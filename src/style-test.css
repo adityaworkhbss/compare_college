@@ -1,0 +1,333 @@
+/* General Variables */
+:root {
+    --primary-color: #025e68;
+    --secondary-color: #EFEFEF;
+    --font-color-white: #ffffff;
+    --background-white: #fff;
+    --border-radius-small: 3px;
+    --border-radius-medium: 16px;
+    --font-size-default: 16px;
+    --font-size-heading: 24px;
+    --padding-small: 8px;
+    --padding-medium: 13px;
+}
+
+/* Buttons */
+.scnd-button {
+    margin-left: 0px;
+}
+
+.compare-search-btn {
+    border: 1px solid var(--primary-color);
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.compare-search-btn input {
+    height: 40px;
+    border: none;
+    padding-left: 16px;
+    outline: none;
+    width: 372px;
+}
+
+.compare-btn button {
+    margin-top: 32px;
+}
+
+.compare-search-buttons {
+    padding-top: 44px;
+}
+
+/* College Icon */
+.college-icon {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.college-icon img {
+    padding: 9px 13px;
+}
+
+/* Checkbox Styles */
+.cxp-checkbox-inline {
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 3px 10px;
+    background-color: var(--background-white);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+    margin: 0 15px 15px 0;
+    font-size: var(--font-size-default);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.cxp-checkbox-inline input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+    background-color: var(--background-white);
+    cursor: pointer;
+    position: relative;
+}
+
+.cxp-checkbox-inline input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--font-color-white);
+}
+
+.cxp-checkbox-inline input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 12px;
+    color: var(--font-color-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.check-box-list {
+    padding-top: 20px;
+}
+
+/* Suggestions */
+.cxp-suggestion-content {
+    padding: 50px;
+    border-radius: 20px;
+    color: var(--font-color-white);
+    background: var(--primary-color);
+}
+
+.cxp-suggestion-content h2 {
+    font-size: var(--font-size-heading);
+    color: var(--font-color-white);
+}
+
+/* Table */
+.cxp_compare-clg-table {
+    margin: 0;
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+/* Select Right College Section */
+.select-right-college {
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    padding: 10px 0px;
+}
+
+.select-right-college img {
+    padding-top: 25px;
+}
+
+.select-right-college h3 {
+    padding-top: 20px;
+}
+
+.select-right-college p {
+    padding: 3px 22px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+/* Comparison Section */
+.cxp-comparison-topic {
+    background: var(--primary-color);
+    border-bottom: 1px solid var(--font-color-white);
+    height: 81px;
+}
+
+.cxp-comparison-topic h4 {
+    padding: 16px;
+    font-size: 24px;
+    color: var(--font-color-white);
+}
+
+.cxp-comparison-about .col-lg-4,
+.cxp-comparison-learning .col-lg-4,
+.cxp-comparison-specialization .col-lg-4,
+.cxp-comparison-review .col-lg-4,
+.cxp-comparison-issue .col-lg-4,
+.cxp-comparison-recommendation .col-lg-4 {
+    height: auto;
+}
+
+.cxp-compare-uni-logo {
+    position: relative;
+    bottom: 62px;
+    left: 124px;
+    height: 120px;
+    margin-bottom: 13px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 59px;
+    background: var(--background-white);
+}
+
+/* Search Bar */
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--background-white);
+    border: 1px solid var(--primary-color);
+    z-index: 10;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestions-list li {
+    padding: var(--padding-small);
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .category-height-desktop {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .compare-search-btn input {
+        width: 150px;
+    }
+
+    .cxp-suggestion-content h2 {
+        font-size: 18px;
+    }
+
+    .check-box-list {
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .compare-search-btn input {
+        width: 150px;
+    }
+
+    .cxp-compare-uni-logo {
+        left: 38px;
+    }
+}
+
+
+.compare-search-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Add spacing between elements */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.compare-search-btn {
+    flex: 1; /* Make each search bar take equal space */
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Smooth rounded edges */
+    padding: 10px; /* Space inside the container */
+    background-color: #fff; /* White background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+}
+
+.college-icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.compare-search-btn span {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #025e68; /* Icon color */
+}
+
+.compare-search-btn input[type="search"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.suggestions-list {
+    display: none; /* Keep the suggestion list hidden by default */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Add Button */
+.add-extra-cont {
+    margin-left: 20px;
+}
+
+.add-third-seachbar {
+    background-color: #025e68;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.add-third-seachbar:hover {
+    background-color: #003f4a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .compare-search-buttons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .compare-search-btn {
+        flex: 1 1 100%; /* Full-width on smaller screens */
+    }
+
+    .add-extra-cont {
+        margin-left: 0;
+    }
+}
