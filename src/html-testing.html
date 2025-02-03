@@ -1,0 +1,763 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script src="script.js"></script>
+<div class="container cxp-padding-72">
+    <div class="row col-md-12">
+        <h2 class="text-center">Compare Online Colleges & Universities 
+        </h2>
+        <p class="text-center">Easily compare top online colleges side by side and make an informed decision
+            for your future.</p>
+
+        <!--        Search colleges by bar --------------------------------------------------------- -->
+
+        <div class=" col-md-12 compare-search-buttons">
+
+            <div class="col-md-6 col-sm-12">
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                             alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch1" placeholder="NMIMS University">
+                    <ul id="suggestions1" class="suggestions-list"></ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                             alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch2" placeholder="Search University">
+                    <ul id="suggestions2" class="suggestions-list"></ul>
+                </div>
+            </div>
+
+            <div style="display:none;" class="col-md-4 col-sm-12">
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                             alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch3" placeholder="Search college 3">
+                    <ul id="suggestions3" class="suggestions-list"></ul>
+                </div>
+                <button class="remove-third-row">X</button>
+            </div>
+
+            <div class="add-extra-cont">
+                <button class="add add-third-seachbar">+</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+    <!--        Comparing checkboxes and radio buttons -----------------------------------------------  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 check-box-list">
+
+
+                <!-- <label class="cxp-checkbox-inline">
+                    Categories <input type="checkbox" name="category" value="categories">
+                </label> -->
+                <label class="cxp-checkbox-inline">
+                    Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Institute Type <input type="checkbox" name="institute-type" value="institute-type">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Establishment <input type="checkbox" name="establishment" value="establishment">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    About <input type="checkbox" name="about" value="about">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Accreditation <input type="checkbox" name="accreditation" value="accreditation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Duration <input type="checkbox" name="duration" value="duration">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Learning Methodology <input type="checkbox" name="learning-methodology"
+                                                value="learning-methodology">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Fees <input type="checkbox" name="fees" value="fees">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Programs <input type="checkbox" name="degree" value="degree">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Specialisation <input type="checkbox" name="specialisation" value="specialisation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Review <input type="checkbox" name="review" value="review">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Our Recommendation <input type="checkbox" name="our-recommendation" value="our-recommendation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Eligibility <input type="checkbox" name="eligibility" value="Eligibility">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Website <input type="checkbox" name="website" value="website">
+                </label>
+                <label class="cxp-checkbox-inline cxp-select-all">
+                    Select All <input type="checkbox" name="selectAll" value="select All">
+                </label>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="compare-btn text-center">
+        <button class="scnd-button">Compare now</button>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <!-- Header with College Logos -->
+    <div class="college-header">
+        <div class="college">
+            <img src="https://edukyu.com//public/compare-page/nmims.png" alt="NMIMS Logo">
+            <h3>NMIMS CODE</h3>
+        </div>
+        <div class="college">
+            <img src="https://edukyu.com//public/compare-page/amity.png" alt="Amity Logo">
+            <h3>Amity University Online</h3>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <table class="compare-table">
+        <thead>
+        <tr>
+            <th>Feature</th>
+            <th>NMIMS CODE</th>
+            <th>Amity University Online</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Institute Type</td>
+            <td>Private</td>
+            <td>Private (Deemed)</td>
+        </tr>
+        <tr>
+            <td>Establishment</td>
+            <td>1981</td>
+            <td>2005</td>
+        </tr>
+        <tr>
+            <td>Abbreviation</td>
+            <td>Narsee Monjee Institute of Management Studies</td>
+            <td>Amity University Online</td>
+        </tr>
+        <tr>
+            <td>About</td>
+            <td>
+                Founded in 1981 by SVKM to meet the demand for management education. Expanded from 40 students to globally recognized university with multiple campuses.
+            </td>
+            <td>
+                Amity University, established by the State Legislature, recognized by UGC, India's leading private education institution with ranked courses and top-tier accreditations.
+            </td>
+        </tr>
+        <tr>
+            <td>Accreditation</td>
+            <td>NAAC A+</td>
+            <td>NAAC A+</td>
+        </tr>
+        <!-- Add other rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container cxp-padding-72">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Factors to Consider Before College Selection</h2>
+            <p>A college isn’t just about academics—consider these essentials before selecting.
+            </p>
+        </div>
+        <div class="col-md-12">
+            <div class="">
+
+                <div style="padding-top:25px;" class="">
+                    <div class="col-md-4 col-sm-12 text-center pt-25">
+                        <div class=" select-right-college">
+                            <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                                 alt="">
+                            <h3>Academic Quality </h3>
+                            <p>Check if the college offers a well-structured curriculum and experienced faculty for
+                                quality learning.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-center pt-25">
+                        <div class="select-right-college">
+                            <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                                 alt="">
+                            <h3>Accreditation</h3>
+                            <p>Verify if the college is accredited by bodies like UGC, AICTE, or AIU for trusted
+                                education.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-center pt-25">
+                        <div class="select-right-college">
+                            <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                                 alt="">
+                            <h3>Costs and Financial Aid
+
+                            </h3>
+                            <p>Check if the college offers scholarships, grants, or loans to make your education more
+                                affordable.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="col-md-4 col-sm-12 text-center pt-25">
+                        <div class=" select-right-college">
+                            <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                                 alt="">
+                            <h3>Alumni Network </h3>
+                            <p>Ensure the college has a robust alumni network and corporate ties for professional
+                                success.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-center pt-25">
+                        <div class="select-right-college">
+                            <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                                 alt="">
+                            <h3>College Facilities</h3>
+                            <p>Look for modern infrastructure such as libraries, labs, and tools that enhance learning
+                                and skill development.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-center pt-25">
+                        <div class="select-right-college">
+                            <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png"
+                                 alt="">
+                            <h3>Placement Support
+                            </h3>
+                            <p>Choose a college with strong placement records and industry tie-ups for better career
+                                prospects</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="padding-bottom:68px;" class="container  cxp-padding-72">
+    <div class="row">
+        <div class="col-md-12 text-center cxp-suggestion-content">
+            <h2 class="color-white">Still confused about your MBA options? Let our experts guide you toward the right
+                choice</h2>
+            <a href="#cxphomeenqformed" data-toggle="modal" data-target="#cxphomeenqformed" aria-label="pop-up-form">
+
+                <button style="margin-top:21px;" class="scnd-button"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                          height="20" fill="currentColor" class="bi bi-telephone-fill vl-align" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z">
+                    </path>
+                </svg> &nbsp;Talk To Counsellor
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<!--    <div class="modal fade cxp-homepage-form-modal" id="cxphomeenqformed" tabindex="-1" role="dialog"-->
+<!--         aria-labelledby="myModalLabel">-->
+<!--        <div class="modal-dialog modal-sm cxp-homepage-form-modal-top" role="document">-->
+<!--            <div class="modal-content cxp-modal-content">-->
+
+<!--                <div class="modal-body cxp-homepage-form-modal-body">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+<!--                            aria-hidden="true">&times;</span></button>-->
+<!--                    <h3 class="text-center" style="font-size:14px;color:#000">Share your details and-->
+<!--                        <br />our counselor will connect you.-->
+<!--                    </h3>-->
+
+<!--                    <div class="cxp-modal-right-panel" style="text-align: -webkit-center;">-->
+<!--                        <form action="" id="my_captcha_form" method="post">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                        <input style=" " type="text" name="name"-->
+<!--                                               class="form-control input-style-landing-page-cxp" placeholder="Enter Your Name*"-->
+<!--                                               required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                        <input style=" height: 32px; border: 1px solid #bebebe;" type="email" name="email"-->
+<!--                                               class="form-control input-style-landing-page-cxp"-->
+<!--                                               placeholder="Enter Your E-mail id*" required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                        <input style=" height: 32px; border: 1px solid #bebebe;" type="text" name="city"-->
+<!--                                               class="form-control input-style-landing-page-cxp" placeholder="Enter Your City*"-->
+<!--                                               required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                        <select style="height: 32px; border: 1px solid #bebebe;" name="university_name"-->
+<!--                                                class="form-control input-style-landing-page-cxp" required>-->
+<!--                                            <option value="" disabled selected>Choose Your University-->
+<!--                                            </option>-->
+<!--                                            <option value="D.Y.Patil University">D.Y.Patil University</option>-->
+<!--                                            <option value="Amity University">Amity University</option>-->
+<!--                                            <option value="Manipal University">Manipal University</option>-->
+<!--                                            <option value="Lovely Professional University">Lovely Professional University-->
+<!--                                            </option>-->
+<!--                                            <option value="Jain University">Jain University</option>-->
+<!--                                            <option value="Shoolini University">Shoolini University</option>-->
+<!--                                            <option value="Uttaranchal University">Uttaranchal University</option>-->
+<!--                                            <option value="Vivekananda Global University">Vivekananda Global University-->
+<!--                                            </option>-->
+<!--                                            <option value="London Metropolitan University">London Metropolitan University-->
+<!--                                            </option>-->
+
+<!--                                            &lt;!&ndash; Add more options as needed &ndash;&gt;-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group"-->
+<!--                                         style="margin-bottom: 8px;display: flex; border: 1px solid #bebebe;">-->
+<!--                                        <div class="col-lg-3" style="background:#e6eaee">-->
+<!--                                            <p style="padding: 0px;margin: 0;font-size: 12px;margin-top: 3px;"><img-->
+<!--                                                    src="https://staging.edukyu.com//assets/cxp-assets/imgs/collage/icons/in.webp"-->
+<!--                                                    width="10px">&nbsp;+91</p>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-lg-9" style="padding-right:0px;">-->
+<!--                                            <input style=" height: 32px;border:0px;font-size: 12px;padding-left: 0px;"-->
+<!--                                                   type="number" name="mobile"-->
+<!--                                                   class="form-control input-style-landing-page-cxp"-->
+<!--                                                   placeholder="Enter Your Mobile Number*" onkeypress='validate(event)'-->
+<!--                                                   onpaste='validate(event)' required="">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                            </div>-->
+
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <div class="g-recaptcha" data-sitekey="6Ld4ZjwpAAAAAAM5C7UTWHnhZIsjfhwBf01X1gMJ">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+
+<!--                            <div class="row">-->
+
+<!--                                <div class="col-lg-12" align="left">-->
+<!--                                    <p style="line-height: 1.5;font-size:10px;font-family:Gilroy-Regular;">-->
+<!--                                        <input type="checkbox" id="checkbox_cxp" required /> I-->
+<!--                                        authorise Edukyu and its associates to contact me with updates-->
+<!--                                        &-->
+<!--                                        notifications via Email, SMS, WhatsApp, and Voice call as per-->
+<!--                                        the-->
+<!--                                        Privacy Policy. This consent will override any registration for-->
+<!--                                        DNC /-->
+<!--                                        NDNC.-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="text-center">-->
+<!--                                <button type="submit" id="sbuMtn" name="submit" class="btn btn-sm cxp-button-bg-yellow"-->
+<!--                                        aria-label="Submit">Enroll-->
+<!--                                    Now</button>-->
+<!--                            </div>-->
+<!--                        </form>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="modal fade" id="modal-subscribe-compare" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--        <div class="modal-dialog modal-md cxp-705" role="document">-->
+<!--            <div class="modal-content cxp-modal-content">-->
+<!--                <div class="modal-body">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+<!--                            aria-hidden="true">&times;</span></button>-->
+
+<!--                    <h3 class="text-center cxp-new-modal-heading pop-up-heading">Still Confused About the Right University-->
+<!--                        for Your Online Degree? <br> Get Expert Assistance Now!</h3>-->
+<!--                    <div class="row">-->
+<!--                        <div style="text-align: -webkit-center" class="col-lg-5">-->
+<!--                            <h5 class="cxp-modal-heading" align="center" style="">Compare and select-->
+<!--                                from<br /> 20+ University-->
+<!--                            </h5>-->
+<!--                            <div class="slider compare-slider" style="margin-bottom:24px;margin-top:24px;">-->
+<!--                                <div class="slide-track">-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/amity.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/jain.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/nmims-logo.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" style="height: 70px; width: 150px;" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/lpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/manipal.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/online.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/sholoni.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/vk.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/amity.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/jain.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/nmims-logo.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" style="height: 70px; width: 150px;" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/lpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/manipal.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/online.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/sholoni.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/vk.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/amity.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/jain.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/nmims-logo.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" style="height: 70px; width: 150px;" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/lpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/manipal.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/online.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/sholoni.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/vk.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/amity.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/jain.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/nmims-logo.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" style="height: 70px; width: 150px;" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/lpu.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/manipal.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/online.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/sholoni.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+<!--                                    <div class="slide">-->
+<!--                                        <img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/vk.png" alt=""-->
+<!--                                             class="cxp-form-slider-un-logo" />-->
+<!--                                    </div>-->
+
+
+
+
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="cxp-new-modal-left-panel cxp-new-design-desktop" class="buttons-container">-->
+<!--                                <div class="cxp-form-modal-cards"><img style="width:50%"-->
+<!--                                                                       src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/no-cost.gif" alt=""><br>No-->
+<!--                                    Cost-->
+<!--                                    <br>EMI Option-->
+<!--                                </div>-->
+<!--                                <div class="cxp-form-modal-cards"><img style="width:50%"-->
+<!--                                                                       src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/unbiased.gif"-->
+<!--                                                                       alt=""><br>Unbiased-->
+<!--                                    Suggestion</div>-->
+<!--                                <div class="cxp-form-modal-cards"><img style="width:50%"-->
+<!--                                                                       src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/guidance.gif"-->
+<!--                                                                       alt=""><br>Guidance-->
+<!--                                    from Expert</div>-->
+
+<!--                                <div class="cxp-form-modal-cards"><img style="width:50%"-->
+<!--                                                                       src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/placement.gif"-->
+<!--                                                                       alt=""><br>100%-->
+<!--                                    Placement Assistance</div>-->
+<!--                                <div class="cxp-form-modal-cards"><img style="width:50%"-->
+<!--                                                                       src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/pay-after.gif"-->
+<!--                                                                       alt=""><br>Pay after-->
+<!--                                    </br> Placement</div>-->
+
+<!--                                <div class="cxp-form-modal-cards"><img style="width:50%"-->
+<!--                                                                       src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/scholarship.gif"-->
+<!--                                                                       alt=""><br>Scholarship-->
+<!--                                    Opportunities</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-7">-->
+
+<!--                            <div class="cxp-modal-right-panel"-->
+<!--                                 style="border:1px solid #bebebe; padding:18px; border-radius:8px;text-align: -webkit-center;">-->
+<!--                                <h5 class="text-center cxp-modal-new-form-heading" align="center"> Share your-->
+<!--                                    details and <br />our-->
+<!--                                    counselor will connect you</h5>-->
+<!--                                <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]); ?>" id="my_captcha_form"-->
+<!--                                method="post">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-md-12 cxp-input-width">-->
+<!--                                        <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                            <input style=" " type="text" name="name"-->
+<!--                                                   class="form-control input-style-landing-page-cxp"-->
+<!--                                                   placeholder="Enter Your Name*" required>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-12 cxp-input-width">-->
+<!--                                        <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                            <input style=" height: 32px; border: 1px solid #bebebe;" type="email"-->
+<!--                                                   name="email" class="form-control input-style-landing-page-cxp"-->
+<!--                                                   placeholder="Enter Your E-mail id*" required>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-md-12 cxp-input-width">-->
+<!--                                        <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                            <input style=" height: 32px; border: 1px solid #bebebe;" type="text"-->
+<!--                                                   name="city" class="form-control input-style-landing-page-cxp"-->
+<!--                                                   placeholder="Enter Your City*" required>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-12 cxp-input-width">-->
+<!--                                        <div class="form-group" style="margin-bottom: 8px;">-->
+<!--                                            <select style="height: 32px; border: 1px solid #bebebe;" name="university"-->
+<!--                                                    class="form-control input-style-landing-page-cxp" required>-->
+<!--                                                <option value="" disabled selected>Choose Your University-->
+<!--                                                </option>-->
+<!--                                                <option value="D.Y.Patil University">D.Y.Patil University-->
+<!--                                                </option>-->
+<!--                                                <option value="Amity University">Amity University</option>-->
+<!--                                                <option value="Manipal University">Manipal University</option>-->
+<!--                                                <option value="Lovely Professional University">Lovely-->
+<!--                                                    Professional University-->
+<!--                                                </option>-->
+<!--                                                <option value="Jain University">Jain University</option>-->
+<!--                                                <option value="Shoolini University">Shoolini University-->
+<!--                                                </option>-->
+<!--                                                <option value="NMIMS University">NMIMS University</option>-->
+<!--                                                <option value="Uttaranchal University">Uttaranchal University-->
+<!--                                                </option>-->
+<!--                                                <option value="Vivekananda Global University">Vivekananda-->
+<!--                                                    Global University</option>-->
+<!--                                                <option value="London Metropolitan University">London-->
+<!--                                                    Metropolitan University-->
+<!--                                                </option>-->
+<!--                                                <option value="Sharda University">Sharda University</option>-->
+
+
+<!--                                                &lt;!&ndash; Add more options as needed &ndash;&gt;-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-12 cxp-input-width">-->
+<!--                                        <div class="form-group"-->
+<!--                                             style="margin-bottom: 8px;display: flex; border: 1px solid #bebebe;">-->
+<!--                                            <div style="background:#e6eaee;" class="col-lg-3 col-xs-4">-->
+<!--                                                <p style="padding: 0px;margin: 0;font-size: 12px;margin-top: 3px;">-->
+<!--                                                    <img src="https://flagpedia.net/data/flags/icon/36x27/in.webp"-->
+<!--                                                         width="10px">&nbsp;+91-->
+<!--                                                </p>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-lg-9" style="padding-left: 0px;">-->
+<!--                                                <input style=" height: 32px;font-size:12px;border-color:#fff"-->
+<!--                                                       type="number" onkeypress='validate(event)' onpaste='validate(event)'-->
+<!--                                                       name="mobile" class="form-control input-style-landing-page-cxp"-->
+<!--                                                       placeholder="Enter Your Mobile Number*" style="font-size:12px;border-bottom: none;-->
+<!--      border-right: none; border-top: none;" required>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-md-12">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <div class="g-recaptcha"-->
+<!--                                                 data-sitekey="6Ld4ZjwpAAAAAAM5C7UTWHnhZIsjfhwBf01X1gMJ">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
+<!--                                <div class="row">-->
+
+<!--                                    <div class="col-lg-12 cxp-mobile-checkbox" align="left">-->
+<!--                                        <p class="cxp-checkbox" style="line-height: 1.5;font-size:10px;">-->
+<!--                                            <input type="checkbox" id="checkbox_cxp" required /> I-->
+<!--                                            authorise Edukyu and its associates to contact me with updates-->
+<!--                                            &-->
+<!--                                            notifications via Email, SMS, WhatsApp, and Voice call as per-->
+<!--                                            the-->
+<!--                                            Privacy Policy. This consent will override any registration for-->
+<!--                                            DNC /-->
+<!--                                            NDNC.-->
+<!--                                        </p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
+<!--                                <?php if (!empty($statusMsg)) { ?>-->
+<!--                                <p class="statusMsg <?php echo !empty($msgClass) ? $msgClass : ''; ?>">-->
+<!--                                    <?php echo $statusMsg; ?>-->
+<!--                                </p>-->
+<!--                                <?php } ?>-->
+<!--                                <div class="text-center ">-->
+<!--                                    <?php $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>-->
+<!--                                    <input type="hidden" name="redirect" value="<?php echo $actual_link; ?>" />-->
+<!--                                    <button type="submit" id="sbuMtn" name="submit"-->
+<!--                                            class="btn btn-sm cxp-button-bg-yellow cxp-form-btn ">Enroll-->
+<!--                                        Now</button>-->
+<!--                                </div>-->
+<!--                                </form>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<div class="container-fluid green-bg cxp_blog_sticky ">
+    <div class="row">
+        <div class="col-lg-2 col-xl-3 col-md-1"></div>
+        <div class="col-lg-1 col-xl-1 col-md-1 cxp-new-design-desktop">
+            <img class="sticky-logo" src="https://edukyu.com/assets/cxp-assets/imgs/blog/study.svg" height="60px">
+        </div>
+        <div data-toggle="modal" data-target="#modal-subscribe-compare" class="col-lg-5  col-xl-4 col-md-7">
+            <h2 class="white-txt cxp-blog-sticky-text"><span class="yellow-txt">Talk to Expert Counsellor</span></h2>
+        </div>
+        <div class="col-lg-1 col-xl-1 col-md-1 cxp-new-design-desktop">
+            <a data-toggle="modal" data-target="#modal-subscribe-compare"
+               class="btn btn-sm cxp-slider-button-home-enquire-ed cxp-secondary-button-home-enquire-ed cxp-blog-sticky-btn"
+               role="button">Click Here</a>
+
+
+        </div>
+        <div class="col-lg-3 col-md-2"></div>
+    </div>
+</div>
+
+</body>

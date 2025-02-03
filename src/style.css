@@ -1,23 +1,47 @@
 /* General Variables */
 :root {
     --primary-color: #025e68;
-    --secondary-color: #EFEFEF;
+    --secondary-color: #efefef;
+    --font-color: #333;
     --font-color-white: #ffffff;
+    --background-color: #f9f9f9;
     --background-white: #fff;
+    --card-background: #ffffff;
+    --card-border: #d9d9d9;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --border-radius-small: 3px;
     --border-radius-medium: 16px;
     --font-size-default: 16px;
     --font-size-heading: 24px;
+    --paragraph-font-size: 14px;
     --padding-small: 8px;
     --padding-medium: 13px;
 }
 
-
-
 /* General Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
 .container.cxp-padding-72 {
     padding: 72px 15px;
-    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+h2 {
+    font-size: var(--font-size-heading);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: var(--paragraph-font-size);
+    margin-bottom: 30px;
 }
 
 .text-center {
@@ -25,12 +49,53 @@
     margin-bottom: 20px;
 }
 
+/* Flexbox Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4 {
+    width: 30%;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+.col-sm-12 {
+    width: 100%;
+}
+
+/* College Images Section */
+.college-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.college-images img {
+    width: 150px;
+    height: 150px;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+    object-fit: cover;
+}
+
+.college-images span {
+    font-size: var(--font-size-default);
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
 /* Search Bars */
 .compare-search-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px; /* Space between search bars */
+    gap: 15px;
     margin-top: 20px;
 }
 
@@ -41,40 +106,25 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.college-icon img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.compare-search-btn span {
-    margin-right: 10px;
-    color: #025e68;
+    background-color: var(--background-white);
+    box-shadow: var(--box-shadow);
 }
 
 .compare-search-btn input[type="search"] {
     flex: 1;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: var(--font-size-default);
     padding: 5px;
     background-color: transparent;
 }
 
 /* Add Extra Button */
-.add-extra-cont {
-    margin-left: 15px;
-}
-
 .add-third-seachbar {
     width: 40px;
     height: 40px;
-    background-color: #025e68;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
     border: none;
     border-radius: 50%;
     font-size: 20px;
@@ -82,6 +132,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .add-third-seachbar:hover {
@@ -92,7 +143,7 @@
 .check-box-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Space between checkboxes */
+    gap: 10px;
     margin-top: 20px;
     justify-content: center;
 }
@@ -100,117 +151,63 @@
 .cxp-checkbox-inline {
     display: flex;
     align-items: center;
-    color: #025e68;
+    color: var(--primary-color);
     font-weight: 500;
     padding: 5px 15px;
-    background-color: #fff;
-    border: 1px solid #025e68;
-    border-radius: 5px;
+    background-color: var(--background-white);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
     font-size: 14px;
     cursor: pointer;
 }
 
-.cxp-checkbox-inline input[type="checkbox"] {
-    margin-left: 10px;
-}
-
-.cxp-checkbox-inline.cxp-select-all {
-    background-color: #f1f1f1;
-    border-color: #ccc;
-}
-
 /* Compare Button */
-.compare-btn {
-    margin-top: 20px;
-}
-
 .compare-btn .scnd-button {
-    background-color: #025e68;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius-small);
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: var(--font-size-default);
     cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s;
 }
 
 .compare-btn .scnd-button:hover {
     background-color: #003f4a;
 }
 
-/* General Variables */
-:root {
-    --primary-color: #025e68;
-    --secondary-color: #EFEFEF;
-    --font-color-white: #ffffff;
-    --background-white: #fff;
-    --border-radius-small: 3px;
-    --border-radius-medium: 16px;
-    --font-size-default: 16px;
-    --font-size-heading: 24px;
-    --padding-small: 8px;
-    --padding-medium: 13px;
-}
-
-/* General Layout */
-.container.cxp-padding-72 {
-    padding: 72px 15px;
-    background-color: #f9f9f9; /* Light background */
-}
-
-.text-center {
+/* Card Styling */
+.select-right-college {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Table Design */
-.compare-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-    background-color: var(--background-white);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius-medium);
-    overflow: hidden;
-}
-
-.compare-table th,
-.compare-table td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
-    font-size: var(--font-size-default);
-}
-
-.compare-table thead {
-    background-color: var(--primary-color);
-    color: var(--font-color-white);
-    font-size: var(--font-size-heading);
-}
-
-.compare-table tbody tr:nth-child(even) {
-    background-color: var(--secondary-color);
-}
-
-.compare-table tbody tr:hover {
-    background-color: #d4edf0;
+.select-right-college:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Table */
 @media (max-width: 768px) {
-    .compare-table, .compare-table thead, .compare-table tbody, .compare-table th, .compare-table td, .compare-table tr {
+    .col-md-4 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .compare-table,
+    .compare-table thead,
+    .compare-table tbody,
+    .compare-table th,
+    .compare-table td,
+    .compare-table tr {
         display: block;
-    }
-
-    .compare-table thead tr {
-        display: none;
-    }
-
-    .compare-table tbody tr {
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        padding: 10px;
     }
 
     .compare-table tbody td {
@@ -230,3 +227,105 @@
     }
 }
 
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* College Header */
+.college-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #f0f0f0;
+    background-color: #f7faff;
+}
+
+.college {
+    text-align: center;
+}
+
+.college img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.college h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+    margin: 0;
+}
+
+/* Comparison Table */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.compare-table thead {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: left;
+}
+
+.compare-table th, .compare-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.compare-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.compare-table tbody tr:hover {
+    background-color: #eaf4ff;
+}
+
+.compare-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.compare-table td {
+    vertical-align: top;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .college-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .college img {
+        max-width: 80px;
+    }
+
+    .compare-table {
+        font-size: 12px;
+    }
+
+    .compare-table th, .compare-table td {
+        padding: 10px;
+    }
+}
