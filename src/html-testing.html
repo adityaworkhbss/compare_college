@@ -761,3 +761,257 @@
 </div>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare online colleges and universities with ease. Make an informed decision for your future.">
+    <title>College Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script src="script.js"></script>
+
+<div class="container cxp-padding-72">
+    <div class="row col-md-12">
+        <h2 class="text-center">Compare Online Colleges & Universities</h2>
+        <p class="text-center">Easily compare top online colleges side by side and make an informed decision for your future.</p>
+
+        <div class="col-md-12 compare-search-buttons">
+
+            <div class="col-md-6 col-sm-12">
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch1" placeholder="NMIMS University">
+                    <ul id="suggestions1" class="suggestions-list"></ul>
+                </div>
+            </div>
+
+            <!-- Search Bar 2 -->
+            <div class="col-md-6 col-sm-12">
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch2" placeholder="Search University">
+                    <ul id="suggestions2" class="suggestions-list"></ul>
+                </div>
+            </div>
+
+            <div style="display:none;" class="col-md-4 col-sm-12" id="extraSearchBar">
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch3" placeholder="Search college 3">
+                    <ul id="suggestions3" class="suggestions-list"></ul>
+                </div>
+                <button class="remove-third-row">X</button>
+            </div>
+
+            <!-- Add extra search bar button -->
+            <div class="add-extra-cont">
+                <button class="add add-third-seachbar">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparing checkboxes and radio buttons -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 check-box-list">
+                <label class="cxp-checkbox-inline">
+                    Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Institute Type <input type="checkbox" name="institute-type" value="institute-type">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Establishment <input type="checkbox" name="establishment" value="establishment">
+                </label>
+                <!-- Add more checkboxes with matching names -->
+                <label class="cxp-checkbox-inline">
+                    Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Institute Type <input type="checkbox" name="institute-type" value="institute-type">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Establishment <input type="checkbox" name="establishment" value="establishment">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    About <input type="checkbox" name="about" value="about">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Accreditation <input type="checkbox" name="accreditation" value="accreditation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Duration <input type="checkbox" name="duration" value="duration">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Learning Methodology <input type="checkbox" name="learning-methodology" value="learning-methodology">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Fees <input type="checkbox" name="fees" value="fees">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Programs <input type="checkbox" name="degree" value="degree">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Specialisation <input type="checkbox" name="specialisation" value="specialisation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Review <input type="checkbox" name="review" value="review">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Our Recommendation <input type="checkbox" name="our-recommendation" value="our-recommendation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Eligibility <input type="checkbox" name="eligibility" value="eligibility">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Website <input type="checkbox" name="website" value="website">
+                </label>
+                <label class="cxp-checkbox-inline cxp-select-all">
+                    Select All <input type="checkbox" name="selectAll" value="select All">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare Button -->
+    <div class="compare-btn text-center">
+        <button class="scnd-button">Compare now</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="college-header">
+        <div class="college">
+            <img src="https://edukyu.com//public/compare-page/nmims.png" alt="NMIMS Logo">
+            <h3>NMIMS CODE</h3>
+        </div>
+        <div class="college">
+            <img src="https://edukyu.com//public/compare-page/amity.png" alt="Amity Logo">
+            <h3>Amity University Online</h3>
+        </div>
+    </div>
+
+    <table class="compare-table" >
+        <thead>
+        <tr>
+            <td>Colleges</td>
+            <td id="college1Header" class="college-header"></td>
+            <td id="college2Header" class="college-header">Amity University Online</td>
+        </tr>
+        </thead>
+
+        </tbody>
+    </table>
+</div>
+
+<!-- Factors to Consider Section -->
+<div class="container cxp-padding-72">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Factors to Consider Before College Selection</h2>
+            <p>A college isn’t just about academics—consider these essentials before selecting.</p>
+        </div>
+        <div class="col-md-12">
+            <div class="col">
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="select-right-college">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="Academic Quality">
+                        <h3>Academic Quality</h3>
+                        <p>Check if the college offers a well-structured curriculum and experienced faculty for quality learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="select-right-college">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="Accreditation">
+                        <h3>Accreditation</h3>
+                        <p>Verify if the college is accredited by bodies like UGC, AICTE, or AIU for trusted education.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="select-right-college">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="Placements">
+                        <h3>Placements</h3>
+                        <p>Ensure the college has a strong placement record with top companies for a secure career path.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="select-right-college">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="Alumni Network">
+                        <h3>Alumni Network</h3>
+                        <p>Ensure the college has a robust alumni network and corporate ties for professional success.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="select-right-college">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="College Facilities">
+                        <h3>College Facilities</h3>
+                        <p>Look for modern infrastructure such as libraries, labs, and tools that enhance learning and skill development.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="select-right-college">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="Placement Support">
+                        <h3>Placement Support</h3>
+                        <p>Choose a college with strong placement records and industry tie-ups for better career prospects.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<div style="padding-bottom:68px;" class="container  cxp-padding-72">
+    <div class="row">
+        <div class="col-md-12 text-center cxp-suggestion-content">
+            <h2 class="color-white">Still confused about your MBA options? Let our experts guide you toward the right
+                choice</h2>
+            <a href="#cxphomeenqformed" data-toggle="modal" data-target="#cxphomeenqformed" aria-label="pop-up-form">
+
+                <button style="margin-top:21px;" class="scnd-button"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                          height="20" fill="currentColor" class="bi bi-telephone-fill vl-align" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z">
+                    </path>
+                </svg> &nbsp;Talk To Counsellor
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

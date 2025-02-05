@@ -17,10 +17,8 @@
         <h2 class="text-center">Compare Online Colleges & Universities</h2>
         <p class="text-center">Easily compare top online colleges side by side and make an informed decision for your future.</p>
 
-        <!-- Search colleges by bar -->
         <div class="col-md-12 compare-search-buttons">
 
-            <!-- Search Bar 1 -->
             <div class="col-md-6 col-sm-12">
                 <div class="compare-search-btn">
                     <div class="college-icon">
@@ -44,7 +42,6 @@
                 </div>
             </div>
 
-            <!-- Search Bar 3 (hidden initially) -->
             <div style="display:none;" class="col-md-4 col-sm-12" id="extraSearchBar">
                 <div class="compare-search-btn">
                     <div class="college-icon">
@@ -68,6 +65,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 check-box-list">
+                <label class="cxp-checkbox-inline">
+                    Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Institute Type <input type="checkbox" name="institute-type" value="institute-type">
+                </label>
+                <label class="cxp-checkbox-inline">
+                    Establishment <input type="checkbox" name="establishment" value="establishment">
+                </label>
+                <!-- Add more checkboxes with matching names -->
                 <label class="cxp-checkbox-inline">
                     Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
                 </label>
@@ -123,103 +130,100 @@
     </div>
 </div>
 
-<!-- College Logos Section -->
 <div class="container">
     <div class="college-header">
         <div class="college">
             <img src="https://edukyu.com//public/compare-page/nmims.png" alt="NMIMS Logo">
-            <h3>NMIMS CODE</h3>
+            <h3 id="college1ContainerHeader"></h3>
         </div>
         <div class="college">
             <img src="https://edukyu.com//public/compare-page/amity.png" alt="Amity Logo">
-            <h3>Amity University Online</h3>
+            <h3 id="college2ContainerHeader"></h3>
         </div>
     </div>
 
-    <!-- Comparison Table -->
-    <!-- Comparison Table -->
-    <table class="compare-table">
+    <table class="compare-table" >
         <thead>
-        <tr>
-            <th>Colleges</th>
-            <th>NMIMS CODE</th>
-            <th>Amity University Online</th>
-        </tr>
+            <tr>
+                <td>Colleges</td>
+                <td id="college1Header" class="college-header"></td>
+                <td id="college2Header" class="college-header"></td>
+            </tr>
         </thead>
         <tbody>
         <tr>
-            <td>Institute Type</td>
-            <td>Private</td>
-            <td>Private (Deemed)</td>
+            <td >Institute Type</td>
+            <td id="college1InstituteType" class="college-body"></td>
+            <td id="college2InstituteType" class="college-body"></td>
         </tr>
         <tr>
             <td>Establishment</td>
-            <td>1981</td>
-            <td>2005</td>
+            <td id="college1Establishment" class="college-body"></td>
+            <td id="college2Establishment" class="college-body"></td>
         </tr>
         <tr>
             <td>Abbreviation</td>
-            <td>Narsee Monjee Institute of Management Studies</td>
-            <td>Amity University Online</td>
+            <td id="college1Abbreviation" class="college-body"></td>
+            <td id="college2Abbreviation" class="college-body"></td>
         </tr>
         <tr>
             <td>About</td>
-            <td>Founded in 1981 by SVKM to meet the demand for management education. Expanded from 40 students to a globally recognized university with multiple campuses. Houses 17,000+ students, 900+ faculty, and strong industry linkages. Accredited by NAAC with an A+ Grade and recognized by UGC as a Deemed-to-be University. Nurtures future leaders through value-based learning and diversity. Focuses on innovation, research, and balanced education.</td>
-            <td>Amity University, established by the State Legislature and recognized by the UGC, is India’s leading private education institution. Ranked among Asia’s top 200 by QS and UK rankings, it is the only Indian university accredited by WASQ, US. With campuses worldwide and 300+ UG and PG programs, Amity hosts 150,000 students and 6,000 faculty members, making it a global education hub.</td>
+            <td id="college1About" class="college-body"></td>
+            <td id="college2About" class="college-body"></td>
         </tr>
         <tr>
             <td>Accreditation</td>
-            <td>NAAC A+</td>
-            <td>NAAC A+</td>
+            <td id="college1Accrediation" class="college-body"></td>
+            <td id="college2Accrediation" class="college-body"></td>
         </tr>
         <tr>
             <td>Programs</td>
-            <td>MBA, Executive MBA, B.Com, BBA, Certificate Programs, Diploma Programs</td>
-            <td>Online MBA, Online MBA (Dual), Online BBA, Online MCA, Online BCA, Online MA, Online BA, Online MCom, Online BCom</td>
+            <td id="college1Programs" class="college-body"></td>
+            <td id="college2Programs" class="college-body"></td>
         </tr>
         <tr>
             <td>Specialisation</td>
-            <td>MBA, Executive MBA, B.Com, BBA, Certificate Programs, Diploma Programs, Business Management, Operations Management, Diploma in Human Resource Management, Diploma in Finance, Management Diploma in Marketing Management</td>
-            <td>Online MBA, MBA in General Management, International Finance, Digital Entrepreneurship, Business Analytics, Data Science, HR Analytics, Digital Marketing Management, Online MBA (Dual), Online BBA, Online MCA, Blockchain, ML & AI, Machine Learning & Artificial Intelligence, AR & VR, Online BCA, Online MA, Online BA, Online MCom, Online BCom</td>
+            <td id="college1Specialisation" class="college-body"></td>
+            <td id="college2Specialisation" class="college-body"></td>
         </tr>
         <tr>
             <td>Duration</td>
-            <td>MBA: 2 Years, Executive MBA (Working Executive): 2 Years, B.Commerce: 3 Years, BBA: 3 Years, Certificate Programs: 6 Months, Diploma Programs: 1 Year</td>
-            <td>Online MBA (Regular): 2 Years, Online MBA (Dual Specialization): 2 Years, Online BBA: 3 Years, Online MCA: 2 Years, Online BCA: 3 Years, Online MA: 2 Years, Online BA: 3 Years, Online MCom: 2 Years, Online BCom: 3 Years</td>
+            <td id="college1Duration" class="college-body"></td>
+            <td id="college2Duration" class="college-body"></td>
         </tr>
         <tr>
             <td>Learning Methodology</td>
-            <td>Online</td>
-            <td>Online & Blended Learning</td>
+            <td id="college1LearningMethodoly" class="college-body"></td>
+            <td id="college2LearningMethodoly" class="college-body"></td>
         </tr>
         <tr>
             <td>Fees</td>
-            <td>Rs 55,000 to Rs 4,00,000</td>
-            <td>Rs 60,000 to Rs 1,99,000</td>
+            <td id="college1Fees" class="college-body"></td>
+            <td id="college2Fees" class="college-body"></td>
         </tr>
         <tr>
             <td>Review</td>
-            <td>Well-received by students</td>
-            <td>Positive feedback on courses</td>
+            <td id="college1Review" class="college-body"></td>
+            <td id="college2Review" class="college-body"></td>
         </tr>
         <tr>
             <td>Eligibility</td>
-            <td>For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2</td>
-            <td>For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2</td>
+            <td id="college1Eligibility" class="college-body"></td>
+            <td id="college2Eligibility" class="college-body"></td>
         </tr>
         <tr>
             <td>Our Recommendation</td>
-            <td>Recommended for advanced programs</td>
-            <td>Recommended for flexibility</td>
+            <td id="college1OurRecommendation" class="college-body"></td>
+            <td id="college2OurRecommendation" class="college-body"></td>
         </tr>
         <tr>
             <td>Website</td>
-            <td><a href="https://online.nmims.edu/">https://online.nmims.edu/</a></td>
-            <td><a href="https://amityonline.com/">https://amityonline.com/</a></td>
+            <td id="college1Website" class="college-body"><a href="https://online.nmims.edu/"></a></td>
+            <td id="college2Website" class="college-body"><a href="https://amityonline.com/"></a></td>
         </tr>
+
         </tbody>
     </table>
-
 </div>
 
 <!-- Factors to Consider Section -->

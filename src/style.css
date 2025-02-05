@@ -628,3 +628,7 @@ p {
     color: white;
     border-color: #28a745;
 }
+
+.hidden {
+    display: none;
+}
