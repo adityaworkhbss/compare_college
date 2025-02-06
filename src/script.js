@@ -7,32 +7,45 @@ document.addEventListener('DOMContentLoaded', function () {
         "Manipal University",
         "Pune University",
         "Christ University",
-        "Symbiosis University"
+        "Symbiosis University",
+        "Dy Patil University",
+        "IIM-Lucknow",
     ];
 
-// Function to filter suggestions
     function filterSuggestions(input, dropdownId) {
         const dropdown = document.getElementById(dropdownId);
         const query = input.value.toLowerCase();
 
-        // Clear previous suggestions
         dropdown.innerHTML = "";
 
         if (query) {
-            // Filter matching colleges
             const filteredColleges = collegeNames.filter((college) =>
                 college.toLowerCase().includes(query)
             );
 
-            // Create suggestion options
             filteredColleges.forEach((college) => {
                 const option = document.createElement("option");
                 option.value = college;
                 option.textContent = college;
+
+                option.addEventListener("click", () => {
+
+                    if(dropdownId === "dropdown1"){
+                        document.getElementById("collegeSearch1").value = option.value;
+                        dropdown.style.display = "none";
+                    }
+                    else if(dropdownId === "dropdown2"){
+                        document.getElementById("collegeSearch2").value = option.value;
+                        dropdown.style.display = "none";
+                    }
+                    else if(dropdownId === "dropdown3"){
+                        document.getElementById("collegeSearch3").setAttribute("value", optiom.college);
+                        dropdown.style.display = "none";
+                    }
+                });
+
                 dropdown.appendChild(option);
             });
-
-            console.log(dropdown);
 
             dropdown.style.display = "block";
         } else {
@@ -40,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Attach event listeners to search bars
     document.getElementById("collegeSearch1").addEventListener("input", (e) => {
         filterSuggestions(e.target, "dropdown1");
     });
@@ -51,6 +63,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById("collegeSearch3").addEventListener("input", (e) => {
         filterSuggestions(e.target, "dropdown3");
+    });
+
+    // document.getElementById("search_buttons").addEventListener("click", (e) => {
+    //     console.log("Running!!!");
+    // })
+
+
+    document.getElementById("search_buttons").addEventListener("click", (e) => {
+
+            console.log("clicked");
+
+            const college1 = document.getElementById("collegeSearch1").value;
+            const college2 = document.getElementById("collegeSearch2").value;
+
+            console.log(college1);
+            console.log(college2);
+
+            if (!college1 || !college2) {
+                alert("Please select colleges in both search bars.");
+                return;
+            }
+            if (collegeData[college1] && collegeData[college2]) {
+                setCollegeDetails(collegeData[college1], collegeData[college2]);
+                populateTable();
+                showAllColumns();
+            } else {
+                alert("Selected colleges are not in the dataset.");
+            }
     });
 
 
@@ -94,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const label = checkbox.closest('label');
         const columnClass = checkbox.name;
 
-       // console.log(columnClass);
 
         if (isFirstClick) {
             hideAllColumns(); // Hide all columns on first click
@@ -162,7 +201,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// College Data (Ensure this is populated)
 const collegeData = {
     "Dy Patil University": {
         "Colleges": {
@@ -350,12 +388,9 @@ function populateTable() {
 function toggleColumnVisibility(columnClass, isVisible) {
     const columns = document.querySelectorAll(".college-body");
 
-   // console.log(column.id);
 
     columns.forEach(column => {
-        console.log(column.id);
-       // console.log(columnClass);
-        if(columnClass.trim() == "institute-type" && (column.id == "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible);
+        if(columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible);
         else if(columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment")) changeDisplay(column, isVisible);
         else if(columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation")) changeDisplay(column, isVisible);
         else if(columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About")) changeDisplay(column, isVisible);
@@ -381,4 +416,5 @@ function changeDisplay(column, isVisible) {
         column.style.display = "none";
         column.classList.add("hidden");
     }
+
 }
