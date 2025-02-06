@@ -20,38 +20,44 @@
         <div class="col-md-12 compare-search-buttons">
 
             <div class="col-md-6 col-sm-12">
-                <div class="compare-search-btn">
+                <div class="compare-search-btn" style="position: relative;">
                     <div class="college-icon">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
-                    <input type="search" id="collegeSearch1" placeholder="NMIMS University">
-                    <ul id="suggestions1" class="suggestions-list"></ul>
+                    <div>
+                        <input type="search" id="collegeSearch1" placeholder="Search University">
+                        <select id="dropdown1" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
+                    </div>
                 </div>
             </div>
 
             <!-- Search Bar 2 -->
             <div class="col-md-6 col-sm-12">
-                <div class="compare-search-btn">
+                <div class="compare-search-btn" style="position: relative;">
                     <div class="college-icon">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
-                    <input type="search" id="collegeSearch2" placeholder="Search University">
-                    <ul id="suggestions2" class="suggestions-list"></ul>
+                    <div>
+                        <input type="search" id="collegeSearch2" placeholder="Search University">
+                        <select id="dropdown2" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
+                    </div>
                 </div>
             </div>
 
+
             <div style="display:none;" class="col-md-4 col-sm-12" id="extraSearchBar">
-                <div class="compare-search-btn">
+                <div class="compare-search-btn" style="position: relative;">
                     <div class="college-icon">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
-                    <input type="search" id="collegeSearch3" placeholder="Search college 3">
-                    <ul id="suggestions3" class="suggestions-list"></ul>
+                    <div>
+                        <input type="search" id="collegeSearch3" placeholder="Search University">
+                        <select id="dropdown3" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
+                    </div>
                 </div>
-                <button class="remove-third-row">X</button>
             </div>
 
             <!-- Add extra search bar button -->

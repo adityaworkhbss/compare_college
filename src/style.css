@@ -632,3 +632,310 @@ p {
 .hidden {
     display: none;
 }
+
+/* General Variables */
+:root {
+    --primary-color: #025e68; /* Edukyu Petrol */
+    --secondary-color: #ffd23f; /* Yellow */
+    --light-shade-1: #0e6d78;
+    --light-shade-2: #1d7c87;
+    --light-shade-3: #2f8b96;
+    --light-shade-4: #449ba5;
+    --light-shade-5: #5cabb4;
+    --light-shade-6: #76bbc3;
+    --light-shade-7: #94ccd2;
+    --light-shade-8: #b5dde1;
+    --light-shade-9: #d8eef0;
+    --dark-shade-1: #02555e;
+    --dark-shade-2: #024b54;
+    --dark-shade-3: #014249;
+    --dark-shade-4: #01393f;
+    --dark-shade-5: #012f34;
+    --dark-shade-6: #01262a;
+    --dark-shade-7: #011c1f;
+    --dark-shade-8: #001315;
+    --dark-shade-9: #00090a;
+    --font-color: #333;
+    --font-color-white: #ffffff;
+    --background-color: #f9f9f9;
+    --background-white: #fff;
+    --card-background: #ffffff;
+    --card-border: #d9d9d9;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius-small: 3px;
+    --border-radius-medium: 16px;
+    --font-size-default: 16px;
+    --font-size-heading: 24px;
+    --paragraph-font-size: 14px;
+    --padding-small: 8px;
+    --padding-medium: 13px;
+}
+
+/* General Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+.container.cxp-padding-72 {
+    padding: 72px 15px;
+    text-align: center;
+    background-color: var(--background-white);
+}
+
+h2 {
+    font-size: var(--font-size-heading);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+p {
+    font-size: var(--paragraph-font-size);
+    margin-bottom: 30px;
+    color: var(--dark-shade-3);
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    box-sizing: border-box;
+}
+
+.col-sm-6 {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+
+/* Search Bars */
+.compare-search-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.compare-search-btn {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border: 1px solid var(--light-shade-6);
+    border-radius: var(--border-radius-medium);
+    padding: 10px;
+    background-color: var(--background-white);
+    box-shadow: var(--box-shadow);
+}
+
+.compare-search-btn input[type="search"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-default);
+    padding: 5px;
+    background-color: transparent;
+}
+
+/* Add Extra Button */
+.add-third-seachbar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-third-seachbar:hover {
+    background-color: var(--dark-shade-1);
+}
+
+/* Checkboxes Section */
+.check-box-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.cxp-checkbox-inline {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 5px 15px;
+    background-color: var(--background-white);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cxp-checkbox-inline.checked {
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
+}
+
+/* Compare Button */
+.compare-btn .scnd-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-small);
+    padding: 10px 20px;
+    font-size: var(--font-size-default);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s;
+}
+
+.compare-btn .scnd-button:hover {
+    background-color: #e6b800; /* Darker yellow */
+}
+
+/* Card Styling */
+.select-right-college {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.select-right-college img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.select-right-college h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.select-right-college p {
+    font-size: var(--paragraph-font-size);
+    color: var(--dark-shade-3);
+    margin-bottom: 0;
+}
+
+.select-right-college:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .col-sm-6 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-md-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Table Styling */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.compare-table thead {
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
+    text-align: left;
+}
+
+.compare-table th, .compare-table td {
+    padding: 15px;
+    border: 1px solid var(--light-shade-6);
+    text-align: left;
+}
+
+.compare-table tbody tr:nth-child(even) {
+    background-color: var(--light-shade-9);
+}
+
+.compare-table tbody tr:hover {
+    background-color: var(--light-shade-8);
+}
+
+.compare-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.compare-table td {
+    vertical-align: top;
+}
+
+/* Remove Button */
+.remove-third-row {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+    transition: background-color 0.3s;
+}
+
+.remove-third-row:hover {
+    background-color: #cc0000;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}

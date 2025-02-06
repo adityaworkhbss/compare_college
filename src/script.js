@@ -27,10 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create suggestion options
             filteredColleges.forEach((college) => {
                 const option = document.createElement("option");
-                option.value = college; // Set value of the option
-                option.textContent = college; // Display text of the option
+                option.value = college;
+                option.textContent = college;
                 dropdown.appendChild(option);
             });
+
+            console.log(dropdown);
 
             dropdown.style.display = "block";
         } else {
@@ -40,16 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Attach event listeners to search bars
     document.getElementById("collegeSearch1").addEventListener("input", (e) => {
-        filterSuggestions(e.target, "suggestions1");
+        filterSuggestions(e.target, "dropdown1");
     });
 
     document.getElementById("collegeSearch2").addEventListener("input", (e) => {
-        filterSuggestions(e.target, "suggestions2");
+        filterSuggestions(e.target, "dropdown2");
     });
 
     document.getElementById("collegeSearch3").addEventListener("input", (e) => {
-        filterSuggestions(e.target, "suggestions3");
+        filterSuggestions(e.target, "dropdown3");
     });
+
 
 
     // Add Search Bar Functionality
@@ -58,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
     const selectAllLabel = document.querySelector('.cxp-select-all');
     let isFirstClick = true;
+
 
     // Function to hide all columns
     function hideAllColumns() {
@@ -73,7 +77,17 @@ document.addEventListener('DOMContentLoaded', function () {
             column.style.display = "";
             column.classList.remove("hidden");
         });
+
+        // Ensure all checkboxes are checked
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = true;
+        });
+        if (selectAllCheckbox) selectAllCheckbox.checked = true;
     }
+
+    // Ensure visibility of all columns on load
+    showAllColumns();
+
 
     // Function to handle checkbox clicks
     function handleCheckboxClick(checkbox) {
@@ -135,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     label.style.color = isChecked ? "#155724" : "";
                 }
             });
-
             selectAllLabel.classList.toggle('checked', isChecked);
         });
     }
