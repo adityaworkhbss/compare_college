@@ -1,91 +1,142 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Add Search Bar Functionality
-    const addButton = document.querySelector('.add-third-seachbar');
-    const searchBarContainer = document.querySelector('.compare-search-buttons');
-    let searchBarCount = 1;
 
-    if (addButton && searchBarContainer) {
-        addButton.addEventListener('click', function () {
-            const newSearchBar = document.createElement('div');
-            newSearchBar.classList.add('col-md-6', 'col-sm-12');
-            newSearchBar.innerHTML = `
-                <div class="compare-search-btn">
-                    <div class="college-icon">
-                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
-                    </div>
-                    <span><i class="fas fa-search"></i></span>
-                    <input type="search" id="collegeSearch${searchBarCount}" placeholder="Search University">
-                    <ul id="suggestions${searchBarCount}" class="suggestions-list"></ul>
-                    <button class="remove-third-row">X</button>
-                </div>
-            `;
+    const collegeNames = [
+        "NMIMS University",
+        "Amity University",
+        "Delhi University",
+        "Manipal University",
+        "Pune University",
+        "Christ University",
+        "Symbiosis University"
+    ];
 
-            searchBarContainer.insertBefore(newSearchBar, addButton.parentElement);
-            searchBarCount++;
+// Function to filter suggestions
+    function filterSuggestions(input, dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+        const query = input.value.toLowerCase();
 
-            // Add event listener to the remove button
-            const removeButton = newSearchBar.querySelector('.remove-third-row');
-            removeButton.addEventListener('click', function () {
-                searchBarContainer.removeChild(newSearchBar);
+        // Clear previous suggestions
+        dropdown.innerHTML = "";
+
+        if (query) {
+            // Filter matching colleges
+            const filteredColleges = collegeNames.filter((college) =>
+                college.toLowerCase().includes(query)
+            );
+
+            // Create suggestion options
+            filteredColleges.forEach((college) => {
+                const option = document.createElement("option");
+                option.value = college; // Set value of the option
+                option.textContent = college; // Display text of the option
+                dropdown.appendChild(option);
             });
-        });
+
+            dropdown.style.display = "block";
+        } else {
+            dropdown.style.display = "none";
+        }
     }
 
-    // Checkbox Functionality
+    // Attach event listeners to search bars
+    document.getElementById("collegeSearch1").addEventListener("input", (e) => {
+        filterSuggestions(e.target, "suggestions1");
+    });
+
+    document.getElementById("collegeSearch2").addEventListener("input", (e) => {
+        filterSuggestions(e.target, "suggestions2");
+    });
+
+    document.getElementById("collegeSearch3").addEventListener("input", (e) => {
+        filterSuggestions(e.target, "suggestions3");
+    });
+
+
+    // Add Search Bar Functionality
     const checkboxes = document.querySelectorAll('.check-box-list input[type="checkbox"]');
     const labels = document.querySelectorAll('.cxp-checkbox-inline');
     const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
     const selectAllLabel = document.querySelector('.cxp-select-all');
+    let isFirstClick = true;
 
-    if (labels.length > 0) {
-        labels.forEach((label) => {
-            const checkbox = label.querySelector('input[type="checkbox"]');
-            if (checkbox && checkbox.name !== "selectAll") {
-                label.addEventListener('click', () => {
-                    label.classList.toggle('checked');
-                });
+    // Function to hide all columns
+    function hideAllColumns() {
+        document.querySelectorAll('.college-body').forEach(column => {
+            column.style.display = "none";
+            column.classList.add("hidden");
+        });
+    }
+
+    // Function to show all columns
+    function showAllColumns() {
+        document.querySelectorAll('.college-body').forEach(column => {
+            column.style.display = "";
+            column.classList.remove("hidden");
+        });
+    }
+
+    // Function to handle checkbox clicks
+    function handleCheckboxClick(checkbox) {
+        const label = checkbox.closest('label');
+        const columnClass = checkbox.name;
+
+       // console.log(columnClass);
+
+        if (isFirstClick) {
+            hideAllColumns(); // Hide all columns on first click
+            isFirstClick = false;
+        }
+
+        if (checkbox.checked) {
+            toggleColumnVisibility(columnClass, true); // Show the selected column
+            if (label) {
+                label.style.backgroundColor = "#d4edda";
+                label.style.border = "1px solid #28a745";
+                label.style.color = "#155724";
+            }
+        } else {
+            toggleColumnVisibility(columnClass, false); // Hide the deselected column
+            if (label) {
+                label.style.backgroundColor = "";
+                label.style.border = "";
+                label.style.color = "";
+            }
+        }
+    }
+
+    // Attach event listeners to checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+            if (this.name !== "selectAll") {
+                handleCheckboxClick(this);
             }
         });
-    }
+    });
 
+    // Handle "Select All" checkbox
     if (selectAllCheckbox && selectAllLabel) {
-        selectAllCheckbox.addEventListener('change', (e) => {
+        selectAllCheckbox.addEventListener('change', function (e) {
             const isChecked = e.target.checked;
-            labels.forEach((label) => {
-                const checkbox = label.querySelector('input[type="checkbox"]');
 
-                if (checkbox) {
-                    checkbox.checked = isChecked;
-                    label.classList.toggle('checked', isChecked);
-                    //console.log(checkbox.name);
-                    toggleColumnVisibility(checkbox.name, isChecked);
-                }
-            });
-            selectAllLabel.classList.toggle('checked', isChecked);
-        });
-    }
+            if (isChecked) {
+                showAllColumns(); // Show all columns when "Select All" is checked
+            } else {
+                hideAllColumns(); // Hide all columns when "Select All" is unchecked
+            }
 
-    // Change button color when clicked
-    if (checkboxes.length > 0) {
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function (e) {
-
-                const label = this.closest('label');
+            // Update the state of all checkboxes
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = isChecked;
+                const label = checkbox.closest('label');
                 if (label) {
-                    if (this.checked) {
-
-                        toggleColumnVisibility(label.textContent, true);
-                        label.style.backgroundColor = "#d4edda"; // Light green for clicked
-                        label.style.border = "1px solid #28a745"; // Green border
-                        label.style.color = "#155724"; // Green text
-                    } else {
-                        toggleColumnVisibility(label.textContent, false);
-                        label.style.backgroundColor = ""; // Reset background
-                        label.style.border = ""; // Reset border
-                        label.style.color = ""; // Reset text color
-                    }
+                    label.classList.toggle('checked', isChecked);
+                    label.style.backgroundColor = isChecked ? "#d4edda" : "";
+                    label.style.border = isChecked ? "1px solid #28a745" : "";
+                    label.style.color = isChecked ? "#155724" : "";
                 }
             });
+
+            selectAllLabel.classList.toggle('checked', isChecked);
         });
     }
 
@@ -286,94 +337,26 @@ function populateTable() {
 function toggleColumnVisibility(columnClass, isVisible) {
     const columns = document.querySelectorAll(".college-body");
 
+   // console.log(column.id);
+
     columns.forEach(column => {
-        if(columnClass.trim() == "Institute Type"){
-            if(column.id == "college1InstituteType"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2InstituteType"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Establishment"){
-            if(column.id == "college1Establishment"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Establishment"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Abbreviation"){
-            if(column.id == "college1Abbreviation"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Abbreviation"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "About"){
-            if(column.id == "college1About"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2About"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Accreditation"){
-            if(column.id == "college1Accreditation"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Accreditation"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Programs"){
-            if(column.id == "college1Programs"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Programs"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Specialisation"){
-            if(column.id == "college1Specialisation"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Specialisation"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Duration"){
-            if(column.id == "college1Duration"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Duration"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Learning Methodology"){
-            if(column.id == "college1LearningMethodoly"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2LearningMethodoly"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Fees"){
-            if(column.id == "college1Fees"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Fees"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Review"){
-            if(column.id == "college1Review"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Review"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Eligibility"){
-            if(column.id == "college1Eligibility"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2Eligibility"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Our Recommendation"){
-            if(column.id == "college1OurRecommendation"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2OurRecommendation"){
-                changeDisplay(column, isVisible);
-            }
-        }else if(columnClass.trim() == "Website"){
-            if(column.id == "college1InstituteType"){
-                changeDisplay(column, isVisible);
-            }else if(column.id == "college2InstituteType"){
-                changeDisplay(column, isVisible);
-            }
-        }else{
-            changeDisplay(column, isVisible);
-        }
+        console.log(column.id);
+       // console.log(columnClass);
+        if(columnClass.trim() == "institute-type" && (column.id == "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college2Specialisation")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "our-recommendation" && (column.id == "collegeOurRecommendation" || column.id == "college1OurRecommendation" || column.id == "college2OurRecommendation")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "website" && (column.id == "collegeWebsite" || column.id == "college1Website" || column.id == "college2Website")) changeDisplay(column, isVisible);
+        else if(columnClass.trim() == "selectAll") changeDisplay(column, isVisible);
     });
 }
 
