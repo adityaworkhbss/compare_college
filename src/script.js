@@ -12,6 +12,39 @@ document.addEventListener('DOMContentLoaded', function () {
         "IIM-Lucknow",
     ];
 
+    // Add Search Bar Functionality
+    const addButton = document.querySelector('.add-third-seachbar');
+    const searchBarContainer = document.querySelector('.compare-search-buttons');
+    let searchBarCount = 1;
+
+    if (addButton && searchBarContainer) {
+        addButton.addEventListener('click', function () {
+            console.log("clicked");
+            const newSearchBar = document.createElement('div');
+            newSearchBar.classList.add('col-md-6', 'col-sm-12');
+            newSearchBar.innerHTML = `
+                <div class="compare-search-btn">
+                    <div class="college-icon">
+                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
+                    </div>
+                    <span><i class="fas fa-search"></i></span>
+                    <input type="search" id="collegeSearch${searchBarCount}" placeholder="Search University">
+                    <ul id="suggestions${searchBarCount}" class="suggestions-list"></ul>
+                    <button class="remove-third-row">X</button>
+                </div>
+            `;
+
+            searchBarContainer.insertBefore(newSearchBar, addButton.parentElement);
+            searchBarCount++;
+
+            // Add event listener to the remove button
+            const removeButton = newSearchBar.querySelector('.remove-third-row');
+            removeButton.addEventListener('click', function () {
+                searchBarContainer.removeChild(newSearchBar);
+            });
+        });
+    }
+
     function filterSuggestions(input, dropdownId) {
         const dropdown = document.getElementById(dropdownId);
         const query = input.value.toLowerCase();
@@ -65,20 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
         filterSuggestions(e.target, "dropdown3");
     });
 
-    // document.getElementById("search_buttons").addEventListener("click", (e) => {
-    //     console.log("Running!!!");
-    // })
-
-
     document.getElementById("search_buttons").addEventListener("click", (e) => {
-
-            console.log("clicked");
-
             const college1 = document.getElementById("collegeSearch1").value;
             const college2 = document.getElementById("collegeSearch2").value;
-
-            console.log(college1);
-            console.log(college2);
 
             if (!college1 || !college2) {
                 alert("Please select colleges in both search bars.");
@@ -93,17 +115,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
     });
 
-
-
-    // Add Search Bar Functionality
     const checkboxes = document.querySelectorAll('.check-box-list input[type="checkbox"]');
     const labels = document.querySelectorAll('.cxp-checkbox-inline');
     const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
     const selectAllLabel = document.querySelector('.cxp-select-all');
     let isFirstClick = true;
 
-
-    // Function to hide all columns
     function hideAllColumns() {
         document.querySelectorAll('.college-body').forEach(column => {
             column.style.display = "none";
@@ -111,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to show all columns
     function showAllColumns() {
         document.querySelectorAll('.college-body').forEach(column => {
             column.style.display = "";
@@ -125,11 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectAllCheckbox) selectAllCheckbox.checked = true;
     }
 
-    // Ensure visibility of all columns on load
     showAllColumns();
 
-
-    // Function to handle checkbox clicks
     function handleCheckboxClick(checkbox) {
         const label = checkbox.closest('label');
         const columnClass = checkbox.name;
@@ -157,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Attach event listeners to checkboxes
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function () {
             if (this.name !== "selectAll") {
@@ -166,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Handle "Select All" checkbox
     if (selectAllCheckbox && selectAllLabel) {
         selectAllCheckbox.addEventListener('change', function (e) {
             const isChecked = e.target.checked;
@@ -192,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Initialize College Data and Populate Table
     if (Object.keys(collegeData).length > 0) {
         setCollegeDetails(collegeData["Dy Patil University"], collegeData["IIM-Lucknow"]);
         populateTable();
@@ -318,6 +328,10 @@ function setCollegeDetails(college1, college2) {
     college2_website = college2.Website;
 }
 
+function separator(value) {
+    return value.replace(/,/g, '<br>');
+}
+
 function populateTable() {
     const college1Header = document.getElementById("college1Header");
     const college2Header = document.getElementById("college2Header");
@@ -344,8 +358,8 @@ function populateTable() {
         document.getElementById("college1About").textContent = college1_about;
         document.getElementById("college2About").textContent = college2_about;
 
-        document.getElementById("college1Accrediation").textContent = college1_accrediation;
-        document.getElementById("college2Accrediation").textContent = college2_accrediation;
+        document.getElementById("college1Accrediation").innerHTML = separator(college1_accrediation);
+        document.getElementById("college2Accrediation").innerHTML = separator(college2_accrediation);
 
         document.getElementById("college1Duration").textContent = college1_Duration;
         document.getElementById("college2Duration").textContent = college2_Duration;
@@ -356,17 +370,17 @@ function populateTable() {
         document.getElementById("college1Fees").textContent = college1_Fees;
         document.getElementById("college2Fees").textContent = college2_Fees;
 
-        document.getElementById("college1Programs").textContent = college1_programs;
-        document.getElementById("college2Programs").textContent = college2_programs;
+        document.getElementById("college1Programs").innerHTML = separator(college1_programs);
+        document.getElementById("college2Programs").innerHTML = separator(college2_programs);
 
-        document.getElementById("college1Specialisation").textContent = college1_specialisation;
-        document.getElementById("college2Specialisation").textContent = college2_specialisation;
+        document.getElementById("college1Specialisation").innerHTML = separator(college1_specialisation);
+        document.getElementById("college2Specialisation").innerHTML = separator(college2_specialisation);
 
-        document.getElementById("college1Eligibility").textContent = college1_eligibility;
-        document.getElementById("college2Eligibility").textContent = college2_eligibility;
+        document.getElementById("college1Eligibility").innerHTML = separator(college1_eligibility);
+        document.getElementById("college2Eligibility").innerHTML = separator(college2_eligibility);
 
-        document.getElementById("college1Review").textContent = college1_review;
-        document.getElementById("college2Review").textContent = college2_review;
+        document.getElementById("college1Review").innerHTML = separator(college1_review);
+        document.getElementById("college2Review").innerHTML = separator(college2_review);
 
         document.getElementById("college1OurRecommendation").textContent = college1_ourRecommendation;
         document.getElementById("college2OurRecommendation").textContent = college2_ourRecommendation;
