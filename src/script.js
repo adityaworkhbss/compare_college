@@ -11,9 +11,71 @@ document.addEventListener('DOMContentLoaded', function () {
         "IIM-Lucknow",
     ];
 
+    const collegeData = {
+        "NMIMS University": {
+            "Colleges": {
+                "text": "NMIMS University",
+                "img": "https://edukyu.com//public/compare-page/nmims.png"
+            },
+            "Abbreviation": "NMIMS",
+            "Institute Type": "Private",
+            "Establishment": "1981",
+            "About": "NMIMS is a leading private university in India, offering a wide range of programs.",
+            "Accrediation": "NAAC A++, UGC, AICTE",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Fees": "₹2,00,000–₹3,00,000",
+            "Programs": "MBA, BBA, MCA",
+            "Specialisation": "Marketing, Finance, HR",
+            "Eligibility": "Graduation with 50% marks",
+            "Review": "Excellent faculty and infrastructure",
+            "Our recommendation": "Highly recommended for management programs",
+            "Website": "https://online.nmims.edu/"
+        },
+        "Amity University": {
+            "Colleges": {
+                "text": "Amity University",
+                "img": "https://edukyu.com//public/compare-page/amity.png"
+            },
+            "Abbreviation": "Amity",
+            "Institute Type": "Private",
+            "Establishment": "2005",
+            "About": "Amity University is known for its global presence and diverse programs.",
+            "Accrediation": "UGC, AICTE, NAAC A+",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Fees": "₹1,50,000–₹2,50,000",
+            "Programs": "MBA, BBA, MCA",
+            "Specialisation": "Marketing, Finance, HR",
+            "Eligibility": "Graduation with 50% marks",
+            "Review": "Good placement records",
+            "Our recommendation": "Recommended for affordable online programs",
+            "Website": "https://amityonline.com/"
+        },
+        // Add more colleges as needed
+    };
+
+    let college1_name, college2_name;
+    let college1_img, college2_img;
+    let college1_abbreviation, college2_abbreviation;
+    let college1_instituteType, college2_instituteType;
+    let college1_establishment, college2_establishment;
+    let college1_about, college2_about;
+    let college1_accrediation, college2_accrediation;
+    let college1_Duration, college2_Duration;
+    let college1_learningMethodolgy, college2_learningMethodolgy;
+    let college1_Fees, college2_Fees;
+    let college1_programs, college2_programs;
+    let college1_specialisation, college2_specialisation;
+    let college1_eligibility, college2_eligibility;
+    let college1_review, college2_review;
+    let college1_ourRecommendation, college2_ourRecommendation;
+    let college1_website, college2_website;
+
     const addButton = document.querySelector('.add-third-seachbar');
     const searchBarContainer = document.querySelector('.compare-search-buttons');
     let searchBarCount = 2;
+    let isFirstClick = true;
 
     if (addButton && searchBarContainer) {
         addButton.addEventListener('click', function () {
@@ -133,15 +195,29 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectAllCheckbox) selectAllCheckbox.checked = true;
     }
 
+    setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
+    populateTable();
     showAllColumns();
 
     function handleCheckboxClick(checkbox) {
         const columnClass = checkbox.name;
+        const label = checkbox.closest("label");
+
+        if (isFirstClick) {
+            hideAllColumns();
+            isFirstClick = false;
+        }
 
         if (checkbox.checked) {
-            toggleColumnVisibility(columnClass, true); // Show the selected column
+            toggleColumnVisibility(columnClass, true);
+            label.style.backgroundColor = "#d4edda";
+            label.style.border = "1px solid #28a745";
+            label.style.color = "#155724";
         } else {
-            toggleColumnVisibility(columnClass, false); // Hide the deselected column
+            toggleColumnVisibility(columnClass, false);
+            label.style.backgroundColor = "";
+            label.style.border = "";
+            label.style.color = "";
         }
     }
 
@@ -165,67 +241,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    const collegeData = {
-        "NMIMS University": {
-            "Colleges": {
-                "text": "NMIMS University",
-                "img": "https://edukyu.com//public/compare-page/nmims.png"
-            },
-            "Abbreviation": "NMIMS",
-            "Institute Type": "Private",
-            "Establishment": "1981",
-            "About": "NMIMS is a leading private university in India, offering a wide range of programs.",
-            "Accrediation": "NAAC A++, UGC, AICTE",
-            "Duration": "2 Years",
-            "Learning Methodolgy": "Online & Blended Learning",
-            "Fees": "₹2,00,000–₹3,00,000",
-            "Programs": "MBA, BBA, MCA",
-            "Specialisation": "Marketing, Finance, HR",
-            "Eligibility": "Graduation with 50% marks",
-            "Review": "Excellent faculty and infrastructure",
-            "Our recommendation": "Highly recommended for management programs",
-            "Website": "https://online.nmims.edu/"
-        },
-        "Amity University": {
-            "Colleges": {
-                "text": "Amity University",
-                "img": "https://edukyu.com//public/compare-page/amity.png"
-            },
-            "Abbreviation": "Amity",
-            "Institute Type": "Private",
-            "Establishment": "2005",
-            "About": "Amity University is known for its global presence and diverse programs.",
-            "Accrediation": "UGC, AICTE, NAAC A+",
-            "Duration": "2 Years",
-            "Learning Methodolgy": "Online & Blended Learning",
-            "Fees": "₹1,50,000–₹2,50,000",
-            "Programs": "MBA, BBA, MCA",
-            "Specialisation": "Marketing, Finance, HR",
-            "Eligibility": "Graduation with 50% marks",
-            "Review": "Good placement records",
-            "Our recommendation": "Recommended for affordable online programs",
-            "Website": "https://amityonline.com/"
-        },
-        // Add more colleges as needed
-    };
-
-    let college1_name, college2_name;
-    let college1_img, college2_img;
-    let college1_abbreviation, college2_abbreviation;
-    let college1_instituteType, college2_instituteType;
-    let college1_establishment, college2_establishment;
-    let college1_about, college2_about;
-    let college1_accrediation, college2_accrediation;
-    let college1_Duration, college2_Duration;
-    let college1_learningMethodolgy, college2_learningMethodolgy;
-    let college1_Fees, college2_Fees;
-    let college1_programs, college2_programs;
-    let college1_specialisation, college2_specialisation;
-    let college1_eligibility, college2_eligibility;
-    let college1_review, college2_review;
-    let college1_ourRecommendation, college2_ourRecommendation;
-    let college1_website, college2_website;
 
     function setCollegeDetails(college1, college2) {
         college1_name = college1.Colleges.text;
@@ -327,10 +342,32 @@ document.addEventListener('DOMContentLoaded', function () {
         const columns = document.querySelectorAll(".college-body");
 
         columns.forEach(column => {
-            if (column.id.includes(columnClass.replace("-", ""))) {
-                column.style.display = isVisible ? "" : "none";
-                column.classList.toggle("hidden", !isVisible);
-            }
+            if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college2Specialisation")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "our-recommendation" && (column.id == "collegeOurRecommendation" || column.id == "college1OurRecommendation" || column.id == "college2OurRecommendation")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "website" && (column.id == "collegeWebsite" || column.id == "college1Website" || column.id == "college2Website")) changeDisplay(column, isVisible);
+            else if (columnClass.trim() == "selectAll") changeDisplay(column, isVisible);
         });
+    }
+
+    function changeDisplay(column, isVisible) {
+        if (isVisible) {
+            column.style.display = "";
+            column.classList.remove("hidden");
+        } else {
+            column.style.display = "none";
+            column.classList.add("hidden");
+        }
+
     }
 });

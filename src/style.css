@@ -310,3 +310,63 @@ p {
 .hidden {
     display: none;
 }
+
+.check-box-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cxp-checkbox-inline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.cxp-checkbox-inline:hover {
+    border-color: #007bff;
+    background: #f0f8ff;
+}
+
+/* Hide the native checkbox */
+.cxp-checkbox-inline input[type="checkbox"] {
+    display: none;
+}
+
+/* Add a custom checkbox */
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Change the custom checkbox style when checked */
+.cxp-checkbox-inline input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #007bff;
+}
+
+/* Highlight the select-all button */
+.cxp-checkbox-inline.cxp-select-all {
+    font-weight: bold;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cxp-checkbox-inline {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
