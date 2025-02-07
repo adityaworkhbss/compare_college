@@ -7,6 +7,7 @@
     <meta name="description" content="Compare online colleges and universities with ease. Make an informed decision for your future.">
     <title>College Comparison</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -18,9 +19,8 @@
         <p class="text-center">Easily compare top online colleges side by side and make an informed decision for your future.</p>
 
         <div class="col-md-12 compare-search-buttons">
-
             <div class="col-md-6 col-sm-12">
-                <div class="compare-search-btn" style="position: relative;">
+                <div class="compare-search-btn"  style="position: relative;">
                     <div class="college-icon">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
@@ -32,35 +32,17 @@
                 </div>
             </div>
 
-            <!-- Search Bar 2 -->
             <div class="col-md-6 col-sm-12">
-                <div class="compare-search-btn" style="position: relative;">
+                <div class="compare-search-btn">
                     <div class="college-icon">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
-                    <div>
-                        <input type="search" id="collegeSearch2" placeholder="Search University">
-                        <select id="dropdown2" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
-                    </div>
+                    <input type="search" id="collegeSearch2" placeholder="Search University">
+                    <select id="dropdown2" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
                 </div>
             </div>
 
-
-            <div style="display:none;" class="col-md-4 col-sm-12" id="extraSearchBar">
-                <div class="compare-search-btn" style="position: relative;">
-                    <div class="college-icon">
-                        <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
-                    </div>
-                    <span><i class="fas fa-search"></i></span>
-                    <div>
-                        <input type="search" id="collegeSearch3" placeholder="Search University">
-                        <select id="dropdown3" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add extra search bar button -->
             <div class="add-extra-cont">
                 <button id="scnd-button" type="button" class="add add-third-seachbar">+</button>
             </div>
@@ -81,15 +63,6 @@
                     Establishment <input type="checkbox" name="establishment" value="establishment">
                 </label>
                 <!-- Add more checkboxes with matching names -->
-                <label class="cxp-checkbox-inline">
-                    Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
-                </label>
-                <label class="cxp-checkbox-inline">
-                    Institute Type <input type="checkbox" name="institute-type" value="institute-type">
-                </label>
-                <label class="cxp-checkbox-inline">
-                    Establishment <input type="checkbox" name="establishment" value="establishment">
-                </label>
                 <label class="cxp-checkbox-inline">
                     About <input type="checkbox" name="about" value="about">
                 </label>
@@ -148,13 +121,13 @@
         </div>
     </div>
 
-    <table class="compare-table" >
+    <table class="compare-table">
         <thead>
-            <tr>
-                <td id="collegeHeader" class="college-header">Colleges</td>
-                <td id="college1Header" class="college-header"></td>
-                <td id="college2Header" class="college-header"></td>
-            </tr>
+        <tr>
+            <td id="collegeHeader" class="college-header">Colleges</td>
+            <td id="college1Header" class="college-header"></td>
+            <td id="college2Header" class="college-header"></td>
+        </tr>
         </thead>
         <tbody>
         <tr>
@@ -169,9 +142,7 @@
         </tr>
         <tr>
             <td id="collegeAbbreviation" class="college-body">Abbreviation</td>
-            <td id="college1Abbreviation" class="college-body">
-                <div id="output"></div>
-            </td>
+            <td id="college1Abbreviation" class="college-body"></td>
             <td id="college2Abbreviation" class="college-body"></td>
         </tr>
         <tr>
@@ -229,7 +200,6 @@
             <td id="college1Website" class="college-body"><a href="https://online.nmims.edu/"></a></td>
             <td id="college2Website" class="college-body"><a href="https://amityonline.com/"></a></td>
         </tr>
-
         </tbody>
     </table>
 </div>
@@ -288,8 +258,6 @@
                     </div>
                 </div>
             </div>
-
-            </div>
         </div>
     </div>
 </div>
@@ -297,22 +265,17 @@
 <div style="padding-bottom:68px;" class="container  cxp-padding-72">
     <div class="row">
         <div class="col-md-12 text-center cxp-suggestion-content">
-            <h2 class="color-white">Still confused about your MBA options? Let our experts guide you toward the right
-                choice</h2>
+            <h2 class="color-white">Still confused about your MBA options? Let our experts guide you toward the right choice</h2>
             <a href="#cxphomeenqformed" data-toggle="modal" data-target="#cxphomeenqformed" aria-label="pop-up-form">
-
-                <button style="margin-top:21px;" class="scnd-button"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                                                          height="20" fill="currentColor" class="bi bi-telephone-fill vl-align" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z">
-                    </path>
-                </svg> &nbsp;Talk To Counsellor
+                <button style="margin-top:21px;" class="scnd-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill vl-align" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+                    </svg> &nbsp;Talk To Counsellor
                 </button>
             </a>
         </div>
     </div>
 </div>
-
 </body>
 
 </html>
