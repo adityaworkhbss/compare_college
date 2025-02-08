@@ -109,7 +109,15 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             dropdown.style.display = "none";
         }
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".compare-search-btn")) {
+                dropdown.style.display = "none";
+            }
+        });
     }
+
+
 
     document.getElementById("collegeSearch1").addEventListener("input", (e) => {
         filterSuggestions(e.target, "dropdown1");
@@ -228,13 +236,13 @@ document.addEventListener('DOMContentLoaded', function () {
         college1_instituteType = college1["Institute Type"];
         college1_establishment = college1.Establishment;
         college1_about = college1.About;
-        college1_accrediation = college1.Accrediation;
-        college1_Duration = college1.Duration;
+        college1_accrediation = convertTextToLine(college1.Accrediation);
+        college1_Duration = convertTextToLine(college1.Duration);
         college1_learningMethodolgy = college1["Learning Methodolgy"];
         college1_Fees = college1.Fees;
-        college1_programs = college1.Programs;
-        college1_specialisation = college1.Specialisation;
-        college1_eligibility = college1.Eligibility;
+        college1_programs = convertTextToLine(college1.Programs);
+        college1_specialisation = convertTextToLine(college1.Specialisation);
+        college1_eligibility = convertTextToLine(college1.Eligibility);
         college1_review = college1.Review;
         college1_ourRecommendation = college1["Our recommendation"];
         college1_website = college1.Website;
@@ -245,13 +253,13 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_instituteType = college2["Institute Type"];
         college2_establishment = college2.Establishment;
         college2_about = college2.About;
-        college2_accrediation = college2.Accrediation;
-        college2_Duration = college2.Duration;
+        college2_accrediation = convertTextToLine(college2.Accrediation);
+        college2_Duration = convertTextToLine(college2.Duration);
         college2_learningMethodolgy = college2["Learning Methodolgy"];
         college2_Fees = college2.Fees;
-        college2_programs = college2.Programs;
-        college2_specialisation = college2.Specialisation;
-        college2_eligibility = college2.Eligibility;
+        college2_programs = convertTextToLine(college2.Programs);
+        college2_specialisation = convertTextToLine(college2.Specialisation);
+        college2_eligibility = convertTextToLine(college2.Eligibility);
         college2_review = college2.Review;
         college2_ourRecommendation = college2["Our recommendation"];
         college2_website = college2.Website;
@@ -283,11 +291,11 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1About").textContent = college1_about;
             document.getElementById("college2About").textContent = college2_about;
 
-            document.getElementById("college1Accrediation").textContent = college1_accrediation;
-            document.getElementById("college2Accrediation").textContent = college2_accrediation;
+            document.getElementById("college1Accrediation").innerHTML = college1_accrediation;
+            document.getElementById("college2Accrediation").innerHTML = college2_accrediation;
 
-            document.getElementById("college1Duration").textContent = college1_Duration;
-            document.getElementById("college2Duration").textContent = college2_Duration;
+            document.getElementById("college1Duration").innerHTML = college1_Duration;
+            document.getElementById("college2Duration").innerHTML = college2_Duration;
 
             document.getElementById("college1LearningMethodoly").textContent = college1_learningMethodolgy;
             document.getElementById("college2LearningMethodoly").textContent = college2_learningMethodolgy;
@@ -295,16 +303,16 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1Fees").textContent = college1_Fees;
             document.getElementById("college2Fees").textContent = college2_Fees;
 
-            document.getElementById("college1Programs").textContent = college1_programs;
-            document.getElementById("college2Programs").textContent = college2_programs;
+            document.getElementById("college1Programs").innerHTML = college1_programs;
+            document.getElementById("college2Programs").innerHTML = college2_programs;
 
-            document.getElementById("college1Specialisation").textContent = college1_specialisation;
-            document.getElementById("college2Specialisation").textContent = college2_specialisation;
+            document.getElementById("college1Specialisation").innerHTML = college1_specialisation;
+            document.getElementById("college2Specialisation").innerHTML = college2_specialisation;
 
-            document.getElementById("college1Eligibility").textContent = college1_eligibility;
+            document.getElementById("college1Eligibility").innerHTML = college1_eligibility;
             document.getElementById("college2Eligibility").textContent = college2_eligibility;
 
-            document.getElementById("college1Review").textContent = college1_review;
+            document.getElementById("college1Review").innerHTML = college1_review;
             document.getElementById("college2Review").textContent = college2_review;
 
             document.getElementById("college1OurRecommendation").textContent = college1_ourRecommendation;
@@ -351,6 +359,10 @@ document.addEventListener('DOMContentLoaded', function () {
             column.classList.add("hidden");
         }
 
+    }
+
+    function convertTextToLine(value){
+        return value.replace(/,/g, '<br>');
     }
 });
 
