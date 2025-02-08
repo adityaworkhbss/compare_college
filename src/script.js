@@ -2,6 +2,30 @@ document.addEventListener('DOMContentLoaded', function () {
     let collegeData = {};
     const collegeNames = [];
 
+    const accrediationImages = new Map([
+        ["NAAC", "https://upload.wikimedia.org/wikipedia/en/1/1d/NAAC_LOGO.png"],
+        ["NIRF", "https://upload.wikimedia.org/wikipedia/en/5/52/National_Institutional_Ranking_Framework_logo.png"],
+        ["UGC", "https://upload.wikimedia.org/wikipedia/en/4/4e/UGC_India_Logo.png"],
+        ["CAREERS-360", "https://img-cdn.thepublive.com/fit-in/1280x960/filters:format(webp)/afaqs/media/post_attachments/34728a6971dffd8dc77e4b6c925faecdc8774743d099343ed19b6387ba4aaa16.jpg"],
+        ["NBA", "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/National_Board_of_Accreditation.svg/330px-National_Board_of_Accreditation.svg.png"],
+        ["WES", "https://www.wes.org/wp-content/themes/storyware/assets/images/logo.svg"],
+        ["ACU", "https://www.acu.ac.uk/dist/images/logo.svg"],
+        ["QSWUR", "https://upload.wikimedia.org/wikipedia/commons/c/c0/QS_University_Rankings_Logo.jpg?20190826092038"],
+        ["AICTE", "https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png"],
+        ["AIU", "https://upload.wikimedia.org/wikipedia/en/5/53/Association_of_Indian_Universities_Logo.svg"],
+        ["KSURF", "https://i0.wp.com/allaboutbelgaum.com/content/uploads/2019/09/rateing.jpg?resize=600%2C256&ssl=1"],
+        ["AUAP", "https://auap.org/web/image/website/1/logo/AUAP?unique=5c9188c"],
+        ["WUR", "https://static.cdnlogo.com/logos/q/27/qs-world-university-rankings.svg"],
+        ["QS I-GAUGE", "https://bit-bangalore.edu.in/assets/images/accreditation/approval_8.png"],
+        ["WUA", "https://www.qahe.org/wp-content/uploads/2023/05/World-University-Ecumenical-520-x-330.jpg"],
+        ["INDIA TODAY", "https://bestcolleges.indiatoday.in/public/asset/images/new-images/it-logo.png"],
+        ["IMPACT RANKING", "https://www.prd.timeshighereducation.com/sites/def…ews_image_style/public/impact_4.jpg?itok=OYr_aI8d"],
+        ["ISO", "https://banner2.cleanpng.com/20180901/xwz/kisspng-iso-9-1-logo-iso-9-quality-management-systems-certificazioni-ultimate-italia-1713945295220.webp"],
+        ["DEC", "https://www.deac.org/wp-content/uploads/2023/10/DEAC-Logo-Mark.svg"],
+        ["DTE", "https://www.deac.org/wp-content/uploads/2023/10/DEAC-Logo-Mark.svg"]
+    ]);
+
+
     fetch("college_db.json")
         .then(response => response.json())
         .then(data => {
@@ -14,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             populateTable();
             showAllColumns();
         })
-        .catch(error => console.error("Error loading JSON:", error));
+        .catch(error => showError("Error loading JSON"));
 
 
     let college1_name, college2_name, college3_name;
@@ -78,9 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const hiddenRows = document.querySelectorAll(".hidden-row-element");
 
-
                 hiddenRows.forEach(row => {
-                    console.log(row);
                     row.style.display = "none";
                     row.classList.add("hidden-row");
                 });
@@ -128,8 +150,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-
     document.getElementById("collegeSearch1").addEventListener("input", (e) => {
         filterSuggestions(e.target, "dropdown1");
     });
@@ -145,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         if (!college1 || !college2) {
-            alert("Please select colleges in both search bars.");
+            showError("Please select colleges in both search bars.");
             return;
         }
 
@@ -164,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
             populateTable();
             showAllColumns();
         } else {
-            alert("Selected colleges are not in the dataset.");
+            showError("Selected colleges are not in the dataset.");
         }
     });
 
@@ -256,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
         college1_instituteType = college1["Institute Type"];
         college1_establishment = college1.Establishment;
         college1_about = college1.About;
-        college1_accrediation = convertTextToLine(college1.Accrediation);
+        college1_accrediation = convertTextToImage(college1.Accrediation);
         college1_Duration = convertTextToLine(college1.Duration);
         college1_learningMethodolgy = college1["Learning Methodolgy"];
         college1_Fees = college1.Fees;
@@ -273,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_instituteType = college2["Institute Type"];
         college2_establishment = college2.Establishment;
         college2_about = college2.About;
-        college2_accrediation = convertTextToLine(college2.Accrediation);
+        college2_accrediation = convertTextToImage(college2.Accrediation);
         college2_Duration = convertTextToLine(college2.Duration);
         college2_learningMethodolgy = college2["Learning Methodolgy"];
         college2_Fees = college2.Fees;
@@ -292,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_instituteType = college3["Institute Type"];
             college3_establishment = college3.Establishment;
             college3_about = college3.About;
-            college3_accrediation = convertTextToLine(college3.Accrediation);
+            college3_accrediation = convertTextToImage(college3.Accrediation);
             college3_Duration = convertTextToLine(college3.Duration);
             college3_learningMethodolgy = college3["Learning Methodolgy"];
             college3_Fees = college3.Fees;
@@ -351,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college2Specialisation").innerHTML = college2_specialisation;
 
             document.getElementById("college1Eligibility").innerHTML = college1_eligibility;
-            document.getElementById("college2Eligibility").textContent = college2_eligibility;
+            document.getElementById("college2Eligibility").innerHTML = college2_eligibility;
 
             document.getElementById("college1Review").innerHTML = college1_review;
             document.getElementById("college2Review").textContent = college2_review;
@@ -384,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("college3Website").innerHTML = `<a href="${college3_website}" target="_blank">Visit Website</a>`;
             }
         } else {
-            console.error("One or more elements not found in the DOM.");
+            showError("One or more elements not found in the DOM.");
         }
     }
 
@@ -427,6 +447,38 @@ document.addEventListener('DOMContentLoaded', function () {
     function convertTextToLine(value){
         return value.replace(/,/g, '<br>');
     }
+
+    function convertTextToImage(value) {
+        const accreditations = value.split(',');
+
+        const accreditationImagesHTML = accreditations.map(acc => {
+            const trimmedAcc = acc.trim();
+            const imageUrl = accrediationImages.get(trimmedAcc);
+            if (imageUrl) {
+                return `<img src="${imageUrl}" alt="${trimmedAcc}" title="${trimmedAcc}" style="width: 50px; height: auto; margin-right: 5px;">`;
+            }
+            return "";
+        }).join('  ');
+
+        return accreditationImagesHTML;
+    }
+
+    function showError(message) {
+        const snackbar = document.createElement('div');
+        snackbar.classList.add('snackbar');
+        snackbar.textContent = message;
+        document.body.appendChild(snackbar);
+
+        setTimeout(() => {
+            snackbar.style.opacity = '1';  // Fade in
+            setTimeout(() => {
+                snackbar.style.opacity = '0';  // Fade out
+                setTimeout(() => {
+                    document.body.removeChild(snackbar);
+                }, 500); // Remove after fade out
+            }, 3000); // Display for 3 seconds
+        }, 100);
+    }
 });
 
 /*
@@ -443,8 +495,5 @@ document.addEventListener('DOMContentLoaded', function () {
 * 10 review
 * 11 our-recommendation
 * 12 website
-*
-*
-*
 *
 * */

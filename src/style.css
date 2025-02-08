@@ -620,3 +620,17 @@ h3 {
     font-size: 1.2rem;
     color: #fff;
 }
+
+.snackbar {
+    position: fixed; /* Stay at the bottom */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 16px;
+    border-radius: 6px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transitions */
+    z-index: 1000; /* Ensure it's on top */
+}
