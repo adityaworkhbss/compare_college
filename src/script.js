@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let collegeData = {};
     const collegeNames = [];
 
-    const accrediationImages = new Map([
+    const accreditationImages = new Map([
         ["NAAC", "https://upload.wikimedia.org/wikipedia/en/1/1d/NAAC_LOGO.png"],
         ["NIRF", "https://upload.wikimedia.org/wikipedia/en/5/52/National_Institutional_Ranking_Framework_logo.png"],
         ["UGC", "https://upload.wikimedia.org/wikipedia/en/4/4e/UGC_India_Logo.png"],
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         addButton.addEventListener('click', function () {
 
             if (searchBarCount >= 3) {
-                alert("You can only add up to 3 search bars.");
+                showError("You can only add up to 3 search bars.");
                 return;
             }
 
@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const accreditationImagesHTML = accreditations.map(acc => {
             const trimmedAcc = acc.trim();
-            const imageUrl = accrediationImages.get(trimmedAcc);
+            const imageUrl = accreditationImages.get(trimmedAcc);
             if (imageUrl) {
                 return `<img src="${imageUrl}" alt="${trimmedAcc}" title="${trimmedAcc}" style="width: 50px; height: auto; margin-right: 5px;">`;
             }
@@ -479,6 +479,60 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 3000); // Display for 3 seconds
         }, 100);
     }
+
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const closeButton = document.querySelector('.close-button');
+
+    console.log(closeButton);
+
+    closeButton.addEventListener('click', () => {
+        modalOverlay.style.display = 'none'; // Hide the modal
+    });
+
+    // Get references to the button, modal, and close button
+    const talkToCounsellorBtn = document.getElementById('talkToCounsellorBtn');
+
+    // Show modal when "Talk To Counsellor" button is clicked
+    talkToCounsellorBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        modalOverlay.style.display = 'block'; // Show the modal
+    });
+
+    // Hide modal when clicking outside the modal content
+    modalOverlay.addEventListener('click', function (e) {
+        if (e.target === modalOverlay) {
+            modalOverlay.style.display = 'none'; // Hide the modal
+        }
+    });
+
+    // Get references to the button and modal
+    const clickHereBtn = document.getElementById('clickHereBtn');
+    const modal = document.getElementById('modal-subscribe-compare');
+
+    console.log(modal);
+
+    // Show modal when "Click Here" button is clicked
+    clickHereBtn.addEventListener('click', function () {
+        modal.style.display = 'block';
+        modal.classList.add('show');
+    });
+
+    // Hide modal when close button is clicked
+    const closeButton2 = modal.querySelector('.close');
+    closeButton2.addEventListener('click', function () {
+        modal.style.display = 'none';
+        modal.classList.remove('show');
+    });
+
+    // Hide modal when clicking outside the modal content
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            modal.classList.remove('show');
+        }
+    });
+
+
 });
 
 /*

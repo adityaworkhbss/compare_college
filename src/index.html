@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -296,7 +296,7 @@
     <div class="row">
         <div class="col-md-12 text-center cxp-suggestion-content">
             <h2 class="color-white">Still confused about your MBA options? Let our experts guide you toward the right choice</h2>
-            <a href="#cxphomeenqformed" data-toggle="modal" data-target="#cxphomeenqformed" aria-label="pop-up-form">
+            <a href="#cxphomeenqformed" data-toggle="modal" data-target="#cxphomeenqformed" aria-label="pop-up-form" id="talkToCounsellorBtn">
                 <button style="margin-top:21px;" class="scnd-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill vl-align" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
@@ -306,6 +306,203 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title">Share your details and<br>our counselor will connect you.</h5>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Your Name*" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter Your E-mail id*" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Your City*" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" required>
+                        <option value="" disabled selected>Choose Your University</option>
+                        <option value="D.Y.Patil University">D.Y.Patil University</option>
+                        <option value="Amity University">Amity University</option>
+                        <option value="Manipal University">Manipal University</option>
+                        <option value="Lovely Professional University">Lovely Professional University</option>
+                        <option value="Jain University">Jain University</option>
+                        <option value="Shoolini University">Shoolini University</option>
+                        <option value="Uttaranchal University">Uttaranchal University</option>
+                        <option value="Vivekananda Global University">Vivekananda Global University</option>
+                        <option value="London Metropolitan University">London Metropolitan University</option>
+                    </select>
+                </div>
+                <div class="form-group mobile-number-wrapper">
+                    <span class="country-code">+91</span>
+                    <input type="number" class="form-control mobile-number-input" placeholder="Enter Your Mobile Number*" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="termsCheck" required>
+                    <label for="termsCheck" class="terms-label">I authorise Edukyu and its associates to contact me with updates & notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Enroll Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-subscribe-compare" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-full-width" role="document">  <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="left-right-body">
+                        <div class="left">
+                            <div class="col-12">
+                                <h4 class="text-center">Compare and select from 20+ Universities</h4>
+                                <div class="university-slider">
+                                    <div class="slide-track">
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt="DPU"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/amity.png" alt="Amity University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/jain.png" alt="Jain University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/nmims-logo.png" alt="NMIMS"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/lpu.png" alt="LPU"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/manipal.png" alt="Manipal University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/online.png" alt="Online University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/sholoni.png" alt="Sholoni University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/vk.png" alt="VK University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt="DPU"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/amity.png" alt="Amity University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/jain.png" alt="Jain University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/nmims-logo.png" alt="NMIMS"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/lpu.png" alt="LPU"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/manipal.png" alt="Manipal University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/online.png" alt="Online University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/sholoni.png" alt="Sholoni University"></div>
+                                        <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/vk.png" alt="VK University"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="features-grid">
+                                        <div class="feature-item">
+                                            <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/no-cost.gif" alt="No Cost EMI">
+                                            <p>No Cost EMI Option</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/unbiased.gif" alt="Unbiased Suggestion">
+                                            <p>Unbiased Suggestion</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/guidance.gif" alt="Expert Guidance">
+                                            <p>Guidance from Expert</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/placement.gif" alt="100% Placement Assistance">
+                                            <p>100% Placement Assistance</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/pay-after.gif" alt="Pay After Placement">
+                                            <p>Pay After Placement</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/scholarship.gif" alt="Scholarship Opportunities">
+                                            <p>Scholarship Opportunities</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <h4 class="modal-title text-center">Still Confused About the Right University for Your Online Degree?<br>Get Expert Assistance Now!</h4>
+                                <form id="enrollmentForm">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter Your Name*" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Enter Your E-mail id*" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter Your City*" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" required>
+                                            <option value="" disabled selected>Choose Your University</option>
+                                            <option value="D.Y.Patil University">D.Y.Patil University</option>
+                                            <option value="Amity University">Amity University</option>
+                                            <option value="Manipal University">Manipal University</option>
+                                            <option value="Lovely Professional University">Lovely Professional University</option>
+                                            <option value="Jain University">Jain University</option>
+                                            <option value="Shoolini University">Shoolini University</option>
+                                            <option value="NMIMS University">NMIMS University</option>
+                                            <option value="Uttaranchal University">Uttaranchal University</option>
+                                            <option value="Vivekananda Global University">Vivekananda Global University</option>
+                                            <option value="London Metropolitan University">London Metropolitan University</option>
+                                            <option value="Sharda University">Sharda University</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">+91</div>
+                                            <input type="text" class="form-control" placeholder="Enter Your Mobile Number*" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="6Ld4ZjwpAAAAAAM5C7UTWHnhZIsjfhwBf01X1gMJ"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox" required> I authorize contact via Email, SMS, WhatsApp, and Voice call.
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Enroll Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="green-bg cxp_blog_sticky">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-xl-3 d-none d-md-block"></div>
+            <div class="col-lg-1 col-xl-1 col-md-2 d-flex justify-content-center align-items-center">
+            <img class="sticky-logo" src="https://edukyu.com/assets/cxp-assets/imgs/blog/study.svg" height="60px" alt="Study Logo">
+        </div>
+            <div class="col-lg-5 col-xl-4 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
+                <h2 class="white-txt cxp-blog-sticky-text" data-toggle="modal" data-target="#modal-subscribe-compare">
+                    <span class="yellow-txt">Talk to Expert Counsellor</span>
+                </h2>
+            </div>
+            <div class="col-lg-2 col-xl-1 col-md-2 d-flex justify-content-center">
+                <button
+                        id="clickHereBtn"
+                        data-toggle="modal"
+                        data-target="#modal-subscribe-compare"
+                        class="btn btn-sm cxp-slider-button-home-enquire-ed cxp-secondary-button-home-enquire-ed cxp-blog-sticky-btn "
+                        role="button">
+                    Click Here
+                </button>
+
+            </div>
+            <div class="col-lg-2 col-xl-3 d-none d-md-block"></div>  </div>
+    </div>
+</div>
+
 
 </body>
 

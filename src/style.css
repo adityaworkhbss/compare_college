@@ -44,6 +44,7 @@ body {
     background-color: var(--background-color);
     color: var(--font-color);
     line-height: 1.6;
+    padding-bottom: 120px;
 }
 
 .container {
@@ -633,4 +634,737 @@ h3 {
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease-in-out; /* Smooth transitions */
     z-index: 1000; /* Ensure it's on top */
+}
+
+/* Modal Styles */
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Ensure it's on top */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #f0f5f0; /* Light green background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 900px; /* Adjust width as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-end; /* Align close button to the right */
+    margin-bottom: 10px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.mobile-number-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.country-code {
+    width: 60px;
+    background-color: #e9ecef;
+    color: #212529;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.mobile-number-input {
+    flex-grow: 1;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    padding-left: 12px;
+    height: 45px;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start; /* Align checkbox to top of label */
+}
+
+.terms-label {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Make button take full width */
+}
+
+.btn:hover {
+    background-color: #e6ad0c;
+}
+
+/* Style the select dropdown */
+select.form-control {
+    -webkit-appearance: none; /* Remove default arrow */
+    -moz-appearance: none; /* Remove default arrow */
+    appearance: none; /* Remove default arrow */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24h-24z' fill='none'/></svg>"); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Adjust to accommodate arrow */
+}
+
+
+/* Modal Content Background */
+.modal-content {
+    background-color: #f0f5f0; /* Light green background */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    /*overflow: hidden; !* Ensure rounded corners are visible *!*/
+}
+
+/* Modal Header */
+.modal-header {
+    border-bottom: none; /* Remove default border */
+    padding: 20px; /* Add padding */
+}
+
+.close {
+    opacity: 1; /* Make close button more visible */
+    font-size: 24px; /* Adjust size as needed */
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 0; /* Remove default padding */
+}
+
+/* Left Section (University Info) */
+.left-section {
+    padding: 30px; /* Add padding */
+    background-color: #fff; /* White background */
+}
+
+.university-slider {
+    /* Style for the slider (see below) */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Spacing between grid items */
+    margin-top: 30px; /* Add spacing above grid */
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.feature-item img {
+    max-width: 60px; /* Adjust icon size as needed */
+    margin-bottom: 10px; /* Add spacing below icon */
+}
+
+/* Right Section (Form) */
+.right-section {
+    padding: 30px; /* Add padding */
+}
+
+.modal-title {
+    font-weight: bold; /* Make title bold */
+    margin-bottom: 20px; /* Add spacing below title */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Add spacing below form groups */
+}
+
+.form-control {
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.input-group-addon {
+    background-color: #eee; /* Light gray background for +91 */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ced4da; /* Match input border */
+    border-right: none; /* Remove right border */
+    border-radius: 5px 0 0 5px; /* Round left corners only */
+}
+
+.btn-primary {
+    background-color: #ffc107; /* Yellow button */
+    border-color: #ffc107; /* Yellow border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Add padding */
+}
+
+.btn-primary:hover {
+    background-color: #e6ad0c; /* Darker yellow on hover */
+    border-color: #e6ad0c; /* Darker yellow border on hover */
+}
+
+/* Slider Styling (Example) */
+.university-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Adjust animation duration as needed */
+}
+
+.slide {
+    height: 100px; /* Adjust slide height as needed */
+    margin: 0 10px; /* Adjust spacing between slides */
+}
+
+.slide img {
+    max-height: 100%; /* Make images fit within slide */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 3 * 20)); } /* Adjust multiplier based on number of slides */
+}
+
+.modal-row{
+    display: flex;
+}
+
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-section h4 {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.university-slider {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.slide {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.right-section h4 {
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+
+/* Modal Size and Position */
+.modal-dialog {
+    max-width: 50%;
+    margin: 30px auto;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #f0f5f0; /* Light green background */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+    overflow: hidden; /* Ensure content fits within rounded corners */
+}
+
+/* Modal Header */
+.modal-header {
+    border-bottom: none; /* Remove default border */
+    padding: 15px;
+}
+
+.close {
+    font-size: 24px;
+    opacity: 1; /* Make close button more visible */
+}
+
+/* Modal Row Layout */
+.modal-row {
+    display: flex;
+    justify-content: space-between; /* Even spacing between sections */
+    align-items: flex-start; /* Align sections to the top */
+    gap: 20px; /* Add spacing between sections */
+    padding: 20px;
+}
+
+/* Left Section (University Info) */
+.left-section {
+    flex: 1; /* Take up equal space */
+    max-width: 45%; /* Limit width */
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding in width/height */
+    padding: 20px;
+    text-align: center;
+}
+
+.left-section h4 {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: left;
+}
+
+.feature-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Right Section (Form) */
+.right-section {
+    flex: 1; /* Take up equal space */
+    max-width: 50%; /* Limit width */
+    background-color: #f8f9fa;
+    box-sizing: border-box; /* Include padding in width/height */
+    padding: 20px;
+    text-align: center;
+}
+
+.right-section h4 {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.input-group-addon {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-right: none; /* Remove right border */
+    border-radius: 5px 0 0 5px; /* Round left corners only */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+.row-body {
+    display: flex;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .modal-row {
+        flex-direction: column; /* Stack sections */
+        gap: 10px;
+    }
+
+    .left-section,
+    .right-section {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
+
+
+/* Sticky Footer Styles */
+.cxp_blog_sticky {
+    height: 10%;
+    position: fixed; /* Stay in place */
+    left: 0;
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    background-color: #008080; /* Green background */
+    padding: 10px 0; /* Add some padding */
+    z-index: 100; /* Ensure it's on top of other content */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.green-bg { /* Apply green background to the sticky footer */
+    background-color: #008080;
+}
+
+.container-fluid {
+    max-width: 1200px; /* Or your preferred max-width */
+    margin: 0 auto;
+}
+
+.row {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center; /* Vertically center content */
+}
+
+.col-lg-*, .col-xl-*, .col-md-* {
+    display: flex; /* Use flexbox for the columns too */
+}
+
+.sticky-logo {
+    max-width: 80%; /* Make sure logo fits its container */
+    height: auto;
+}
+
+.cxp-blog-sticky-text {
+    color: white;
+    font-size: 1.2rem; /* Adjust as needed */
+    cursor: pointer; /* Make text clickable */
+    margin: 0; /* Remove default margins */
+}
+
+.yellow-txt {
+    color: yellow;
+}
+
+.cxp-blog-sticky-btn {
+    background-color: #f0ad4e; /* Example yellow color */
+    border-color: #f0ad4e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+/* Hide columns on smaller screens (adjust breakpoint as needed) */
+@media (max-width: 767px) {
+    .d-none { /* Hide on smaller screens */
+        display: none !important;
+    }
+}
+
+/* Center the content on smaller screens */
+@media (max-width: 767px) {
+    .col-md-6 {
+        justify-content: center;
+    }
+}
+
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    margin: auto; /* Center the modal content */
+}
+
+.modal-header {
+    text-align: right;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mobile-number-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.country-code {
+    margin-right: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.terms-label {
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e0a800;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex; /* Show the modal when it has the 'show' class */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+}
+
+.modal-header {
+    text-align: right;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-addon {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+.left-right-body{
+    display: flex;
+}
+
+.left{
+    padding-right: 5px;
+    max-width: 50%;
+}
+
+.right{
+    padding-left: 5px;
+    max-width: 50%;
 }
