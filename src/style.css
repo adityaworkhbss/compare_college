@@ -245,12 +245,89 @@ p {
     h2 {
         font-size: 28px;
     }
+
+    .compare-search-buttons {
+        flex-direction: column;
+    }
+
+    .compare-search-btn {
+        width: 100%;
+    }
+
+    .add-third-seachbar {
+        width: 100%;
+        border-radius: var(--border-radius-medium);
+    }
+
+    .check-box-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cxp-checkbox-inline {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .select-right-college {
+        padding: 15px;
+    }
+
+    .select-right-college img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .select-right-college h3 {
+        font-size: 16px;
+    }
+
+    .select-right-college p {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .col-md-4 {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .compare-search-btn {
+        padding: 8px;
+    }
+
+    .compare-search-btn input[type="search"] {
+        font-size: 14px;
+    }
+
+    .add-third-seachbar {
+        font-size: 16px;
+    }
+
+    .cxp-checkbox-inline {
+        font-size: 12px;
+    }
+
+    .select-right-college {
+        padding: 10px;
+    }
+
+    .select-right-college img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .select-right-college h3 {
+        font-size: 14px;
+    }
+
+    .select-right-college p {
+        font-size: 10px;
     }
 }
 
@@ -404,4 +481,59 @@ p {
 .dropdown option:hover {
     background: var(--primary-color);
     color: var(--font-color-white);
+}
+/* Style for container and suggestion content */
+.cxp-padding-72 {
+    padding: 72px 15px;
+    background-color: var(--primary-color); /* Edukyu Petrol */
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+}
+
+.cxp-suggestion-content h2 {
+    color: var(--font-color-white); /* White text */
+    font-size: var(--font-size-heading);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cxp-suggestion-content .scnd-button {
+    background-color: var(--secondary-color); /* Yellow button */
+    color: var(--primary-color); /* Text matches primary color */
+    border: none;
+    border-radius: var(--border-radius-small);
+    padding: 10px 20px;
+    font-size: var(--font-size-default);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.cxp-suggestion-content .scnd-button:hover {
+    background-color: #e6b800; /* Slightly darker yellow */
+    color: var(--font-color); /* Font turns darker for emphasis */
+}
+
+.cxp-suggestion-content svg {
+    fill: var(--primary-color); /* Icon matches text color */
+}
+
+.cxp-suggestion-content .vl-align {
+    vertical-align: middle;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .cxp-suggestion-content h2 {
+        font-size: 20px; /* Smaller font for smaller screens */
+    }
+
+    .cxp-suggestion-content .scnd-button {
+        font-size: 14px; /* Adjust button size */
+        padding: 8px 15px;
+    }
 }
