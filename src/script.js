@@ -1,59 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const collegeNames = [
-        "NMIMS University",
-        "Amity University",
-        "Delhi University",
-        "Manipal University",
-        "Pune University",
-        "Christ University",
-        "Symbiosis University",
-        "Dy Patil University",
-        "IIM-Lucknow",
-    ];
+    let collegeData = {};
+    const collegeNames = [];
 
-    const collegeData = {
-        "NMIMS University": {
-            "Colleges": {
-                "text": "NMIMS University",
-                "img": "https://edukyu.com//public/compare-page/nmims.png"
-            },
-            "Abbreviation": "NMIMS",
-            "Institute Type": "Private",
-            "Establishment": "1981",
-            "About": "NMIMS is a leading private university in India, offering a wide range of programs.",
-            "Accrediation": "NAAC A++, UGC, AICTE",
-            "Duration": "2 Years",
-            "Learning Methodolgy": "Online & Blended Learning",
-            "Fees": "₹2,00,000–₹3,00,000",
-            "Programs": "MBA, BBA, MCA",
-            "Specialisation": "Marketing, Finance, HR",
-            "Eligibility": "Graduation with 50% marks",
-            "Review": "Excellent faculty and infrastructure",
-            "Our recommendation": "Highly recommended for management programs",
-            "Website": "https://online.nmims.edu/"
-        },
-        "Amity University": {
-            "Colleges": {
-                "text": "Amity University",
-                "img": "https://edukyu.com//public/compare-page/amity.png"
-            },
-            "Abbreviation": "Amity",
-            "Institute Type": "Private",
-            "Establishment": "2005",
-            "About": "Amity University is known for its global presence and diverse programs.",
-            "Accrediation": "UGC, AICTE, NAAC A+",
-            "Duration": "2 Years",
-            "Learning Methodolgy": "Online & Blended Learning",
-            "Fees": "₹1,50,000–₹2,50,000",
-            "Programs": "MBA, BBA, MCA",
-            "Specialisation": "Marketing, Finance, HR",
-            "Eligibility": "Graduation with 50% marks",
-            "Review": "Good placement records",
-            "Our recommendation": "Recommended for affordable online programs",
-            "Website": "https://amityonline.com/"
-        },
-        // Add more colleges as needed
-    };
+    fetch("college_db.json")
+        .then(response => response.json())
+        .then(data => {
+            collegeData = data;
+            for (const universityName in data) {
+                collegeNames.push(universityName);
+            }
+
+
+            setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
+            populateTable();
+            showAllColumns();
+        })
+        .catch(error => console.error("Error loading JSON:", error));
+
+        console.log(collegeData["Sikkim Manipal University"]);
 
     let college1_name, college2_name;
     let college1_img, college2_img;
@@ -156,8 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById("search_buttons").addEventListener("click", (e) => {
-        const college1 = document.getElementById("collegeSearch1").value;
-        const college2 = document.getElementById("collegeSearch2").value;
+        const college1 = document.getElementById("collegeSearch1").value.trim();
+        const college2 = document.getElementById("collegeSearch2").value.trim();
+
+        console.log(college1);
+        console.log(college2);
 
         if (!college1 || !college2) {
             alert("Please select colleges in both search bars.");
@@ -174,9 +141,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const checkboxes = document.querySelectorAll('.check-box-list input[type="checkbox"]');
+
+    let checkboxesChecked = [];
+    for(let i = 0; i < checkboxes.length; i++) {
+        checkboxesChecked[i] = false
+    }
+
     const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
 
     function hideAllColumns() {
+        checkboxesChecked.fill(false);
         document.querySelectorAll('.college-body').forEach(column => {
             column.style.display = "none";
             column.classList.add("hidden");
@@ -184,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showAllColumns() {
+        checkboxesChecked.fill(true);
         document.querySelectorAll('.college-body').forEach(column => {
             column.style.display = "";
             column.classList.remove("hidden");
@@ -195,11 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (selectAllCheckbox) selectAllCheckbox.checked = true;
     }
 
-    setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
-    populateTable();
-    showAllColumns();
-
-    function handleCheckboxClick(checkbox) {
+    function handleCheckboxClick(checkbox, index) {
         const columnClass = checkbox.name;
         const label = checkbox.closest("label");
 
@@ -208,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
             isFirstClick = false;
         }
 
-        if (checkbox.checked) {
+        if (checkboxesChecked[index]) {
             toggleColumnVisibility(columnClass, true);
             label.style.backgroundColor = "#d4edda";
             label.style.border = "1px solid #28a745";
@@ -222,11 +193,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     checkboxes.forEach(checkbox => {
+        let index = 0;
         checkbox.addEventListener('change', function () {
             if (this.name !== "selectAll") {
-                handleCheckboxClick(this);
+                if(checkboxesChecked[index]) {
+                    checkboxesChecked[index] = false;
+                }else {
+                    checkboxesChecked[index] = true;
+                }
+
+                handleCheckboxClick(this, index);
             }
         });
+        index++;
     });
 
     if (selectAllCheckbox) {
@@ -342,32 +321,55 @@ document.addEventListener('DOMContentLoaded', function () {
         const columns = document.querySelectorAll(".college-body");
 
         columns.forEach(column => {
-            if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college2Specialisation")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "our-recommendation" && (column.id == "collegeOurRecommendation" || column.id == "college1OurRecommendation" || column.id == "college2OurRecommendation")) changeDisplay(column, isVisible);
-            else if (columnClass.trim() == "website" && (column.id == "collegeWebsite" || column.id == "college1Website" || column.id == "college2Website")) changeDisplay(column, isVisible);
+            if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible, 1);
+            else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment")) changeDisplay(column, isVisible, 2);
+            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation")) changeDisplay(column, isVisible, 0);
+            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About")) changeDisplay(column, isVisible, 3);
+            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation")) changeDisplay(column, isVisible, 4);
+            else if (columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs")) changeDisplay(column, isVisible, 8);
+            else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college2Specialisation")) changeDisplay(column, isVisible, 9);
+            else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration")) changeDisplay(column, isVisible, 5);
+            else if (columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly")) changeDisplay(column, isVisible, 6);
+            else if (columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees")) changeDisplay(column, isVisible, 7);
+            else if (columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review")) changeDisplay(column, isVisible, 10);
+            else if (columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility")) changeDisplay(column, isVisible, 12);
+            else if (columnClass.trim() == "our-recommendation" && (column.id == "collegeOurRecommendation" || column.id == "college1OurRecommendation" || column.id == "college2OurRecommendation")) changeDisplay(column, isVisible, 11);
+            else if (columnClass.trim() == "website" && (column.id == "collegeWebsite" || column.id == "college1Website" || column.id == "college2Website")) changeDisplay(column, isVisible, 13);
             else if (columnClass.trim() == "selectAll") changeDisplay(column, isVisible);
         });
     }
 
-    function changeDisplay(column, isVisible) {
+    function changeDisplay(column, isVisible, index) {
+
         if (isVisible) {
+            checkboxesChecked[index] = false;
             column.style.display = "";
             column.classList.remove("hidden");
         } else {
+            checkboxesChecked[index] = true;
             column.style.display = "none";
             column.classList.add("hidden");
         }
 
     }
 });
+
+/*
+* 0 abbreviation
+* 1 institute-type
+* 2 establishment
+* 3 about
+* 4 accreditation
+* 5 duration
+* 6 learning-methodlogy
+* 7 fees
+* 8 degree
+* 9 specialisation
+* 10 review
+* 11 our-recommendation
+* 12 website
+*
+*
+*
+*
+* */
