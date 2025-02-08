@@ -17,24 +17,24 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error("Error loading JSON:", error));
 
-        console.log(collegeData["Sikkim Manipal University"]);
 
-    let college1_name, college2_name;
-    let college1_img, college2_img;
-    let college1_abbreviation, college2_abbreviation;
-    let college1_instituteType, college2_instituteType;
-    let college1_establishment, college2_establishment;
-    let college1_about, college2_about;
-    let college1_accrediation, college2_accrediation;
-    let college1_Duration, college2_Duration;
-    let college1_learningMethodolgy, college2_learningMethodolgy;
-    let college1_Fees, college2_Fees;
-    let college1_programs, college2_programs;
-    let college1_specialisation, college2_specialisation;
-    let college1_eligibility, college2_eligibility;
-    let college1_review, college2_review;
-    let college1_ourRecommendation, college2_ourRecommendation;
-    let college1_website, college2_website;
+    let college1_name, college2_name, college3_name;
+    let college1_img, college2_img, college3_img;
+    let college1_abbreviation, college2_abbreviation, college3_abbreviation;
+    let college1_instituteType, college2_instituteType, college3_instituteType;
+    let college1_establishment, college2_establishment, college3_establishment;
+    let college1_about, college2_about, college3_about;
+    let college1_accrediation, college2_accrediation, college3_accrediation;
+    let college1_Duration, college2_Duration, college3_Duration;
+    let college1_learningMethodolgy, college2_learningMethodolgy, college3_learningMethodolgy;
+    let college1_Fees, college2_Fees, college3_Fees;
+    let college1_programs, college2_programs, college3_programs;
+    let college1_specialisation, college2_specialisation, college3_specialisation;
+    let college1_eligibility, college2_eligibility, college3_eligibility;
+    let college1_review, college2_review, college3_review;
+    let college1_ourRecommendation, college2_ourRecommendation, college3_ourRecommendation;
+    let college1_website, college2_website, college3_website;
+
 
     const addButton = document.querySelector('.add-third-seachbar');
     const searchBarContainer = document.querySelector('.compare-search-buttons');
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (addButton && searchBarContainer) {
         addButton.addEventListener('click', function () {
+
             if (searchBarCount >= 3) {
                 alert("You can only add up to 3 search bars.");
                 return;
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <input type="search" id="collegeSearch${searchBarCount + 1}" placeholder="Search University">
                         <select id="dropdown${searchBarCount + 1}" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
                     </div>
-                    <button class="remove-third-row">X</button>
+                    <button class="remove-third-row">-</button>
                 </div>`;
 
             searchBarContainer.insertBefore(newSearchBar, addButton.parentElement);
@@ -75,8 +76,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const removeButton = newSearchBar.querySelector('.remove-third-row');
             removeButton.addEventListener('click', function () {
+
+                const hiddenRows = document.querySelectorAll(".hidden-row-element");
+
+
+                hiddenRows.forEach(row => {
+                    console.log(row);
+                    row.style.display = "none";
+                    row.classList.add("hidden-row");
+                });
+
                 searchBarContainer.removeChild(newSearchBar);
                 searchBarCount--;
+
             });
         });
     }
@@ -130,17 +142,26 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("search_buttons").addEventListener("click", (e) => {
         const college1 = document.getElementById("collegeSearch1").value.trim();
         const college2 = document.getElementById("collegeSearch2").value.trim();
+        const college3 = document.getElementById("collegeSearch3") ? document.getElementById("collegeSearch3").value.trim() : null;
 
-        console.log(college1);
-        console.log(college2);
 
         if (!college1 || !college2) {
             alert("Please select colleges in both search bars.");
             return;
         }
 
+        if(college3){
+            const hiddenRows = document.querySelectorAll(".hidden-row");
+
+            hiddenRows.forEach(row => {
+                row.style.display = "";
+                row.classList.remove("hidden-row");
+            });
+        }
+
+
         if (collegeData[college1] && collegeData[college2]) {
-            setCollegeDetails(collegeData[college1], collegeData[college2]);
+            setCollegeDetails(collegeData[college1], collegeData[college2], college3 ? collegeData[college3] : null);
             populateTable();
             showAllColumns();
         } else {
@@ -229,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function setCollegeDetails(college1, college2) {
+    function setCollegeDetails(college1, college2, college3 = null) {
         college1_name = college1.Colleges.text;
         college1_img = college1.Colleges.img;
         college1_abbreviation = college1.Abbreviation;
@@ -263,11 +284,32 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_review = college2.Review;
         college2_ourRecommendation = college2["Our recommendation"];
         college2_website = college2.Website;
+
+        if (college3) {
+
+            college3_name = college3.Colleges.text;
+            college3_img = college3.Colleges.img;
+            college3_abbreviation = college3.Abbreviation;
+            college3_instituteType = college3["Institute Type"];
+            college3_establishment = college3.Establishment;
+            college3_about = college3.About;
+            college3_accrediation = convertTextToLine(college3.Accrediation);
+            college3_Duration = convertTextToLine(college3.Duration);
+            college3_learningMethodolgy = college3["Learning Methodolgy"];
+            college3_Fees = college3.Fees;
+            college3_programs = convertTextToLine(college3.Programs);
+            college3_specialisation = convertTextToLine(college3.Specialisation);
+            college3_eligibility = convertTextToLine(college3.Eligibility);
+            college3_review = college3.Review;
+            college3_ourRecommendation = college3["Our recommendation"];
+            college3_website = college3.Website;
+        }
     }
 
     function populateTable() {
         const college1Header = document.getElementById("college1Header");
         const college2Header = document.getElementById("college2Header");
+        const college3Header = document.getElementById("college3Header");
 
         if (college1Header && college2Header) {
             college1Header.textContent = college1_name;
@@ -276,8 +318,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1ContainerHeader").textContent = college1_name;
             document.getElementById("college2ContainerHeader").textContent = college2_name;
 
-            document.querySelector(".college-header .college:first-child img").src = college1_img;
-            document.querySelector(".college-header .college:last-child img").src = college2_img;
+            document.querySelector(".college-header-logo .college:nth-child(1) img").src = college1_img;
+            document.querySelector(".college-header-logo .college:nth-child(2) img").src = college2_img;
 
             document.getElementById("college1InstituteType").textContent = college1_instituteType;
             document.getElementById("college2InstituteType").textContent = college2_instituteType;
@@ -320,6 +362,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
             document.getElementById("college1Website").innerHTML = `<a href="${college1_website}" target="_blank">Visit Website</a>`;
             document.getElementById("college2Website").innerHTML = `<a href="${college2_website}" target="_blank">Visit Website</a>`;
+
+            if (college3Header && college3_name) {
+
+                college3Header.textContent = college3_name;
+
+                document.getElementById("college3ContainerHeader").textContent = college3_name;
+
+                document.querySelector(".college-header-logo .college:nth-child(3) img").src = college3_img;
+
+                document.getElementById("college3InstituteType").textContent = college3_instituteType;
+                document.getElementById("college3Establishment").textContent = college3_establishment;
+                document.getElementById("college3Abbreviation").textContent = college3_abbreviation;
+                document.getElementById("college3About").textContent = college3_about;
+                document.getElementById("college3Accrediation").innerHTML = college3_accrediation;
+                document.getElementById("college3Duration").innerHTML = college3_Duration;
+                document.getElementById("college3LearningMethodoly").textContent = college3_learningMethodolgy;
+                document.getElementById("college3Fees").textContent = college3_Fees;
+                document.getElementById("college3Programs").innerHTML = college3_programs;
+                document.getElementById("college3Specialisation").innerHTML = college3_specialisation;
+                document.getElementById("college3Eligibility").innerHTML = college3_eligibility;
+                document.getElementById("college3Review").innerHTML = college3_review;
+                document.getElementById("college3OurRecommendation").textContent = college3_ourRecommendation;
+                document.getElementById("college3Website").innerHTML = `<a href="${college3_website}" target="_blank">Visit Website</a>`;
+            }
         } else {
             console.error("One or more elements not found in the DOM.");
         }
@@ -329,20 +395,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const columns = document.querySelectorAll(".college-body");
 
         columns.forEach(column => {
-            if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType")) changeDisplay(column, isVisible, 1);
-            else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment")) changeDisplay(column, isVisible, 2);
-            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation")) changeDisplay(column, isVisible, 0);
-            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About")) changeDisplay(column, isVisible, 3);
-            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation")) changeDisplay(column, isVisible, 4);
-            else if (columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs")) changeDisplay(column, isVisible, 8);
-            else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college2Specialisation")) changeDisplay(column, isVisible, 9);
-            else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration")) changeDisplay(column, isVisible, 5);
-            else if (columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly")) changeDisplay(column, isVisible, 6);
-            else if (columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees")) changeDisplay(column, isVisible, 7);
-            else if (columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review")) changeDisplay(column, isVisible, 10);
-            else if (columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility")) changeDisplay(column, isVisible, 12);
-            else if (columnClass.trim() == "our-recommendation" && (column.id == "collegeOurRecommendation" || column.id == "college1OurRecommendation" || column.id == "college2OurRecommendation")) changeDisplay(column, isVisible, 11);
-            else if (columnClass.trim() == "website" && (column.id == "collegeWebsite" || column.id == "college1Website" || column.id == "college2Website")) changeDisplay(column, isVisible, 13);
+            if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType" || column.id == "college3InstituteType")) changeDisplay(column, isVisible, 1);
+            else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment" || column.id == "college3Establishment")) changeDisplay(column, isVisible, 2);
+            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation"|| column.id == "college3Abbreviation")) changeDisplay(column, isVisible, 0);
+            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About"|| column.id == "college3About")) changeDisplay(column, isVisible, 3);
+            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation"|| column.id == "college3Accreditation")) changeDisplay(column, isVisible, 4);
+            else if (columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs" || column.id == "college3Programs")) changeDisplay(column, isVisible, 8);
+            else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college3Specialisation")) changeDisplay(column, isVisible, 9);
+            else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration" || column.id == "college3Duration")) changeDisplay(column, isVisible, 5);
+            else if (columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly" || column.id == "college3LearningMethodoly")) changeDisplay(column, isVisible, 6);
+            else if (columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees" || column.id == "college3Fees")) changeDisplay(column, isVisible, 7);
+            else if (columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review" || column.id == "college3Review")) changeDisplay(column, isVisible, 10);
+            else if (columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility" || column.id == "college3Eligibility")) changeDisplay(column, isVisible, 12);
+            else if (columnClass.trim() == "our-recommendation" && (column.id == "collegeOurRecommendation" || column.id == "college1OurRecommendation" || column.id == "college3OurRecommendation" || column.id == "college2OurRecommendation")) changeDisplay(column, isVisible, 11);
+            else if (columnClass.trim() == "website" && (column.id == "collegeWebsite" || column.id == "college1Website" || column.id == "college2Website" || column.id == "college3Website")) changeDisplay(column, isVisible, 13);
             else if (columnClass.trim() == "selectAll") changeDisplay(column, isVisible);
         });
     }
