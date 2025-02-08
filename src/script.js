@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 collegeNames.push(universityName);
             }
 
-
             setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
             populateTable();
             showAllColumns();
@@ -58,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     <span><i class="fas fa-search"></i></span>
                     <div>
-                        <input type="search" id="collegeSearch${searchBarCount + 1}" placeholder="Search University">
-                        <select id="dropdown${searchBarCount + 1}" class="w-full" size="5" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 1000;"></select>
+                        <input type="search" id="collegeSearch${searchBarCount + 1}" placeholder="Search University"  class="search-input">
+                        <select id="dropdown${searchBarCount + 1}" class="dropdown" size="5""></select>
                     </div>
                     <button class="remove-third-row">-</button>
                 </div>`;
@@ -368,9 +367,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 college3Header.textContent = college3_name;
 
                 document.getElementById("college3ContainerHeader").textContent = college3_name;
-
                 document.querySelector(".college-header-logo .college:nth-child(3) img").src = college3_img;
-
                 document.getElementById("college3InstituteType").textContent = college3_instituteType;
                 document.getElementById("college3Establishment").textContent = college3_establishment;
                 document.getElementById("college3Abbreviation").textContent = college3_abbreviation;
