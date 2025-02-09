@@ -483,7 +483,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalOverlay = document.querySelector('.modal-overlay');
     const closeButton = document.querySelector('.close-button');
 
-    console.log(closeButton);
 
     closeButton.addEventListener('click', () => {
         modalOverlay.style.display = 'none'; // Hide the modal
@@ -509,7 +508,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const clickHereBtn = document.getElementById('clickHereBtn');
     const modal = document.getElementById('modal-subscribe-compare');
 
-    console.log(modal);
 
     // Show modal when "Click Here" button is clicked
     clickHereBtn.addEventListener('click', function () {
@@ -529,6 +527,21 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target === modal) {
             modal.style.display = 'none';
             modal.classList.remove('show');
+        }
+    });
+
+    let isHidden = true;
+
+    document.getElementById("toggleCheckboxList").addEventListener("click", function () {
+        const checkboxList = document.querySelector(".check-box-list-container");
+
+        // Toggle the display property
+        if (checkboxList.style.display === "none" || checkboxList.style.display === "") {
+            checkboxList.style.display = "block"; // Show the container
+            this.textContent = "--";   // Change button text
+        } else {
+            checkboxList.style.display = "none"; // Hide the container
+            this.textContent = "|";   // Change button text
         }
     });
 

@@ -155,7 +155,8 @@ p {
 /* Checkboxes Section */
 .check-box-list {
     display: flex;
-    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: column;
     gap: 10px;
     margin-top: 20px;
     justify-content: center;
@@ -163,6 +164,7 @@ p {
 
 .cxp-checkbox-inline {
     display: flex;
+    flex-direction: row;
     align-items: center;
     color: var(--primary-color);
     font-weight: 500;
@@ -309,7 +311,7 @@ p {
     }
 
     .add-third-seachbar {
-        font-size: 16px;
+        font-size: 32px;
     }
 
     .cxp-checkbox-inline {
@@ -893,12 +895,6 @@ select.form-control {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.left-section h4 {
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 20px;
-}
-
 .university-slider {
     display: flex;
     overflow: hidden;
@@ -1367,4 +1363,148 @@ select.form-control {
 .right{
     padding-left: 5px;
     max-width: 50%;
+}
+
+/* Existing CSS remains the same */
+
+/* Add this for the table wrapper */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Horizontal scroll for wider tables */
+}
+
+.college-body-header{
+    text-align: center;
+    color: #ffffff;
+    background-color: #008080;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .table-wrapper {
+        max-height: 400px; /* Adjust the height as needed */
+        overflow-y: auto; /* Enable vertical scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    .compare-table {
+        width: 100%;
+        display: flex; /* Flexbox for vertical stacking */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align the items */
+        gap: 15px; /* Add space between items */
+        text-align: center; /* Center-align text */
+    }
+
+    .compare-table thead,
+    .compare-table tbody,
+    .compare-table tr,
+    .compare-table th,
+    .compare-table td {
+        display: block;
+        width: 100%; /* Ensure full width for mobile */
+
+    }
+
+    .compare-table thead {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; /* Hide table headers */
+    }
+
+
+    .compare-table tr {
+        border: none;
+        margin-bottom: 10px; /* Add spacing between rows */
+    }
+
+    .compare-table td {
+        border: none;
+        position: relative;
+        text-align: center;
+    }
+
+    .compare-table td:before {
+        display: none; /* Hide data-label in vertical mode */
+    }
+
+    .circle{
+        width: 50px;
+        height: 50px;
+    }
+
+    .college h3{
+        font-size: 0.8rem;
+    }
+
+    .compare-table td {
+        display: block;
+        width: 90.5%; /* Ensure full width for mobile */
+
+    }
+
+    .check-box-list{
+        font-size: 8px;
+        width: 45%;
+    }
+
+}
+
+.toggle-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.check-box-list-container {
+    display: none;
+}
+
+/* Filter icon styling */
+.toggle-btn img.filter-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.check-box-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-start; /* Align to the left */
+}
+
+.cxp-checkbox-inline {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 5px 15px;
+    background-color: var(--background-white);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px; /* Add spacing between checkboxes */
+    margin-bottom: 10px; /* Add spacing between checkboxes */
+}
+
+.cxp-checkbox-inline input[type="checkbox"] {
+    margin-right: 5px; /* Add spacing between checkbox and text */
+}
+
+.cxp-checkbox-inline.checked {
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
 }
