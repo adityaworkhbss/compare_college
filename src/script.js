@@ -537,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Toggle the display property
         if (checkboxList.style.display === "none" || checkboxList.style.display === "") {
-            checkboxList.style.display = "block"; // Show the container
+            checkboxList.style.display = "flex"; // Show the container
             this.textContent = "--";   // Change button text
         } else {
             checkboxList.style.display = "none"; // Hide the container

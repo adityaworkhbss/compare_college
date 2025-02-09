@@ -155,7 +155,6 @@ p {
 /* Checkboxes Section */
 .check-box-list {
     display: flex;
-    width: 90%;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
@@ -188,6 +187,7 @@ p {
     color: var(--primary-color);
     border: none;
     border-radius: var(--border-radius-small);
+    margin-top: 30px;
     padding: 10px 20px;
     font-size: var(--font-size-default);
     cursor: pointer;
@@ -1127,7 +1127,7 @@ select.form-control {
 
 /* Sticky Footer Styles */
 .cxp_blog_sticky {
-    height: 10%;
+    height: 7%;
     position: fixed; /* Stay in place */
     left: 0;
     bottom: 0; /* Stick to the bottom */
@@ -1143,7 +1143,8 @@ select.form-control {
 }
 
 .container-fluid {
-    max-width: 1200px; /* Or your preferred max-width */
+    padding: 0.3rem;
+    max-width: 600px; /* Or your preferred max-width */
     margin: 0 auto;
 }
 
@@ -1158,7 +1159,7 @@ select.form-control {
 }
 
 .sticky-logo {
-    max-width: 80%; /* Make sure logo fits its container */
+    max-width: 50%;
     height: auto;
 }
 
@@ -1445,18 +1446,49 @@ select.form-control {
 
     .check-box-list{
         font-size: 8px;
-        width: 45%;
     }
 
+    .sticky-logo {
+        max-width: 25%;
+        height: auto;
+    }
+
+    .cxp-blog-sticky-text {
+        color: white;
+        font-size: 0.6rem; /* Adjust as needed */
+        cursor: pointer; /* Make text clickable */
+        margin-left: -100px; /* Remove default margins */
+    }
+
+    .yellow-txt {
+        color: yellow;
+    }
+
+    .cxp-blog-sticky-btn {
+        margin-top: 1px;
+        height: 30px;
+        font-size: 12px;
+        background-color: #f0ad4e; /* Example yellow color */
+        border-color: #f0ad4e;
+        color: white;
+        border-radius: 5px;
+        white-space: nowrap; /* Prevent button text from wrapping */
+    }
+
+}
+
+.cxp_blog_sticky{
+    padding-bottom: 20px;
 }
 
 .toggle-btn {
     display: block;
     width: 40px;
     height: 40px;
-    background-color: #007BFF;
+    background-color: #f0ad4e;
     border: none;
     border-radius: 50%;
+    margin-top: 10px;
     padding: 5px;
     cursor: pointer;
     margin-bottom: 10px;
@@ -1464,7 +1496,13 @@ select.form-control {
 }
 
 .check-box-list-container {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+    gap: 15px; /* Consistent gap for both horizontal and vertical */
+    margin-top: 20px;
+    justify-content: flex-start;
+
 }
 
 /* Filter icon styling */
@@ -1484,27 +1522,26 @@ select.form-control {
     justify-content: flex-start; /* Align to the left */
 }
 
-.cxp-checkbox-inline {
+
+.check-box-list-container {
+    margin-top: 20px;
+}
+
+.check-box-list {
     display: flex;
-    align-items: center;
-    color: var(--primary-color);
-    font-weight: 500;
-    padding: 5px 15px;
-    background-color: var(--background-white);
-    border: 1px solid var(--primary-color);
-    border-radius: var(--border-radius-small);
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-right: 10px; /* Add spacing between checkboxes */
-    margin-bottom: 10px; /* Add spacing between checkboxes */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Add spacing between each checkbox group */
+    align-items: flex-start; /* Align items to the start of the container */
 }
 
-.cxp-checkbox-inline input[type="checkbox"] {
-    margin-right: 5px; /* Add spacing between checkbox and text */
+.check-box-list-container {
+    margin-top: 20px;
 }
 
-.cxp-checkbox-inline.checked {
-    background-color: var(--primary-color);
-    color: var(--font-color-white);
+.check-box-list {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    gap: 10px; /* Add spacing between each checkbox group */
+    align-items: center; /* Align items vertically in the center */
 }
