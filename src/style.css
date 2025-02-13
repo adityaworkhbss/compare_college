@@ -34,6 +34,12 @@
     --paragraph-font-size: 14px;
     --padding-small: 8px;
     --padding-medium: 13px;
+    --college1-name: "College 1";
+    --college2-name: "Coolege 2";
+    --college3-name: "Coolege 3";
+    --college1-logo: "Coolege 1 logo";
+    --college2-logo: "Coolege 2 logo";
+    --college3-logo: "Coolege 3 logo";
 }
 
 /* General Layout */
@@ -352,7 +358,7 @@ p {
 
 .compare-table th, .compare-table td {
     padding: 15px;
-    border: 1px solid var(--light-shade-6);
+    border: 1px solid var(--light-shade-8);
     text-align: left;
 }
 
@@ -360,9 +366,6 @@ p {
     background-color: var(--light-shade-9);
 }
 
-.compare-table tbody tr:hover {
-    background-color: var(--light-shade-8);
-}
 
 .compare-table th {
     font-weight: bold;
@@ -669,8 +672,7 @@ h3 {
 }
 
 .close-button {
-    background: none;
-    border: none;
+    margin-top: 5px;
     font-size: 20px;
     cursor: pointer;
     padding: 0;
@@ -1125,7 +1127,7 @@ select.form-control {
 
 
     .modal-title{
-        font-size: 2px;
+        font-size: 16px;
     }
 }
 
@@ -1148,7 +1150,6 @@ select.form-control {
 }
 
 .container-fluid {
-    padding: 0.3rem;
     max-width: 600px; /* Or your preferred max-width */
     margin: 0 auto;
 }
@@ -1198,6 +1199,10 @@ select.form-control {
         text-align: center;
         margin-bottom: 20px;
         font-size: 0.7rem;
+    }
+
+    .compare-table tbody tr:nth-child(even) {
+        background-color: white !important;
     }
 }
 
@@ -1249,9 +1254,6 @@ select.form-control {
     cursor: pointer;
 }
 
-.modal-body {
-    margin-top: 10px;
-}
 
 .form-group {
     margin-bottom: 15px;
@@ -1333,6 +1335,7 @@ select.form-control {
 }
 
 .modal-body {
+    justify-self: flex-end;
     margin-top: 10px;
 }
 
@@ -1424,6 +1427,10 @@ select.form-control {
         display: block;
         width: 95%; /* Ensure full width for mobile */
 
+    }
+
+    .compare-table tr{
+        width: 100%;
     }
 
     .compare-table thead {
@@ -1520,12 +1527,6 @@ select.form-control {
         display: block; /* Show the modal when it has the 'show' class */
     }
 
-    .modal-content {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        border-radius: 8px;
-    }
-
 
     .close {
         background: none;
@@ -1535,16 +1536,18 @@ select.form-control {
     }
 
     .modal-content {
+        border-radius: 8px;
         background-color: white;
         padding: 5%;
         margin-top: -5%;
         border-radius: 8px;
         width: 90%;
-        max-width: 500px;
+        max-width: 300px;
         position: relative;
 
     }
     .form-group {
+        padding-left: 10%;
         width: 80%;
     }
 
@@ -1566,6 +1569,10 @@ select.form-control {
 
     .hidden-row {
         display: none;
+    }
+
+    .modal-header {
+        justify-content: center;
     }
 }
 
@@ -1651,3 +1658,88 @@ select.form-control {
     margin-left: 5px;
 }
 
+@media (max-width: 768px) {
+    /* Apply styles only when the row is visible */
+    .college-body:not(.hidden-row)::before {
+        content: attr(data-college-name); /* Set college name from data attribute */
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: bold;
+    }
+
+    #college1InstituteType:not(.hidden-row)::before,
+    #college1Establishment:not(.hidden-row)::before,
+    #college1Abbreviation:not(.hidden-row)::before,
+    #college1About:not(.hidden-row)::before,
+    #college1Accrediation:not(.hidden-row)::before,
+    #college1Programs:not(.hidden-row)::before,
+    #college1Specialisation:not(.hidden-row)::before,
+    #college1Duration:not(.hidden-row)::before,
+    #college1LearningMethodoly:not(.hidden-row)::before,
+    #college1Fees:not(.hidden-row)::before,
+    #college1Review:not(.hidden-row)::before,
+    #college1Eligibility:not(.hidden-row)::before,
+    #college1OurRecommendation:not(.hidden-row)::before,
+    #college1Website:not(.hidden-row)::before {
+        background-image: var(--college1-logo);
+        background-size: 30px 20px; /* Increase logo size */
+        background-repeat: no-repeat;
+        padding-left: 38px; /* Increase padding to accommodate larger logo */
+        content: var(--college1-name);
+        margin-bottom: 40px;
+    }
+
+    #college2InstituteType:not(.hidden-row)::before,
+    #college2Establishment:not(.hidden-row)::before,
+    #college2Abbreviation:not(.hidden-row)::before,
+    #college2About:not(.hidden-row)::before,
+    #college2Accrediation:not(.hidden-row)::before,
+    #college2Programs:not(.hidden-row)::before,
+    #college2Specialisation:not(.hidden-row)::before,
+    #college2Duration:not(.hidden-row)::before,
+    #college2LearningMethodoly:not(.hidden-row)::before,
+    #college2Fees:not(.hidden-row)::before,
+    #college2Review:not(.hidden-row)::before,
+    #college2Eligibility:not(.hidden-row)::before,
+    #college2OurRecommendation:not(.hidden-row)::before,
+    #college2Website:not(.hidden-row)::before {
+        background-image: var(--college2-logo);
+        background-size: 30px 30px; /* Increase logo size */
+        background-repeat: no-repeat;
+        padding-left: 38px; /* Increase padding to accommodate larger logo */
+        margin-bottom: 40px;
+        content: var(--college2-name);
+    }
+
+
+    #college3InstituteType:not(.hidden-row)::before,
+    #college3Establishment:not(.hidden-row)::before,
+    #college3Abbreviation:not(.hidden-row)::before,
+    #college3About:not(.hidden-row)::before,
+    #college3Accrediation:not(.hidden-row)::before,
+    #college3Programs:not(.hidden-row)::before,
+    #college3Specialisation:not(.hidden-row)::before,
+    #college3Duration:not(.hidden-row)::before,
+    #college3LearningMethodoly:not(.hidden-row)::before,
+    #college3Fees:not(.hidden-row)::before,
+    #college3Review:not(.hidden-row)::before,
+    #college3Eligibility:not(.hidden-row)::before,
+    #college3OurRecommendation:not(.hidden-row)::before,
+    #college3Website:not(.hidden-row)::before {
+        background-image: var(--college3-logo);
+        background-size: 30px 30px; /* Increase logo size */
+        background-repeat: no-repeat;
+        padding-left: 38px; /* Increase padding to accommodate larger logo */
+        margin-bottom: 40px;
+        content: var(--college3-name);
+    }
+
+    tr td.college-body-header{
+        text-align: center;
+    }
+}
+
+tr td.college-body-header{
+    border-radius: 2%;
+}

@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ["DTE", "https://www.deac.org/wp-content/uploads/2023/10/DEAC-Logo-Mark.svg"]
     ]);
 
-
     fetch("college_db.json")
         .then(response => response.json())
         .then(data => {
@@ -40,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
             showAllColumns();
         })
         .catch(error => showError("Error loading JSON"));
-
 
     let college1_name, college2_name, college3_name;
     let college1_img, college2_img, college3_img;
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let college1_ourRecommendation, college2_ourRecommendation, college3_ourRecommendation;
     let college1_website, college2_website, college3_website;
 
-
     const addButton = document.querySelector('.add-third-seachbar');
     const searchBarContainer = document.querySelector('.compare-search-buttons');
     let searchBarCount = 2;
@@ -67,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (addButton && searchBarContainer) {
         addButton.addEventListener('click', function () {
-
             if (searchBarCount >= 3) {
                 showError("You can only add up to 3 search bars.");
                 return;
@@ -100,9 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const removeButton = newSearchBar.querySelector('.remove-third-row');
             removeButton.addEventListener('click', function () {
-
                 const hiddenRows = document.querySelectorAll(".hidden-row-element");
-
                 hiddenRows.forEach(row => {
                     row.style.display = "none";
                     row.classList.add("hidden-row");
@@ -110,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 searchBarContainer.removeChild(newSearchBar);
                 searchBarCount--;
-
             });
         });
     }
@@ -164,21 +157,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const college2 = document.getElementById("collegeSearch2").value.trim();
         const college3 = document.getElementById("collegeSearch3") ? document.getElementById("collegeSearch3").value.trim() : null;
 
-
         if (!college1 || !college2) {
             showError("Please select colleges in both search bars.");
             return;
         }
 
-        if(college3){
+        if (college3) {
             const hiddenRows = document.querySelectorAll(".hidden-row");
-
             hiddenRows.forEach(row => {
                 row.style.display = "";
                 row.classList.remove("hidden-row");
             });
         }
-
 
         if (collegeData[college1] && collegeData[college2]) {
             setCollegeDetails(collegeData[college1], collegeData[college2], college3 ? collegeData[college3] : null);
@@ -191,10 +181,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const checkboxes = document.querySelectorAll('.check-box-list input[type="checkbox"]');
-
     let checkboxesChecked = [];
-    for(let i = 0; i < checkboxes.length; i++) {
-        checkboxesChecked[i] = false
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxesChecked[i] = false;
     }
 
     const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
@@ -246,9 +235,9 @@ document.addEventListener('DOMContentLoaded', function () {
         let index = 0;
         checkbox.addEventListener('change', function () {
             if (this.name !== "selectAll") {
-                if(checkboxesChecked[index]) {
+                if (checkboxesChecked[index]) {
                     checkboxesChecked[index] = false;
-                }else {
+                } else {
                     checkboxesChecked[index] = true;
                 }
 
@@ -272,6 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setCollegeDetails(college1, college2, college3 = null) {
+
         college1_name = college1.Colleges.text;
         college1_img = college1.Colleges.img;
         college1_abbreviation = college1.Abbreviation;
@@ -307,7 +297,6 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_website = college2.Website;
 
         if (college3) {
-
             college3_name = college3.Colleges.text;
             college3_img = college3.Colleges.img;
             college3_abbreviation = college3.Abbreviation;
@@ -324,6 +313,43 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_review = college3.Review;
             college3_ourRecommendation = college3["Our recommendation"];
             college3_website = college3.Website;
+        }
+
+        // Set CSS variables for college names and logos
+        document.documentElement.style.setProperty('--college1-name', `"${college1_name}"`);
+        document.documentElement.style.setProperty('--college1-logo', `url(${college1_img})`);
+        document.documentElement.style.setProperty('--college2-name', `"${college2_name}"`);
+        document.documentElement.style.setProperty('--college2-logo', `url(${college2_img})`);
+
+        if (college3) {
+            document.documentElement.style.setProperty('--college3-name', `"${college3_name}"`);
+            document.documentElement.style.setProperty('--college3-logo', `url(${college3_img})`);
+        }
+
+        // Apply the styles
+        applyCollegeStyles();
+    }
+
+    function applyCollegeStyles() {
+        const college1Elements = document.querySelectorAll('.college1');
+        const college2Elements = document.querySelectorAll('.college2');
+        const college3Elements = document.querySelectorAll('.college3');
+
+        college1Elements.forEach(element => {
+            element.style.setProperty('--college-name', 'var(--college1-name)');
+            element.style.setProperty('--college-logo', 'var(--college1-logo)');
+        });
+
+        college2Elements.forEach(element => {
+            element.style.setProperty('--college-name', 'var(--college2-name)');
+            element.style.setProperty('--college-logo', 'var(--college2-logo)');
+        });
+
+        if (college3Elements.length > 0) {
+            college3Elements.forEach(element => {
+                element.style.setProperty('--college-name', 'var(--college3-name)');
+                element.style.setProperty('--college-logo', 'var(--college3-logo)');
+            });
         }
     }
 
@@ -385,7 +411,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college2Website").innerHTML = `<a href="${college2_website}" target="_blank">Visit Website</a>`;
 
             if (college3Header && college3_name) {
-
                 college3Header.textContent = college3_name;
 
                 document.getElementById("college3ContainerHeader").textContent = college3_name;
@@ -416,9 +441,9 @@ document.addEventListener('DOMContentLoaded', function () {
         columns.forEach(column => {
             if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType" || column.id == "college3InstituteType")) changeDisplay(column, isVisible, 1);
             else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment" || column.id == "college3Establishment")) changeDisplay(column, isVisible, 2);
-            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation"|| column.id == "college3Abbreviation")) changeDisplay(column, isVisible, 0);
-            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About"|| column.id == "college3About")) changeDisplay(column, isVisible, 3);
-            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation"|| column.id == "college3Accreditation")) changeDisplay(column, isVisible, 4);
+            else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation" || column.id == "college3Abbreviation")) changeDisplay(column, isVisible, 0);
+            else if (columnClass.trim() == "about" && (column.id == "collegeAbout" || column.id == "college1About" || column.id == "college2About" || column.id == "college3About")) changeDisplay(column, isVisible, 3);
+            else if (columnClass.trim() == "accreditation" && (column.id == "collegeAccreditation" || column.id == "college1Accreditation" || column.id == "college2Accreditation" || column.id == "college3Accreditation")) changeDisplay(column, isVisible, 4);
             else if (columnClass.trim() == "programs" && (column.id == "collegePrograms" || column.id == "college1Programs" || column.id == "college2Programs" || column.id == "college3Programs")) changeDisplay(column, isVisible, 8);
             else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college3Specialisation")) changeDisplay(column, isVisible, 9);
             else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration" || column.id == "college3Duration")) changeDisplay(column, isVisible, 5);
@@ -433,7 +458,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function changeDisplay(column, isVisible, index) {
-
         if (isVisible) {
             checkboxesChecked[index] = false;
             column.style.display = "";
@@ -443,10 +467,9 @@ document.addEventListener('DOMContentLoaded', function () {
             column.style.display = "none";
             column.classList.add("hidden");
         }
-
     }
 
-    function convertTextToLine(value){
+    function convertTextToLine(value) {
         return value.replace(/,/g, '<br>');
     }
 
@@ -485,46 +508,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalOverlay = document.querySelector('.modal-overlay');
     const closeButton = document.querySelector('.close-button');
 
-
     closeButton.addEventListener('click', () => {
         modalOverlay.style.display = 'none'; // Hide the modal
     });
 
-    // Get references to the button, modal, and close button
     const talkToCounsellorBtn = document.getElementById('talkToCounsellorBtn');
-
-    // Show modal when "Talk To Counsellor" button is clicked
     talkToCounsellorBtn.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default link behavior
         modalOverlay.style.display = 'block'; // Show the modal
     });
 
-    // Hide modal when clicking outside the modal content
     modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
             modalOverlay.style.display = 'none'; // Hide the modal
         }
     });
 
-    // Get references to the button and modal
     const clickHereBtn = document.getElementById('clickHereBtn');
     const modal = document.getElementById('modal-subscribe-compare');
 
-
-    // Show modal when "Click Here" button is clicked
     clickHereBtn.addEventListener('click', function () {
         modal.style.display = 'block';
         modal.classList.add('show');
     });
 
-    // Hide modal when close button is clicked
     const closeButton2 = modal.querySelector('.close');
     closeButton2.addEventListener('click', function () {
         modal.style.display = 'none';
         modal.classList.remove('show');
     });
 
-    // Hide modal when clicking outside the modal content
     window.addEventListener('click', function (event) {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -532,12 +545,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    let isHidden = true;
-
     document.getElementById("toggleCheckboxList").addEventListener("click", function () {
         const checkboxList = document.querySelector(".check-box-list-container");
 
-        // Toggle the display property
         if (checkboxList.style.display === "none" || checkboxList.style.display === "") {
             checkboxList.style.display = "flex"; // Show the container
             this.textContent = "--";   // Change button text
@@ -548,13 +558,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const headers = document.querySelectorAll(".college-body-header");
 
     headers.forEach(header => {
         header.addEventListener("click", function () {
-
             if (window.innerWidth > 768) return;
 
             let parentRow = header.parentElement;
@@ -598,21 +606,5 @@ function truncateText() {
             this.innerText = this.innerText === "Show More" ? "Show Less" : "Show More";
         });
     });
-}
 
-/*
-* 0 abbreviation
-* 1 institute-type
-* 2 establishment
-* 3 about
-* 4 accreditation
-* 5 duration
-* 6 learning-methodlogy
-* 7 fees
-* 8 degree
-* 9 specialisation
-* 10 review
-* 11 our-recommendation
-* 12 website
-*
-* */
+}
