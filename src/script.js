@@ -544,9 +544,27 @@ document.addEventListener('DOMContentLoaded', function () {
             this.textContent = "|";   // Change button text
         }
     });
-
-
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const headers = document.querySelectorAll(".college-body-header");
+
+    headers.forEach(header => {
+        header.addEventListener("click", function () {
+
+            if (window.innerWidth > 768) return;
+
+            let parentRow = header.parentElement;
+            let hiddenCols = parentRow.querySelectorAll(".college-td-hider");
+
+            hiddenCols.forEach(col => {
+                col.style.display = "block";
+            });
+        });
+    });
+});
+
 
 /*
 * 0 abbreviation

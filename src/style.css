@@ -1420,7 +1420,7 @@ select.form-control {
     .compare-table th,
     .compare-table td {
         display: block;
-        width: 100%; /* Ensure full width for mobile */
+        width: 95%; /* Ensure full width for mobile */
 
     }
 
@@ -1432,19 +1432,17 @@ select.form-control {
 
 
     .compare-table tr {
-        border: none;
         margin-bottom: 10px; /* Add spacing between rows */
     }
 
     .compare-table td {
-        border: none;
         position: relative;
         text-align: center;
     }
 
-    .compare-table td:before {
-        display: none; /* Hide data-label in vertical mode */
-    }
+    /*.compare-table td:before {*/
+    /*    display: none; !* Hide data-label in vertical mode *!*/
+    /*}*/
 
     .circle{
         width: 50px;
@@ -1556,6 +1554,13 @@ select.form-control {
         margin-left: 45px;
     }
 
+    td.college-td-hider {
+        display: none;
+    }
+
+    .college-td-hider {
+        padding-left: 10px;
+    }
 
 }
 
