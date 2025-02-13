@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
             populateTable();
+            truncateText();
             showAllColumns();
         })
         .catch(error => showError("Error loading JSON"));
@@ -182,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (collegeData[college1] && collegeData[college2]) {
             setCollegeDetails(collegeData[college1], collegeData[college2], college3 ? collegeData[college3] : null);
             populateTable();
+            truncateText();
             showAllColumns();
         } else {
             showError("Selected colleges are not in the dataset.");
@@ -559,12 +561,44 @@ document.addEventListener("DOMContentLoaded", function () {
             let hiddenCols = parentRow.querySelectorAll(".college-td-hider");
 
             hiddenCols.forEach(col => {
-                col.style.display = "block";
+                if (col.style.display === "none" || col.style.display === "") {
+                    col.style.display = "block";
+                } else {
+                    col.style.display = "none";
+                }
             });
         });
     });
 });
 
+function truncateText() {
+    const columns = document.querySelectorAll(".college-td-hider");
+    columns.forEach(col => {
+        const text = col.textContent.trim();
+        if (text.length > 200) {
+            const shortText = text.substring(0, 200); // Adjust the substring length as needed
+
+            col.innerHTML = `
+                <span class="short-text">${shortText}...</span>
+                <span class="full-text hidden">${text}</span>
+                <button class="show-more-btn">Show More</button>
+            `;
+        }
+    });
+
+    document.querySelectorAll(".show-more-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const parentCol = this.parentElement;
+            const shortTextEl = parentCol.querySelector(".short-text");
+            const fullTextEl = parentCol.querySelector(".full-text");
+
+            shortTextEl.classList.toggle("hidden");
+            fullTextEl.classList.toggle("hidden");
+
+            this.innerText = this.innerText === "Show More" ? "Show Less" : "Show More";
+        });
+    });
+}
 
 /*
 * 0 abbreviation

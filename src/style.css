@@ -1383,8 +1383,6 @@ select.form-control {
     max-width: 50%;
 }
 
-/* Existing CSS remains the same */
-
 /* Add this for the table wrapper */
 .table-wrapper {
     width: 100%;
@@ -1392,7 +1390,7 @@ select.form-control {
 }
 
 .college-body-header{
-    text-align: center;
+    text-align: left;
     color: #ffffff;
     background-color: #008080;
 }
@@ -1403,6 +1401,10 @@ select.form-control {
         max-height: 400px; /* Adjust the height as needed */
         overflow-y: auto; /* Enable vertical scrolling */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    tr td.college-body{
+        text-align: right;
     }
 
     .compare-table {
@@ -1562,6 +1564,9 @@ select.form-control {
         padding-left: 10px;
     }
 
+    .hidden-row {
+        display: none;
+    }
 }
 
 .cxp_blog_sticky{
@@ -1631,5 +1636,18 @@ select.form-control {
     flex-wrap: wrap; /* Allow wrapping to the next line if needed */
     gap: 10px; /* Add spacing between each checkbox group */
     align-items: center; /* Align items vertically in the center */
+}
+
+.hidden{
+    display: none;
+}
+
+.show-more-btn {
+    background: none;
+    border: none;
+    color: #012f34;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
 }
 
