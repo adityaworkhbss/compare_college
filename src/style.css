@@ -118,6 +118,13 @@ p {
     margin-top: 20px;
 }
 
+@media (max-width: 1100px) {
+    .compare-search-buttons {
+        flex-direction: column;
+    }
+
+}
+
 .compare-search-btn {
     display: flex;
     align-items: center;
@@ -257,10 +264,6 @@ p {
         font-size: 28px;
     }
 
-    .compare-search-buttons {
-        flex-direction: column;
-    }
-
     .compare-search-btn {
         width: 100%;
     }
@@ -358,7 +361,7 @@ p {
 
 .compare-table th, .compare-table td {
     padding: 15px;
-    border: 1px solid var(--light-shade-8);
+    border: 1px solid var(--light-shade-9);
     text-align: left;
 }
 
@@ -420,7 +423,7 @@ p {
 }
 
 .cxp-checkbox-inline:hover {
-    border-color: #007bff;
+    border-color: var(--primary-color);
     background: #f0f8ff;
 }
 
@@ -1199,7 +1202,11 @@ div.features-item{
     .text-center {
         text-align: center;
         margin-bottom: 20px;
-        font-size: 0.7rem;
+        font-size: 1.25rem;
+    }
+
+    p.text-center{
+        font-size: 0.9rem;
     }
 
     .compare-table tbody tr:nth-child(even) {
@@ -1586,7 +1593,8 @@ div.modal-body-2{
     display: block;
     width: 40px;
     height: 40px;
-    background-color: #f0ad4e;
+    background-color: var(--secondary-color);
+    color: var(--white);
     border: none;
     border-radius: 50%;
     margin-top: 10px;
@@ -1594,6 +1602,7 @@ div.modal-body-2{
     cursor: pointer;
     margin-bottom: 10px;
     position: relative;
+
 }
 
 .check-box-list-container {
@@ -1771,4 +1780,34 @@ div.features-grid{
     .right{
         max-width: 100%;
     }
+}
+
+.college-header-logo {
+    display: flex;
+    justify-content: space-around; /* Ensures spacing between elements */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Adds spacing between colleges */
+    width: 90%;
+    padding-left: 8%;
+}
+
+.college {
+    display: flex;
+    flex-direction: column; /* Stack logo and text */
+    align-items: center; /* Center align logo and text */
+    text-align: center;
+}
+
+.circle {
+    width: 100px; /* Adjust logo container size */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden;
+}
+
+.hidden-row {
+    display: none;
 }

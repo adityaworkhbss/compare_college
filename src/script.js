@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleColumnVisibility(columnClass, true);
             label.style.backgroundColor = "#d4edda";
             label.style.border = "1px solid #28a745";
-            label.style.color = "#155724";
+            label.style.color = "#0e6d78";
         } else {
             toggleColumnVisibility(columnClass, false);
             label.style.backgroundColor = "";
@@ -315,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_website = college3.Website;
         }
 
-        // Set CSS variables for college names and logos
         document.documentElement.style.setProperty('--college1-name', `"${college1_name}"`);
         document.documentElement.style.setProperty('--college1-logo', `url(${college1_img})`);
         document.documentElement.style.setProperty('--college2-name', `"${college2_name}"`);
@@ -326,7 +325,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.documentElement.style.setProperty('--college3-logo', `url(${college3_img})`);
         }
 
-        // Apply the styles
         applyCollegeStyles();
     }
 
@@ -495,13 +493,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.appendChild(snackbar);
 
         setTimeout(() => {
-            snackbar.style.opacity = '1';  // Fade in
+            snackbar.style.opacity = '1';
             setTimeout(() => {
-                snackbar.style.opacity = '0';  // Fade out
+                snackbar.style.opacity = '0';
                 setTimeout(() => {
                     document.body.removeChild(snackbar);
-                }, 500); // Remove after fade out
-            }, 3000); // Display for 3 seconds
+                }, 500);
+            }, 3000);
         }, 100);
     }
 
@@ -509,18 +507,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeButton = document.querySelector('.close-button');
 
     closeButton.addEventListener('click', () => {
-        modalOverlay.style.display = 'none'; // Hide the modal
+        modalOverlay.style.display = 'none';
     });
 
     const talkToCounsellorBtn = document.getElementById('talkToCounsellorBtn');
     talkToCounsellorBtn.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default link behavior
-        modalOverlay.style.display = 'block'; // Show the modal
+        e.preventDefault();
+        modalOverlay.style.display = 'block';
     });
 
     modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
-            modalOverlay.style.display = 'none'; // Hide the modal
+            modalOverlay.style.display = 'none';
         }
     });
 
@@ -548,13 +546,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("toggleCheckboxList").addEventListener("click", function () {
         const checkboxList = document.querySelector(".check-box-list-container");
 
-        if (checkboxList.style.display === "none" || checkboxList.style.display === "") {
-            checkboxList.style.display = "flex"; // Show the container
-            this.textContent = "--";   // Change button text
-        } else {
-            checkboxList.style.display = "none"; // Hide the container
-            this.textContent = "|";   // Change button text
-        }
+        if (checkboxList.style.display === "none" || checkboxList.style.display === "") checkboxList.style.display = "flex";
+        else checkboxList.style.display = "none";
     });
 });
 
@@ -584,7 +577,7 @@ function truncateText() {
     columns.forEach(col => {
         const text = col.textContent.trim();
         if (text.length > 200) {
-            const shortText = text.substring(0, 200); // Adjust the substring length as needed
+            const shortText = text.substring(0, 200);
 
             col.innerHTML = `
                 <span class="short-text">${shortText}...</span>
