@@ -387,7 +387,46 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1LearningMethodoly").textContent = college1_learningMethodolgy;
             document.getElementById("college2LearningMethodoly").textContent = college2_learningMethodolgy;
 
-            document.getElementById("college1Fees").textContent = college1_Fees;
+            //document.getElementById("college1Fees").textContent = college1_Fees;
+
+            const nmimsDetailedFees = `
+                MBA: 55,000 - 1,00,000<br>
+                B.Tech: 1,00,000 - 3,00,000<br>
+                Design: 3,00,000 - 4,00,000
+            `;
+
+            if (college1_name === "NMIMS CDOE") {
+                const feesCell = document.getElementById("college1Fees");
+                feesCell.innerHTML = `
+                    <span class="fees-summary">${college1_Fees}</span>
+                    <span class="fees-details hidden">${nmimsDetailedFees}</span>
+                    <div>
+                        <button class="show-details-btn">Show Details</button>
+                    </div>`;
+
+                const showDetailsBtn = feesCell.querySelector(".show-details-btn");
+                showDetailsBtn.addEventListener("click", function () {
+                    const summary = feesCell.querySelector(".fees-summary");
+                    const details = feesCell.querySelector(".fees-details");
+
+                    if (details.classList.contains("hidden")) {
+                        summary.classList.add("hidden");
+                        details.classList.remove("hidden");
+                        showDetailsBtn.textContent = "Show Less";
+                    } else {
+                        summary.classList.remove("hidden");
+                        details.classList.add("hidden");
+                        showDetailsBtn.textContent = "Show Details";
+                    }
+                });
+            } else {
+                document.getElementById("college1Fees").textContent = college1_Fees;
+            }
+
+            document.getElementById("college2Fees").textContent = college2_Fees;
+
+
+
             document.getElementById("college2Fees").textContent = college2_Fees;
 
             document.getElementById("college1Programs").innerHTML = college1_programs;
@@ -576,8 +615,8 @@ function truncateText() {
     const columns = document.querySelectorAll(".college-td-hider");
     columns.forEach(col => {
         const text = col.textContent.trim();
-        if (text.length > 200) {
-            const shortText = text.substring(0, 200);
+        if (text.length > 250) {
+            const shortText = text.substring(0, 250);
 
             col.innerHTML = `
                 <span class="short-text">${shortText}...</span>

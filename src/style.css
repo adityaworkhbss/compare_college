@@ -1811,3 +1811,34 @@ div.features-grid{
 .hidden-row {
     display: none;
 }
+
+.show-details-btn {
+    background-color: var(--primary-color); /* Blue background */
+    color: var(--secondary-color); /* White text */
+    border: none; /* No border */
+    padding: 8px 16px; /* Padding for better spacing */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    margin-top: 8px; /* Space above the button */
+    display: inline-block; /* Ensure it stays inline */
+}
+
+.show-details-btn:hover {
+    background-color: var(--dark-shade-1); /* Darker blue on hover */
+}
+
+.show-details-btn:active {
+    background-color: var(--dark-shade-2); /* Even darker blue on click */
+}
+
+/* Optional: Add an icon to the button */
+.show-details-btn::after {
+    content: " ▼"; /* Down arrow for "Show Details" */
+    font-size: 12px;
+}
+
+.show-details-btn.show-less::after {
+    content: " ▲"; /* Up arrow for "Show Less" */
+}
