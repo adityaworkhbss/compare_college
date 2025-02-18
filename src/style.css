@@ -1419,7 +1419,7 @@ div.modal-body-2{
     }
 
     tr td.college-body{
-        text-align: right;
+        text-align: left;
     }
 
     .compare-table {
@@ -1669,6 +1669,10 @@ div.modal-body-2{
     margin-left: 5px;
 }
 
+.info-box{
+    display : none;
+}
+
 @media (max-width: 768px) {
     /* Apply styles only when the row is visible */
     .college-body:not(.hidden-row)::before {
@@ -1749,6 +1753,38 @@ div.modal-body-2{
     tr td.college-body-header{
         text-align: center;
     }
+
+    .info-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f8f9fa; /* Light gray background */
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        max-width: 300px;
+        position: relative; /* Ensures it's always in view */
+        margin-top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Perfect centering */
+    }
+
+    .info-box-cancel-button {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .info-box-cancel-button:hover {
+        color: var(--primary-color);
+    }
+
 }
 
 tr td.college-body-header{
@@ -1842,3 +1878,28 @@ div.features-grid{
 .show-details-btn.show-less::after {
     content: " ▲"; /* Up arrow for "Show Less" */
 }
+
+
+.circle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: sticky; /* Use sticky positioning */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 90; /* Ensure it stays above other content */
+    transition: all 0.8s ease; /* Smooth transition */
+}
+
+.circle.fixed {
+    display: ;
+    position: fixed; /* Fixed positioning when scrolling */
+    top: 0;
+    left: 0;
+    background-color: white ;
+    right: 0;
+}
+

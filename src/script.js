@@ -95,12 +95,17 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             const removeButton = newSearchBar.querySelector('.remove-third-row');
+
             removeButton.addEventListener('click', function () {
                 const hiddenRows = document.querySelectorAll(".hidden-row-element");
+                const thirdCollegeImage = document.querySelector(".hidden-college-logo-3");
+
                 hiddenRows.forEach(row => {
                     row.style.display = "none";
                     row.classList.add("hidden-row");
                 });
+                thirdCollegeImage.style.display = "none";
+                thirdCollegeImage.classList.add("hidden-row");
 
                 searchBarContainer.removeChild(newSearchBar);
                 searchBarCount--;
@@ -588,6 +593,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (checkboxList.style.display === "none" || checkboxList.style.display === "") checkboxList.style.display = "flex";
         else checkboxList.style.display = "none";
     });
+
+    document.querySelector('.info-box-cancel-button').addEventListener("click", function () {
+        const hideDetailBox = document.querySelector('.info-box');
+        hideDetailBox.style.display = "none";
+    })
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -608,6 +618,43 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+    });
+
+    // const headerLogo = document.querySelectorAll('.circle');
+    // const collegeHeaderLogo = document.querySelector('.college-header-logo');
+    // const table = document.querySelector('.compare-table');
+
+    //console.log(headerLogo);
+
+    // window.addEventListener('scroll', function() {
+    //     const scrollPosition = window.scrollY;
+    //     const tableEnd = table.offsetTop + table.offsetHeight;
+    //
+    //     if (scrollPosition >= table.offsetTop && scrollPosition <= tableEnd) {
+    //         headerLogo.forEach(logo => {
+    //             logo.classList.add('fixed');
+    //         });
+    //     } else {
+    //         headerLogo.forEach(logo => logo.classList.remove('fixed'));
+    //     }
+    // });
+
+    const collegeHeaderLogo = document.querySelectorAll('.circle');
+    const table = document.querySelector('.compare-table');
+
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const tableStart = table.offsetTop; // Start of the table
+        const tableEnd = tableStart + table.offsetHeight; // End of the table
+
+        if (scrollPosition >= tableStart && scrollPosition <= tableEnd) {
+            // When scrolling within the table, fix the logos at the top
+            console.log(scrollPosition);
+            collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
+        } else {
+            // When not scrolling within the table, reset the logos to their original position
+            collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
+        }
     });
 });
 
