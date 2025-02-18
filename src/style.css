@@ -1880,26 +1880,16 @@ div.features-grid{
 }
 
 
+.college-header-logo {
+    position: relative; /* Ensure the container is relative */
+}
+
 .circle {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    color: #fff;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    position: sticky; /* Use sticky positioning */
-    top: 0; /* Stick to the top of the viewport */
-    z-index: 90; /* Ensure it stays above other content */
-    transition: all 0.8s ease; /* Smooth transition */
+    z-index: 1000;
 }
 
 .circle.fixed {
-    display: ;
     position: fixed; /* Fixed positioning when scrolling */
-    top: 0;
-    left: 0;
-    background-color: white ;
-    right: 0;
+    top: 20px;
+    z-index: 1000;
 }
-
