@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let college1_accrediation, college2_accrediation, college3_accrediation;
     let college1_Duration, college2_Duration, college3_Duration;
     let college1_learningMethodolgy, college2_learningMethodolgy, college3_learningMethodolgy;
+    let college1_Degree, college2_Degree, college3_Degree;
     let college1_Fees, college2_Fees, college3_Fees;
     let college1_programs, college2_programs, college3_programs;
     let college1_specialisation, college2_specialisation, college3_specialisation;
@@ -276,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
         college1_accrediation = convertTextToImage(college1.Accrediation);
         college1_Duration = convertTextToLine(college1.Duration);
         college1_learningMethodolgy = college1["Learning Methodolgy"];
+        // college1_Degree = college1["Degree"];
         college1_Fees = college1.Fees;
         college1_programs = convertTextToLine(college1.Programs);
         college1_specialisation = convertTextToLine(college1.Specialisation);
@@ -293,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_accrediation = convertTextToImage(college2.Accrediation);
         college2_Duration = convertTextToLine(college2.Duration);
         college2_learningMethodolgy = college2["Learning Methodolgy"];
+        // college2_Degree = college2["Degree"];
         college2_Fees = college2.Fees;
         college2_programs = convertTextToLine(college2.Programs);
         college2_specialisation = convertTextToLine(college2.Specialisation);
@@ -311,6 +314,7 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_accrediation = convertTextToImage(college3.Accrediation);
             college3_Duration = convertTextToLine(college3.Duration);
             college3_learningMethodolgy = college3["Learning Methodolgy"];
+            // college3_Degree = college3["Degree"];
             college3_Fees = college3.Fees;
             college3_programs = convertTextToLine(college3.Programs);
             college3_specialisation = convertTextToLine(college3.Specialisation);
@@ -392,6 +396,9 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1LearningMethodoly").textContent = college1_learningMethodolgy;
             document.getElementById("college2LearningMethodoly").textContent = college2_learningMethodolgy;
 
+            // document.getElementById("college1Degree").innerHTML = college1_Degree;
+            // document.getElementById("college2Degree").innerHTML = college2_Degree;
+
             //document.getElementById("college1Fees").textContent = college1_Fees;
 
             const nmimsDetailedFees = `
@@ -464,6 +471,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("college3Accrediation").innerHTML = college3_accrediation;
                 document.getElementById("college3Duration").innerHTML = college3_Duration;
                 document.getElementById("college3LearningMethodoly").textContent = college3_learningMethodolgy;
+                //document.getElementById("college3Degree").textContent = college3_Degree;
                 document.getElementById("college3Fees").textContent = college3_Fees;
                 document.getElementById("college3Programs").innerHTML = college3_programs;
                 document.getElementById("college3Specialisation").innerHTML = college3_specialisation;
@@ -490,6 +498,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (columnClass.trim() == "specialisation" && (column.id == "collegeSpecialisation" || column.id == "college1Specialisation" || column.id == "college3Specialisation")) changeDisplay(column, isVisible, 9);
             else if (columnClass.trim() == "duration" && (column.id == "collegeDuration" || column.id == "college1Duration" || column.id == "college2Duration" || column.id == "college3Duration")) changeDisplay(column, isVisible, 5);
             else if (columnClass.trim() == "learning-methodology" && (column.id == "collegeLearningMethodoly" || column.id == "college1LearningMethodoly" || column.id == "college2LearningMethodoly" || column.id == "college3LearningMethodoly")) changeDisplay(column, isVisible, 6);
+           // else if (columnClass.trim() == "degree" && (column.id == "collegeDegree" || column.id == "college1Degree" || column.id == "college2Degree" || column.id == "college3Degree")) changeDisplay(column, isVisible, 6);
             else if (columnClass.trim() == "fees" && (column.id == "collegeFees" || column.id == "college1Fees" || column.id == "college2Fees" || column.id == "college3Fees")) changeDisplay(column, isVisible, 7);
             else if (columnClass.trim() == "review" && (column.id == "collegeReview" || column.id == "college1Review" || column.id == "college2Review" || column.id == "college3Review")) changeDisplay(column, isVisible, 10);
             else if (columnClass.trim() == "eligibility" && (column.id == "collegeEligibility" || column.id == "college1Eligibility" || column.id == "college2Eligibility" || column.id == "college3Eligibility")) changeDisplay(column, isVisible, 12);
