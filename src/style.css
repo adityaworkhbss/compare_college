@@ -199,6 +199,7 @@ p {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border: none;
+    width: 200px;
     border-radius: var(--border-radius-small);
     margin-top: 30px;
     padding: 10px 20px;
@@ -209,7 +210,26 @@ p {
 }
 
 .compare-btn .scnd-button:hover {
-    background-color: #e6b800; /* Darker yellow */
+    background-color: #e6b800;
+}
+
+/* Compare Form Button */
+.compare-form-btn .scnd-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    width: 200px;
+    border-radius: var(--border-radius-small);
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: var(--font-size-default);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s;
+}
+
+.compare-form-btn .scnd-button:hover {
+    background-color: #e6b800;
 }
 
 /* Card Styling */
@@ -436,7 +456,7 @@ p {
 .custom-checkbox {
     width: 18px;
     height: 18px;
-    border: 2px solid #007bff;
+    border: 2px solid var(--dark-shade-5);
     border-radius: 4px;
     margin-left: 10px;
     transition: background-color 0.3s ease;
@@ -444,14 +464,14 @@ p {
 
 /* Change the custom checkbox style when checked */
 .cxp-checkbox-inline input[type="checkbox"]:checked + .custom-checkbox {
-    background-color: #007bff;
+    background-color: #012f34;
 }
 
 /* Highlight the select-all button */
 .cxp-checkbox-inline.cxp-select-all {
     font-weight: bold;
-    color: #007bff;
-    border-color: #007bff;
+    color: #012f34;
+    border-color: var(--dark-shade-5);
 }
 
 /* Responsive Design */
@@ -517,20 +537,27 @@ p {
     color: var(--primary-color); /* Text matches primary color */
     border: none;
     border-radius: var(--border-radius-small);
-    padding: 10px 20px;
-    font-size: var(--font-size-default);
+    padding: 15px 30px;
+    width: 400px;
     cursor: pointer;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between icon and text */
+    justify-content: center; /* Center content */
+    gap: 10px; /* Space between icon and text */
+}
+
+.cxp-suggestion-content .scnd-button svg {
+    width: 26px; /* Increase icon size */
+    height: 26px;
 }
 
 .cxp-suggestion-content .scnd-button:hover {
     background-color: #e6b800; /* Slightly darker yellow */
     color: var(--font-color); /* Font turns darker for emphasis */
 }
+
 
 .cxp-suggestion-content svg {
     fill: var(--primary-color); /* Icon matches text color */
@@ -705,9 +732,9 @@ h3 {
 }
 
 .form-control:focus {
-    border-color: #80bdff;
+    border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--dark-shade-4);
 }
 
 .mobile-number-wrapper {
@@ -1996,5 +2023,133 @@ div.features-grid{
     }
 }
 
+/* Modal Background */
+.compare-form-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Modal Content */
+.compare-form-modal-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* University Logo */
+.form-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Form Inputs */
+.compare-form-modal-content form input,
+.compare-form-modal-content form select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;  /* Prevents extra width issues */
+}
+
+/* Fix Checkbox Alignment */
+input.checkbox-compare-form {
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Submit Button */
+.compare-form-modal-content form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #e6b800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.compare-form-modal-content form button:hover {
+    background-color: #d1a700;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
+    .compare-form-modal-content {
+        width: 95%;
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    .compare-form-modal-content form input,
+    .compare-form-modal-content form select {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .compare-form-modal-content form button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Fix dropdown options */
+.compare-form-modal-content form select option {
+    font-size: 14px;
+    background-color: white;
+    width: 80%;
+    color: black;
+}
+
+.compare-form-modal-content {
+    overflow: hidden;
+}
+
+.toggle-btn-col {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .toggle-btn-col {
+        display: inline-block; /* Makes it visible */
+        background-color: #e6b800; /* Example color */
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+}
 
 

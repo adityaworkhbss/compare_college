@@ -684,6 +684,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const collegeHeaderLogo = document.querySelectorAll('.circle');
@@ -694,13 +696,34 @@ document.addEventListener("DOMContentLoaded", function () {
         const tableStart = table.offsetTop;
         const tableEnd = tableStart + table.offsetHeight;
 
-        if (scrollPosition >= tableStart && scrollPosition <= tableEnd) {
+        if (scrollPosition >= tableStart && scrollPosition <= tableEnd-200) {
             collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
         } else {
             collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("compareFormModal");
+    const btn = document.getElementById("search_form_button");
+    const closeBtn = document.querySelector(".close");
+
+    btn.addEventListener("click", function() {
+        modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
 
 
 
