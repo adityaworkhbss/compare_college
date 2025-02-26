@@ -266,6 +266,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    let thirdRowActive = false;
+
     function setCollegeDetails(college1, college2, college3 = null) {
 
         college1_name = college1.Colleges.text;
@@ -305,6 +307,9 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_website = college2.Website;
 
         if (college3) {
+
+            thirdRowActive = true;
+
             college3_name = college3.Colleges.text;
             college3_img = college3.Colleges.img;
             college3_abbreviation = college3.Abbreviation;
@@ -322,20 +327,25 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_review = college3.Review;
             college3_ourRecommendation = college3["Our recommendation"];
             college3_website = college3.Website;
+        }else{
+            thirdRowActive = false;
         }
 
-        document.documentElement.style.setProperty('--college1-name', `"${college1_name}"`);
-        document.documentElement.style.setProperty('--college1-logo', `url(${college1_img})`);
-        document.documentElement.style.setProperty('--college2-name', `"${college2_name}"`);
-        document.documentElement.style.setProperty('--college2-logo', `url(${college2_img})`);
-
-        if (college3) {
-            document.documentElement.style.setProperty('--college3-name', `"${college3_name}"`);
-            document.documentElement.style.setProperty('--college3-logo', `url(${college3_img})`);
-        }
-
-        applyCollegeStyles();
+        // document.documentElement.style.setProperty('--college1-name', `"${college1_name}"`);
+        // document.documentElement.style.setProperty('--college1-logo', `url(${college1_img})`);
+        // document.documentElement.style.setProperty('--college2-name', `"${college2_name}"`);
+        // document.documentElement.style.setProperty('--college2-logo', `url(${college2_img})`);
+        //
+        // if (college3) {
+        //     document.documentElement.style.setProperty('--college3-name', `"${college3_name}"`);
+        //     document.documentElement.style.setProperty('--college3-logo', `url(${college3_img})`);
+        // }
+        //
+        // applyCollegeStyles();
     }
+
+
+
 
     function applyCollegeStyles() {
         const college1Elements = document.querySelectorAll('.college1');
@@ -401,37 +411,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
             //document.getElementById("college1Fees").textContent = college1_Fees;
 
-            const nmimsDetailedFees = `
-                MBA: 55,000 - 1,00,000<br>
-                B.Tech: 1,00,000 - 3,00,000<br>
-                Design: 3,00,000 - 4,00,000
-            `;
+            const nmimsFeesOptions = [
+                { program: "MBA", fees: "55,000 - 1,00,000" },
+                { program: "B.Tech", fees: "1,00,000 - 3,00,000" },
+                { program: "Design", fees: "3,00,000 - 4,00,000" }
+            ];
 
             if (college1_name === "NMIMS CDOE") {
                 const feesCell = document.getElementById("college1Fees");
-                feesCell.innerHTML = `
-                    <span class="fees-summary">${college1_Fees}</span>
-                    <span class="fees-details hidden">${nmimsDetailedFees}</span>
-                    <div>
-                        <button class="show-details-btn">Show Details</button>
-                    </div>`;
 
-                const showDetailsBtn = feesCell.querySelector(".show-details-btn");
+                // Create the fees container
+                const feesContainer = document.createElement("div");
+                feesContainer.classList.add("fees-container");
+
+                // Add the fees summary
+                const feesSummary = document.createElement("div");
+                feesSummary.classList.add("fees-summary");
+                feesSummary.textContent = college1_Fees;
+                feesContainer.appendChild(feesSummary);
+
+                // Create dropdown (initially hidden)
+                const feesDropdown = document.createElement("select");
+                feesDropdown.classList.add("fees-dropdown", "hidden");
+
+                // Add options to dropdown
+                const defaultOption = document.createElement("option");
+                defaultOption.textContent = "Check Programs Fees";
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                feesDropdown.appendChild(defaultOption);
+
+                nmimsFeesOptions.forEach(option => {
+                    const opt = document.createElement("option");
+                    opt.textContent = `${option.program}: ${option.fees}`;
+                    feesDropdown.appendChild(opt);
+                });
+
+                feesContainer.appendChild(feesDropdown);
+
+                // Add the "Show Details" button
+                const showDetailsBtn = document.createElement("button");
+                showDetailsBtn.classList.add("show-details-btn");
+                showDetailsBtn.textContent = "Show Details";
+                feesContainer.appendChild(showDetailsBtn);
+
+                // Append the fees container to the fees cell
+                feesCell.appendChild(feesContainer);
+
+                // Add event listener to the "Show Details" button
                 showDetailsBtn.addEventListener("click", function () {
-                    const summary = feesCell.querySelector(".fees-summary");
-                    const details = feesCell.querySelector(".fees-details");
-
-                    if (details.classList.contains("hidden")) {
-                        summary.classList.add("hidden");
-                        details.classList.remove("hidden");
+                    if (feesDropdown.classList.contains("hidden")) {
+                        feesSummary.classList.add("hidden");
+                        feesDropdown.classList.remove("hidden");
                         showDetailsBtn.textContent = "Show Less";
                     } else {
-                        summary.classList.remove("hidden");
-                        details.classList.add("hidden");
+                        feesSummary.classList.remove("hidden");
+                        feesDropdown.classList.add("hidden");
                         showDetailsBtn.textContent = "Show Details";
                     }
                 });
-            } else {
+            }
+
+            else {
                 document.getElementById("college1Fees").textContent = college1_Fees;
             }
 
@@ -607,65 +648,61 @@ document.addEventListener('DOMContentLoaded', function () {
         const hideDetailBox = document.querySelector('.info-box');
         hideDetailBox.style.display = "none";
     })
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const headers = document.querySelectorAll(".college-body-header");
 
     headers.forEach(header => {
-        header.addEventListener("click", function () {
-            if (window.innerWidth > 768) return;
+        let toggleBtn = header.querySelector(".toggle-btn-col");
+
+        // Ensure original text is stored correctly
+        if (!header.dataset.originalText) {
+            header.dataset.originalText = header.firstChild.textContent.trim();
+        }
+
+        toggleBtn.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent event bubbling to header
+
+            if (window.innerWidth > 768) return; // Ignore clicks on larger screens
 
             let parentRow = header.parentElement;
             let hiddenCols = parentRow.querySelectorAll(".college-td-hider");
 
+            let isHidden = Array.from(hiddenCols).every(col => col.style.display === "none" || col.style.display === "");
+
             hiddenCols.forEach(col => {
-                if (col.style.display === "none" || col.style.display === "") {
-                    col.style.display = "block";
+                if (col.classList.contains("hidden-row-element")) {
+                    col.style.display = thirdRowActive ? (isHidden ? "block" : "none") : "none";
                 } else {
-                    col.style.display = "none";
+                    col.style.display = isHidden ? "flex" : "none";
                 }
             });
+
+            toggleBtn.textContent = isHidden ? "-" : "+";
+
+            header.firstChild.textContent = isHidden ? "" : header.dataset.originalText + " ";
         });
     });
+});
 
-    // const headerLogo = document.querySelectorAll('.circle');
-    // const collegeHeaderLogo = document.querySelector('.college-header-logo');
-    // const table = document.querySelector('.compare-table');
-
-    //console.log(headerLogo);
-
-    // window.addEventListener('scroll', function() {
-    //     const scrollPosition = window.scrollY;
-    //     const tableEnd = table.offsetTop + table.offsetHeight;
-    //
-    //     if (scrollPosition >= table.offsetTop && scrollPosition <= tableEnd) {
-    //         headerLogo.forEach(logo => {
-    //             logo.classList.add('fixed');
-    //         });
-    //     } else {
-    //         headerLogo.forEach(logo => logo.classList.remove('fixed'));
-    //     }
-    // });
+document.addEventListener("DOMContentLoaded", function () {
 
     const collegeHeaderLogo = document.querySelectorAll('.circle');
     const table = document.querySelector('.compare-table');
 
     window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
-        const tableStart = table.offsetTop; // Start of the table
-        const tableEnd = tableStart + table.offsetHeight; // End of the table
+        const tableStart = table.offsetTop;
+        const tableEnd = tableStart + table.offsetHeight;
 
         if (scrollPosition >= tableStart && scrollPosition <= tableEnd) {
-            // When scrolling within the table, fix the logos at the top
-            console.log(scrollPosition);
             collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
         } else {
-            // When not scrolling within the table, reset the logos to their original position
             collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
         }
     });
 });
+
+
 
 function truncateText() {
     const columns = document.querySelectorAll(".college-td-hider");
@@ -696,3 +733,4 @@ function truncateText() {
     });
 
 }
+

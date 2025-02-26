@@ -1406,7 +1406,7 @@ div.modal-body-2{
 
 .college-body-header{
     text-align: left;
-    color: #ffffff;
+    color: #ffffff;;
     background-color: #008080;
 }
 
@@ -1418,6 +1418,7 @@ div.modal-body-2{
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
 
+
     tr td.college-body{
         text-align: left;
     }
@@ -1425,7 +1426,7 @@ div.modal-body-2{
     .compare-table {
         width: 100%;
         display: flex; /* Flexbox for vertical stacking */
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: row; /* Stack items vertically */
         align-items: center; /* Center-align the items */
         gap: 15px; /* Add space between items */
         text-align: center; /* Center-align text */
@@ -1443,6 +1444,10 @@ div.modal-body-2{
 
     .compare-table tr{
         width: 100%;
+    }
+
+    .compare-table tr{
+        display: flex;
     }
 
     .compare-table thead {
@@ -1675,84 +1680,86 @@ div.modal-body-2{
 
 @media (max-width: 768px) {
     /* Apply styles only when the row is visible */
-    .college-body:not(.hidden-row)::before {
-        content: attr(data-college-name); /* Set college name from data attribute */
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: bold;
-    }
+    /*.college-body:not(.hidden-row)::before {*/
+    /*    content: attr(data-college-name); !* Set college name from data attribute *!*/
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*    gap: 8px;*/
+    /*    font-weight: bold;*/
+    /*}*/
 
-    #college1InstituteType:not(.hidden-row)::before,
-    #college1Establishment:not(.hidden-row)::before,
-    #college1Abbreviation:not(.hidden-row)::before,
-    #college1About:not(.hidden-row)::before,
-    #college1Accrediation:not(.hidden-row)::before,
-    #college1Programs:not(.hidden-row)::before,
-    #college1Specialisation:not(.hidden-row)::before,
-    #college1Duration:not(.hidden-row)::before,
-    #college1LearningMethodoly:not(.hidden-row)::before,
-    #college1Fees:not(.hidden-row)::before,
-    #college1Review:not(.hidden-row)::before,
-    #college1Eligibility:not(.hidden-row)::before,
-    #college1OurRecommendation:not(.hidden-row)::before,
-    #college1Website:not(.hidden-row)::before {
-        background-image: var(--college1-logo);
-        background-size: 30px 20px; /* Increase logo size */
-        background-repeat: no-repeat;
-        padding-left: 38px; /* Increase padding to accommodate larger logo */
-        content: var(--college1-name);
-        margin-bottom: 40px;
-    }
+    /*#college1InstituteType:not(.hidden-row)::before,*/
+    /*#college1Establishment:not(.hidden-row)::before,*/
+    /*#college1Abbreviation:not(.hidden-row)::before,*/
+    /*#college1About:not(.hidden-row)::before,*/
+    /*#college1Accrediation:not(.hidden-row)::before,*/
+    /*#college1Programs:not(.hidden-row)::before,*/
+    /*#college1Specialisation:not(.hidden-row)::before,*/
+    /*#college1Duration:not(.hidden-row)::before,*/
+    /*#college1LearningMethodoly:not(.hidden-row)::before,*/
+    /*#college1Fees:not(.hidden-row)::before,*/
+    /*#college1Review:not(.hidden-row)::before,*/
+    /*#college1Eligibility:not(.hidden-row)::before,*/
+    /*#college1OurRecommendation:not(.hidden-row)::before,*/
+    /*#college1Website:not(.hidden-row)::before {*/
+    /*    background-image: var(--college1-logo);*/
+    /*    background-size: 30px 20px; !* Increase logo size *!*/
+    /*    background-repeat: no-repeat;*/
+    /*    padding-left: 38px; !* Increase padding to accommodate larger logo *!*/
+    /*    content: var(--college1-name);*/
+    /*    margin-bottom: 40px;*/
+    /*}*/
 
-    #college2InstituteType:not(.hidden-row)::before,
-    #college2Establishment:not(.hidden-row)::before,
-    #college2Abbreviation:not(.hidden-row)::before,
-    #college2About:not(.hidden-row)::before,
-    #college2Accrediation:not(.hidden-row)::before,
-    #college2Programs:not(.hidden-row)::before,
-    #college2Specialisation:not(.hidden-row)::before,
-    #college2Duration:not(.hidden-row)::before,
-    #college2LearningMethodoly:not(.hidden-row)::before,
-    #college2Fees:not(.hidden-row)::before,
-    #college2Review:not(.hidden-row)::before,
-    #college2Eligibility:not(.hidden-row)::before,
-    #college2OurRecommendation:not(.hidden-row)::before,
-    #college2Website:not(.hidden-row)::before {
-        background-image: var(--college2-logo);
-        background-size: 30px 30px; /* Increase logo size */
-        background-repeat: no-repeat;
-        padding-left: 38px; /* Increase padding to accommodate larger logo */
-        margin-bottom: 40px;
-        content: var(--college2-name);
-    }
+    /*#college2InstituteType:not(.hidden-row)::before,*/
+    /*#college2Establishment:not(.hidden-row)::before,*/
+    /*#college2Abbreviation:not(.hidden-row)::before,*/
+    /*#college2About:not(.hidden-row)::before,*/
+    /*#college2Accrediation:not(.hidden-row)::before,*/
+    /*#college2Programs:not(.hidden-row)::before,*/
+    /*#college2Specialisation:not(.hidden-row)::before,*/
+    /*#college2Duration:not(.hidden-row)::before,*/
+    /*#college2LearningMethodoly:not(.hidden-row)::before,*/
+    /*#college2Fees:not(.hidden-row)::before,*/
+    /*#college2Review:not(.hidden-row)::before,*/
+    /*#college2Eligibility:not(.hidden-row)::before,*/
+    /*#college2OurRecommendation:not(.hidden-row)::before,*/
+    /*#college2Website:not(.hidden-row)::before {*/
+    /*    background-image: var(--college2-logo);*/
+    /*    background-size: 30px 30px; !* Increase logo size *!*/
+    /*    background-repeat: no-repeat;*/
+    /*    padding-left: 38px; !* Increase padding to accommodate larger logo *!*/
+    /*    margin-bottom: 40px;*/
+    /*    content: var(--college2-name);*/
+    /*}*/
 
 
-    #college3InstituteType:not(.hidden-row)::before,
-    #college3Establishment:not(.hidden-row)::before,
-    #college3Abbreviation:not(.hidden-row)::before,
-    #college3About:not(.hidden-row)::before,
-    #college3Accrediation:not(.hidden-row)::before,
-    #college3Programs:not(.hidden-row)::before,
-    #college3Specialisation:not(.hidden-row)::before,
-    #college3Duration:not(.hidden-row)::before,
-    #college3LearningMethodoly:not(.hidden-row)::before,
-    #college3Fees:not(.hidden-row)::before,
-    #college3Review:not(.hidden-row)::before,
-    #college3Eligibility:not(.hidden-row)::before,
-    #college3OurRecommendation:not(.hidden-row)::before,
-    #college3Website:not(.hidden-row)::before {
-        background-image: var(--college3-logo);
-        background-size: 30px 30px; /* Increase logo size */
-        background-repeat: no-repeat;
-        padding-left: 38px; /* Increase padding to accommodate larger logo */
-        margin-bottom: 40px;
-        content: var(--college3-name);
-    }
+    /*#college3InstituteType:not(.hidden-row)::before,*/
+    /*#college3Establishment:not(.hidden-row)::before,*/
+    /*#college3Abbreviation:not(.hidden-row)::before,*/
+    /*#college3About:not(.hidden-row)::before,*/
+    /*#college3Accrediation:not(.hidden-row)::before,*/
+    /*#college3Programs:not(.hidden-row)::before,*/
+    /*#college3Specialisation:not(.hidden-row)::before,*/
+    /*#college3Duration:not(.hidden-row)::before,*/
+    /*#college3LearningMethodoly:not(.hidden-row)::before,*/
+    /*#college3Fees:not(.hidden-row)::before,*/
+    /*#college3Review:not(.hidden-row)::before,*/
+    /*#college3Eligibility:not(.hidden-row)::before,*/
+    /*#college3OurRecommendation:not(.hidden-row)::before,*/
+    /*#college3Website:not(.hidden-row)::before {*/
+    /*    background-image: var(--college3-logo);*/
+    /*    background-size: 30px 30px; !* Increase logo size *!*/
+    /*    background-repeat: no-repeat;*/
+    /*    padding-left: 38px; !* Increase padding to accommodate larger logo *!*/
+    /*    margin-bottom: 40px;*/
+    /*    content: var(--college3-name);*/
+    /*}*/
+
 
     tr td.college-body-header{
         text-align: center;
     }
+
 
     .info-box {
         display: flex;
@@ -1785,6 +1792,10 @@ div.modal-body-2{
         color: var(--primary-color);
     }
 
+    .college-body-header{
+        flex-shrink: 3;
+    }
+
 }
 
 tr td.college-body-header{
@@ -1806,7 +1817,6 @@ div.form-group{
 div.features-grid{
     width: 100%;
 }
-
 
 @media (max-width: 1100px) {
     .left{
@@ -1879,7 +1889,6 @@ div.features-grid{
     content: " ▲"; /* Up arrow for "Show Less" */
 }
 
-
 .college-header-logo {
     position: relative; /* Ensure the container is relative */
 }
@@ -1893,3 +1902,20 @@ div.features-grid{
     top: 20px;
     z-index: 1000;
 }
+
+.hidden-column {
+    display: none;
+}
+.toggle-btn-col {
+    background-color: teal;
+    color: white;
+    border-radius: 15px;
+    border-color: var(--secondary-color);
+    cursor: pointer;
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+
+
