@@ -285,11 +285,11 @@ p {
     }
 
     .compare-search-btn {
-        width: 100%;
+        width: 95%;
     }
 
     .add-third-seachbar {
-        width: 100%;
+        width: 90%;
         border-radius: var(--border-radius-medium);
     }
 
@@ -1236,9 +1236,6 @@ div.features-item{
         font-size: 0.9rem;
     }
 
-    .compare-table tbody tr:nth-child(even) {
-        background-color: white !important;
-    }
 }
 
 /* Center the content on smaller screens */
@@ -1439,59 +1436,6 @@ div.modal-body-2{
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-    .table-wrapper {
-        max-height: 400px; /* Adjust the height as needed */
-        overflow-y: auto; /* Enable vertical scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    }
-
-
-    tr td.college-body{
-        text-align: left;
-    }
-
-    .compare-table {
-        width: 100%;
-        display: flex; /* Flexbox for vertical stacking */
-        flex-direction: row; /* Stack items vertically */
-        align-items: center; /* Center-align the items */
-        gap: 15px; /* Add space between items */
-        text-align: center; /* Center-align text */
-    }
-
-    .compare-table thead,
-    .compare-table tbody,
-    .compare-table tr,
-    .compare-table th,
-    .compare-table td {
-        display: block;
-        width: 95%; /* Ensure full width for mobile */
-
-    }
-
-    .compare-table tr{
-        width: 100%;
-    }
-
-    .compare-table tr{
-        display: flex;
-    }
-
-    .compare-table thead {
-        position: absolute;
-        top: -9999px;
-        left: -9999px; /* Hide table headers */
-    }
-
-
-    .compare-table tr {
-        margin-bottom: 10px; /* Add spacing between rows */
-    }
-
-    .compare-table td {
-        position: relative;
-        text-align: center;
-    }
 
     /*.compare-table td:before {*/
     /*    display: none; !* Hide data-label in vertical mode *!*/
@@ -1604,6 +1548,10 @@ div.modal-body-2{
     }
 
     td.college-td-hider {
+        display: block;
+    }
+
+    td.hidden-row-element{
         display: none;
     }
 
@@ -1697,7 +1645,8 @@ div.modal-body-2{
     border: none;
     color: #012f34;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
     margin-left: 5px;
 }
 
@@ -1921,13 +1870,13 @@ div.features-grid{
 }
 
 .circle {
-    z-index: 1000;
+    z-index: 100;
 }
 
 .circle.fixed {
     position: fixed; /* Fixed positioning when scrolling */
     top: 20px;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .hidden-column {
@@ -1987,7 +1936,7 @@ div.features-grid{
 
 @media (max-width: 768px) {
     .factors-container {
-        max-height: 400px; /* Adjust height for smaller screens */
+        height: 250px; /* Adjust height for smaller screens */
     }
 
     .select-right-college img {
@@ -2139,17 +2088,32 @@ input.checkbox-compare-form {
     display: none;
 }
 
+
 @media (max-width: 768px) {
-    .toggle-btn-col {
-        display: inline-block; /* Makes it visible */
-        background-color: #e6b800; /* Example color */
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        font-size: 14px;
-        cursor: pointer;
-        border-radius: 15px;
+    .college-header {
+        display: block;
+        width: 95%;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .college-data-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Ensure equal spacing */
+        gap: 10px;
+        padding: 10px 0;
+        /*border: 1px solid;*/
+        width: 100%;
+    }
+
+    .college-data-cell {
+        flex: 1; /* Ensure each cell takes equal space */
+        text-align: center; /* Center text within each cell */
+        border: 1px solid;
+        padding: 5px;
     }
 }
-
 

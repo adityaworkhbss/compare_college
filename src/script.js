@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBarContainer = document.querySelector('.compare-search-buttons');
     let searchBarCount = 2;
     let isFirstClick = true;
+    let isThirdRowActive = false;
 
     if (addButton && searchBarContainer) {
         addButton.addEventListener('click', function () {
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span><i class="fas fa-search"></i></span>
                     <div>
                         <input type="search" id="collegeSearch${searchBarCount + 1}" placeholder="Search University"  class="search-input">
-                        <select id="dropdown${searchBarCount + 1}" class="dropdown" size="5""></select>
+                        <select id="dropdown${searchBarCount + 1}" class="dropdown" size="4""></select>
                     </div>
                     <button class="remove-third-row">-</button>
                 </div>`;
@@ -181,6 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
             populateTable();
             truncateText();
             showAllColumns();
+            convertTableToDiv();
+
         } else {
             showError("Selected colleges are not in the dataset.");
         }
@@ -196,6 +199,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function hideAllColumns() {
         checkboxesChecked.fill(false);
+        if(window.innerWidth <= 768){
+            document.querySelectorAll('.college-data-wrapper').forEach(column => {
+                column.style.display = "none";
+                column.classList.add("hidden");
+            })
+        }
         document.querySelectorAll('.college-body').forEach(column => {
             column.style.display = "none";
             column.classList.add("hidden");
@@ -204,6 +213,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showAllColumns() {
         checkboxesChecked.fill(true);
+        if(window.innerWidth <= 768){
+            document.querySelectorAll('.college-data-wrapper').forEach(column => {
+                column.style.display = "";
+                column.classList.remove("hidden");
+            })
+        }
         document.querySelectorAll('.college-body').forEach(column => {
             column.style.display = "";
             column.classList.remove("hidden");
@@ -266,8 +281,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    let thirdRowActive = false;
-
     function setCollegeDetails(college1, college2, college3 = null) {
 
         college1_name = college1.Colleges.text;
@@ -308,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (college3) {
 
-            thirdRowActive = true;
+            isThirdRowActive = true;
 
             college3_name = college3.Colleges.text;
             college3_img = college3.Colleges.img;
@@ -328,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_ourRecommendation = college3["Our recommendation"];
             college3_website = college3.Website;
         }else{
-            thirdRowActive = false;
+            isThirdRowActive = false;
         }
 
         // document.documentElement.style.setProperty('--college1-name', `"${college1_name}"`);
@@ -343,9 +356,6 @@ document.addEventListener('DOMContentLoaded', function () {
         //
         // applyCollegeStyles();
     }
-
-
-
 
     function applyCollegeStyles() {
         const college1Elements = document.querySelectorAll('.college1');
@@ -371,6 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function populateTable() {
+
         const college1Header = document.getElementById("college1Header");
         const college2Header = document.getElementById("college2Header");
         const college3Header = document.getElementById("college3Header");
@@ -527,6 +538,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function toggleColumnVisibility(columnClass, isVisible) {
+
+        if(window.innerWidth <= 768){
+            const columns = document.querySelectorAll(".college-data-wrapper");
+
+            columns.forEach(column => {
+                if (columnClass.trim() === "institute-type" && (column.classList.contains("institute-type"))) changeDisplay(column, isVisible, 1);
+                else if (columnClass.trim() == "establishment" && (column.classList.contains("establishment"))) changeDisplay(column, isVisible, 2);
+                else if (columnClass.trim() == "abbreviation" &&(column.classList.contains("abbreviation"))) changeDisplay(column, isVisible, 0);
+                else if (columnClass.trim() == "about" && (column.classList.contains("about")) ) changeDisplay(column, isVisible, 3);
+                else if (columnClass.trim() == "accreditation" &&(column.classList.contains("accreditation"))) changeDisplay(column, isVisible, 4);
+                else if (columnClass.trim() == "programs" && (column.classList.contains("programs")) ) changeDisplay(column, isVisible, 8);
+                else if (columnClass.trim() == "specialisation" && (column.classList.contains("specialisation"))) changeDisplay(column, isVisible, 9);
+                else if (columnClass.trim() == "duration" && (column.classList.contains("duration")) ) changeDisplay(column, isVisible, 5);
+                else if (columnClass.trim() == "learning-methodology" && (column.classList.contains("learning-methodology")) ) changeDisplay(column, isVisible, 6);
+                // else if (columnClass.trim() == "degree" && (column.id == "collegeDegree" || column.id == "college1Degree" || column.id == "college2Degree" || column.id == "college3Degree")) changeDisplay(column, isVisible, 6);
+                else if (columnClass.trim() == "fees" && (column.classList.contains("fees"))) changeDisplay(column, isVisible, 7);
+                else if (columnClass.trim() == "review" && (column.classList.contains("review"))) changeDisplay(column, isVisible, 10);
+                else if (columnClass.trim() == "eligibility" && (column.classList.contains("eligibility"))) changeDisplay(column, isVisible, 12);
+                else if (columnClass.trim() == "our-recommendation" && (column.classList.contains("our-recommendation"))) changeDisplay(column, isVisible, 11);
+                else if (columnClass.trim() == "website" && (column.classList.contains("website"))) changeDisplay(column, isVisible, 13);
+                else if (columnClass.trim() == "selectAll") changeDisplay(column, isVisible);
+            });
+        }
+
         const columns = document.querySelectorAll(".college-body");
 
         columns.forEach(column => {
@@ -651,57 +686,129 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const headers = document.querySelectorAll(".college-body-header");
 
-    headers.forEach(header => {
-        let toggleBtn = header.querySelector(".toggle-btn-col");
-
-        // Ensure original text is stored correctly
-        if (!header.dataset.originalText) {
-            header.dataset.originalText = header.firstChild.textContent.trim();
-        }
-
-        toggleBtn.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent event bubbling to header
-
-            if (window.innerWidth > 768) return; // Ignore clicks on larger screens
-
-            let parentRow = header.parentElement;
-            let hiddenCols = parentRow.querySelectorAll(".college-td-hider");
-
-            let isHidden = Array.from(hiddenCols).every(col => col.style.display === "none" || col.style.display === "");
-
-            hiddenCols.forEach(col => {
-                if (col.classList.contains("hidden-row-element")) {
-                    col.style.display = thirdRowActive ? (isHidden ? "block" : "none") : "none";
-                } else {
-                    col.style.display = isHidden ? "flex" : "none";
-                }
-            });
-
-            toggleBtn.textContent = isHidden ? "-" : "+";
-
-            header.firstChild.textContent = isHidden ? "" : header.dataset.originalText + " ";
-        });
-    });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
 
     const collegeHeaderLogo = document.querySelectorAll('.circle');
     const table = document.querySelector('.compare-table');
+    const mobileTable = document.getElementById('mobileViewContainer');
 
     window.addEventListener('scroll', function () {
-        const scrollPosition = window.scrollY;
-        const tableStart = table.offsetTop;
-        const tableEnd = tableStart + table.offsetHeight;
 
-        if (scrollPosition >= tableStart && scrollPosition <= tableEnd-200) {
-            collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
+        const scrollPosition = window.scrollY;
+        if(window.innerWidth <= 768){
+            const mobileTableStart = mobileTable.offsetTop;
+            const mobileTableEnd = mobileTableStart + mobileTable.offsetHeight;
+
+            if (scrollPosition >= mobileTableStart && scrollPosition <= mobileTableEnd) {
+                collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
+            } else {
+                collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
+            }
+
+        }else{
+            const tableStart = table.offsetTop;
+            const tableEnd = tableStart + table.offsetHeight;
+
+            if (scrollPosition >= tableStart && scrollPosition <= tableEnd) {
+                collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
+            } else {
+                collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
+            }
+        }
+
+    });
+
+    function convertTableToDiv() {
+        const table = document.querySelector(".compare-table");
+        const mobileContainer = document.getElementById("mobileViewContainer");
+
+        if (window.innerWidth <= 768) {
+            mobileContainer.innerHTML = "";
+
+            const rows = table.querySelectorAll("tr");
+            rows.forEach((row) => {
+                const header = row.querySelector(".college-body-header");
+                const dataCells = row.querySelectorAll(".college-td-hider");
+
+                if (header) {
+                    const headerDiv = document.createElement("div");
+                    headerDiv.className = "college-header";
+                    headerDiv.textContent = header.textContent;
+
+                    const dataWrapper = document.createElement("div");
+                    dataWrapper.className = "college-data-wrapper";
+                    dataWrapper.style.display = "none"; // Explicitly set to none initially
+
+                    const headerClass = header.textContent.trim().replace(/[^\w-]/g, "-").toLowerCase();
+                    dataWrapper.classList.add(headerClass);
+
+                    dataCells.forEach((cell) => {
+                        const dataDiv = document.createElement("div");
+                        dataDiv.classList.add("college-data-cell");
+
+                        setTimeout(() => {
+                            if (!isThirdRowActive && cell.classList.contains("hidden-row-element")) {
+                                dataDiv.style.display = "none";
+                            } else {
+                                dataDiv.textContent = cell.textContent.trim();
+                            }
+                        }, 1000);
+
+                        dataWrapper.appendChild(dataDiv);
+                    });
+                    headerDiv.addEventListener("click", () => {
+                        if (dataWrapper.style.display === "none" || dataWrapper.style.display === "") {
+                            dataWrapper.style.display = "flex";
+                        } else {
+                            dataWrapper.style.display = "none";
+                        }
+                    });
+
+                    mobileContainer.appendChild(headerDiv);
+                    mobileContainer.appendChild(dataWrapper);
+                }
+            });
+
+            table.style.display = "none"; // Hide original table
         } else {
-            collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
+            table.style.display = "table"; // Restore table on larger screens
+            mobileContainer.innerHTML = ""; // Clear the mobile container
+        }
+    }
+
+
+    window.addEventListener("DOMContentLoaded", convertTableToDiv);
+    window.addEventListener("resize", convertTableToDiv);
+
+    function truncateText() {
+        const columns = document.querySelectorAll(".college-td-hider");
+        columns.forEach(col => {
+            const text = col.textContent.trim();
+            if (text.length > 250) {
+                const shortText = text.substring(0, 250);
+
+                col.innerHTML = `
+                <span class="short-text">${shortText}...</span>
+                <span class="full-text hidden">${text}</span>
+                <button class="show-more-btn">Show More</button>
+            `;
+            }
+        });
+    }
+
+    document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("show-more-btn")) {
+            const button = event.target;
+            const parentCol = button.parentElement;
+            const shortTextEl = parentCol.querySelector(".short-text");
+            const fullTextEl = parentCol.querySelector(".full-text");
+
+            shortTextEl.classList.toggle("hidden");
+            fullTextEl.classList.toggle("hidden");
+
+            button.innerText = button.innerText === "Show More" ? "Show Less" : "Show More";
         }
     });
+
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -723,37 +830,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
-
-
-function truncateText() {
-    const columns = document.querySelectorAll(".college-td-hider");
-    columns.forEach(col => {
-        const text = col.textContent.trim();
-        if (text.length > 250) {
-            const shortText = text.substring(0, 250);
-
-            col.innerHTML = `
-                <span class="short-text">${shortText}...</span>
-                <span class="full-text hidden">${text}</span>
-                <button class="show-more-btn">Show More</button>
-            `;
-        }
-    });
-
-    document.querySelectorAll(".show-more-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            const parentCol = this.parentElement;
-            const shortTextEl = parentCol.querySelector(".short-text");
-            const fullTextEl = parentCol.querySelector(".full-text");
-
-            shortTextEl.classList.toggle("hidden");
-            fullTextEl.classList.toggle("hidden");
-
-            this.innerText = this.innerText === "Show More" ? "Show Less" : "Show More";
-        });
-    });
-
-}
 
