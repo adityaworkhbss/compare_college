@@ -1,8 +1,23 @@
+@font-face {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Apply the font */
+body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Gilroy-Heavy', sans-serif;
+    font-family: 'Gilroy-Light', sans-serif;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif;*/
 }
 
 body {
@@ -10,13 +25,20 @@ body {
 }
 
 .navbar {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
-    padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
+}
+
+.refer-logo{
+    margin-right: 100px;
 }
 
 .logo {
@@ -27,6 +49,7 @@ body {
 .logo img {
     height: 40px;
     margin-right: 10px;
+    margin-left: 100px;
 }
 
 .logo-line {
@@ -60,29 +83,49 @@ body {
 
 .toggle-btn {
     border: none;
-    padding: 10px 15px;
+    padding: 12px; /* Matches your given padding */
     flex: 1;
-    border-radius: 50px;
+    border-radius: 32px; /* Rounded button */
     cursor: pointer;
     font-size: 16px;
     background: transparent;
     color: #005A6B;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    width: 248px;  /* Fixed width */
+    height: 54px;  /* Fixed height */
+    display: flex; /* Ensures proper alignment */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .toggle-btn.active {
-    background: #FFD700;
+    background: #FFD700; /* Gold background */
     color: black;
+}
+
+
+
+/* Optional: Parent container */
+.toggle-container {
+    display: flex;
+    gap: 10px; /* Spacing between buttons */
+    position: absolute;
+    top: 10px;
+    left: 463px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .nav-links li {
     margin: 0 15px;
+    font-size: 16px;
 }
 
 .nav-links a {
@@ -101,7 +144,7 @@ body {
 .search-btn {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     color: #005a66; /* Match navbar color */
     display: flex;
@@ -116,9 +159,9 @@ body {
 .refer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Aligns to the left */
     position: relative;
-    padding-left: 20px; /* Space for the slanted border */
+    padding-left: 40px; /* Space for the slash */
 }
 
 .refer-btn {
@@ -131,7 +174,21 @@ body {
     display: inline-block;
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
     text-align: center;
+    position: relative;
+    z-index: 1; /* Keeps button above */
 }
+
+.refer-slash {
+    position: absolute;
+    left: 7px;
+    margin-top: -21px;
+    font-size: 110px; /* Slash size */
+    font-weight: 900;
+    color: black;
+    line-height: 100px;
+    transform: rotate(13deg) scaleX(0.4);
+}
+
 
 .refer-text {
     font-size: 14px;
@@ -186,7 +243,7 @@ body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 8px;
-    width: 260px; /* Fixed width */
+    width: 248px; /* Fixed width */
     font-family: 'Arial', sans-serif;
     max-height: 600px;
     overflow-y: auto;
@@ -283,3 +340,171 @@ body {
         display: block;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        height: 80%;
+    }
+
+    .logo {
+        flex: 1;
+        font-size: 20%;
+    }
+
+    .logo img {
+        font-size: 25%;
+        margin-left: 0px;
+    }
+
+    .logo-line {
+        width: 1px;
+        height: 30px;
+        background: black;
+        margin-left: -5px;
+    }
+
+    .kyunki{
+        margin-left: -5px;
+        width: 10px;
+        font-size: 8px;
+    }
+
+    /* Hide desktop nav links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Toggle buttons should shrink */
+    .toggle-dropdown {
+        width: 50%;
+        justify-content: center;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .toggle-btn {
+        width: 140px; /* Adjust width */
+        font-size: 10px;
+        padding: 5px;
+        height: auto;
+    }
+
+    /* Hamburger menu appears */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* Mobile dropdown menu */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-menu li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #online-course-dropdown {
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
+
+
+
+    .course-item {
+        font-size: 16px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .course-item:hover {
+        background: #f0f0f0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #collegeDropdown,
+    #college-list-dropdown,
+    #online-program-list-dropdown {
+        /*width: 100%;*/
+        /*position: relative;*/
+        /*left: 0;*/
+        /*top: 0;*/
+        /*padding: 10px;*/
+        /*background: white;*/
+        /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+        /*margin-top: 10px;*/
+    }
+
+    .dropdown-item {
+        font-size: 16px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+        background: #f0f0f0;
+    }
+
+    .logo img {
+        height: 25px;
+        width: 40%;
+        margin-right: 5px;
+    }
+
+    .toggle-dropdown {
+        display: flex;
+        background: white;
+        padding: 5px;
+        border-radius: 50px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        height: 50px;
+        margin-right: 10px;
+        justify-content: space-between;
+    }
+
+}
+
