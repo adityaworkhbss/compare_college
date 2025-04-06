@@ -813,29 +813,61 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+        const modalCompareCollegeForm = document.getElementById("compareFormModal");
+        const btn = document.getElementById("search_form_button");
+        const closeBtn = document.querySelector(".close");
+
+        btn.addEventListener("click", function () {
+            const logoContainer = document.querySelector('.compare-form-modal-header-logo');
+            logoContainer.innerHTML = "";
+
+            if (college1_name != null && college1_img) {
+                logoContainer.innerHTML += `<img src="${college1_img}" alt="${college1_name} Logo" class="form-logo">`;
+            }
+
+            if (college2_name != null && college2_img) {
+                logoContainer.innerHTML += `<img src="${college2_img}" alt="${college2_name} Logo" class="form-logo">`;
+            }
+
+            if (college3_name != null && college3_img) {
+                logoContainer.innerHTML += `<img src="${college3_img}" alt="${college3_name} Logo" class="form-logo">`;
+            }
+
+
+            const selectBox = document.getElementById("collegeSelect");
+
+            //   Clear existing options except the first one
+            selectBox.innerHTML = `<option value="" disabled selected>Choose Your University</option>`;
+
+            if (college1_name) {
+                selectBox.innerHTML += `<option value="${college1_name}">${college1_name}</option>`;
+            }
+
+            if (college2_name) {
+                selectBox.innerHTML += `<option value="${college2_name}">${college2_name}</option>`;
+            }
+
+            if (college3_name) {
+                selectBox.innerHTML += `<option value="${college3_name}">${college3_name}</option>`;
+            }
+
+
+            modalCompareCollegeForm.style.display = "flex";
+        });
+
+        closeBtn.addEventListener("click", function() {
+            modalCompareCollegeForm.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === modalCompareCollegeForm) {
+                modalCompareCollegeForm.style.display = "none";
+            }
+        });
+
+
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("compareFormModal");
-    const btn = document.getElementById("search_form_button");
-    const closeBtn = document.querySelector(".close");
-
-    btn.addEventListener("click", function() {
-        modal.style.display = "flex";
-    });
-
-    closeBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-
-});
 
 /* JavaScript for slider functionality */
 document.addEventListener('DOMContentLoaded', function() {
