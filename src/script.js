@@ -597,8 +597,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function convertTextToLine(value) {
-        return value.replace(/,/g, '<br>');
+        const items = value.split(',');
+        const listItems = items.map(item => `<li>${item.trim()}</li>`).join('');
+        return `<ul>${listItems}</ul>`;
     }
+
+
 
     function convertTextToImage(value) {
         const accreditations = value.split(',');
@@ -829,5 +833,52 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = "none";
         }
     });
+
+
 });
 
+/* JavaScript for slider functionality */
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.universities-slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const cards = document.querySelectorAll('.university-card');
+    const cardWidth = cards[0].offsetWidth + 25; // width + gap
+    let currentPosition = 0;
+    const visibleCards = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2.5 : 1;
+    const maxPosition = -((cards.length - visibleCards) * cardWidth);
+
+    function updateButtons() {
+    prevBtn.disabled = currentPosition >= 0;
+    nextBtn.disabled = currentPosition <= maxPosition;
+}
+
+    prevBtn.addEventListener('click', function() {
+    if (currentPosition < 0) {
+    currentPosition += cardWidth * Math.min(visibleCards, Math.abs(currentPosition) / cardWidth);
+    slider.style.transform = `translateX(${currentPosition}px)`;
+    updateButtons();
+}
+});
+
+    nextBtn.addEventListener('click', function() {
+    if (currentPosition > maxPosition) {
+    currentPosition -= cardWidth * Math.min(visibleCards, (currentPosition - maxPosition) / cardWidth);
+    slider.style.transform = `translateX(${currentPosition}px)`;
+    updateButtons();
+}
+});
+
+    // Initialize buttons
+    updateButtons();
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+    const newVisibleCards = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2.5 : 1;
+    if (newVisibleCards !== visibleCards) {
+    currentPosition = 0;
+    slider.style.transform = 'translateX(0)';
+    updateButtons();
+}
+});
+});
