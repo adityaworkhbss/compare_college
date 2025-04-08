@@ -551,7 +551,6 @@ p {
     border: none;
     border-radius: var(--border-radius-small);
     padding: 15px 30px;
-    width: 400px;
     cursor: pointer;
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
@@ -2498,3 +2497,11 @@ input.checkbox-compare-form {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
+.degree-img img{
+    width: 420px;
+    height: 500px;
+    object-fit: fill;
+}
+
+

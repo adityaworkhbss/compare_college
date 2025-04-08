@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let college1_learningMethodolgy, college2_learningMethodolgy, college3_learningMethodolgy;
     let college1_Degree, college2_Degree, college3_Degree;
     let college1_Fees, college2_Fees, college3_Fees;
+    let college1_DetailFees, college2_DetailFees, college3_DetailFees;
     let college1_programs, college2_programs, college3_programs;
     let college1_specialisation, college2_specialisation, college3_specialisation;
     let college1_eligibility, college2_eligibility, college3_eligibility;
@@ -292,8 +293,9 @@ document.addEventListener('DOMContentLoaded', function () {
         college1_accrediation = convertTextToImage(college1.Accrediation);
         college1_Duration = convertTextToLine(college1.Duration);
         college1_learningMethodolgy = college1["Learning Methodolgy"];
-        // college1_Degree = college1["Degree"];
+        college1_Degree = college1["Degree"];
         college1_Fees = college1.Fees;
+        college1_DetailFees = college1["Detail Fees"];
         college1_programs = convertTextToLine(college1.Programs);
         college1_specialisation = convertTextToLine(college1.Specialisation);
         college1_eligibility = convertTextToLine(college1.Eligibility);
@@ -310,8 +312,9 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_accrediation = convertTextToImage(college2.Accrediation);
         college2_Duration = convertTextToLine(college2.Duration);
         college2_learningMethodolgy = college2["Learning Methodolgy"];
-        // college2_Degree = college2["Degree"];
+        college2_Degree = college2["Degree"];
         college2_Fees = college2.Fees;
+        college2_DetailFees = college2["Detail Fees"];
         college2_programs = convertTextToLine(college2.Programs);
         college2_specialisation = convertTextToLine(college2.Specialisation);
         college2_eligibility = convertTextToLine(college2.Eligibility);
@@ -332,8 +335,9 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_accrediation = convertTextToImage(college3.Accrediation);
             college3_Duration = convertTextToLine(college3.Duration);
             college3_learningMethodolgy = college3["Learning Methodolgy"];
-            // college3_Degree = college3["Degree"];
+            college3_Degree = college3["Degree"];
             college3_Fees = college3.Fees;
+            college3_DetailFees = college3["Detail Fees"];
             college3_programs = convertTextToLine(college3.Programs);
             college3_specialisation = convertTextToLine(college3.Specialisation);
             college3_eligibility = convertTextToLine(college3.Eligibility);
@@ -417,19 +421,14 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1LearningMethodoly").textContent = college1_learningMethodolgy;
             document.getElementById("college2LearningMethodoly").textContent = college2_learningMethodolgy;
 
-            // document.getElementById("college1Degree").innerHTML = college1_Degree;
-            // document.getElementById("college2Degree").innerHTML = college2_Degree;
+            document.querySelector("#college1Degree img").src = college1_Degree;
+            document.querySelector("#college2Degree img").src = college2_Degree;
 
-            //document.getElementById("college1Fees").textContent = college1_Fees;
+            console.log(typeof college1_DetailFees)
 
-            const nmimsFeesOptions = [
-                { program: "MBA", fees: "55,000 - 1,00,000" },
-                { program: "B.Tech", fees: "1,00,000 - 3,00,000" },
-                { program: "Design", fees: "3,00,000 - 4,00,000" }
-            ];
-
-            if (college1_name === "NMIMS CDOE") {
+            if (college1_DetailFees && typeof college1_DetailFees === 'object' && Object.keys(college1_DetailFees).length > 0) {
                 const feesCell = document.getElementById("college1Fees");
+                feesCell.innerHTML = ''; // Clear existing content
 
                 // Create the fees container
                 const feesContainer = document.createElement("div");
@@ -452,11 +451,173 @@ document.addEventListener('DOMContentLoaded', function () {
                 defaultOption.selected = true;
                 feesDropdown.appendChild(defaultOption);
 
-                nmimsFeesOptions.forEach(option => {
-                    const opt = document.createElement("option");
-                    opt.textContent = `${option.program}: ${option.fees}`;
-                    feesDropdown.appendChild(opt);
+                // Add fee options from the detailed fees data
+                for (const [program, fee] of Object.entries(college1_DetailFees)) {
+                    // Handle nested fee structures (like MBA specializations)
+                    if (typeof fee === 'object' && fee !== null) {
+                        for (const [subProgram, subFee] of Object.entries(fee)) {
+                            if (subProgram !== "Total" && subProgram !== "Detail Total") {
+                                const opt = document.createElement("option");
+                                opt.textContent = `${program} - ${subProgram}: ${subFee}`;
+                                feesDropdown.appendChild(opt);
+                            }
+                        }
+                    } else {
+                        // Handle simple fee structures
+                        if (program !== "Total" && program !== "Detail Total") {
+                            const opt = document.createElement("option");
+                            opt.textContent = `${program}: ${fee}`;
+                            feesDropdown.appendChild(opt);
+                        }
+                    }
+                }
+
+                feesContainer.appendChild(feesDropdown);
+
+                // Add the "Show Details" button
+                const showDetailsBtn = document.createElement("button");
+                showDetailsBtn.classList.add("show-details-btn");
+                showDetailsBtn.textContent = "Show Details";
+                feesContainer.appendChild(showDetailsBtn);
+
+                // Append the fees container to the fees cell
+                feesCell.appendChild(feesContainer);
+
+                // Add event listener to the "Show Details" button
+                showDetailsBtn.addEventListener("click", function () {
+                    if (feesDropdown.classList.contains("hidden")) {
+                        feesSummary.classList.add("hidden");
+                        feesDropdown.classList.remove("hidden");
+                        showDetailsBtn.textContent = "Show Less";
+                    } else {
+                        feesSummary.classList.remove("hidden");
+                        feesDropdown.classList.add("hidden");
+                        showDetailsBtn.textContent = "Show Details";
+                    }
                 });
+            } else {
+                document.getElementById("college1Fees").textContent = college1_Fees;
+            }
+
+            if (college2_DetailFees && typeof college2_DetailFees === 'object' && Object.keys(college2_DetailFees).length > 0) {
+                const feesCell = document.getElementById("college1Fees");
+                feesCell.innerHTML = ''; // Clear existing content
+
+                // Create the fees container
+                const feesContainer = document.createElement("div");
+                feesContainer.classList.add("fees-container");
+
+                // Add the fees summary
+                const feesSummary = document.createElement("div");
+                feesSummary.classList.add("fees-summary");
+                feesSummary.textContent = college2_Fees;
+                feesContainer.appendChild(feesSummary);
+
+                // Create dropdown (initially hidden)
+                const feesDropdown = document.createElement("select");
+                feesDropdown.classList.add("fees-dropdown", "hidden");
+
+                // Add options to dropdown
+                const defaultOption = document.createElement("option");
+                defaultOption.textContent = "Check Programs Fees";
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                feesDropdown.appendChild(defaultOption);
+
+                // Add fee options from the detailed fees data
+                for (const [program, fee] of Object.entries(college1_DetailFees)) {
+                    // Handle nested fee structures (like MBA specializations)
+                    if (typeof fee === 'object' && fee !== null) {
+                        for (const [subProgram, subFee] of Object.entries(fee)) {
+                            if (subProgram !== "Total" && subProgram !== "Detail Total") {
+                                const opt = document.createElement("option");
+                                opt.textContent = `${program} - ${subProgram}: ${subFee}`;
+                                feesDropdown.appendChild(opt);
+                            }
+                        }
+                    } else {
+                        // Handle simple fee structures
+                        if (program !== "Total" && program !== "Detail Total") {
+                            const opt = document.createElement("option");
+                            opt.textContent = `${program}: ${fee}`;
+                            feesDropdown.appendChild(opt);
+                        }
+                    }
+                }
+
+                feesContainer.appendChild(feesDropdown);
+
+                // Add the "Show Details" button
+                const showDetailsBtn = document.createElement("button");
+                showDetailsBtn.classList.add("show-details-btn");
+                showDetailsBtn.textContent = "Show Details";
+                feesContainer.appendChild(showDetailsBtn);
+
+                // Append the fees container to the fees cell
+                feesCell.appendChild(feesContainer);
+
+                // Add event listener to the "Show Details" button
+                showDetailsBtn.addEventListener("click", function () {
+                    if (feesDropdown.classList.contains("hidden")) {
+                        feesSummary.classList.add("hidden");
+                        feesDropdown.classList.remove("hidden");
+                        showDetailsBtn.textContent = "Show Less";
+                    } else {
+                        feesSummary.classList.remove("hidden");
+                        feesDropdown.classList.add("hidden");
+                        showDetailsBtn.textContent = "Show Details";
+                    }
+                });
+            } else {
+                document.getElementById("college2Fees").textContent = college2_Fees;
+            }
+
+
+            if (college3_DetailFees && typeof college3_DetailFees === 'object' && Object.keys(college3_DetailFees).length > 0) {
+                const feesCell = document.getElementById("college1Fees");
+                feesCell.innerHTML = ''; // Clear existing content
+
+                // Create the fees container
+                const feesContainer = document.createElement("div");
+                feesContainer.classList.add("fees-container");
+
+                // Add the fees summary
+                const feesSummary = document.createElement("div");
+                feesSummary.classList.add("fees-summary");
+                feesSummary.textContent = college3_Fees;
+                feesContainer.appendChild(feesSummary);
+
+                // Create dropdown (initially hidden)
+                const feesDropdown = document.createElement("select");
+                feesDropdown.classList.add("fees-dropdown", "hidden");
+
+                // Add options to dropdown
+                const defaultOption = document.createElement("option");
+                defaultOption.textContent = "Check Programs Fees";
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                feesDropdown.appendChild(defaultOption);
+
+                // Add fee options from the detailed fees data
+                for (const [program, fee] of Object.entries(college1_DetailFees)) {
+                    // Handle nested fee structures (like MBA specializations)
+                    if (typeof fee === 'object' && fee !== null) {
+                        for (const [subProgram, subFee] of Object.entries(fee)) {
+                            if (subProgram !== "Total" && subProgram !== "Detail Total") {
+                                const opt = document.createElement("option");
+                                opt.textContent = `${program} - ${subProgram}: ${subFee}`;
+                                feesDropdown.appendChild(opt);
+                            }
+                        }
+                    } else {
+                        // Handle simple fee structures
+                        if (program !== "Total" && program !== "Detail Total") {
+                            const opt = document.createElement("option");
+                            opt.textContent = `${program}: ${fee}`;
+                            feesDropdown.appendChild(opt);
+                        }
+                    }
+                }
 
                 feesContainer.appendChild(feesDropdown);
 
@@ -482,16 +643,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             }
-
-            else {
-                document.getElementById("college1Fees").textContent = college1_Fees;
-            }
-
-            document.getElementById("college2Fees").textContent = college2_Fees;
-
-
-
-            document.getElementById("college2Fees").textContent = college2_Fees;
 
             document.getElementById("college1Programs").innerHTML = college1_programs;
             document.getElementById("college2Programs").innerHTML = college2_programs;
@@ -523,7 +674,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("college3Accrediation").innerHTML = college3_accrediation;
                 document.getElementById("college3Duration").innerHTML = college3_Duration;
                 document.getElementById("college3LearningMethodoly").textContent = college3_learningMethodolgy;
-                //document.getElementById("college3Degree").textContent = college3_Degree;
+                document.querySelector("#college3Degree img").src = college3_Degree;
                 document.getElementById("college3Fees").textContent = college3_Fees;
                 document.getElementById("college3Programs").innerHTML = college3_programs;
                 document.getElementById("college3Specialisation").innerHTML = college3_specialisation;
@@ -836,7 +987,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const selectBox = document.getElementById("collegeSelect");
 
-            //   Clear existing options except the first one
             selectBox.innerHTML = `<option value="" disabled selected>Choose Your University</option>`;
 
             if (college1_name) {
@@ -881,36 +1031,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxPosition = -((cards.length - visibleCards) * cardWidth);
 
     function updateButtons() {
-    prevBtn.disabled = currentPosition >= 0;
-    nextBtn.disabled = currentPosition <= maxPosition;
-}
+        prevBtn.disabled = currentPosition >= 0;
+        nextBtn.disabled = currentPosition <= maxPosition;
+    }
 
     prevBtn.addEventListener('click', function() {
-    if (currentPosition < 0) {
-    currentPosition += cardWidth * Math.min(visibleCards, Math.abs(currentPosition) / cardWidth);
-    slider.style.transform = `translateX(${currentPosition}px)`;
-    updateButtons();
-}
-});
+        if (currentPosition < 0) {
+        currentPosition += cardWidth * Math.min(visibleCards, Math.abs(currentPosition) / cardWidth);
+        slider.style.transform = `translateX(${currentPosition}px)`;
+        updateButtons();
+    }
+    });
 
     nextBtn.addEventListener('click', function() {
-    if (currentPosition > maxPosition) {
-    currentPosition -= cardWidth * Math.min(visibleCards, (currentPosition - maxPosition) / cardWidth);
-    slider.style.transform = `translateX(${currentPosition}px)`;
-    updateButtons();
-}
-});
+        if (currentPosition > maxPosition) {
+            currentPosition -= cardWidth * Math.min(visibleCards, (currentPosition - maxPosition) / cardWidth);
+            slider.style.transform = `translateX(${currentPosition}px)`;
+            updateButtons();
+        }
+    });
 
     // Initialize buttons
     updateButtons();
 
     // Handle window resize
     window.addEventListener('resize', function() {
-    const newVisibleCards = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2.5 : 1;
-    if (newVisibleCards !== visibleCards) {
-    currentPosition = 0;
-    slider.style.transform = 'translateX(0)';
-    updateButtons();
-}
-});
+        const newVisibleCards = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2.5 : 1;
+        if (newVisibleCards !== visibleCards) {
+            currentPosition = 0;
+            slider.style.transform = 'translateX(0)';
+            updateButtons();
+        }
+    });
 });
