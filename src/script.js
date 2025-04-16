@@ -1,9 +1,1061 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let collegeData = {};
+    let collegeData = {
+        "Sikkim Manipal University": {
+            "Colleges": {
+                "text": "Sikkim Manipal University",
+                "img": "https://edukyu.com//public/compare-page/smu.png"
+            },
+            "Abbreviation": "SMU",
+            "Institute Type": "Private",
+            "Establishment": "1995",
+            "About": "Sikkim Manipal University offers various undergraduate, postgraduate, and distance education programs. It is renowned for its quality education and infrastructure.",
+            "Accrediation": "NAAC A+, NIRF, UGC",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "2-5 years depending on the program",
+            "Learning Methodolgy": "Online and Distance Learning",
+            "Degree": "https://www.onlinemanipal.com/wp-content/uploads/2023/06/SMU-sample-certificate-Bachelor-of-Arts1.jpg",
+            "Fees": "Approximately ₹30,000 - ₹1,50,000 per year",
+            "Detail Fees": "",
+            "Programs": "MBA, MCA, MA, M.Com, BA, B.Com",
+            "Specialisation": "Management, IT, Healthcare, Engineering",
+            "Review": "Well-rated for its flexible programs and student support.",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Any Issue": "Limited access to hands-on lab sessions for certain programs.",
+            "Our recommendation": "Recommended for students seeking flexible learning options with quality education.",
+            "Website": "https://smu.onlinemanipal.com/"
+        },
+        "Manipal University": {
+            "Colleges": {
+                "text": "Manipal University Jaipur",
+                "img": "https://edukyu.com//public/compare-page/manipal.png"
+            },
+            "Abbreviation": "Manipal University",
+            "Institute Type": "Private (Deemed)",
+            "Establishment": "1953",
+            "About": "The online Manipal University is a division of the prestigious Manipal University Jaipur (MUJ). In 2021, the university commenced offering courses in an online format. The University Grants Commission (UGC) has granted authorization to Online Manipal University to provide undergraduate (UG) and postgraduate (PG) programs.",
+            "Accrediation": "NAAC A+, CAREERS-360, NIRF, NBA, WES, ACU, UGC",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA: 2 years, Online BBA: 3 Years, Online MCA: 2 Years, Online BCA: 3 Years, Online MA (JMC): 2 Years, Online M.com: 2 Years, Online B.com: 3 Years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Degree": "https://www.onlinemanipal.com/wp-content/uploads/2022/11/MUJ-BBA1.png",
+            "Fees": "₹75,000–₹1,75,000",
+            "Detail Fees": "",
+            "Programs": "Online MBA, Online BBA, Online MCA, Online BCA, Online MA, Online M.com, Online B.com",
+            "Specialisation": "Online MBA, Online BBA, Online MCA, Online BCA, Online MA, Online M.com, Online B.com, Finance, IT, Healthcare, Project Management",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "High satisfaction",
+            "Any Issue": "Higher fees for technical programs",
+            "Our recommendation": "Recommended for academics",
+            "Website": "https://www.onlinemanipal.com/"
+        },
+        "Amity University": {
+            "Colleges": {
+                "text": "Amity University Online",
+                "img": "https://edukyu.com//public/compare-page/amity.png"
+            },
+            "Abbreviation": "Amity University Online",
+            "Institute Type": "Private (Deemed)",
+            "Establishment": "2005",
+            "About": "Amity University, established by the State Legislature and recognized by the UGC, is India's leading private education institution. Ranked among Asia's top 200 by QS and UK rankings, it is the only Indian university accredited by WASQ, US. With campuses worldwide and 300+ UG and PG programs, Amity hosts 150,000 students and 6,000 faculty members, making it a global education hub.",
+            "Accrediation": "NAAC A+, WES, QSWUR, NIRF, UGC dEB, AICTE, AIU",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA (Regular): 2 Years, Online MBA (Dual Specialization): 2 Years, Online BBA: 3 Years,Online MCA: 2 Years, Online BCA: 3 Years,Online MA: 2 Years, Online BA: 3 Years, Online MCom: 2 Years,Online BCom: 3 Years",
+            "Learning Methodolgy": "Online",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-S0guEBJqayrT8oWvWiyfo9OU9HBnXqQSnPmWJkYY-GfB98e4zLVuoW56&s=10",
+            "Fees": "Rs 60,000 to Rs 1,99,000",
+            "Detail Fees": {
+                "Online MBA": "INR 1,99,000",
+                "Online MBA (Dual)": "INR 2,99,000",
+                "Online MBA (Campus Immersion (For Executives))": "INR 3,80,000",
+                "Online MBA (Human Resource Analytics)": "INR 1,99,000",
+                "Online MBA (Data Science)": "INR 1,99,000",
+                "Online MBA (Business Analytics)": "INR 1,99,000",
+                "Online MBA (International Finance)": "INR 2,99,000",
+                "Online MBA (Digital Entrepreneurship)": "INR 1,99,000",
+                "Online MBA (Digital Marketing Management)": "INR 1,99,000",
+                "Online MBA (General Management)": "INR 1,99,000",
+
+                "Online BBA": "INR 1,65,000",
+                "Online BBA (Data Analytics)": "INR 2,25,000",
+
+                "Online MCA": "INR 1,70,000",
+                "Online MCA (Cyber Security)": "INR 2,50,000",
+                "Online MCA (Software Engineering)": "INR 2,50,000",
+                "Online MCA (Blockchain Technology and Management)": "INR 1,70,000",
+                "Online MCA (Machine Learning and Artificial Intelligence)": "INR 1,70,000",
+                "Online MCA (Machine Learning & AI with TCS iON)": "INR 2,50,000",
+                "Online MCA (Augmented Reality and Virtual Reality)": "INR 2,50,000",
+
+                "Online BCA": "INR 1,50,000",
+                "Online BCA (Data Engineering)": "INR 2,25,000",
+                "Online BCA (Cloud and Security)": "INR 2,25,000",
+                "Online BCA (Software Engineering)": "INR 2,25,000",
+                "Online BCA (Data Analytics)": "INR 2,25,000",
+
+                "Online MA (Psychology)": "INR 2,50,000",
+                "Online MA (Journalism and Mass Communication)": "INR 1,70,000",
+                "Online MA (Public Policy & Governance)": "INR 1,30,000",
+
+                "Online BA": "INR 99,000",
+                "Online BA (Journalism and Mass Communication)": "INR 1,70,000",
+                "Online BA (Malayalam, Tamil, Kannada, Telugu, Hindi)": "INR 85,000",
+
+                "Online MCom (Financial Management)": "INR 1,20,000",
+                "Online MCom (Financial Technology)": "INR 1,20,000",
+
+                "Online BCom": "INR 99,000",
+                "Online BCom (Hons)": "INR 1,65,000",
+                "Online BCom (International Finance & Accounting)": "INR 2,50,000",
+
+                "Online M.Sc (Data Science)": "INR 2,50,000",
+
+                "UG + PG Degree Program (BBA + MBA)": "INR 3,45,800",
+                "UG + PG Degree Program (B.Com + MBA)": "INR 2,83,100",
+                "UG + PG Degree Program (BCA + MCA)": "INR 3,04,000"
+            },
+            "Programs": "Online MBA, Online MBA (Dual), Online BBA, Online MCA, Online BCA, Online MA, Online BA, Online Mcom, Online Bcom",
+            "Specialisation": {
+                "Online MBA": {
+                    "MBA in General Management": {},
+                    "International Finance": {},
+                    "Digital Entrepreneurship": {},
+                    "Business Analytics": {},
+                    "Data Science": {},
+                    "HR Analytics": {},
+                    "Digital Marketing Management": {},
+                    "Online MBA (Dual)": {},
+                    "Online BBA": {},
+                    "Online MCA": {},
+                    "Blockchain": {},
+                    "ML&AI": {},
+                    "Machine Learning & Artificial Intelligence": {},
+                    "AR & VR": {}
+                },
+                "Online BCA": {
+
+                },
+                "Online MA": {
+
+                },
+                "Online BA": {
+
+                },
+                "Online MCom": {
+
+                },
+                "Online BCom": {
+
+                }
+            },
+            "Review": "Positive feedback on courses",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Any Issue": "Higher fees for some programs",
+            "Our recommendation": "Recommended for flexibility",
+            "Website": "https://amityonline.com/"
+        },
+        "Vivekanand Global University": {
+            "Colleges": {
+                "text": "Vivekanand Global University",
+                "img": "https://edukyu.com//public/compare-page/vgu.png"
+            },
+            "Abbreviation": "Vivekanand Global University",
+            "Institute Type": "Private",
+            "Establishment": "2012",
+            "About": "Vivekananda Global University (VGU) has emerged as a premier institution in India, renowned for its commitment to providing high-quality education, state-of-the-art facilities, and exceptional career opportunities. Offering both on-campus and online courses across a range of disciplines, VGU is dedicated to catering to diverse learning needs and career goals.",
+            "Accrediation": "NAAC A+, UGC, AICTE, AIU",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA: 2 Years, Online MCA: 2 Years, Online BBA (Hybrid Mode): 3 Years, Online BCA: 3 Years, Online MA: 2 Years, Online MSc: 2 Years",
+            "Learning Methodolgy": "Online",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY3af9KPEbBMAr_8Z8xHq55AdD_JsTtINlnubjsuvawAwwHgfI_vkRmhTY&s=10",
+            "Fees": "₹60,000–₹1,30,000",
+            "Detail Fees": "",
+            "Programs": "Online MBA, Online MCA, Online BBA, Online BCA, Online MA, Online MSc",
+            "Specialisation": "Online MBA, Online MCA, Online BBA, Online BCA, Online MA, Online MSc, Management, IT, Healthcare",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Affordable and flexible",
+            "Any Issue": "Relatively new in the market",
+            "Our recommendation": "Recommended for affordability",
+            "Website": "https://onlinevgu.com/"
+        },
+        "Jain Online University": {
+            "Colleges": {
+                "text": "Jain Online University",
+                "img": "https://edukyu.com//public/compare-page/jain.png"
+            },
+            "Abbreviation": "Jain Online University",
+            "Institute Type": "Private (Deemed)",
+            "Establishment": "1990",
+            "About": "JAIN Online University, the leading e-learning platform provided by JAIN (Deemed-to-be University) in Bangalore, led by the visionary Dr. Chenraj Roychand. Firm in the belief that education can transform lives, Dr. Roychand and the respected JAIN Group—armed with over 30 years of excellence in teaching and entrepreneurship—introduce a platform that knows no bounds.",
+            "Accrediation": "NAAC A++, UGC, NIRF, KSURF, AICTE, QSWUR, CAREERS360, ACU, WES, AUAP, AIU",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA: 2 Years, Online BBA: 3 Years, Online MCA (Data Science/AI): 2 Years, Online MCA: 2 Years, Online M.Com: 2 Years, Online B.com: 3 Years",
+            "Learning Methodolgy": "Online",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7DnPzvkp3_yfQmJP78poYWHQv9SmIdF8yROCKR-5AvVJNvLun1m7MMQoB&s=10",
+            "Fees": "₹1,27,500–₹1,96,000",
+            "Detail Fees": "",
+            "Programs": "Online MBA, Online BBA, Online MCA (Data Science/AI), nline MCA, Online M.Com, Online B.com",
+            "Specialisation": "Online MBA, Online BBA, Online MCA (Data Science/AI), nline MCA, Online M.Com, Online B.com, E-commerce, Banking, Finance, Marketing",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Positive for working students",
+            "Any Issue": "Limited courses for niche fields",
+            "Our recommendation": "Recommended for professionals",
+            "Website": "https://onlinejain.com/"
+        },
+        "Dy Patil University": {
+            "Colleges": {
+                "text": "D.Y. Patil University, Pune",
+                "img": "https://edukyu.com//public/compare-page/dpu.png"
+            },
+            "Abbreviation": "Dnyandeo Yashwantrao Patil",
+            "Institute Type": "Private",
+            "Establishment": "2002",
+            "About": "Dr. D.Y. Patil University houses the Centre for Online Learning (DPU-COL), dedicated to providing undergraduate and postgraduate online courses. Through virtual platforms, the university ensures comprehensive educational services are accessible to students. The university offers affordable education to students, with various fee concession options available for special and needy categories.For instance, the D.Y Patil Online MBA fees are most affordable as compared to open universities.",
+            "Accrediation": "NAAC A++, WES, NIRF, AICTE, AIU, NAAC, WES",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA: 2 Years, Online BBA: 3 Years, Online Certificate Program for Digital Marketing: 2 Years, Online Certificate Programme in Hospital & Health Care Management: 2 Years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/dy-patil-vidyapeeth-pune-sample-certificate...webp",
+            "Fees": "₹28,000–₹1,69,200",
+            "Detail Fees": {
+                "MBA": "₹ 1,89,400",
+                "BBA": "₹ 1,92,400",
+                "Digital Marketing": ",₹ 28,000",
+                "HAHM": "₹ 28,000"
+            },
+            "Programs": "Online MBA, Online BBA, Online Certificate Program for Digital Marketing, Online Certificate Programme in Hospital & Health Care Management",
+            "Specialisation": "Online MBA, Online BBA, Online Certificate Program for Digital Marketing,Online Certificate Programme in Hospital & Health Care Management",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Good student support",
+            "Any Issue": "Limited niche specializations",
+            "Our recommendation": "Recommended for general online courses",
+            "Website": "https://www.dypatilonline.com/"
+        },
+        "NMIMS University": {
+            "Colleges": {
+                "text": "NMIMS CDOE",
+                "img": "https://edukyu.com//public/compare-page/nmims.png"
+            },
+            "Abbreviation": "Narsee Monjee Institute of Management Studies",
+            "Institute Type": "Private",
+            "Establishment": "1981",
+            "About": "Founded in 1981 by SVKM to meet the demand for management education. Expanded from 40 students to a globally recognized university with multiple campuses. Houses 17,000+ students, 900+ faculty, and strong industry linkages. Accredited by NAAC with an A+ Grade and recognized by UGC as a Deemed-to-be University. Nurtures future leaders through value-based learning and diversity. Focuses on innovation, research, and balanced education.,",
+            "Accrediation": "NAAC A+, UGC, NIRF",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "MBA: 2 Years, Executive MBA(Working Executive): 2 Years, B.Commerce: 3 Years, BBA: 3 Years, Certificate Programs: 6 Months, Diploma Programs: 1 Year",
+            "Learning Methodolgy": "Online",
+            "Degree": "https://nmims.help/wp-content/uploads/2024/06/nmims-distance-mba-sample-degree.jpg.webp",
+            "Fees": "Rs 55000 to Rs 4,00,000",
+            "Detail Fees": {
+                "MBA (WX)": "INR 4,00,000",
+                "MBA": "INR 2,10,000",
+                "BBA": "INR 1,41,000",
+                "BBA (Business Analytics)": "INR 1,59,800",
+                "B.Com": "INR 99,000"
+            },
+            "Programs": "MBA, Executive MBA, B.Com, BBA, Certificate Programs, Diploma Programs",
+            "Specialisation": {
+                "MBA": {},
+                "Executive MBA": {},
+                "B.Com": {},
+                "BBA": {},
+                "Certificate Programs": {},
+                "Diploma Programs": {
+                    "Business Management": {},
+                    "Operations Management": {},
+                    "Diploma in Human Resource Management": {},
+                    "Diploma in Finance Management": {},
+                    "Diploma in Marketing Management": {}
+                }
+            },
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Well-received by students",
+            "Any Issue": "Higher competition for admissions",
+            "Our recommendation": "Recommended for advanced programs",
+            "Website": "https://online.nmims.edu/"
+        },
+        "LPU Univerisity": {
+            "Colleges": {
+                "text": "Lovely Professional University",
+                "img": "https://edukyu.com//public/compare-page/lpu.png"
+            },
+            "Abbreviation": "Lovely Professional University",
+            "Institute Type": "Private",
+            "Establishment": "2004",
+            "About": "Established Institution: LPU offers 200+ professional programs with a hi-tech campus. - Global Diversity: Hosts 150,000+ students, including 3,000+ international students. - Wide Range of Programs: Offers 150+ UG and PG programs across disciplines. - Industry Partnerships: 200+ collaborations for practical learning and jobs. - Accreditations: NAAC A++ grade, ranked among India's top universities.",
+            "Accrediation": "NAAC A++, WES, NIRF, AICTE, AIU",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "MBA: 2 years, BBA: 3 Years, MCA: 2 Years, BCA: 3 Years, M. Commerce: 2 Years, BA: 3 Years, MA: 2 Years, MSc: 2 Years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Degree": "https://www.lpuonline.com/images/degree/mba.jpg",
+            "Fees": "Rs 80,000 to Rs 1,80,000",
+            "Detail Fees": "",
+            "Programs": "MBA, MCA, MSC, M.Com, MA, BBA, BCA, BA",
+            "Specialisation": {
+                "MBA": {
+                    "HRM": {},
+                    "Finance": {},
+                    "Marketing": {},
+                    "Operations Management": {},
+                    "Business Analytics": {},
+                    "Digital marketing": {},
+                    "Data Science": {},
+                    "Information Technology": {},
+                    "International Business": {}
+                },
+                "BBA": {},
+                "MCA": {
+                    "Machine Learning & AI": {},
+                    "Data Science": {},
+                    "Cybersecurity": {},
+                    "Full Stack Web Development": {},
+                    "AR/VR (Game Development)": {}
+                },
+                "BCA": {},
+                "M.Com": {},
+                "BA": {},
+                "MA": {
+                    "English": {},
+                    "History": {},
+                    "Sociology": {},
+                    "Political Science": {}
+                },
+                "MSc": {
+                    "Mathematics": {},
+                    "Economics": {}
+                }
+            },
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Good for affordability",
+            "Any Issue": "Limited support for advanced programs",
+            "Our recommendation": "Recommended for budget-friendly options",
+            "Website": "https://www.lpuonline.com/"
+        },
+        "Shoolini Univerisity": {
+            "Colleges": {
+                "text": "Shoolini Univerisity",
+                "img": "https://edukyu.com//public/compare-page/shoolini.png"
+            },
+            "Abbreviation": "Shoolini Univerisity",
+            "Institute Type": "Private",
+            "Establishment": "2009",
+            "About": "Shoolini University, situated in Solan district of Himachal Pradesh, was established in 2009 and is recognized as one of the top private universities in India. It has been consistently ranked among the top 100 universities by the National Institutional Ranking Framework (NIRF).",
+            "Accrediation": "NAAC B++, WUR, QS I-GAUGE, NIRF, WUA, INDIA TODAY, UGC, IMPACT RANKINGS",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA: 2 Years, Shoolini X KPMG (India MBA fees): 2 Years, Online BBA: 3 Years, Online BCA: 3 Years, Online MA English: 2 Years, Online BA (JMC): 3 Years, Pay After Placement Program: 2 years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/shoolini-university-online.webp",
+            "Fees": "₹50,000–₹1,60,000",
+            "Detail Fees": {
+                "MBA": {
+                    "HRM": "₹ 1,31,840",
+                    "Finance": "₹ 1,31,840",
+                    "Marketing": "₹ 1,31,840",
+                    "Operations Management": "₹ 1,31,840",
+                    "Business Analytics": "₹ 1,31,840",
+                    "Digital Marketing": "₹ 1,31,840",
+                    "Data Science": "₹ 1,31,840",
+                    "Information Technology": "₹ 1,31,840",
+                    "International Business": "₹ 1,31,840",
+                    "Total": "₹ 1,89,400"
+                },
+                "BBA": {
+                    "Total": "₹ 1,32,960",
+                    "Detail Total": "₹ 1,92,400"
+                },
+                "Online DBA": "₹ 44,320",
+                "MCA": {
+                    "Machine Learning & AI": "₹ 1,03,040",
+                    "Data Science": "₹ 1,03,040",
+                    "Cybersecurity": "₹ 1,03,040",
+                    "Full Stack Web Development": "₹ 1,03,040",
+                    "AR/VR (Game Development)": "₹ 1,03,040"
+                },
+                "BCA": "₹ 1,32,960",
+                "DCA": "₹ 44,320",
+                "M.Com": "₹ 74,240",
+                "BA": "₹ 89,760",
+                "MA": {
+                    "English": "₹ 59,840",
+                    "History": "₹ 59,840",
+                    "Sociology": "₹ 59,840",
+                    "Political Science": "₹ 59,840"
+                },
+                "MSc": {
+                    "Mathematics": "₹ 59,840",
+                    "Economics": "₹ 59,840"
+                },
+                "Digital Marketing Certification": "₹ 28,000",
+                "HAHM": "₹ 28,000"
+            },
+            "Programs": "Online MBA, Shoolini X KPMG (India MBA fees), Online BBA, Online BCA, Online MA English, Online BA, Pay After Placement Program (JMC)",
+            "Specialisation": "Online MBA, Shoolini X KPMG (India MBA fees), Online BBA, Online BCA, Online MA English, Online BA, Pay After Placement Program (JMC), Biotechnology, Management, IT",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Highly rated for research focus",
+            "Any Issue": "Limited course offerings",
+            "Our recommendation": "Recommended for research enthusiasts",
+            "Website": "https://shooliniuniversity.com/"
+        },
+        "Uttaranchal Univerisity": {
+            "Colleges": {
+                "text": "Online UU",
+                "img": "https://edukyu.com//public/compare-page/uttaranchal.png"
+            },
+            "Abbreviation": "Uttaranchal Univerisity",
+            "Institute Type": "Private",
+            "Establishment": "2013",
+            "About": "Uttaranchal University, located in Dehradun, Uttarakhand, is recognized by NAAC as an esteemed institution. Committed to enhancing access to quality higher education, the university provides affordable educational opportunities to a diverse student body.",
+            "Accrediation": "NAAC A, UGC, AICTE, AIU, ISO",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "yes",
+            "Duration": "Online MBA: 2 Years, Online MCA: 2 Years, Online MBA (Hybrid Mode): 2 Years, Online BBA: 3 Years, Online BCA: 3 Years, Online BA: 3 Years",
+            "Learning Methodolgy": "Online & Blended Learning",
+            "Degree": "https://www.onlineuu.in/assets/images/online-degree-sample-format.jpg",
+            "Fees": "₹50,000–₹1,50,000",
+            "Detail Fees": "",
+            "Programs": "Online MBA, Online MCA, Online MBA (Hybrid Mode), Online BBA, Online BCA, Online BA",
+            "Specialisation": "Online MBA, Online MCA, Online MBA (Hybrid Mode), Online BBA, Online BCA, Online BA, Law, IT, Healthcare",
+            "Eligibility": "For Certificate: 10+2, For MBA: Graduation, For BBA: 10+2",
+            "Review": "Positive for niche areas",
+            "Any Issue": "Limited global presence",
+            "Our recommendation": "Recommended for focused programs",
+            "Website": "https://uttaranchaluniversity.ac.in/"
+        },
+        "IIM-Lucknow": {
+            "Colleges": {
+                "text": "IIM-Lucknow",
+                "img": "https://edukyu.com//public/compare-page/iim.webp"
+            },
+            "Abbreviation": "Indian Institute of Management",
+            "Institute Type": "Private Institute",
+            "Establishment": "",
+            "About": "IIM Lucknow",
+            "Accrediation": "AIU(Association of Indian University)",
+            "UGC": "N/A",
+            "AICTE": "Yes",
+            "DEB": "N/A",
+            "Duration": "1/2 year",
+            "Learning Methodolgy": "Online classes through their enrollment partner like hughes education etc No Recorded classes will be provided.Campus visit for 5days with additional cost.",
+            "Degree": "https://www.iiml.ac.in/sites/default/files/2019-11/2016527019certificate.jpg",
+            "Fees": "Rs 2.5 Lakhs to 5 Lakhs( depending upon the course)",
+            "Detail Fees": "",
+            "Programs": "Diploma and other executiveprograms(it doesn't offer PG diploma)",
+            "Specialisation": "1)Business Management 2)Business Analytics 3)International Business 4)Global Business Management",
+            "Eligibility": "",
+            "Review": "Great Reviews, Programs are of very high quality and designed to suit experienced executives and are termed as very costly",
+            "Any Issue": "None",
+            "Our recommendation": "Admission to IIM distance learning requires entrance test followed by interview, atleast one year of experience is required. The high quality and expensive programs are specially designed to meet the needs of executives with good amount of experience. IIMs don't give any degrees and the courses are not equivalent to its PG Diploma, those aspiring to do distance courses from IIMs must plan carefully as studying at IIM doesn't come cheap",
+            "Website": "http://www.iiml.ac.in/"
+        },
+        "IIM calcutta": {
+            "Colleges": {
+                "text": "IIM calcutta",
+                "img": "https://edukyu.com//public/compare-page/iim_culcutta.png"
+            },
+            "Abbreviation": "Indian Institute of Management",
+            "Institute Type": "Private Institute",
+            "Establishment": "1961",
+            "About": "It has ranked among the top 3 B-schools in India.Indian Institute of Management Calcutta (IIM Calcutta or IIM-C) is a public business school located in Joka, Kolkata, West Bengal, India.",
+            "Accrediation": "AIU(Association of Indian University)",
+            "UGC": "N/A",
+            "AICTE": "Yes",
+            "DEB": "N/A",
+            "Duration": "1/2 year",
+            "Learning Methodolgy": "Online classes through their enrollment partner like hughes education etc No Recorded classes will be provided. Campus visit for 5days with additional cost",
+            "Degree": "https://www.iimcal.ac.in/sites/default/files/2024-06/sample-certificate-PGCFBM.png",
+            "Fees": "Rs 2.5 Lakhs to 5 Lakhs( depending upon the course)",
+            "Detail Fees": "",
+            "Programs": "Executive program",
+            "Specialisation": "1)Business Management 2)Business Analytics 3)International Business 4)Global Business Management",
+            "Eligibility": "",
+            "Review": "",
+            "Any Issue": "",
+            "Our recommendation": "Admission to IIM distance learning requires entrance test followed by interview, atleast one year of experience is required. The high quality and expensive programs are specially designed to meet the needs of executives with good amount of experience. IIMs don't give any degrees and the courses are not equivalent to its PG Diploma, those aspiring to do distance courses from IIMs must plan carefully as studying at IIM doesn't come cheap",
+            "Website": "https://www.iimcal.ac.in/programs/executive-education"
+        },
+        "IGNOU": {
+            "Colleges": {
+                "text": "IGNOU",
+                "img": "https://edukyu.com//public/compare-page/ignou.jpg"
+            },
+            "Abbreviation": "Indira Gandhi Open University",
+            "Institute Type": "Central Open University",
+            "Establishment": "1985",
+            "About": "Indira Gandhi National Open University is the world's largest open university in terms of number of students enrolled",
+            "Accrediation": "UGC, DEC, NAAC -A Grade, Govt of India",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Learning Methodolgy": "Physical classes by guest faculties or visiting faculties. As IGNOU is open university they provide study material student have to study by their self.",
+            "Degree": "https://cdn.slidesharecdn.com/ss_thumbnails/8ebe0c0e-8720-43aa-ad7c-a91031f09728-151029112705-lva1-app6892-thumbnail.jpg?width=640&height=640&fit=bounds",
+            "Fees": "Rs 35000",
+            "Detail Fees": "",
+            "Programs": "MBA Degree",
+            "Specialisation": "Financial Markets Practice Marketing Management Operations Management Financial Management",
+            "Eligibility": "",
+            "Review": "More than 50% recommended, Ignou students usually complain of poor student support, it lacks good student support and a personal touch. Students faced lack of timely communication and telephone lines are always busy, and if at all the call is picked they don't seem to be in a mood to help you.",
+            "Any Issue": "None",
+            "Our recommendation": "Ignou is the largest distance learning institute of India for any course. Its MBA admissions are through an entrance test called as OPENMAT. Recommended. But you may face your share of bad support complaints.",
+            "Website": "https://www.ignou.ac.in/"
+        },
+        "Symbiosis-CDL": {
+            "Colleges": {
+                "text": "Symbiosis -CDL",
+                "img": "https://edukyu.com//public/compare-page/Symbiosis-CDL.jpg"
+            },
+            "Abbreviation": "Symbiosis Centre of Distance Learning Program",
+            "Institute Type": "Autonomous",
+            "Establishment": "1971",
+            "About": "Symbiosis Centre for Distance Learning (SCDL) is one of the largest autonomous distance learning educational institutions in India.",
+            "Accrediation": "AICTE, DEC",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Degree": "https://store.learningroutes.in/images/colleges/symbiosis-centre-for-distance-learning/degree/Symbiosis-SCDL-sample-certificate.webp",
+            "Learning Methodolgy": "Online Recorded classes will be provided from SCDL faculties. Recorded classes is also available. Faculties are from Centre distance learning. No full time faculties of Symboisis University will take class.",
+            "Fees": "Rs. 35,000 for 2 years",
+            "Detail Fees": "",
+            "Programs": "PG Diploma",
+            "Eligibility": "",
+            "Specialisation": "Business Management Marketing Management Operation Management Human Resource Management Finance Management Banking & Finance Management Retail Management Supply Chain Management International Business Management Information Technology Management Export and Import Management Customer Relationship Management Insurance Management Supply Chain Management",
+            "Review": "Symbiosis is a reputed institute for its regular courses and carry high value in the industry, but same is not true for its distance courses offered. The PG Diploma in offer is not valid for any job in public sector where MBA is a prerequisite. After doing PGDBA or any other similar 2 years program you are not eligible to pursue research degree. You are also not eligible for higher studies in India and abroad.",
+            "Any Issue": "None",
+            "Our recommendation": "As most of the students go for distance courses by the brand image of the institute, and pay high prices for the PG diploma courses, they find that the course are of too less value, One cannot go for higher studies or for job in public sector.",
+            "Website": ""
+        },
+        "IMT-CDL": {
+            "Colleges": {
+                "text": "IMT-CDL",
+                "img": "https://edukyu.com//public/compare-page/IMT-CDL.png"
+            },
+            "Abbreviation": "Institute of Management Technology Centre for Distance Learning",
+            "Institute Type": "Private Institute",
+            "Establishment": "1991",
+            "About": "IMT-CDL offers a wide spectrum of management and information technology programmes.",
+            "Accrediation": "AICTE, Not UGC",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Eligibility": "",
+            "Learning Methodolgy": "This MBA was specifically designed to equip graduates with the ability to become effective managers. The ground-breaking curriculum will ensure everyone who graduates has command of various aspects of business regardless of specialization.",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/imt-center-for-distance-learning.webp",
+            "Fees": "Rs. 1,35,000",
+            "Detail Fees": "",
+            "Programs": "PG Diploma and other executive courses",
+            "Specialisation": "Business Analytics Management Marketing Management Operation Management Human Resource Management Finance Management",
+            "Review": "Good reviews about the regular course, but not recommended for distance course",
+            "Any Issue": "None",
+            "Our recommendation": "As the Diploma they offer is not valid for higher education and for job in India or abroad, Hence when deciding about the distance learning it is better to avoid going after the reputation of the institute.",
+            "Website": "https://www.imtcdl.ac.in/"
+        },
+        "MIT-SDE": {
+            "Colleges": {
+                "text": "MIT-SDE",
+                "img": "https://edukyu.com//public/compare-page/MIT-SDE.png"
+            },
+            "Abbreviation": "Affiliated to Assam Down town university",
+            "Institute Type": "Distance Learning",
+            "Establishment": "1983",
+            "About": "MIT School of Distance Education (MITSDE) is an integral constituent of MAEER's MIT Pune, established in the year 2008. MIT is among the first in professional education offering academic programs at more than 72 institutions and 4 universities across India.",
+            "Accrediation": "AICTE, DEC, DTE",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Eligibility": "",
+            "Learning Methodolgy": "Recorded classes through visiting faculties. Study material in hard copy as well soft copy also.",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/mit-sde.webp",
+            "Fees": "Rs. 40,000",
+            "Detail Fees": "",
+            "Programs": "PG Diploma",
+            "Specialisation": "Modern Office Management Business Management Marketing Management Operation Management Human Resource Management Finance Management Insurance and Risk Management Material Management Financial Service Management Infrastructure Management Retail Management Project Management Supply Chain Management International Business Management Information and System Management",
+            "Review": "Some students complain about high promises and low delivery. The course is not run properly and student support is not very good.",
+            "Any Issue": "Assam Down Town University probably doesnot have the DEC and UGC recognition for providing distance degree outside Assam, Hence all diplomas issued via this university may be considered invalid.",
+            "Our recommendation": "Avoid enrolling with any institute with controversy, Student support is also not found to be good. Hence not recommended.",
+            "Website": "https://www.mitsde.com/"
+        },
+        "Suresh Gyan Vihar": {
+            "Colleges": {
+                "text": "Suresh Gyan Vihar",
+                "img": "https://edukyu.com//public/compare-page/Suresh Gyan Vihar.jpeg"
+            },
+            "Abbreviation": "SGUV is a non-auntomous research university",
+            "Institute Type": "Private University ",
+            "Establishment": "1997",
+            "About": "Suresh Gyan Vihar University",
+            "Accrediation": "UGC, DEC",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "Eligibility": "",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Learning Methodolgy": "provides you a digital campus which is known as learning mgmt system which has features like live and interative lectures",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/sgvu-engineering-sample-certificate.webp",
+            "Fees": "Rs. 62400(one shot)",
+            "Detail Fees": "",
+            "Programs": "MBA",
+            "Specialisation": "Risk Management Business Leadership Banking Management Finance Management Foreign Trade and Global Business Management Marketing Management International Marketing Project and leadership Management Wealth Management Hospital Management Strategic Management Information Management Financial Planning and analysis Hr Management Operation and production Management Branding and Advertising Management Entreprenuership Management",
+            "Review": "SGUV got NAAC grade because of its agile milestone ",
+            "Any Issue": "examnination are in offline mode",
+            "Our recommendation": "SGUV has total 22 specialisation for MBA,all syllabus and content is Industry oriented.",
+            "Website": "https://www.sgvu.edu.in/"
+        },
+        "ICFAI": {
+            "Colleges": {
+                "text": "ICFAI",
+                "img": "https://edukyu.com//public/compare-page/ICFAI.jpeg"
+            },
+            "Abbreviation": "Institute of Chartered Financial Analysts of India",
+            "Institute Type": "private university",
+            "Establishment": "1984",
+            "About": "ICFAI is a group of institutions consisting of recognized universities, a deemed-to-be university and several institutions likely to be recognized as universities.",
+            "Accrediation": "DEC",
+            "UGC": "No",
+            "AICTE": "No",
+            "DEB": "No",
+            "Duration": "2 years",
+            "Eligibility": "",
+            "Learning Methodolgy": "ICFAI is reowned brand in regular MBA/ PGDM, but in distance learning still need to gear up. Students will get study material, Online classes and recorded classes also. ",
+            "Degree": "https://www.secure.icfai.org/olcv/certificates/947472017111.jpg",
+            "Fees": "More than Rs 1 Lakh for 2 years",
+            "Detail Fees": "",
+            "Programs": "MBA Degree ",
+            "Specialisation": "Health care management Innovation management Finance HR Retail management Telecom management Operation Management Pharma Management IT and Systems Marketing Hospital administration International business Global markets Risk management Investment management Strategic Finance",
+            "Review": "As per student reviews, they term the course fee too high, also questioned about approvals ",
+            "Any Issue": "ICFAI was de- recognised following a legal battle, now again running various distance courses. Approved for the states of:Andhra Pradesh, Mizoram, Sikkim, Uttarakhand and Tripura, still running centre",
+            "Our recommendation": "",
+            "Website": ""
+        },
+        "IIM Kozhikode": {
+            "Colleges": {
+                "text": "IIM Kozhikode",
+                "img": "https://edukyu.com//public/compare-page/kozikodhe-logo.png"
+            },
+            "Abbreviation": "Indian Institute of Management Kozhikode Is IIMK",
+            "Institute Type": "Govt University",
+            "Establishment": "1997",
+            "About": "* IIMK Was the fifth IIM to be established . Rank #3 under the management category by NIRF 2024,\nApplicants must have a bachelor's degree from a recognized university with an aggregate percentage of at least 50%. \nCAT scores are considered for shortlisting for further selection rounds \nNotable features\nIIMK has one of the most picturesque and oxy-rich campuses in the country",
+            "Accrediation": "AMBA, EQUIS",
+            "UGC": "No",
+            "AICTE": "YES",
+            "DEB": "No",
+            "Duration": "1years/2 years",
+            "Learning Methodolgy": "Online The IIM Kozhikode Executive MBA primarily utilizes a blended learning approach, heavily relying on the \"Interactive Learning (IL)\" platform for online classes, supplemented by periodic in-person immersion modules on campus, with a pedagogy that incorporates case studies, simulations, projects, assignments, class discussions, and quizzes to facilitate active learning among working professionals; this method allows for a mix of theoretical knowledge and practical application through real-world scenarios.",
+            "Degree": "https://timesproweb-static-backend-prod.s3.ap-south-1.amazonaws.com/medium_5_IIMKZ_EPGP_62a061fe6b.png",
+            "Fees": "265000/INR For 1 year program and 15.5 lakh for 2 year program",
+            "Programs": "Executive Program",
+            "Specialisation": "Finance, Human Resource, Strategy, IT and Analytics, Marketing Management, operation Management, General Management, Strategic Management, Information technology management, Mergers, Acquisitions and Corporate Restructuring, Financial Risk Management, Product and Brand Management, Business to Business Marketing, Digital Marketing, Business Storytelling, Marketing Analytics, Industrial Relations and Labor Laws, Compensation and Reward Management, Negotiations and Conflict Management",
+            "Eligibility": "Applicants should meet at least one item in Part 1, 2, and 3 respectively. \nPart 1 - Academic requirement\nGraduates (10+2+3) or equivalent degree from a recognised university; and;\nwith at least 50 Weighted Average Mark (WAM)\nOr\nGraduates (10+2+3) or equivalent degree from a recognised university; and;\na valid Graduate Management Admission Test (GMAT) score of at least 550 (validity is 5 years)\nOr\nGraduates (10+2+3) or equivalent degree from a recognised university; and;\na valid CAT score of at least 65 percentile\nOr\nGraduates (10+2+3) or equivalent degree from a recognised university (UGC/ AICTE/ AIU); and:\na valid XAT score of at least 65 percentile\nOr\nGraduates (10+2+3) or equivalent degree from a recognised university; and;\na valid MAT score of at least 70 percentile\nOr\nGraduates (10+2+3) or equivalent degree from a recognised university; and;\nat least two additional year of relevant documented professional experience considered by UWA to be sufficient to permit satisfactory completion of the course\nOr\nA UWA Graduate certificate which articulates with this course; and;\nthe equivalent of a UWA weighted average mark of at least 65\nOr\nA Graduate Certificate in Business, or an equivalent qualification from a post-experience and accredited course, as recognised by UWA; and;\nthe equivalent of a UWA weighted average mark of at least 70\nPart 2 - Work experience requirements\nMinimum of two years of full-time work experience in a registered firm/ Company/ Industry/ Educational and/ Government, Autonomous Organizations post graduation as on the program start date\nPart 3 - English language requirement\nITEM (Any-item to be met)\nTEST/ QUALIFICATION\nREQUIREMENT\na)\nAll India Examination from the CBSE Board and Indian School Certicate from the CISCE Board\nEnglish language components with a minimum grade B2 (CBSE) or 60% (I.S.C)\nb)\nSuccessful completion of 10th and 12th Central or state board from India\nMedium of Instruction in English\nc)\nCambridge Advanced English C1\nMinimum grade of 180 with no band less than 170\nd)\nEruditus / Emeritus Programs\nCompletion of the Postgraduate Diploma accredited by the Council for Private Education.\ne)\nGCE A-level\nMinimum grade E in either English language or English Literature or English Language and Literature.\nf)\nGCE AS-level (General Paper)\nMinimum grade C\ng)\nIELTS (Academic) OR IELTS for UKVI (Academic) Pen & Paper based\nMinimum overall score of 6.5 with no band less than 6.0.\nh)\nIELTS (Academic) Computer Delivered\nMinimum overall score of 6.5 with no band less than 6.0.\ni)\nInternational Baccalaureate Diploma (IB)\nEnglish A1 at HL or SL - Minimum score 4\nj)\nInternational Baccalaureate Diploma (IB)\nEnglish A2 at HL or SL - Minimum score 4\nk)\nInternational Baccalaureate Diploma (IB)\nEnglish B at HL - Minimum score 5\nl)\nPTE (Academic)\nAn overall score of 64 with a minimum score of 59 in the speaking and writing sections, and no less than 54 in the listening and reading sections.\nm)\nPearson Written English Test and Pearson Spoken English Test\nMinimum score of 59\nn)\nTOEFL (TWE) of 4.5 and either 230\nEssay Rating / Test of Written English(computer based) or 570 (Paper-based) score\no)\nNext Generation TOEFL (IBT or paper)\nOverall score of 82 -All sections: Minimum 20",
+            "Review": "IIM Kozhikode is widely considered a top-tier business school in India, receiving positive reviews for its strong faculty, excellent placement opportunities, diverse student body, and a beautiful campus setting, making it a great choice for those seeking a quality MBA education with solid career prospects; however, some might note that it may not have the same global recognition as IIM Ahmedabad or Bangalore.",
+            "Any Issue": "None",
+            "Our recommendation": "If you have decided to get into this program, be ready for a hectic schedule for the next 2 years without any break.,• Two-year program will have a very hectic schedule. Not to scare you, but just setting the right expectation. You can forget all weekends, holidays, etc for the next 2 years.,• You will have 7 terms (4 quarters in 1st year & 3 quadrimester in 2nd year) and each terms will have 5-6 subjects. So basically, 6 subjects in 3 months duration with 3-4 quizzes for each subject, multiple assignments for each subject, and one end term exam.,• You have to make sure that you're spending at least a couple of hours every day (Yes, you read it right, every day) studying, preparing for quizzes, completing assignments, and end terms.,• Classes will go at a super-fast speed and missing even one class will be a big challenge to catch up , Admission for 2 years program have been closed.",
+            "Website": "https://www.iimk.ac.in/",
+            "Partner Associated": "Times Pro, veranda"
+        },
+        "IIM Indore": {
+            "Colleges": {
+                "text": "IIM Indore",
+                "img": "https://edukyu.com//public/compare-page/iimi-logo.svg"
+            },
+            "Abbreviation": "Indian Institute of Management in Indore is IIM Indore (IIMI)",
+            "Institute Type": "Govt university",
+            "Establishment": "1996",
+            "About": "Campus: Located on a scenic hillock, the 193-acre campus has modern facilities, including lecture theaters, gyms, and sports facilities \nPrograms: Offers a variety of programs, including PGP, IPM, EPGP, PGPMX, GMPE, DPM, EDPM, and EDPMG \nIndustry interface: Has a strong industry interface and has pioneered initiatives to connect management with the industry, government, and PSUs \nResearch: Conducts research and has produced research papers \nTraining: Offers training and consultancy in management \nEDPMG: Offers an Executive Doctoral Programme in Management and Governance for serving armed forces personnel \nMission: \nTo develop socially-conscious managers, leaders, and entrepreneurs\nTo use contemporary teaching methods\nTo be a contextually-relevant business school\nTo encourage \"Scholar Warriors\" who embody strategic acumen and intellectual excellence",
+            "Accrediation": "ASB, AMBA, EQUIS",
+            "UGC": "No",
+            "AICTE": "YES",
+            "DEB": "No",
+            "Duration": "1YEARS / 2 YEARS",
+            "Learning Methodolgy": "The Indian Institute of Management (IIM) Indore uses a variety of teaching methods, including case studies, group discussions, and lectures. The institute's goal is to develop critical thinking, problem-solving, and decision-making skills.",
+            "Degree": "https://jaro-website.s3.ap-south-1.amazonaws.com/2023/03/Sample-Certificate-scaled.jpg",
+            "Fees": "17.6 Lakh for 2 Years Program",
+            "Programs": "Executive Program",
+            "Specialisation": "General Management Programme for Executives (GMPE), Post Graduate Programme in Management for Working Executives (PGPMX). Specialization Marketing, Operations, Strategy, Finance, Human Resources, Entrepreneurship, Digital Enterprise Management, Finance, Human Resources",
+            "Eligibility": "Entrance Exam Requirement: A valid GMAT/GRE/CAT score is mandatory at the time of application.\nWork Experience: A minimum of five years of professional or entrepreneurial experience, or a combination of both, is required as of the application submission date.\nValid Work Experience: Only work experience gained after obtaining the essential qualification is considered.\nExcluded Work Experience: Part-time jobs, internships, article-ship, or work experience as a student do not count towards the required five years.",
+            "Review": "Competition for admission: The admission process for the EPGP is competitive, requiring a strong work profile and entrance exam scores. \nOverall, IIM Indore's Executive MBA program is a solid choice for professionals seeking to enhance their management skills and network within the industry, especially if you value a practical, industry-focused curriculum and are looking for a recognized IIM brand on your resume.",
+            "Any Issue": "IIM Indore reserves the right to change the program design, format, and other aspects of the program without prior notice.",
+            "Our recommendation": "Key points about IIM Indore EPGP:\nStrong Academic Standing:\nIIM Indore is consistently ranked among the top Indian business schools, with its EPGP program being accredited by the Association of MBAs (AMBA). \nCurriculum for Experienced Professionals:\nThe program is tailored to address the specific needs of working executives, focusing on relevant industry challenges and leadership development. \nNetworking Opportunities:\nAccess to a diverse peer group of senior professionals from various industries allows for valuable networking and collaboration. \nCareer Advancement Potential:\nGraduates often see significant career progression after completing the EPGP, with opportunities for senior management roles.",
+            "Website": "iimidr.ac.in",
+            "Partner Associated": "Times Pro"
+        },
+        "IIM Vishakapatnam": {
+            "Colleges": {
+                "text": "IIM Vishakapatnam",
+                "img": "https://edukyu.com//public/compare-page/iimv-logo-img.jpg"
+            },
+            "Abbreviation": "Indian Institute of Management Visakhapatnam is IIMV",
+            "Institute Type": "Govt University",
+            "Establishment": "2015",
+            "About": "IIMV Works on To develop contextually relevant solutions to techno-managerial problems. To encourage creative learning. To promote relevance and excellence in academic, research, and allied knowledge pursuits. To attain standards of global excellence in management, management research, and allied areas of knowledge. Values professionalism and sustainability.",
+            "Accrediation": "AIU",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "No",
+            "Duration": "2 years",
+            "Learning Methodolgy": "The teaching approach will be highly interactive, taking advantage of the technological benefits. The pedagogy followed for the programme will be a judicious blend of lectures, real-life case studies, quizzes, and assignments. TimesPro, as the learning partner, shall ensure uninterrupted technical support in conducting online classes, attendance, quizzes, etc. Sessions will be conducted via a state-of-the-art Interactive Learning (IL) platform and delivered in Direct-to-Device (D2D) mode",
+            "Fees": "11 lakh 90 thousand for 2 years exective program",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaVizLMJrs5kt9ZlAmU5CBBXpt7dxS3SE9DA&s",
+            "Specialisation": "Finance and accounting, Economics, Decision Science, Marketing, Organization behaviour and HR Management, Production and operation management, Communication, Information system, Entrepreneurship, Strategy",
+            "Eligibility": "• The programme is open to Indian nationals residing in India only. • The candidate must hold a bachelor's degree, with at least 50% marks equivalent CGPA [45% in the case of candidates belonging to NC-OBC and EWS categories, and 40% in the case of candidates belonging to the Scheduled Caste(SC), Scheduled Tribe (ST), and Persons with Disability (PwD) categories], awarded by any University or educational institution as incorporated by an Act Parliament or State Legislature in India or declared to be deemed as a University under Section 3 of the UGC Act, 1956, or possess an equivalent qualification recognised by the Ministry of HRD, Government of India. • The bachelor's degree obtained by the candidate must entail a minimum of three years of education after completing higher secondary schooling (10+2) or equivalent. • The applicant must have a minimum of three years of full-time work experience on the closing date of the respective application window at an officer/executive level or higher, as a professional, or as an entrepreneur. • Part time work experience, clerical (non-officer/non-executive) experience and apprenticeship will not be considered as eligible work experience. • There is no age limit for application to the programme. • Reservation policy as applicable to Central Educational Institutions (CEIs) will followed for admission to the Executive MBA",
+            "Review": "Reviews of IIM Visakhapatnam generally highlight its strong placement record, quality faculty, a growing reputation for industry engagement, and a positive learning environment, with many students praising the holistic development they experienced while studying there, particularly in terms of practical application and skill development; however, some might mention its relatively newer status compared to established IIMs as a potential factor to consider depending on individual priorities.",
+            "Any Issue": "Some potential issues often cited regarding IIM Visakhapatnam include its relatively newer status as a \"baby IIM\" leading to possible limitations in faculty experience, a smaller alumni network compared to older IIMs, potential challenges with industry exposure due to its location in Visakhapatnam, and occasionally being perceived as having a slightly lower ranking compared to established IIMs in major cities; however, the institute is actively working to address these concerns by building its reputation, expanding research initiatives, and fostering strong industry connections",
+            "Our recommendation": "IIM Visakhapatnam is recommended for students seeking a quality MBA with a strong focus on practical learning, a supportive faculty, good placement opportunities, and a growing reputation, particularly if you value a holistic development experience with strong industry connections and exposure to entrepreneurship initiatives; however, it's important to consider its relatively newer status compared to older IIMs when making your decision",
+            "Website": "https://www.iimv.ac.in/",
+            "Partner Associated": "Times Pro"
+        },
+        "IIM KashiPur": {
+            "Colleges": {
+                "text": "IIM KashiPur",
+                "img": "https://edukyu.com//public/compare-page/iimku.png"
+            },
+            "Abbreviation": "Indian Institute of Management Kashipur is IIM Kashipur",
+            "Institute Type": "Govt University",
+            "Establishment": "2011",
+            "About": "The Indian Institute of Management Kashipur is a second-generation IIM set up by the Government of India in 2011. It aspires to achieve excellence in management education by using innovative teaching methods, promoting high quality research and practicing sustainable leadership.",
+            "Accrediation": "AACSB, EQUIS",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The IIM Kashipur Executive MBA utilizes a blended learning methodology, combining online modules with on-campus immersion sessions, incorporating real-world case studies, industry workshops, simulations, and a strong focus on practical application of knowledge gained in the classroom, allowing participants to directly implement learnings in their workplaces; this approach is particularly prominent in their Executive MBA (Analytics) program which emphasizes data-driven decision making and industry relevant skills through a mix of theoretical concepts and hands-on projects.",
+            "Fees": "12 lakh for 2 years",
+            "Degree": "https://www.nulearn.in/executive-mba-analytics-iim-kashipur/img/certificate.png",
+            "Specialisation": "General Management, Finance & Accounting, Information Technology, Operations Management & Decision Sciences, Marketing, Organizational Behaviors Human Resource, Economics, Strategy",
+            "Eligibility": "The candidate must have: 1. A Bachelor's Degree duly recognized by UGC/AIU with minimum aggregate marks of 50% for General, 47% for NC-OBC, and 45% for SC/ST/DAP 2. Minimum 3 years of Managerial/ Entrepreneurial/ Professional experience after Graduation. Selection Process: The Institute seeks diversity of background and interests, from a wide range of corporations, public institutions and other professional fields. The selection will be based on • A valid CAT/GMAT score (last two years) or Marks obtained in Executive Management Aptitude Test (EMAT) conducted by IIM Kashipur and • The performance of the candidates in the personal interview. Final merit list will be prepared based on CAT/GMAT/EMAT Score, academic performance, work experience and personal interview. Admission offer is given based on the final merit list.",
+            "Review": "Reviews for IIM Kashipur generally highlight its strong placement record with a high percentage of students getting placed in reputed companies, a good faculty, and a growing reputation among newer IIMs, despite its location disadvantage; however, some mention that the campus might not be as developed as other top IIMs",
+            "Any Issue": "According to recent news reports, the primary issue with IIM Kashipur is that the interim chairperson, Sandeep Singh, is currently facing legal trouble due to a contempt notice issued by the Uttarakhand High Court for failing to comply with an order to provide a No Objection Certificate (NOC) and vigilance clearance to an employee, with allegations of accessing confidential information without authorization; the court has also issued a notice to the institute's Chief Administrative Officer regarding this matter.",
+            "Our recommendation": "The Indian Institute of Management (IIM) in Kashipur is a top business school in India. It is known for its academic rigor, real-world experience, and culture of innovation. What people say \"Excellent institution with world class quality\"",
+            "Website": "www.iimkashipur.ac.in",
+            "Partner Associated": "Times pro"
+        },
+        "IIM Amrtisar": {
+            "Colleges": {
+                "text": "IIM Amrtisar",
+                "img": "https://edukyu.com//public/compare-page/IIM_amritsar_logo_header.png"
+            },
+            "Abbreviation": "Indian Institute of Management in Amritsar is IIM-A",
+            "Institute Type": "Govt University",
+            "Establishment": "2015",
+            "About": "The Indian Institute of Management (IIM) Amritsar, the 15th IIM established under the aegis of the Ministry of Education (formerly the Ministry of Human Resource Development), was founded with the support of the Government of Punjab. Following the registration of the IIM Amritsar Society on July 27, 2015, the inaugural MBA batch (2015-17) commenced in August 2015. Subsequently, on October 14, 2015, the IIM Amritsar Board of Governance & Society was constituted, marking a significant milestone in the institute's journey.",
+            "Accrediation": "NIRF, EMBA, NAAC",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 YEARS",
+            "Learning Methodolgy": "The EMBA program provides a multidisciplinary view of business management. The program is offered in the hybrid mode, with two on-campus visits per year intertwined with live virtual classes. EMBA classes are delivered online via video conferencing using an interactive learning management system. The program is offered over weekends with classes on Saturdays, and Sundays. Designed to address the needs of executives, the program provides a channel for learning and writing exams online, without compromising on human needs for networking in both physical and virtual modes. The program is aimed at enabling participants to develop strategies for solving complex business problems, creating strong teams, and leading organizational change to sustain competitive advantage. The two-year EMBA program spans over 750 hours, where participants have the opportunity of closely interacting with IIM Amritsar faculty and the diverse pool of industry leaders. The program offers a curated set of core courses along with relevant electives to meet the individual aspirations of working professionals. At a time, when India needs a large number of business leaders to keep the momentum of economic growth, our EMBA program will catapult you to lead India's growth story",
+            "Fees": "10 lakh 74 Thousand for 2 years",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ58OIYIrxJlrA4zcFFyQJ0gviiF1p0wf52Dw&s",
+            "Specialisation": "",
+            "Eligibility": "The Institute focuses on a holistic assessment of interested candidates. The admission criteria specified below are more to check the suitability of the candidate for this rigorous program .Bachelor's degree in any discipline with consistent academic performance .Minimum 3 years of progressive work experience in a managerial/entrepreneurial/ professional role as on May 31, 2025,after completion of Graduation .The applicant must have a valid CAT/GMAT/GRE/GATE score to apply for the program. .Alternatively, the interested candidates can also choose to take the IIM Amritsar .Admission Test (IAAT) along the lines of the CAT Examination.GATE, GRE, and GMAT score validity: Not more than three years old as on Jan 31, 2025.",
+            "Review": "Reviews of IIM Amritsar generally highlight its strong placement record, particularly among the newer \"baby IIMs,\" with many students reporting high placement rates and good quality recruiters; however, some mention that the campus infrastructure is still developing and could be improved, while the faculty are praised for their expertise and relevant course curriculum.",
+            "Any Issue": "\"Baby IIM\" perception: As one of the newer IIMs, IIM Amritsar might face challenges in establishing a strong brand reputation and attracting top companies for placements compared to older, more established institutions. Faculty recruitment: Due to its location in Amritsar, attracting highly qualified and experienced faculty could be difficult, potentially impacting the quality of education. Industry connect: Building strong connections with local industries in Amritsar might be challenging, potentially limiting internship and placement opportunities for students.",
+            "Our recommendation": "",
+            "Website": "https://iimamritsar.ac.in/",
+            "Partner Associated": "Times pro"
+        },
+        "IIM SIRMAUR": {
+            "Colleges": {
+                "text": "IIM SIRMAUR",
+                "img": "https://edukyu.com//public/compare-page/sirmaurlogo (1).png"
+            },
+            "Abbreviation": "INDIAN INSTITUTE OF MANAGEMENT SIRMAUR",
+            "Institute Type": "Govt University",
+            "Establishment": "2015",
+            "About": "Indian Institute of Management Sirmaur (IIM Sirmaur) is a Centrally Funded Institution of National Importance set up by the Government of India in 2015. IIM Sirmaur is one of the newer institutions of the IIM family in the country. As a premier institution, under aegis of Ministry of Education, Gol, it aims to provide Management Education of high quality and promotes allied areas of knowledge and inter-disciplinary studies. Institute strives for the seamless integration of management education with local and global aspirations in an enabling environment . It supports that management education is not just about seeking the most competitive employment opportunities, but also about learning to serve socio-economic concerns through ethical and visionary corporate leadership. It strives to focus on indigenous areas and innovative practices, to develop sensitive corporate leaders and entrepreneurs of tomorrow.",
+            "Accrediation": "AACSB",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "No",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The learning methodology of IIM Sirmaur's Executive MBA program primarily relies on a mix of case discussions, lectures, group exercises, role plays, simulations, management games, seminars, assignments, project work, and utilizes audio-visual aids and ICT-based learning methods to create an immersive learning experience, allowing participants to analyze real business scenarios and develop strategic thinking skills through interactive approaches.",
+            "Fees": "8lakh for 2 years",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/iim-sirmaur.webp",
+            "Specialisation": "",
+            "Eligibility": ". A bachelor's degree (10+2+3) or equivalent with a minimum of 50% marks or equivalent CGPA with minimum two years of full-time post-qualification managerial/professional experience at the time of application . For General Category: A minimum of 50% marks in graduation are required. . For SC/ST/PWD Categories: A relaxation of 5% is provided, meaning a minimum of 45% marks in graduation is sufficient. & . Score on any one of the following tests: . A valid CAT/GMAT/XAT/GATE/GRE score . IIM Sirmaur Ex-MBA test score (if conducted) Admission Criteria . Based on the valid qualifying scores of the GMAT/XAT/CAT/GATE/GRE/ExMBA entrance exam, candidates shall be shortlisted for a Personal Interview. . Offer of admission shall be made based on the composite score obtained along with the various parameters of selection (Qualifying test score, PI, Academic and professional profile).",
+            "Review": "Reviews of the IIM Sirmaur Executive MBA program generally highlight its strong focus on placements with a 100% placement record, supportive faculty, good infrastructure, and a unique location in the Himalayas, providing a serene learning environment; however, some note that as a newer IIM, it might not have the same brand recognition as older established IIMs.",
+            "Any Issue": "While the IIM Sirmaur Executive MBA is generally considered a good option for working professionals seeking career advancement, potential concerns could include its relatively newer status compared to other established IIMs, a potentially lower ranking, and a location that might not be easily accessible for all participants depending on their work base; however, the program is designed to be flexible with a non-residential weekend format, and its curriculum is considered relevant to current business trends, making it a cost-effective way to gain an IIM degree while maintaining employment.",
+            "Our recommendation": "",
+            "Website": "https://www.iimsirmaur.ac.in/",
+            "Partner Associated": "Times Pro"
+        },
+        "IIM Udaipur": {
+            "Colleges": {
+                "text": "IIM Udaipur",
+                "img": "https://edukyu.com//public/compare-page/iimu-logo.png"
+            },
+            "Abbreviation": "Indian Institute of Management Udaipur is IIMU",
+            "Institute Type": "Govt University",
+            "Establishment": "2011",
+            "About": "IIM Udaipur, a second-generation IIM, one of the fastest-growing management schools in the country. It was set up by the Indian Government in 2011. Taking the legacy of older IIMs forward, IIMU aspires to set new benchmarks in the field of management education by combining excellence in both teaching and research. At IIM Udaipur, we are committed to becoming a globally recognized management school by 2030 and we are inevitably on our way.",
+            "Accrediation": "AACSB, NIRF",
+            "UGC": "NO",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years / 1 years",
+            "Learning Methodolgy": "The IIM Udaipur online Executive MBA primarily uses a blended learning approach, combining live online lectures, case studies, business simulations, interactive workshops, and mandatory on-campus immersions, allowing participants to apply theoretical knowledge to real-world business scenarios while maintaining flexibility with online access to course materials and recorded sessions; this approach emphasizes experiential learning through projects, peer-to-peer discussions, and interactions with industry experts",
+            "Fees": "14 lakh for 2 years",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/iim-udaipur.webp",
+            "Specialisation": "Accounting and Finance, Economics and Public Policy, Information Management, Marketing, Operations Management, Organizational Behavior and Human Resource Management, Strategy and General Management, Business Analytics, Energy Management",
+            "Eligibility": "Minimum of 10+2 years of school education and a bachelor's degree/equivalent qualification in any discipline with at least 50 percent marks or equivalent Cumulative Grade Point Average (CGPA). Applicants from SC, ST and PwD categories should have a minimum of 45% or equivalent CGPA. (Minimum three years of bachelor's level education after the completion of higher secondary schooling). Minimum three years of full-time post-qualification experience as of May 07, 2025. Valid GMAT or GMAT (Focus) or GRE score (not older than 5 years from date of GMAT/GRE exam) or CAT score of tests taken in 2021 or later, or Score of the IIMU Test to be conducted by IIMU. Reservation Policy - The Institute will follow Govt of India's reservation policy for EWS, NC-OBC, SC, ST and PWD.",
+            "Review": "Reviews for the IIM Udaipur Executive MBA program highlight its comprehensive curriculum, high-quality faculty with real-world experience, well-designed structure for working professionals, and a strong emphasis on applying learnings directly to the workplace, making it a valuable option for career advancement, with many users noting positive experiences with the on-campus immersion modules and the ability to balance work commitments while studying; however, some mention the challenge of managing time with demanding work schedules.",
+            "Any Issue": "A relatively newer campus compared to other IIMs, potential limitations in specialization options within the Executive MBA, and the possibility of a more competitive admission process due to its growing popularity",
+            "Our recommendation": "",
+            "Website": "iimu.ac.in",
+            "Partner Associated": "Times pro"
+        },
+        "IIM Jammu": {
+            "Colleges": {
+                "text": "IIM Jammu",
+                "img": "https://edukyu.com//public/compare-page/iim-jmmu.png"
+            },
+            "Abbreviation": "The Indian Institute of Management Jammu (IIM Jammu)",
+            "Institute Type": "Govt University",
+            "Establishment": "2016",
+            "About": "The Indian Institute of Management (IIM) brand has now become synonymous to innovation, talent and zeal for success and contribution in management. Government of India established IIM Jammu in Jammu and Kashmir in 2016. IIM Jammu inaugurated its Off-Campus at Srinagar on January 24, 2020. From very beginning, IIM Jammu has set high standards for outstanding value based quality education, high quality research, executive education, consultancy and strong corporate as well as international linkages. IIM Jammu encourages contemporary research concentrating on regional, national and global issues.",
+            "Accrediation": "AACSB",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Learning Methodolgy": "The Indian Institute of Management (IIM) brand has now become synonymous to innovation, talent and zeal for success and contribution in management. Government of India established IIM Jammu in Jammu and Kashmir in 2016. IIM Jammu inaugurated its Off-Campus at Srinagar on January 24, 2020. From very beginning, IIM Jammu has set high standards for outstanding value based quality education, high quality research, executive education, consultancy and strong corporate as well as international linkages. IIM Jammu encourages contemporary research concentrating on regional, national and global issues.",
+            "Fees": "11 lakh for 2 years",
+            "Degree": "https://www.iimj.ac.in/sites/default/files/2024-05/emba-certificate2024.jpg",
+            "Specialisation": "Human Resources, Business Analytics, Labor & Employment Law, Digital Marketing, Supply Chain, Transport & Logistics, Project Management, Marketing, Digital Transformation, and Leadership",
+            "Eligibility": "Eligibility Criteria for EMBA Admission at IIM Jammu: 1. Work Experience: Candidates must have at least three years of full-time work experience as of the last application date. Work experience gained during studies (internships, part-time jobs, articleship, apprenticeships, training, or project work) will not be considered. 2. Educational Qualification: A Bachelor's Degree with minimum aggregate marks: 50% for General, 47% for NC-OBC, 45% for SC/ST/DAP. Candidates with professional qualifications such as CA/CS/ICWA are also eligible. 3. Selection Criteria (Merit List): The merit list is prepared based on a composite score derived from CAT/GMAT/GRE/IIMJAT Score (30%), Personal Interview (30%), Graduation Marks (15%), Work Experience (15%), and Gender Diversity (10%).",
+            "Review": "IIM Jammu is generally considered a well-regarded institution among the newer IIMs, offering quality management education with strong placements in top companies, despite being a relatively young institute; students often praise the high placement rate, good faculty, and growing reputation, although some may mention its \"new IIM\" status as a potential drawback depending on individual priorities.",
+            "Any Issue": "None",
+            "Our recommendation": "Based on its reputation for quality education, strong industry connections, and a well-structured online Executive PGDM program, MDI Gurgaon is a highly recommended choice for an online Executive MBA; particularly for professionals seeking a rigorous curriculum with excellent placement opportunities in the Indian market.",
+            "Website": "www.iimj.ac.in",
+            "Partner Associated": "EMERITUS"
+        },
+        "IIM Shilong": {
+            "Colleges": {
+                "text": "IIM Shilong",
+                "img": "https://edukyu.com//public/compare-page/New-logo-IIMShillong"
+            },
+            "Abbreviation": "Indian Institute of Management Shillong (IIM-S)",
+            "Institute Type": "Govt University",
+            "Establishment": "2007",
+            "About": "Indian Institute of Management Shillong (IIM Shillong or IIM-S) is a public, fully autonomous management institute in the city of Shillong, Meghalaya. It was the seventh Indian Institute of Management to be established in India. Founded in 2007, IIM Shillong offers postgraduate, doctoral, and executive programmes in management education, and Management Development Programmes (MDPs) spanning different streams of management. Admissions to the institute are based on scores obtained in the Common Admission Test (CAT) and further the group discussion and personal interview rounds. In addition, the institute has a Centre for Development of North Eastern Region (CEDNER), constituted to offer programmes relevant to the local community and society of the state and the region.",
+            "Accrediation": "AIU",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "No",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The IIM Shillong Executive MBA primarily uses a blended learning approach, combining live online classes held mostly on weekends with in-person immersions on campus, allowing working professionals to continue working while studying and applying classroom learning immediately to their jobs; the program heavily relies on case studies, interactive discussions, and a strong emphasis on industry-relevant projects, with a focus on global exposure through international modules and collaborations with overseas universities.",
+            "Fees": "13 lakh for 2 years",
+            "Degree": "https://verandahighered.com/assetshrm/image/pgp_cert_image_1861_1671441480.jpg",
+            "Specialisation": "Finance, Trade, Marketing, Strategy, Human Resources Management, Information Technology, and Economics",
+            "Eligibility": "Education: A Bachelor's Degree or its equivalent in any discipline with minimum 50% aggregate marks or an equivalent CGPA [45% in case of the candidates belonging to Scheduled Caste (SC), Scheduled Tribe (ST) and Differently Abled (DA)]. Experience: Minimum 3 years of full-time work experience (as on 30th April 2025) after graduation. Qualifying Examination/Eligibility: There will be written eligibility test for admission - Working Executive Management Aptitude Test (WE-MAT). The WE-MAT would follow a similar pattern as the Common Admission Test (CAT) conducted by IIMs. However, those having either of minimum 50 percentile in CAT or score of at least 500 in GMAT are eligible to be exempted from the above test. IIM Shillong will consider last 2 years CAT performance or last 5 years valid GMAT score.",
+            "Review": "It is considered a high-quality business school with a strong academic curriculum, excellent placement records, and a beautiful location, offering a positive learning experience for students, although some may note its relatively newer status compared to older IIMs; with consistent 100% placement rates, strong faculty, and a growing reputation for international collaborations, many review it favorably, especially considering its picturesque setting in Shillong.",
+            "Any Issue": "It is with a tag \"baby IIM,\" which can lead to perceived limitations in faculty reputation, alumni network size, and placement opportunities compared to older IIMs; its remote location in Shillong, which may limit access to certain industry connections; and occasional concerns regarding the quality of infrastructure and facilities depending on individual experiences.",
+            "Our recommendation": "If you're looking for an online Executive MBA, XLRI is highly recommended due to its esteemed reputation, strong faculty with industry expertise, well-structured online curriculum, and valuable alumni network, making it a great choice for working professionals seeking to enhance their management skills through a flexible online format; however, be prepared for a rigorous workload and potential costs associated with the program.",
+            "Website": "https://www.iimshillong.ac.in/",
+            "Partner Associated": "Emeritus, TimesPro"
+        },
+        "NMIMS MBA WX": {
+            "Colleges": {
+                "text": "NMIMS MBA WX",
+                "img": "https://edukyu.com//public/compare-page/New-logo-IIMShillong"
+            },
+            "Abbreviation": "Narsee Monjee Institute of Management Studies",
+            "Institute Type": "Private University",
+            "Establishment": "1981",
+            "About": "The institute was founded in 1994 as a distance education arm of SVKM's NMIMS. Over the last several years, NMIMS CDOE has developed and delivered quality education programs, curriculum, and services to democratise education with equal opportunity for everyone to excel at their desired skills. By building a thriving ecosystem for a community of learners, NMIMS CDOE has helped them nurture their aspiration to achieve their goals and thrive in a competitive and dynamically evolving corporate marketplace.",
+            "Accrediation": "NAAC A+, NIRF",
+            "UGC": "YES",
+            "AICTE": "YES",
+            "DEB": "YES",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The NMIMS MBA WX learning methodology primarily focuses on a blended approach combining online lectures, case studies, industry projects, capstone projects, and on-campus immersion modules, designed to provide working professionals with a practical and relevant learning experience while balancing their careers, with a strong emphasis on real-world application of theoretical concepts through hands-on projects and interaction with industry experts; key features include a flexible online learning platform, access to experienced faculty, and networking opportunities with peers from diverse industries.",
+            "Fees": "4 lakh for 2 years",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReNF6IyoTTY_e3IHmqg52An1No-map0NkDXw&s",
+            "Specialisation": "Finance and Accounting Management, Marketing and Sales Management, Human Resource Management, Business Analytics, Production and Operations Management, Digital Marketing Management, Entrepreneurship and Leadership Management, Data Science, Information Technology Management, International Business Management",
+            "Eligibility": "Bachelor's Degree (10+2+3) in any discipline from recognised University or an equivalent degree recognised by Association of Indian Universities (AIU) with a minimum of 55% and 3 + years of Work Experience (50% for SC/ST/OBC/PwD).",
+            "Review": "Reviews of NMIMS CDOE (Centre for Distance and Online Education) in Mumbai generally highlight its reputation as a top-tier institute for distance learning, offering a well-structured curriculum, industry-relevant content, strong faculty, and good placement opportunities, making it a valuable choice for working professionals seeking a recognized online degree; however, some users mention potential issues with the online platform and occasional inconsistency in support services.",
+            "Any Issue": "The University Grants Commission (UGC) barred Narsee Monjee Institute of Management Studies (NMIMS) from offering distance learning and online programs for a few academic sessions due to violations of UGC regulations. Why the ban? NMIMS did not follow UGC's fee refund policy, NMIMS did not adhere to UGC regulations for the Centre for Internal Quality Assurance (CIQA), NMIMS did not adhere to UGC regulations for the quality of self-learning and e-learning material, NMIMS did not adhere to UGC regulations for the nomenclature of the Centre for Distance and Online Learning. What was the impact? The ban was a setback for the university and its students, NMIMS received complaints from various stakeholders.",
+            "Our recommendation": "Teaching pedagogy: The program uses interactive virtual sessions, live industry interaction, and collaboration between industry and academia. Specializations: Students can specialize in a discipline of their choice, such as Finance, Trade, Marketing, Strategy, Human Resources Management, Information Technology, and Economics. Learning experience: The program includes a port visit, industry visits, and research project. QS World University ranking: IIFT is ranked 60th in the world and 1st in India for International Trade Education (Master/MBA) by QS World University ranking 2025.",
+            "Website": "https://online.nmims.edu/",
+            "Partner Associated": "Edukyu"
+        },
+        "SP Jain": {
+            "Colleges": {
+                "text": "SP Jain",
+                "img": "https://edukyu.com//public/compare-page/sp-jain.webp"
+            },
+            "Abbreviation": "S. P. Jain Institute of Management and Research",
+            "Institute Type": "Private university",
+            "Establishment": "1981",
+            "About": "SP Jain School of Global Management, a leading 21st century business school that provides modern, relevant and practical business education. We offer a range of cutting-edge certificate and executive education programs, developed in collaboration with distinguished faculty and industry leaders. Our curriculum goes beyond theory, immersing you in the practical realities of global business, ensuring you gain the insights and agility needed to thrive in dynamic markets. Committed to cultivating the next generation of leaders, SP Jain fosters a vibrant community where your leadership potential flourishes. Here, you'll embark on a transformative journey that enriches your perspectives, sharpens your skills, and prepares you to shape the future as a global citizen.",
+            "Accrediation": "ABEST, NAAC A++, NIRF, AACSB, AMBA, EQUIS, NBA, AIU",
+            "UGC": "No",
+            "AICTE": "Yes",
+            "DEB": "No",
+            "Duration": "18 months",
+            "Learning Methodolgy": "The SP Jain School of Global Management's online Executive MBA program primarily utilizes a technology called \"Engaged Learning Online (ELO)\" which provides a virtual classroom experience, allowing students to interact with professors and peers in real-time, similar to a traditional on-campus learning environment, all while being accessible from anywhere with an internet connection; this approach emphasizes real-world application of concepts through case studies, group projects, and interactive discussions, making it suitable for working professionals balancing their careers with studies.",
+            "Fees": "Between ₹14.87 lakh and ₹15.36 lakh FOR 18 Months course",
+            "Degree": "https://www.spjimr.org/wp-content/uploads/2023/06/pgdm-online-certificate-jpg.webp",
+            "Specialisation": "Marketing, Finance, Human Resources, Analytics and Data Science, Retail Management, Banking, Financial Services and Insurance, IT and FinTech, Operations Management, International Business, Strategy and Leadership",
+            "Eligibility": "UNDERGRADUATE DEGREE: All applicants (domestic and international) will have an undergraduate degree from a recognised university or other approved tertiary institution. Applicants who do not have their final year results can apply for the intake, but SP Jain can only make a conditional offer. WORK EXPERIENCE: Evidence of having worked after graduation on a full-time basis in a role which has been assessed by SP Jain as relevant to the course of study for a minimum period of 3 years. ENGLISH LANGUAGE ENTRY REQUIREMENTS: All applicants must have completed their education as detailed above in English and must provide certified evidence to the School. In exceptional cases where an applicant is unable to provide certified evidence, the Admission Director may approve self-attested copies of the completion of education certification. Applicants who have not completed their most recent education qualifications in English are required to take any of the following recognised formal English language tests and obtain currently valid minimum scores as below: IELTS minimum score of 6.5, TOEFL iBT minimum score of 70, PTE minimum score of 60. English Language Test scores must be submitted before the program commencement date. Only test scores obtained in the last 2 years will be considered valid.",
+            "Review": "Reviews of the SP Jain School of Global Management's online Executive MBA program generally highlight its strong global focus, interactive virtual platform, diverse curriculum, and emphasis on practical application, allowing working professionals to gain valuable business skills while remaining employed, with many praising the opportunity to network with peers from different countries across their multiple campuses in Dubai, Singapore, Sydney, and Mumbai; however, some potential drawbacks include the program's cost and the intensity of balancing work and studies.",
+            "Any Issue": "When comparing the SP Jain School of Global Management's online Executive MBA to other universities, the main issue often cited is the potential for a higher cost compared to certain institutions, while still maintaining a strong reputation for its globally focused curriculum and strong industry connections, particularly in the Asia-Pacific region; however, the quality of the online learning experience and faculty may offset the cost for some students depending on their career goals.",
+            "Our recommendation": "Based on reviews and information available, the online MBA program offered by Amity University Noida is considered a good choice for individuals seeking an online MBA, particularly working professionals, due to its strong brand reputation, globally recognized accreditation, placement support, and flexible learning format; making it a competitive option among other online MBA programs in India.",
+            "Website": "spjain.edu",
+            "Partner Associated": "Emeritus"
+        },
+        "MDI Gurgaon": {
+            "Colleges": {
+                "text": "MDI Gurgaon",
+                "img": "https://edukyu.com//public/compare-page/mdi-gurgaon.png"
+            },
+            "Abbreviation": "Management Development Institute(Gurgoan)",
+            "Institute Type": "Private University",
+            "Establishment": "1973",
+            "About": "Creating knowledge. Making impact. For nearly 50 years, our graduates and faculty have shaped business in over 54 countries globally. We see our past as an inspiration, a legacy of values, entrepreneurship and innovation. We endeavour to excel each day while redefining the nature of management education, to create an impact for future of business. Today, as it celebrates the Golden Jubilee of its existence, it is ranked among the top B-schools in India by reputed publications and agencies. The Institute has earned international accreditation from AACSB, USA and Association of MBAs (AMBA), UK. We have partnerships with over 90 B-schools across the world. An institute is known by the achievements of its alumni and the difference they make to the world around them. MDI Gurgaon has a very strong legacy, being one of the early management institutions in the country. The alumni network across all the programmes offered is one of the largest. With more than 700 members joining the group annually, the alumni network is growing stronger year by year. As of now, we have around 10,000 alumni working across 54 countries.",
+            "Accrediation": "AACSB, AMBA, NBA",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "No",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The learning methodology of MDI Gurgaon's online Executive MBA program primarily involves a mix of online synchronous classes, asynchronous self-paced learning, virtual interactions, case studies, simulations, project work, and occasional on-campus immersions, ensuring a rigorous learning experience while accommodating the schedules of working professionals; all delivered through a specially curated online platform designed for effective remote learning.",
+            "Fees": "₹ 9.8 L - 19.71 L",
+            "Degree": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5l6A2SywOvxzG2GY54SxDLqnz0U92Lk987w&s",
+            "Specialisation": "",
+            "Eligibility": "Academic Qualifications: A minimum of a 3-year Bachelor's Degree (or equivalent) in any discipline from a recognized university. At least 50% marks (or equivalent CGPA) in Class X, Class XII, and Bachelor's Degree. Work Experience: A minimum of 3 years of post-qualification executive work experience as on March 31, 2025. Entrance Exams: Admission is based on a valid CAT/GMAT/XAT/MAT score. Selection Process: Shortlisted candidates based on entrance exam scores will be invited for a personal interview.",
+            "Review": "Reviews of MDI Gurgaon's online Executive MBA program are generally positive, highlighting its high-quality faculty, rigorous curriculum, strong industry connections, and reputation as a top-tier business school, making it a good choice for working professionals seeking career advancement with a flexible online format; however, some note that while the online program is excellent, it might not be exactly the same as the full-time residential program in terms of networking opportunities and immersive experience.",
+            "Any Issue": "While MDI Gurgaon's online Executive MBA program is generally considered reputable, potential concerns could include: limited networking opportunities compared to a traditional on-campus program, less face-to-face interaction with faculty, and potential challenges with managing a demanding work schedule alongside online learning; however, the program is designed to mitigate these issues with structured online interactions and dedicated support for working professionals.",
+            "Our recommendation": "If you're looking for an online Executive MBA from IIT Patna, their program is generally well-regarded for its focus on practical applications, strong faculty, and industry-relevant curriculum, making it a good choice for working professionals seeking to advance their careers with an IIT brand recognition; particularly noteworthy aspects include: a strong emphasis on data analytics, a flexible online format, opportunities for campus immersion, and specialization options in areas like finance; however, it's important to consider your specific career goals and compare with other programs before committing.",
+            "Website": "https://www.mdi.ac.in/",
+            "Partner Associated": "Shiksha.com"
+        },
+        "XLRI": {
+            "Colleges": {
+                "text": "XLRI",
+                "img": "https://edukyu.com/https://api.xlri.edu/xlri-75-logo.svg"
+            },
+            "Abbreviation": "Xavier School of Management",
+            "Institute Type": "Private",
+            "Establishment": "1949",
+            "About": "XLRI, for more than 7 decades has been dedicated to diligently preserving and elevating its reputation and standing. This commitment is driven by the aim to attract highly talented students, accomplished faculty, professionals, as well as renowned organizations seeking placements and lifelong executive education opportunities. Being the first institute to introduce management courses to the online medium in India, XLRI-Xavier School of Management has been an achiever and innovator in the field of management education.",
+            "Accrediation": "NBA, AACSB, AMBA",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "The Executive Post Graduate Diploma in Management (EPGDM) at XLRI Jamshedpur is one year and three months long. The course includes three months of field training.",
+            "Learning Methodolgy": "The learning methodology of XLRI's online Executive MBA primarily relies on a blended approach with live interactive online sessions, case studies, group projects, simulations, discussions, and occasional on-campus immersions, heavily utilizing the \"Virtual Interactive Learning\" (VIL) platform, where students engage with faculty through lectures, case analysis, and real-world application exercises to develop both theoretical understanding and practical skills; this approach emphasizes active participation and peer-to-peer learning, allowing working professionals to apply knowledge directly to their work situations.",
+            "Fees": "14.4 lakhs",
+            "Degree": "https://xlri.ac.in/static/media/EDP-sample-1.cb68a6cd0acc4a7a1c8c.webp",
+            "Specialisation": "",
+            "Eligibility": "Graduation (10+2+3) with Min 2 Year of Work Experience after Graduation. There would also be an online interaction with XLRI faculty members.",
+            "Review": "Reviews of XLRI's online Executive MBA program generally highlight its strong reputation as a top Indian business school, experienced faculty, a robust curriculum covering contemporary issues, and a valuable alumni network, making it a great option for professionals seeking to advance their careers through an online executive program; however, some users mention that the program could benefit from more frequent in-person interactions with faculty for certain topics requiring deeper discussion.",
+            "Any Issue": "While XLRI's online Executive MBA program is generally well-regarded, a potential issue some users might mention is the lack of frequent in-person interaction with faculty and peers compared to a traditional on-campus program, which can be crucial for building strong networking connections and fully immersing oneself in the learning experience; however, XLRI does incorporate some on-campus immersion modules to mitigate this concern.",
+            "Our recommendation": "",
+            "Website": "https://xlri.ac.in/",
+            "Partner Associated": "shiksha.com, Upgrad"
+        },
+        "IIFT": {
+            "Colleges": {
+                "text": "IIFT",
+                "img": "https://edukyu.com//public/coan.jpeg"
+            },
+            "Abbreviation": "The Indian Institute of Foreign Trade (IIFT)",
+            "Institute Type": "Govt university",
+            "Establishment": "1963",
+            "About": "The Indian Institute of Foreign Trade (IIFT) is a national university that offers research and training in international business and trade. It was established in 1963 by the Government of India. Purpose: To develop skills for India's external trade sector, To improve understanding of trade and economic issues, To conduct research on domestic and world trade and business issues, To develop human resources, To generate, analyze, and disseminate data",
+            "Accrediation": "AACSB, NAAC A+",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The learning methodology for the IIFT Online Executive MBA primarily focuses on interactive virtual sessions, case studies, live industry interactions, and a problem-solving approach, utilizing a Learning Management System (LMS) platform to deliver live and recorded lectures, assignments, and discussion forums, while also incorporating regular webinars and workshops with industry experts to provide a holistic learning experience mirroring a traditional classroom environment",
+            "Fees": "11 lakh",
+            "Degree": "https://talentsprint.com/course/international-business-strategy-iift/images/iift-certificate.webp",
+            "Specialisation": "",
+            "Eligibility": "The candidate must hold a Bachelor's degree with minimum 50% marks in aggregate or 5.0 CGPA out of 10. The student should have Mathematics / Statistics as one of the subjects at Graduation level. Or Candidates must hold B. Tech / B.E degree in any discipline from a recognized university/institute with at least 50% marks in aggregate or 5.0 CGPA out of 10. or The candidate must hold a Bachelor's degree with minimum 50% marks in aggregate or 5.0 CGPA out of 10, with Mathematics as a subject at 10+2 level. Applied Mathematics in 10+2 will not be considered. The candidate must hold a Bachelor's degree with minimum 50% marks in aggregate or 5.0 CGPA out of 10. The student should have Mathematics / Statistics as one of the subjects at Graduation level. No age limit.",
+            "Review": "The IIFT online Executive MBA, particularly the Executive PG Diploma in International Business (EPGDIB), is widely considered a strong choice for professionals looking to advance their careers in international trade, with high regard for its faculty, industry-focused curriculum, and the reputation of IIFT as a leading institute in the field, although some may note that the online format might have limitations compared to a traditional on-campus program.",
+            "Any Issue": "A potential issue with the IIFT online Executive MBA is that while it offers flexibility for working professionals to pursue an advanced degree, the lack of in-person interaction with faculty and peers on a regular basis could potentially affect the overall learning experience and networking opportunities compared to a traditional on-campus program; however, IIFT is known for its strong curriculum in international business, making it a valuable option for those seeking expertise in that field while managing their work commitments",
+            "Our recommendation": "",
+            "Website": "www.iift.ac.in",
+            "Partner Associated": "Shiksha.com, Upgrad"
+        },
+        "Amity University Online": {
+            "Colleges": {
+                "text": "Amity University Online",
+                "img": "https://edukyu.com//public/compare-page/amity.png"
+            },
+            "Abbreviation": "Amity University Online",
+            "Institute Type": "PVT University",
+            "Establishment": "1986",
+            "About": "Amity University is a private research university in India with campuses in India and abroad. It offers undergraduate and postgraduate programs. Features: Campuses: Amity has campuses in India and overseas, including in Dubai, Tashkent, London, New York, Singapore, San Francisco, Romania, Taiwan, and Mauritius. Programs: Amity offers over 300 programs, including undergraduate and postgraduate programs. Accreditation: Amity is accredited by the National Assessment and Accreditation Council (NAAC) and the University Grants Commission (UGC). Recognition:",
+            "Accrediation": "NAAC A+, WES, WASC",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "Yes",
+            "Duration": "2 years",
+            "Learning Methodolgy": "Amity University's online MBA program helps students prepare for careers through career coaching, resume building, and job fairs. The program also encourages students to participate in practical projects and internships.",
+            "Fees": "380000 For 2 years",
+            "Degree": "https://d1aeya7jd2fyco.cloudfront.net/upload_file/amity-online-sample-degree-certificate.webp",
+            "Specialisation": "",
+            "Eligibility": "Fresh graduates and working professionals. Entrepreneurs looking to develop skills to manage critical business projects. Aspirants or working professionals seeking a global career in the fields of Management, Finance, Marketing, Sales, Operations, Logistics among many more. For Indian students: Graduation in any discipline with 40% marks in the last qualifying examination. Below 40% marks, a test is conducted and if passed then the student is eligible for admission. Applicants must possess sufficient knowledge and understanding of the English Language. For Foreign students: Candidates must have completed a graduation degree. Certificate of equivalence from the Association of Indian Universities required from students with foreign education to apply to any university in India. (Refer to http://aiu.ac.in/)",
+            "Review": "Reviews of Amity University Noida's online MBA generally highlight its flexibility for working professionals, comprehensive curriculum, and access to experienced faculty, with some mentioning that while placement support is available, it may not be as robust as traditional college programs, and a potential lack of real-time industry case studies could be a drawback; overall, it is considered a good option for those seeking a flexible online MBA with recognized credentials.",
+            "Any Issue": "None",
+            "Our recommendation": "",
+            "Website": "https://amityonline.com/",
+            "Partner Associated": "Edukyu, shiksha.com, Univo"
+        },
+        "IIT PATNA": {
+            "Colleges": {
+                "text": "IIT PATNA",
+                "img": "https://edukyu.com//public/coan.jpeg"
+            },
+            "Abbreviation": "Indian Institute of Technology Patna",
+            "Institute Type": "Govt University",
+            "Establishment": "2008",
+            "About": "Indian Institute of Technology Patna is one of the new IITs established by an Act of the Indian Parliament on August 06, 2008. Patna which was known as Patliputra has been a center of knowledge since long has been attracting visitors and scholars from many parts of the world such as China, Indonesia, Japan, Korea, Sri Lanka, among others. This has been a land of visionaries. Some of the legends from this region include Lord Gautam Buddha, Lord Mahavir, Guru Gobind Singh, the famous astronomer Aryabhatta and the first President of India, Dr. Rajendra Prasad. IIT Patna has ten departments: These are Computer Science & Engineering, Electrical Engineering, Mechanical Engineering, Chemical and Biochemical Engineering, Civil & Environmental Engineering, Materials Science & Engineering, Chemistry, Physics, Mathematics and Humanities & Social Science departments.",
+            "Accrediation": "UGC, AICTE",
+            "UGC": "Yes",
+            "AICTE": "Yes",
+            "DEB": "No",
+            "Duration": "2 Years",
+            "Learning Methodolgy": "The online Executive MBA program at IIT Patna primarily uses a blended learning approach, combining live online lectures delivered through a dedicated Learning Management System with periodic on-campus immersion sessions, incorporating case studies, simulations, and hands-on practice to facilitate a comprehensive learning experience for working professionals, allowing them to study flexibly while maintaining engagement with the curriculum and faculty.",
+            "Fees": "2,92,000",
+            "Degree": "https://f2.leadsquaredcdn.com/t/microtek/content/common/images/Joint-PhD.jpg",
+            "Specialisation": "",
+            "Eligibility": "Candidates must hold a bachelor's degree with a minimum of 50% marks (45% for SC/ST/PwD) or equivalent CGPA.",
+            "Review": "Reviews of the online Executive MBA from IIT Patna are mixed, with some praising the prestige of the IIT brand and the affordability of the program, while others criticize significant issues like course management by a third-party organization (TeamLease), inconsistent faculty quality, lack of proper support, and a discrepancy between advertised promises and actual delivery, which can lead to concerns about the overall value of the degree; potential students should carefully consider these factors before enrolling",
+            "Any Issue": "While the online Executive MBA program from IIT Patna is generally considered credible and recognized, some potential concerns raised by students include: limited interaction with peers and faculty due to the online format, potential lack of networking opportunities compared to a traditional on-campus program, and occasional issues with the online learning platform; however, most users agree that the quality of the curriculum and faculty remains strong.",
+            "Our recommendation": "",
+            "Website": "iitp.ac.in",
+            "Partner Associated": ""
+        }
+    };
+
     const collegeNames = [];
 
     const accreditationImages = new Map([
         ["NAAC", "https://upload.wikimedia.org/wikipedia/en/1/1d/NAAC_LOGO.png"],
+        ["NAAC A+", "https://upload.wikimedia.org/wikipedia/en/1/1d/NAAC_LOGO.png"],
         ["NIRF", "https://upload.wikimedia.org/wikipedia/en/5/52/National_Institutional_Ranking_Framework_logo.png"],
         ["UGC", "https://upload.wikimedia.org/wikipedia/en/4/4e/UGC_India_Logo.png"],
         ["CAREERS-360", "https://img-cdn.thepublive.com/fit-in/1280x960/filters:format(webp)/afaqs/media/post_attachments/34728a6971dffd8dc77e4b6c925faecdc8774743d099343ed19b6387ba4aaa16.jpg"],
@@ -22,23 +1074,18 @@ document.addEventListener('DOMContentLoaded', function () {
         ["IMPACT RANKING", "https://www.prd.timeshighereducation.com/sites/def…ews_image_style/public/impact_4.jpg?itok=OYr_aI8d"],
         ["ISO", "https://banner2.cleanpng.com/20180901/xwz/kisspng-iso-9-1-logo-iso-9-quality-management-systems-certificazioni-ultimate-italia-1713945295220.webp"],
         ["DEC", "https://www.deac.org/wp-content/uploads/2023/10/DEAC-Logo-Mark.svg"],
-        ["DTE", "https://www.deac.org/wp-content/uploads/2023/10/DEAC-Logo-Mark.svg"]
+        ["DTE", "https://www.deac.org/wp-content/uploads/2023/10/DEAC-Logo-Mark.svg"],
+        ["AACSB", "https://seeklogo.com/images/A/aacsb-logo-331672E2E6-seeklogo.com.png"],
+        ["AMBA", "https://seeklogo.com/images/A/association-of-mbas-amba-logo-3591330C3E-seeklogo.com.png"],
+        ["EQUIS", "https://seeklogo.com/images/E/equis-logo-48489E9B9F-seeklogo.com.png"],
+        ["ABEST", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRilgvlRXBEBpDZMPH6bA58YKIbHznRM_J86Q&s"],
+        ["AACSB", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt2nmxxVhqvXimP8OHstVjJaPHKMWapw29ng&s"],
+        ["AMBA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtVJ-Tlht_QgTR908inHj_INeWXUFIHV9PLQ&s"],
+        ["EMBA", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7-FeoGx1ESUs9E79yPg8lqH6DuYrqrqcAyw&s"],
+        ["ASB", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt2nmxxVhqvXimP8OHstVjJaPHKMWapw29ng&s"],
+        ["DEC", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuF9Sq0JsXLC3YfJwO4st00yQiMbmEu8J80Q&s"],
+        ["WASC", "https://i0.wp.com/www.ais.edu.hk/wp-content/uploads/2020/11/WASC.png?fit=1200%2C628&ssl=1"]
     ]);
-
-    fetch("college_db.json")
-        .then(response => response.json())
-        .then(data => {
-            collegeData = data;
-            for (const universityName in data) {
-                collegeNames.push(universityName);
-            }
-
-            setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
-            populateTable();
-            truncateText();
-            showAllColumns();
-        })
-        .catch(error => showError("Error loading JSON"));
 
     let college1_name, college2_name, college3_name;
     let college1_img, college2_img, college3_img;
@@ -59,11 +1106,23 @@ document.addEventListener('DOMContentLoaded', function () {
     let college1_ourRecommendation, college2_ourRecommendation, college3_ourRecommendation;
     let college1_website, college2_website, college3_website;
 
-    const addButton = document.querySelector('.add-third-seachbar');
-    const searchBarContainer = document.querySelector('.compare-search-buttons');
+    const addButton = document.querySelector('.add-third-seachbar-edukyu');
+    const searchBarContainer = document.querySelector('.compare-search-buttons-edukyu');
     let searchBarCount = 2;
     let isFirstClick = true;
     let isThirdRowActive = false;
+
+    const checkboxes = document.querySelectorAll('.check-box-list-edukyu input[type="checkbox"]');
+    let checkboxesChecked = [];
+    const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
+
+    const headers = document.querySelectorAll(".college-body-edukyu-header");
+
+
+    const collegeHeaderLogo = document.querySelectorAll('.circle-edukyu');
+    const table = document.querySelector('.compare-table-edukyu');
+    const mobileTable = document.getElementById('mobileViewContainer');
+
 
     if (addButton && searchBarContainer) {
         addButton.addEventListener('click', function () {
@@ -73,16 +1132,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const newSearchBar = document.createElement('div');
-            newSearchBar.classList.add('col-md-6', 'col-sm-12');
+            newSearchBar.classList.add('col-md-6-edukyu', 'col-sm-12');
             newSearchBar.innerHTML =
-                `<div class="compare-search-btn" style="position: relative;">
+                `<div class="compare-search-btn-edukyu" style="position: relative;">
                     <div class="college-icon">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
                     <div>
-                        <input type="search" id="collegeSearch${searchBarCount + 1}" placeholder="Search University"  class="search-input">
-                        <select id="dropdown${searchBarCount + 1}" class="dropdown" size="4""></select>
+                        <input type="search" id="collegeSearch${searchBarCount + 1}" placeholder="Search University"  class="search-input-edukyu">
+                        <div id="dropdown${searchBarCount + 1}" class="dropdown-edukyu" ">
+                            <!-- Options will be added here dynamically -->
+                        </div>
                     </div>
                     <button class="remove-third-row">-</button>
                 </div>`;
@@ -100,8 +1161,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const removeButton = newSearchBar.querySelector('.remove-third-row');
 
             removeButton.addEventListener('click', function () {
-                const hiddenRows = document.querySelectorAll(".hidden-row-element");
-                const thirdCollegeImage = document.querySelector(".hidden-college-logo-3");
+                const hiddenRows = document.querySelectorAll(".hidden-row-element-edukyu");
+                const thirdCollegeImage = document.querySelector(".hidden-college-logo-3-edukyu");
 
                 hiddenRows.forEach(row => {
                     row.style.display = "none";
@@ -128,12 +1189,12 @@ document.addEventListener('DOMContentLoaded', function () {
             );
 
             filteredColleges.forEach((college) => {
-                const option = document.createElement("option");
-                option.value = college;
+                const option = document.createElement("div");
+                option.className = "dropdown-item";
                 option.textContent = college;
 
                 option.addEventListener("click", () => {
-                    input.value = option.value;
+                    input.value = option.textContent;
                     dropdown.style.display = "none";
                 });
 
@@ -146,7 +1207,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         document.addEventListener("click", (e) => {
-            if (!e.target.closest(".compare-search-btn")) {
+            if (!e.target.closest(".compare-search-btn-edukyu")) {
                 dropdown.style.display = "none";
             }
         });
@@ -171,14 +1232,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (college3) {
-            const hiddenRows = document.querySelectorAll(".hidden-row");
+            const hiddenRows = document.querySelectorAll(".hidden-row-edukyu");
             hiddenRows.forEach(row => {
                 row.style.display = "";
-                row.classList.remove("hidden-row");
+                row.classList.remove("hidden-row-edukyu");
             });
         }
 
         if (collegeData[college1] && collegeData[college2]) {
+            console.log(college3);
             setCollegeDetails(collegeData[college1], collegeData[college2], college3 ? collegeData[college3] : null);
             populateTable();
             truncateText();
@@ -190,23 +1252,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const checkboxes = document.querySelectorAll('.check-box-list input[type="checkbox"]');
-    let checkboxesChecked = [];
+    for (const universityName in collegeData) {
+        collegeNames.push(universityName);
+    }
+
+    setCollegeDetails(collegeData["NMIMS University"], collegeData["Amity University"]);
+    populateTable();
+    truncateText();
+    showAllColumns();
+    convertTableToDiv();
+
+
     for (let i = 0; i < checkboxes.length; i++) {
         checkboxesChecked[i] = false;
     }
 
-    const selectAllCheckbox = document.querySelector('input[name="selectAll"]');
-
     function hideAllColumns() {
         checkboxesChecked.fill(false);
         if(window.innerWidth <= 768){
-            document.querySelectorAll('.college-data-wrapper').forEach(column => {
+            document.querySelectorAll('.college-data-wrapper-edukyu').forEach(column => {
                 column.style.display = "none";
                 column.classList.add("hidden");
             })
         }
-        document.querySelectorAll('.college-body').forEach(column => {
+        document.querySelectorAll('.college-body-edukyu').forEach(column => {
             column.style.display = "none";
             column.classList.add("hidden");
         });
@@ -215,12 +1284,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function showAllColumns() {
         checkboxesChecked.fill(true);
         if(window.innerWidth <= 768){
-            document.querySelectorAll('.college-data-wrapper').forEach(column => {
+            document.querySelectorAll('.college-data-wrapper-edukyu').forEach(column => {
                 column.style.display = "";
                 column.classList.remove("hidden");
             })
         }
-        document.querySelectorAll('.college-body').forEach(column => {
+        document.querySelectorAll('.college-body-edukyu').forEach(column => {
             column.style.display = "";
             column.classList.remove("hidden");
         });
@@ -282,8 +1351,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function setCollegeDetails(college1, college2, college3 = null) {
+    function cleanTableData() {
+        document.querySelectorAll('.college-body-edukyu:not(.college-body-edukyu-header)').forEach(cell => {
+            cell.innerHTML = '';
+        });
 
+        const headers = ['college1Header', 'college2Header', 'college3Header'];
+        headers.forEach(headerId => {
+            const header = document.getElementById(headerId);
+            if (header) header.textContent = '';
+        });
+
+        document.querySelectorAll('.college-header-logo-edukyu .college-edukyu img').forEach(img => {
+            img.src = '';
+        });
+    }
+
+    function setCollegeDetails(college1, college2, college3 = null) {
+        // cleanTableData();
         college1_name = college1.Colleges.text;
         college1_img = college1.Colleges.img;
         college1_abbreviation = college1.Abbreviation;
@@ -297,7 +1382,7 @@ document.addEventListener('DOMContentLoaded', function () {
         college1_Fees = college1.Fees;
         college1_DetailFees = college1["Detail Fees"];
         college1_programs = convertTextToLine(college1.Programs);
-        college1_specialisation = convertTextToLine(college1.Specialisation);
+        college1_specialisation = processSpecialisations(college1.Specialisation);
         college1_eligibility = convertTextToLine(college1.Eligibility);
         college1_review = college1.Review;
         college1_ourRecommendation = college1["Our recommendation"];
@@ -316,7 +1401,7 @@ document.addEventListener('DOMContentLoaded', function () {
         college2_Fees = college2.Fees;
         college2_DetailFees = college2["Detail Fees"];
         college2_programs = convertTextToLine(college2.Programs);
-        college2_specialisation = convertTextToLine(college2.Specialisation);
+        college2_specialisation = processSpecialisations(college2.Specialisation);
         college2_eligibility = convertTextToLine(college2.Eligibility);
         college2_review = college2.Review;
         college2_ourRecommendation = college2["Our recommendation"];
@@ -339,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', function () {
             college3_Fees = college3.Fees;
             college3_DetailFees = college3["Detail Fees"];
             college3_programs = convertTextToLine(college3.Programs);
-            college3_specialisation = convertTextToLine(college3.Specialisation);
+            college3_specialisation = processSpecialisations(college3.Specialisation);
             college3_eligibility = convertTextToLine(college3.Eligibility);
             college3_review = college3.Review;
             college3_ourRecommendation = college3["Our recommendation"];
@@ -397,8 +1482,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("college1ContainerHeader").textContent = college1_name;
             document.getElementById("college2ContainerHeader").textContent = college2_name;
 
-            document.querySelector(".college-header-logo .college:nth-child(1) img").src = college1_img;
-            document.querySelector(".college-header-logo .college:nth-child(2) img").src = college2_img;
+            document.querySelector(".college-header-logo-edukyu .college-edukyu:nth-child(1) img").src = college1_img;
+            document.querySelector(".college-header-logo-edukyu .college-edukyu:nth-child(2) img").src = college2_img;
 
             document.getElementById("college1InstituteType").textContent = college1_instituteType;
             document.getElementById("college2InstituteType").textContent = college2_instituteType;
@@ -424,231 +1509,179 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector("#college1Degree img").src = college1_Degree;
             document.querySelector("#college2Degree img").src = college2_Degree;
 
-            console.log(typeof college1_DetailFees)
-
-            if (college1_DetailFees && typeof college1_DetailFees === 'object' && Object.keys(college1_DetailFees).length > 0) {
+            if (
+                college1_DetailFees &&
+                typeof college1_DetailFees === "object" &&
+                Object.keys(college1_DetailFees).length > 0
+            ) {
                 const feesCell = document.getElementById("college1Fees");
-                feesCell.innerHTML = ''; // Clear existing content
+                feesCell.innerHTML = "";
 
-                // Create the fees container
                 const feesContainer = document.createElement("div");
                 feesContainer.classList.add("fees-container");
 
-                // Add the fees summary
                 const feesSummary = document.createElement("div");
                 feesSummary.classList.add("fees-summary");
                 feesSummary.textContent = college1_Fees;
                 feesContainer.appendChild(feesSummary);
 
-                // Create dropdown (initially hidden)
-                const feesDropdown = document.createElement("select");
-                feesDropdown.classList.add("fees-dropdown", "hidden");
+                const dropdown = document.createElement("div");
+                dropdown.className = "fees-dropdown hidden";
 
-                // Add options to dropdown
-                const defaultOption = document.createElement("option");
-                defaultOption.textContent = "Check Programs Fees";
-                defaultOption.disabled = true;
-                defaultOption.selected = true;
-                feesDropdown.appendChild(defaultOption);
+                const header = document.createElement("div");
+                header.textContent = "Check Programs Fees";
+                dropdown.appendChild(header);
 
-                // Add fee options from the detailed fees data
+                const menu = document.createElement("div");
+                menu.className = "dropdown-menu-edukyu hidden";
+
                 for (const [program, fee] of Object.entries(college1_DetailFees)) {
-                    // Handle nested fee structures (like MBA specializations)
-                    if (typeof fee === 'object' && fee !== null) {
+                    if (typeof fee === "object" && fee !== null) {
                         for (const [subProgram, subFee] of Object.entries(fee)) {
-                            if (subProgram !== "Total" && subProgram !== "Detail Total") {
-                                const opt = document.createElement("option");
-                                opt.textContent = `${program} - ${subProgram}: ${subFee}`;
-                                feesDropdown.appendChild(opt);
+                            if (!["Total", "Detail Total"].includes(subProgram)) {
+                                const item = document.createElement("div");
+                                item.className = "dropdown-item";
+                                item.textContent = `${program} - ${subProgram}: ${subFee}`;
+                                menu.appendChild(item);
                             }
                         }
-                    } else {
-                        // Handle simple fee structures
-                        if (program !== "Total" && program !== "Detail Total") {
-                            const opt = document.createElement("option");
-                            opt.textContent = `${program}: ${fee}`;
-                            feesDropdown.appendChild(opt);
-                        }
+                    } else if (!["Total", "Detail Total"].includes(program)) {
+                        const item = document.createElement("div");
+                        item.className = "dropdown-item";
+                        item.textContent = `${program}: ${fee}`;
+                        menu.appendChild(item);
                     }
                 }
 
-                feesContainer.appendChild(feesDropdown);
+                dropdown.appendChild(menu);
+                feesCell.appendChild(dropdown);
 
-                // Add the "Show Details" button
                 const showDetailsBtn = document.createElement("button");
                 showDetailsBtn.classList.add("show-details-btn");
                 showDetailsBtn.textContent = "Show Details";
-                feesContainer.appendChild(showDetailsBtn);
 
-                // Append the fees container to the fees cell
+                feesContainer.appendChild(showDetailsBtn);
+                feesContainer.appendChild(dropdown);
                 feesCell.appendChild(feesContainer);
 
-                // Add event listener to the "Show Details" button
                 showDetailsBtn.addEventListener("click", function () {
-                    if (feesDropdown.classList.contains("hidden")) {
-                        feesSummary.classList.add("hidden");
-                        feesDropdown.classList.remove("hidden");
+                    if (dropdown.classList.contains("hidden")) {
+                        // feesSummary.classList.add("hidden");
+                        dropdown.classList.remove("hidden");
                         showDetailsBtn.textContent = "Show Less";
                     } else {
-                        feesSummary.classList.remove("hidden");
-                        feesDropdown.classList.add("hidden");
+                        // feesSummary.classList.remove("hidden");
+                        dropdown.classList.add("hidden");
                         showDetailsBtn.textContent = "Show Details";
                     }
                 });
-            } else {
+
+                header.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    menu.classList.toggle("hidden");
+                });
+
+                document.addEventListener("click", function (e) {
+                    const clickedOutside = !menu.contains(e.target) && !header.contains(e.target);
+                    if (!menu.classList.contains("hidden") && clickedOutside) {
+                        menu.classList.add("hidden");
+                    }
+                });
+            }else{
                 document.getElementById("college1Fees").textContent = college1_Fees;
             }
 
-            if (college2_DetailFees && typeof college2_DetailFees === 'object' && Object.keys(college2_DetailFees).length > 0) {
-                const feesCell = document.getElementById("college1Fees");
-                feesCell.innerHTML = ''; // Clear existing content
+            if (
+                college2_DetailFees &&
+                typeof college2_DetailFees === "object" &&
+                Object.keys(college2_DetailFees).length > 0
+            ) {
+                const feesCell = document.getElementById("college2Fees");
+                feesCell.innerHTML = "";
 
-                // Create the fees container
                 const feesContainer = document.createElement("div");
                 feesContainer.classList.add("fees-container");
 
-                // Add the fees summary
                 const feesSummary = document.createElement("div");
                 feesSummary.classList.add("fees-summary");
                 feesSummary.textContent = college2_Fees;
                 feesContainer.appendChild(feesSummary);
 
-                // Create dropdown (initially hidden)
-                const feesDropdown = document.createElement("select");
-                feesDropdown.classList.add("fees-dropdown", "hidden");
+                const dropdown = document.createElement("div");
+                dropdown.className = "fees-dropdown hidden";
 
-                // Add options to dropdown
-                const defaultOption = document.createElement("option");
-                defaultOption.textContent = "Check Programs Fees";
-                defaultOption.disabled = true;
-                defaultOption.selected = true;
-                feesDropdown.appendChild(defaultOption);
+                const header = document.createElement("div");
+                header.textContent = "Check Programs Fees";
+                dropdown.appendChild(header);
 
-                // Add fee options from the detailed fees data
-                for (const [program, fee] of Object.entries(college1_DetailFees)) {
-                    // Handle nested fee structures (like MBA specializations)
-                    if (typeof fee === 'object' && fee !== null) {
+                const menu = document.createElement("div");
+                menu.className = "dropdown-menu-edukyu hidden";
+
+                for (const [program, fee] of Object.entries(college2_DetailFees)) {
+                    if (typeof fee === "object" && fee !== null) {
                         for (const [subProgram, subFee] of Object.entries(fee)) {
-                            if (subProgram !== "Total" && subProgram !== "Detail Total") {
-                                const opt = document.createElement("option");
-                                opt.textContent = `${program} - ${subProgram}: ${subFee}`;
-                                feesDropdown.appendChild(opt);
+                            if (!["Total", "Detail Total"].includes(subProgram)) {
+                                const item = document.createElement("div");
+                                item.className = "dropdown-item";
+                                item.textContent = `${program} - ${subProgram}: ${subFee}`;
+                                menu.appendChild(item);
                             }
                         }
-                    } else {
-                        // Handle simple fee structures
-                        if (program !== "Total" && program !== "Detail Total") {
-                            const opt = document.createElement("option");
-                            opt.textContent = `${program}: ${fee}`;
-                            feesDropdown.appendChild(opt);
-                        }
+                    } else if (!["Total", "Detail Total"].includes(program)) {
+                        const item = document.createElement("div");
+                        item.className = "dropdown-item";
+                        item.textContent = `${program}: ${fee}`;
+                        menu.appendChild(item);
                     }
                 }
 
-                feesContainer.appendChild(feesDropdown);
+                dropdown.appendChild(menu);
+                feesCell.appendChild(dropdown);
 
-                // Add the "Show Details" button
                 const showDetailsBtn = document.createElement("button");
                 showDetailsBtn.classList.add("show-details-btn");
                 showDetailsBtn.textContent = "Show Details";
-                feesContainer.appendChild(showDetailsBtn);
 
-                // Append the fees container to the fees cell
+                feesContainer.appendChild(showDetailsBtn);
+                feesContainer.appendChild(dropdown);
                 feesCell.appendChild(feesContainer);
 
-                // Add event listener to the "Show Details" button
                 showDetailsBtn.addEventListener("click", function () {
-                    if (feesDropdown.classList.contains("hidden")) {
-                        feesSummary.classList.add("hidden");
-                        feesDropdown.classList.remove("hidden");
+                    if (dropdown.classList.contains("hidden")) {
+                        // feesSummary.classList.add("hidden");
+                        dropdown.classList.remove("hidden");
                         showDetailsBtn.textContent = "Show Less";
                     } else {
-                        feesSummary.classList.remove("hidden");
-                        feesDropdown.classList.add("hidden");
+                        // feesSummary.classList.remove("hidden");
+                        dropdown.classList.add("hidden");
                         showDetailsBtn.textContent = "Show Details";
                     }
                 });
-            } else {
+
+                header.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    menu.classList.toggle("hidden");
+                });
+
+                document.addEventListener("click", function (e) {
+                    const clickedOutside = !menu.contains(e.target) && !header.contains(e.target);
+                    if (!menu.classList.contains("hidden") && clickedOutside) {
+                        menu.classList.add("hidden");
+                    }
+                });
+            }
+            else {
                 document.getElementById("college2Fees").textContent = college2_Fees;
             }
 
 
-            if (college3_DetailFees && typeof college3_DetailFees === 'object' && Object.keys(college3_DetailFees).length > 0) {
-                const feesCell = document.getElementById("college1Fees");
-                feesCell.innerHTML = ''; // Clear existing content
-
-                // Create the fees container
-                const feesContainer = document.createElement("div");
-                feesContainer.classList.add("fees-container");
-
-                // Add the fees summary
-                const feesSummary = document.createElement("div");
-                feesSummary.classList.add("fees-summary");
-                feesSummary.textContent = college3_Fees;
-                feesContainer.appendChild(feesSummary);
-
-                // Create dropdown (initially hidden)
-                const feesDropdown = document.createElement("select");
-                feesDropdown.classList.add("fees-dropdown", "hidden");
-
-                // Add options to dropdown
-                const defaultOption = document.createElement("option");
-                defaultOption.textContent = "Check Programs Fees";
-                defaultOption.disabled = true;
-                defaultOption.selected = true;
-                feesDropdown.appendChild(defaultOption);
-
-                // Add fee options from the detailed fees data
-                for (const [program, fee] of Object.entries(college1_DetailFees)) {
-                    // Handle nested fee structures (like MBA specializations)
-                    if (typeof fee === 'object' && fee !== null) {
-                        for (const [subProgram, subFee] of Object.entries(fee)) {
-                            if (subProgram !== "Total" && subProgram !== "Detail Total") {
-                                const opt = document.createElement("option");
-                                opt.textContent = `${program} - ${subProgram}: ${subFee}`;
-                                feesDropdown.appendChild(opt);
-                            }
-                        }
-                    } else {
-                        // Handle simple fee structures
-                        if (program !== "Total" && program !== "Detail Total") {
-                            const opt = document.createElement("option");
-                            opt.textContent = `${program}: ${fee}`;
-                            feesDropdown.appendChild(opt);
-                        }
-                    }
-                }
-
-                feesContainer.appendChild(feesDropdown);
-
-                // Add the "Show Details" button
-                const showDetailsBtn = document.createElement("button");
-                showDetailsBtn.classList.add("show-details-btn");
-                showDetailsBtn.textContent = "Show Details";
-                feesContainer.appendChild(showDetailsBtn);
-
-                // Append the fees container to the fees cell
-                feesCell.appendChild(feesContainer);
-
-                // Add event listener to the "Show Details" button
-                showDetailsBtn.addEventListener("click", function () {
-                    if (feesDropdown.classList.contains("hidden")) {
-                        feesSummary.classList.add("hidden");
-                        feesDropdown.classList.remove("hidden");
-                        showDetailsBtn.textContent = "Show Less";
-                    } else {
-                        feesSummary.classList.remove("hidden");
-                        feesDropdown.classList.add("hidden");
-                        showDetailsBtn.textContent = "Show Details";
-                    }
-                });
-            }
-
             document.getElementById("college1Programs").innerHTML = college1_programs;
             document.getElementById("college2Programs").innerHTML = college2_programs;
 
-            document.getElementById("college1Specialisation").innerHTML = college1_specialisation;
-            document.getElementById("college2Specialisation").innerHTML = college2_specialisation;
+            document.getElementById("college1Specialisation").innerHTML = "";
+            document.getElementById("college1Specialisation").insertAdjacentHTML('beforeend', college1_specialisation);
+            document.getElementById("college2Specialisation").innerHTML = "";
+            document.getElementById("college2Specialisation").insertAdjacentHTML('beforeend', college2_specialisation);
 
             document.getElementById("college1Eligibility").innerHTML = college1_eligibility;
             document.getElementById("college2Eligibility").innerHTML = college2_eligibility;
@@ -666,7 +1699,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 college3Header.textContent = college3_name;
 
                 document.getElementById("college3ContainerHeader").textContent = college3_name;
-                document.querySelector(".college-header-logo .college:nth-child(3) img").src = college3_img;
+                document.querySelector(".college-header-logo-edukyu .college-edukyu:nth-child(3) img").src = college3_img;
                 document.getElementById("college3InstituteType").textContent = college3_instituteType;
                 document.getElementById("college3Establishment").textContent = college3_establishment;
                 document.getElementById("college3Abbreviation").textContent = college3_abbreviation;
@@ -675,9 +1708,93 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("college3Duration").innerHTML = college3_Duration;
                 document.getElementById("college3LearningMethodoly").textContent = college3_learningMethodolgy;
                 document.querySelector("#college3Degree img").src = college3_Degree;
-                document.getElementById("college3Fees").textContent = college3_Fees;
+
+                if (
+                    college3_DetailFees &&
+                    typeof college3_DetailFees === "object" &&
+                    Object.keys(college3_DetailFees).length > 0
+                ) {
+                    const feesCell = document.getElementById("college3Fees");
+                    feesCell.innerHTML = "";
+
+                    const feesContainer = document.createElement("div");
+                    feesContainer.classList.add("fees-container");
+
+                    const feesSummary = document.createElement("div");
+                    feesSummary.classList.add("fees-summary");
+                    feesSummary.textContent = college3_Fees;
+                    feesContainer.appendChild(feesSummary);
+
+                    const dropdown = document.createElement("div");
+                    dropdown.className = "fees-dropdown hidden";
+
+                    const header = document.createElement("div");
+                    header.textContent = "Check Programs Fees";
+                    dropdown.appendChild(header);
+
+                    const menu = document.createElement("div");
+                    menu.className = "dropdown-menu-edukyu hidden";
+
+                    for (const [program, fee] of Object.entries(college3_DetailFees)) {
+                        if (typeof fee === "object" && fee !== null) {
+                            for (const [subProgram, subFee] of Object.entries(fee)) {
+                                if (!["Total", "Detail Total"].includes(subProgram)) {
+                                    const item = document.createElement("div");
+                                    item.className = "dropdown-item";
+                                    item.textContent = `${program} - ${subProgram}: ${subFee}`;
+                                    menu.appendChild(item);
+                                }
+                            }
+                        } else if (!["Total", "Detail Total"].includes(program)) {
+                            const item = document.createElement("div");
+                            item.className = "dropdown-item";
+                            item.textContent = `${program}: ${fee}`;
+                            menu.appendChild(item);
+                        }
+                    }
+
+                    dropdown.appendChild(menu);
+                    feesCell.appendChild(dropdown);
+
+                    const showDetailsBtn = document.createElement("button");
+                    showDetailsBtn.classList.add("show-details-btn");
+                    showDetailsBtn.textContent = "Show Details";
+
+                    feesContainer.appendChild(showDetailsBtn);
+                    feesContainer.appendChild(dropdown);
+                    feesCell.appendChild(feesContainer);
+
+                    showDetailsBtn.addEventListener("click", function () {
+                        if (dropdown.classList.contains("hidden")) {
+                            // feesSummary.classList.add("hidden");
+                            dropdown.classList.remove("hidden");
+                            showDetailsBtn.textContent = "Show Less";
+                        } else {
+                            // feesSummary.classList.remove("hidden");
+                            dropdown.classList.add("hidden");
+                            showDetailsBtn.textContent = "Show Details";
+                        }
+                    });
+
+                    header.addEventListener("click", (event) => {
+                        event.stopPropagation();
+                        menu.classList.toggle("hidden");
+                    });
+
+                    document.addEventListener("click", function (e) {
+                        const clickedOutside = !menu.contains(e.target) && !header.contains(e.target);
+                        if (!menu.classList.contains("hidden") && clickedOutside) {
+                            menu.classList.add("hidden");
+                        }
+                    });
+                }
+                else {
+                    document.getElementById("college3Fees").textContent = college3_Fees;
+                }
+
                 document.getElementById("college3Programs").innerHTML = college3_programs;
-                document.getElementById("college3Specialisation").innerHTML = college3_specialisation;
+                document.getElementById("college3Specialisation").innerHTML = "";
+                document.getElementById("college3Specialisation").insertAdjacentHTML('beforeend', college3_specialisation);
                 document.getElementById("college3Eligibility").innerHTML = college3_eligibility;
                 document.getElementById("college3Review").innerHTML = college3_review;
                 document.getElementById("college3OurRecommendation").textContent = college3_ourRecommendation;
@@ -691,7 +1808,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function toggleColumnVisibility(columnClass, isVisible) {
 
         if(window.innerWidth <= 768){
-            const columns = document.querySelectorAll(".college-data-wrapper");
+            const columns = document.querySelectorAll(".college-data-wrapper-edukyu");
 
             columns.forEach(column => {
                 if (columnClass.trim() === "institute-type" && (column.classList.contains("institute-type"))) changeDisplay(column, isVisible, 1);
@@ -713,9 +1830,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        const columns = document.querySelectorAll(".college-body");
+        const columns = document.querySelectorAll(".college-body-edukyu");
 
         columns.forEach(column => {
+
             if (columnClass.trim() === "institute-type" && (column.id === "collegeInstituteType" || column.id == "college1InstituteType" || column.id == "college2InstituteType" || column.id == "college3InstituteType")) changeDisplay(column, isVisible, 1);
             else if (columnClass.trim() == "establishment" && (column.id == "collegeEstablishment" || column.id == "college1Establishment" || column.id == "college2Establishment" || column.id == "college3Establishment")) changeDisplay(column, isVisible, 2);
             else if (columnClass.trim() == "abbreviation" && (column.id == "collegeAbbreviation" || column.id == "college1Abbreviation" || column.id == "college2Abbreviation" || column.id == "college3Abbreviation")) changeDisplay(column, isVisible, 0);
@@ -746,14 +1864,39 @@ document.addEventListener('DOMContentLoaded', function () {
             column.classList.add("hidden");
         }
     }
+    function processSpecialisations(specialisation) {
+        if (!specialisation) return '';
 
-    function convertTextToLine(value) {
-        const items = value.split(',');
-        const listItems = items.map(item => `<li>${item.trim()}</li>`).join('');
-        return `<ul>${listItems}</ul>`;
+        if (typeof specialisation === 'object' && !Array.isArray(specialisation)) {
+            return formatNestedSpecialisations(specialisation);
+        }
+        else if (typeof specialisation === 'string') {
+            return convertTextToLine(specialisation);
+        }
+        return '';
     }
 
+    function formatNestedSpecialisations(specialisations) {
+        let html = '<ul class="nested-specialisation">';
+        for (const [programName, specializations] of Object.entries(specialisations)) {
+            html += `<li><strong>${programName}</strong>`;
+            if (Object.keys(specializations).length > 0) {
+                html += '<ul class="specialisation-items">';
+                for (const specName of Object.keys(specializations)) {
+                    html += `<li>${specName}</li>`;
+                }
+                html += '</ul>';
+            }
+            html += '</li>';
+        }
+        html += '</ul>';
+        return html;
+    }
 
+    function convertTextToLine(value) {
+        const items = String(value).split(',').map(item => item.trim()).filter(item => item);
+        return items.length ? `<ul class="simple-specialisation">${items.map(item => `<li>${item}</li>`).join('')}</ul>` : '';
+    }
 
     function convertTextToImage(value) {
         const accreditations = value.split(',');
@@ -827,95 +1970,106 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    document.getElementById("toggleCheckboxList").addEventListener("click", function () {
-        const checkboxList = document.querySelector(".check-box-list-container");
 
-        if (checkboxList.style.display === "none" || checkboxList.style.display === "") checkboxList.style.display = "flex";
-        else checkboxList.style.display = "none";
-    });
 
-    document.querySelector('.info-box-cancel-button').addEventListener("click", function () {
-        const hideDetailBox = document.querySelector('.info-box');
+    document.querySelector('.info-box-cancel-button-edukyu').addEventListener("click", function () {
+        const hideDetailBox = document.querySelector('.info-box-edukyu');
         hideDetailBox.style.display = "none";
     })
-
-    const headers = document.querySelectorAll(".college-body-header");
-
-
-    const collegeHeaderLogo = document.querySelectorAll('.circle');
-    const table = document.querySelector('.compare-table');
-    const mobileTable = document.getElementById('mobileViewContainer');
 
     window.addEventListener('scroll', function () {
 
         const scrollPosition = window.scrollY;
         if(window.innerWidth <= 768){
-            const mobileTableStart = mobileTable.offsetTop;
-            const mobileTableEnd = mobileTableStart + mobileTable.offsetHeight;
+            // const mobileTableStart = mobileTable.offsetTop;
+            // const mobileTableEnd = mobileTableStart + mobileTable.offsetHeight;
 
-            if (scrollPosition >= mobileTableStart && scrollPosition <= mobileTableEnd) {
-                collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
-            } else {
-                collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
-            }
+            // if (scrollPosition >= mobileTableStart && scrollPosition <= mobileTableEnd) {
+            //     collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
+            // } else {
+            //     collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
+            // }
 
         }else{
-            const tableStart = table.offsetTop;
-            const tableEnd = tableStart + table.offsetHeight;
-
-            if (scrollPosition >= tableStart && scrollPosition <= tableEnd) {
-                collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
-            } else {
-                collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
-            }
+            // const tableStart = table.offsetTop;
+            // const tableEnd = tableStart + table.offsetHeight;
+            //
+            // if (scrollPosition >= tableStart && scrollPosition <= tableEnd) {
+            //     collegeHeaderLogo.forEach(logo => logo.classList.add('fixed'));
+            // } else {
+            //     collegeHeaderLogo.forEach(logo => logo.classList.remove('fixed'));
+            // }
         }
 
     });
 
+
     function convertTableToDiv() {
-        const table = document.querySelector(".compare-table");
+        const table = document.querySelector(".compare-table-edukyu");
         const mobileContainer = document.getElementById("mobileViewContainer");
+
+        if (!table || !mobileContainer) return;
 
         if (window.innerWidth <= 768) {
             mobileContainer.innerHTML = "";
 
             const rows = table.querySelectorAll("tr");
             rows.forEach((row) => {
-                const header = row.querySelector(".college-body-header");
-                const dataCells = row.querySelectorAll(".college-td-hider");
+                const header = row.querySelector(".college-body-header-edukyu");
+                const dataCells = row.querySelectorAll(".college-td-hider-edukyu");
 
-                if (header) {
+                if (header && dataCells.length > 0) {
                     const headerDiv = document.createElement("div");
-                    headerDiv.className = "college-header";
+                    headerDiv.className = "college-header-edukyu";
                     headerDiv.textContent = header.textContent;
 
                     const dataWrapper = document.createElement("div");
-                    dataWrapper.className = "college-data-wrapper";
-                    dataWrapper.style.display = "none"; // Explicitly set to none initially
+                    dataWrapper.className = "college-data-wrapper-edukyu";
+                    dataWrapper.style.display = "flex";
 
                     const headerClass = header.textContent.trim().replace(/[^\w-]/g, "-").toLowerCase();
                     dataWrapper.classList.add(headerClass);
 
                     dataCells.forEach((cell) => {
                         const dataDiv = document.createElement("div");
-                        dataDiv.classList.add("college-data-cell");
+                        dataDiv.classList.add("college-data-cell-edukyu");
 
-                        setTimeout(() => {
-                            if (!isThirdRowActive && cell.classList.contains("hidden-row-element")) {
-                                dataDiv.style.display = "none";
-                            } else {
-                                dataDiv.textContent = cell.textContent.trim();
+                        if (cell.classList.contains("degree-img")) {
+                            const img = cell.querySelector("img");
+                            if (img) {
+                                const imgClone = img.cloneNode(true);
+
+                                dataDiv.style.display = "flex";
+                                dataDiv.style.justifyContent = "center";
+                                dataDiv.style.alignItems = "center";
+
+                                imgClone.style.maxWidth = "100%";
+                                imgClone.style.maxHeight = "100%";
+
+                                dataDiv.appendChild(imgClone);
                             }
-                        }, 1000);
+                        } else if (cell.querySelector("a")) {
+                            const link = cell.querySelector("a").cloneNode(true);
+                            dataDiv.appendChild(link);
+                        } else if (cell.querySelector("img")) {
+                            const imgs = cell.querySelectorAll("img");
+                            imgs.forEach(img => {
+                                const imgClone = img.cloneNode(true);
+                                dataDiv.appendChild(imgClone);
+                            });
+                        } else {
+                            dataDiv.innerHTML = cell.innerHTML;
+                        }
+
+                        if (typeof isThirdRowActive !== "undefined" && !isThirdRowActive && cell.classList.contains("hidden-row-element-edukyu")) {
+                            dataDiv.style.display = "none";
+                        }
 
                         dataWrapper.appendChild(dataDiv);
                     });
+
                     headerDiv.addEventListener("click", () => {
-                        if (dataWrapper.style.display === "none" || dataWrapper.style.display === "") {
-                            dataWrapper.style.display = "flex";
-                        } else {
-                            dataWrapper.style.display = "none";
-                        }
+                        dataWrapper.style.display = dataWrapper.style.display === "none" ? "flex" : "none";
                     });
 
                     mobileContainer.appendChild(headerDiv);
@@ -923,35 +2077,98 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            table.style.display = "none"; // Hide original table
+            document.querySelector(".check-box-list-container-edukyu").style.display = "none";
+
+            attachShowDetailsListener();
+            table.style.display = "none";
         } else {
-            table.style.display = "table"; // Restore table on larger screens
-            mobileContainer.innerHTML = ""; // Clear the mobile container
+            table.style.display = "table";
+            mobileContainer.innerHTML = "";
+            document.querySelector(".check-box-list-container-edukyu").style.display = "flex";
         }
     }
 
+    window.onload = function () {
+        setTimeout(() => {
+            convertTableToDiv();
+        }, 200);
+    };
 
     window.addEventListener("DOMContentLoaded", convertTableToDiv);
     window.addEventListener("resize", convertTableToDiv);
 
+    function attachShowDetailsListener() {
+        const mobileButtons = document.querySelectorAll("#mobileViewContainer .show-details-btn");
+        mobileButtons.forEach(showDetailsBtn => {
+            showDetailsBtn.addEventListener("click", function () {
+                console.log("clicked in mobile view");
+                const feesDropdown = this.closest(".fees-container")?.querySelector(".fees-dropdown");
+                const feesSummary = this.closest(".fees-container")?.querySelector(".fees-summary");
+
+                console.log(feesDropdown);
+                console.log(feesSummary);
+
+                const menu = feesDropdown.querySelector(".dropdown-menu-edukyu");
+
+                feesDropdown.addEventListener("click", function (event) {
+                    if(menu.classList.contains("hidden")) {
+                        menu.classList.remove("hidden");
+                    }else{
+                        menu.classList.add("hidden");
+                    }
+
+                    document.addEventListener("click", function handleOutsideClick(e) {
+                        if (!feesDropdown.contains(e.target)) {
+                            console.log(menu);
+                            menu.classList.add("hidden");
+                            document.removeEventListener("click", handleOutsideClick);
+                        }
+                    });
+                })
+
+                if (!feesDropdown || !feesSummary) return;
+
+                if (feesDropdown.classList.contains("hidden")) {
+                    feesSummary.classList.add("hidden");
+                    feesDropdown.classList.remove("hidden");
+                    this.textContent = "Show Less";
+                } else {
+                    feesSummary.classList.remove("hidden");
+                    feesDropdown.classList.add("hidden");
+                    this.textContent = "Show Details";
+                }
+            });
+        });
+    }
+
     function truncateText() {
         const columns = document.querySelectorAll(".college-td-hider");
         columns.forEach(col => {
-            const text = col.textContent.trim();
-            if (text.length > 250) {
-                const shortText = text.substring(0, 250);
-
+            if(col.id == "college1Specialisation" ||
+                col.id == "college2Specialisation" ||
+                col.id == "college3Specialisation"){
                 col.innerHTML = `
-                <span class="short-text">${shortText}...</span>
-                <span class="full-text hidden">${text}</span>
-                <button class="show-more-btn">Show More</button>
-            `;
+                            <span class="full-text hidden">${text}</span>
+                        `;
+            }else{
+                const text = col.textContent.trim();
+                    if (text.length > 250) {
+                        const shortText = text.substring(0, 250);
+
+                        col.innerHTML = `
+                            <span class="short-text">${shortText}...</span>
+                            <span class="full-text hidden">${text}</span>
+                            <button class="show-more-btn">Show More</button>
+                        `;
+                    }
             }
+
         });
     }
 
     document.addEventListener("click", function (event) {
         if (event.target.classList.contains("show-more-btn")) {
+
             const button = event.target;
             const parentCol = button.parentElement;
             const shortTextEl = parentCol.querySelector(".short-text");
@@ -964,62 +2181,61 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-        const modalCompareCollegeForm = document.getElementById("compareFormModal");
-        const btn = document.getElementById("search_form_button");
-        const closeBtn = document.querySelector(".close");
+    const modalCompareCollegeForm = document.getElementById("compareFormModal");
+    const btn = document.getElementById("search_form_button");
+    const closeBtn = document.querySelector(".close");
 
-        btn.addEventListener("click", function () {
-            const logoContainer = document.querySelector('.compare-form-modal-header-logo');
-            logoContainer.innerHTML = "";
+    btn.addEventListener("click", function () {
+        const logoContainer = document.querySelector('.compare-form-modal-header-logo');
+        logoContainer.innerHTML = "";
 
-            if (college1_name != null && college1_img) {
-                logoContainer.innerHTML += `<img src="${college1_img}" alt="${college1_name} Logo" class="form-logo">`;
-            }
+        if (college1_name != null && college1_img) {
+            logoContainer.innerHTML += `<img src="${college1_img}" alt="${college1_name} Logo" class="form-logo">`;
+        }
 
-            if (college2_name != null && college2_img) {
-                logoContainer.innerHTML += `<img src="${college2_img}" alt="${college2_name} Logo" class="form-logo">`;
-            }
+        if (college2_name != null && college2_img) {
+            logoContainer.innerHTML += `<img src="${college2_img}" alt="${college2_name} Logo" class="form-logo">`;
+        }
 
-            if (college3_name != null && college3_img) {
-                logoContainer.innerHTML += `<img src="${college3_img}" alt="${college3_name} Logo" class="form-logo">`;
-            }
-
-
-            const selectBox = document.getElementById("collegeSelect");
-
-            selectBox.innerHTML = `<option value="" disabled selected>Choose Your University</option>`;
-
-            if (college1_name) {
-                selectBox.innerHTML += `<option value="${college1_name}">${college1_name}</option>`;
-            }
-
-            if (college2_name) {
-                selectBox.innerHTML += `<option value="${college2_name}">${college2_name}</option>`;
-            }
-
-            if (college3_name) {
-                selectBox.innerHTML += `<option value="${college3_name}">${college3_name}</option>`;
-            }
+        if (college3_name != null && college3_img) {
+            logoContainer.innerHTML += `<img src="${college3_img}" alt="${college3_name} Logo" class="form-logo">`;
+        }
 
 
-            modalCompareCollegeForm.style.display = "flex";
-        });
+        const selectBox = document.getElementById("collegeSelect");
 
-        closeBtn.addEventListener("click", function() {
+        selectBox.innerHTML = `<option value="" disabled selected>Choose Your University</option>`;
+
+        if (college1_name) {
+            selectBox.innerHTML += `<option value="${college1_name}">${college1_name}</option>`;
+        }
+
+        if (college2_name) {
+            selectBox.innerHTML += `<option value="${college2_name}">${college2_name}</option>`;
+        }
+
+        if (college3_name) {
+            selectBox.innerHTML += `<option value="${college3_name}">${college3_name}</option>`;
+        }
+
+
+        modalCompareCollegeForm.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function() {
+        modalCompareCollegeForm.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target === modalCompareCollegeForm) {
             modalCompareCollegeForm.style.display = "none";
-        });
-
-        window.addEventListener("click", function(event) {
-            if (event.target === modalCompareCollegeForm) {
-                modalCompareCollegeForm.style.display = "none";
-            }
-        });
+        }
+    });
 
 
 });
 
 
-/* JavaScript for slider functionality */
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.universities-slider');
     const prevBtn = document.querySelector('.prev-btn');
@@ -1051,10 +2267,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize buttons
     updateButtons();
 
-    // Handle window resize
     window.addEventListener('resize', function() {
         const newVisibleCards = window.innerWidth >= 992 ? 3 : window.innerWidth >= 768 ? 2.5 : 1;
         if (newVisibleCards !== visibleCards) {
@@ -1063,4 +2277,46 @@ document.addEventListener('DOMContentLoaded', function() {
             updateButtons();
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".factors-container-edukyu");
+
+    container.scrollLeft = 0;
+    console.log(container.clientLeft);
+});
+
+function equalizeCardHeights() {
+    const cards = document.querySelectorAll('.factors-card-edukyu');
+    let maxHeight = 0;
+
+    cards.forEach(card => {
+        card.style.height = 'auto';
+    });
+
+    cards.forEach(card => {
+        const height = card.offsetHeight;
+        if (height > maxHeight) maxHeight = height;
+    });
+
+    cards.forEach(card => {
+        card.style.height = maxHeight + 'px';
+    });
+}
+
+window.addEventListener('load', () => {
+    setTimeout(equalizeCardHeights, 150);
+});
+
+window.addEventListener('resize', () => {
+    setTimeout(equalizeCardHeights, 150);
+});
+
+document.getElementById("toggleCheckboxList").addEventListener("click", function () {
+    const checkboxContainer = document.querySelector(".check-box-list-container");
+    if (checkboxContainer.style.display === "none") {
+        checkboxContainer.style.display = "block";
+    } else {
+        checkboxContainer.style.display = "none";
+    }
 });

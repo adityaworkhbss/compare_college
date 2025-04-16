@@ -1,7 +1,6 @@
-/* General Variables */
 :root {
-    --primary-color: #025e68; /* Edukyu Petrol */
-    --secondary-color: #ffd23f; /* Yellow */
+    --primary-color: #025e68;
+    --secondary-color: #ffd23f;
     --light-shade-1: #0e6d78;
     --light-shade-2: #1d7c87;
     --light-shade-3: #2f8b96;
@@ -28,7 +27,7 @@
     --card-border: #d9d9d9;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --border-radius-small: 3px;
-    --border-radius-medium: 16px;
+    --border-radius-medium: 30px;
     --font-size-default: 16px;
     --font-size-heading: 24px;
     --paragraph-font-size: 14px;
@@ -42,7 +41,6 @@
     --college3-logo: "Coolege 3 logo";
 }
 
-/* General Layout */
 body {
     margin: 0;
     padding: 0;
@@ -58,7 +56,7 @@ body {
     font-family: 'Gilroy-Regular', sans-serif;
 }
 
-.container {
+.container-edukyu {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
@@ -84,13 +82,12 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-.text-center {
+.text-center-edukyu {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-/* Flexbox Layout */
-.row {
+.row-edukyu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -103,19 +100,18 @@ p {
     gap: 20px;
 }
 
-.col-md-4 {
+.col-md-4-edukyu {
     flex: 1 1 calc(33.33% - 40px);
     max-width: calc(33.33% - 40px);
     box-sizing: border-box;
 }
 
-.col-sm-6 {
+.col-sm-6-edukyu {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
 }
 
-/* Search Bars */
-.compare-search-buttons {
+.compare-search-buttons-edukyu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,12 +120,12 @@ p {
 }
 
 @media (max-width: 1100px) {
-    .compare-search-buttons {
+    .compare-search-buttons-edukyu {
         flex-direction: column;
     }
 }
 
-.compare-search-btn {
+.compare-search-btn-edukyu {
     display: flex;
     align-items: center;
     flex: 1;
@@ -140,7 +136,7 @@ p {
     box-shadow: var(--box-shadow);
 }
 
-.compare-search-btn input[type="search"] {
+.compare-search-btn-edukyu input[type="search"] {
     flex: 1;
     border: none;
     outline: none;
@@ -149,8 +145,7 @@ p {
     background-color: transparent;
 }
 
-/* Add Extra Button */
-.add-third-seachbar {
+.add-third-seachbar-edukyu {
     width: 40px;
     height: 40px;
     background-color: var(--primary-color);
@@ -165,11 +160,11 @@ p {
     transition: background-color 0.3s;
 }
 
-.add-third-seachbar:hover {
+.add-third-seachbar-edukyu:hover {
     background-color: var(--dark-shade-1);
 }
 
-.check-box-list {
+.check-box-list-edukyu {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -177,7 +172,7 @@ p {
     justify-content: center;
 }
 
-.cxp-checkbox-inline {
+.cxp-checkbox-inline-edukyu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -192,13 +187,12 @@ p {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.cxp-checkbox-inline.checked {
+.cxp-checkbox-inline-edukyu.checked {
     background-color: var(--primary-color);
     color: var(--font-color-white);
 }
 
-/* Compare Button */
-.compare-btn .scnd-button {
+.compare-btn-edukyu .scnd-button {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border: none;
@@ -212,11 +206,10 @@ p {
     transition: background-color 0.3s;
 }
 
-.compare-btn .scnd-button:hover {
+.compare-btn-edukyu .scnd-button:hover {
     background-color: #e6b800;
 }
 
-/* Compare Form Button */
 .compare-form-btn .scnd-button {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -235,8 +228,7 @@ p {
     background-color: #e6b800;
 }
 
-/* Card Styling */
-.select-right-college {
+.select-right-college-edukyu {
     background-color: var(--card-background);
     border: 1px solid var(--card-border);
     border-radius: var(--border-radius-medium);
@@ -244,41 +236,40 @@ p {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.select-right-college img {
+.select-right-college-edukyu img {
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
 }
 
-.select-right-college h3 {
+.select-right-college-edukyu h3 {
     font-size: 18px;
     color: var(--primary-color);
     margin-bottom: 10px;
     font-weight: 600;
 }
 
-.select-right-college p {
+.select-right-college-edukyu p {
     font-size: var(--paragraph-font-size);
     color: var(--dark-shade-3);
     margin-bottom: 0;
 }
 
-.select-right-college:hover {
+.select-right-college-edukyu:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .col-md-4 {
+    .col-md-4-edukyu {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 
-    .col-sm-6 {
+    .col-sm-6-edukyu {
         flex: 1 1 100%;
         max-width: 100%;
     }
@@ -287,45 +278,45 @@ p {
         font-size: 28px;
     }
 
-    .compare-search-btn {
+    .compare-search-btn-edukyu {
         width: 95%;
     }
 
-    .add-third-seachbar {
+    .add-third-seachbar-edukyu {
         width: 90%;
         border-radius: var(--border-radius-medium);
     }
 
-    .check-box-list {
+    .check-box-list-edukyu {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .cxp-checkbox-inline {
+    .cxp-checkbox-inline-edukyu {
         width: 100%;
         justify-content: space-between;
     }
 
-    .select-right-college {
+    .select-right-college-edukyu {
         padding: 15px;
     }
 
-    .select-right-college img {
+    .select-right-college-edukyu img {
         width: 60px;
         height: 60px;
     }
 
-    .select-right-college h3 {
+    .select-right-college-edukyu h3 {
         font-size: 16px;
     }
 
-    .select-right-college p {
+    .select-right-college-edukyu p {
         font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .col-md-4 {
+    .col-md-4-edukyu {
         flex: 1 1 100%;
         max-width: 100%;
     }
@@ -334,85 +325,79 @@ p {
         font-size: 24px;
     }
 
-    .compare-search-btn {
+    .compare-search-btn-edukyu {
         padding: 8px;
     }
 
-    .compare-search-btn input[type="search"] {
+    .compare-search-btn-edukyu input[type="search"] {
         font-size: 14px;
     }
 
-    .add-third-seachbar {
+    .add-third-seachbar-edukyu {
         font-size: 32px;
     }
 
-    .cxp-checkbox-inline {
+    .cxp-checkbox-inline-edukyu {
         font-size: 12px;
     }
 
-    .select-right-college {
+    .select-right-college-edukyu {
         padding: 10px;
     }
 
-    .select-right-college img {
+    .select-right-college-edukyu img {
         width: 50px;
         height: 50px;
     }
 
-    .select-right-college h3 {
+    .select-right-college-edukyu h3 {
         font-size: 14px;
     }
 
-    .select-right-college p {
+    .select-right-college-edukyu p {
         font-size: 10px;
     }
 }
 
-/* Table Styling */
-
-.compare-table-wrapper {
+.compare-table-wrapper-edukyu {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.compare-table {
-    min-width: 800px; /* adjust based on your column count */
+.compare-table-edukyu {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 14px;
 }
 
-.compare-table thead {
+.compare-table-edukyu thead {
     background-color: var(--primary-color);
     color: var(--font-color-white);
     text-align: left;
 }
 
-.compare-table th, .compare-table td {
+.compare-table-edukyu th, .compare-table-edukyu td {
     padding: 15px;
     border: 1px solid var(--light-shade-9);
     text-align: left;
     word-wrap: break-word;
 }
 
-.compare-table tbody tr:nth-child(even) {
+.compare-table-edukyu tbody tr:nth-child(even) {
     background-color: var(--light-shade-9);
 }
 
-.compare-table th {
+.compare-table-edukyu th {
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.compare-table td {
+.compare-table-edukyu td {
     vertical-align: top;
 }
 
-
-
-/* Remove Button */
 .remove-third-row {
     color: black;
     border: none;
@@ -426,22 +411,27 @@ p {
     background-color: #ffffff;
 }
 
-/* Hidden Class */
+@media (max-width: 768px) {
+    .remove-third-row {
+        padding-right: 15px;
+    }
+}
+
 .hidden {
     display: none;
 }
 
-.hidden-row {
+.hidden-row-edukyu {
     display: none;
 }
 
-.check-box-list {
+.check-box-list-edukyu {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.cxp-checkbox-inline {
+.cxp-checkbox-inline-edukyu {
     display: flex;
     align-items: center;
     position: relative;
@@ -455,17 +445,15 @@ p {
     color: #333;
 }
 
-.cxp-checkbox-inline:hover {
+.cxp-checkbox-inline-edukyu:hover {
     border-color: var(--primary-color);
     background: #f0f8ff;
 }
 
-/* Hide the native checkbox */
-.cxp-checkbox-inline input[type="checkbox"] {
+.cxp-checkbox-inline-edukyu input[type="checkbox"] {
     display: none;
 }
 
-/* Add a custom checkbox */
 .custom-checkbox {
     width: 18px;
     height: 18px;
@@ -475,28 +463,24 @@ p {
     transition: background-color 0.3s ease;
 }
 
-/* Change the custom checkbox style when checked */
-.cxp-checkbox-inline input[type="checkbox"]:checked + .custom-checkbox {
+.cxp-checkbox-inline-edukyu input[type="checkbox"]:checked + .custom-checkbox {
     background-color: #012f34;
 }
 
-/* Highlight the select-all button */
-.cxp-checkbox-inline.cxp-select-all {
+.cxp-checkbox-inline-edukyu.cxp-select-all {
     font-weight: bold;
     color: #012f34;
     border-color: var(--dark-shade-5);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .cxp-checkbox-inline {
+    .cxp-checkbox-inline-edukyu {
         width: 100%;
         justify-content: space-between;
     }
 }
 
-/* Dropdown Styling */
-.dropdown {
+.dropdown-edukyu {
     display: none;
     position: absolute;
     top: 100%;
@@ -513,11 +497,11 @@ p {
     font-size: var(--paragraph-font-size);
 }
 
-.dropdown.open {
+.dropdown-edukyu.open {
     display: block;
 }
 
-.dropdown option {
+.dropdown-edukyu option {
     padding: 10px;
     cursor: pointer;
     background: var(--background-white);
@@ -525,29 +509,29 @@ p {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.dropdown option:hover {
+.dropdown-edukyu option:hover {
     background: var(--primary-color);
     color: var(--font-color-white);
 }
-/* Style for container and suggestion content */
-.cxp-padding-72 {
+
+.cxp-padding-72-edukyu {
     padding: 72px 15px;
-    background-color: var(--primary-color); /* Edukyu Petrol */
+    background-color: var(--primary-color);
     border-radius: var(--border-radius-medium);
     box-shadow: var(--box-shadow);
 }
 
-.cxp-suggestion-content h2 {
-    color: var(--font-color-white); /* White text */
+.cxp-suggestion-content-edukyu h2 {
+    color: var(--font-color-white);
     font-size: var(--font-size-heading);
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.cxp-suggestion-content .scnd-button {
-    background-color: var(--secondary-color); /* Yellow button */
-    color: var(--primary-color); /* Text matches primary color */
+.cxp-suggestion-content-edukyu .scnd-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     border-radius: var(--border-radius-small);
     padding: 15px 30px;
@@ -556,42 +540,42 @@ p {
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    justify-content: center; /* Center content */
-    gap: 10px; /* Space between icon and text */
+    justify-content: center;
+    gap: 10px;
 }
 
-.cxp-suggestion-content .scnd-button svg {
-    width: 26px; /* Increase icon size */
+.cxp-suggestion-content-edukyu .scnd-button svg {
+    width: 26px;
     height: 26px;
 }
 
-.cxp-suggestion-content .scnd-button:hover {
-    background-color: #e6b800; /* Slightly darker yellow */
-    color: var(--font-color); /* Font turns darker for emphasis */
+.cxp-suggestion-content-edukyu .scnd-button:hover {
+    background-color: #e6b800;
+    color: var(--font-color);
 }
 
 
-.cxp-suggestion-content svg {
-    fill: var(--primary-color); /* Icon matches text color */
+.cxp-suggestion-content-edukyu svg {
+    fill: var(--primary-color);
 }
 
-.cxp-suggestion-content .vl-align {
+.cxp-suggestion-content-edukyu .vl-align-edukyu {
     vertical-align: middle;
 }
 
 /* Add responsiveness */
 @media (max-width: 768px) {
-    .cxp-suggestion-content h2 {
-        font-size: 20px; /* Smaller font for smaller screens */
+    .cxp-suggestion-content-edukyu h2 {
+        font-size: 20px;
     }
 
-    .cxp-suggestion-content .scnd-button {
-        font-size: 14px; /* Adjust button size */
+    .cxp-suggestion-content-edukyu .scnd-button {
+        font-size: 14px;
         padding: 8px 15px;
     }
 }
 
-.college-header {
+.college-header-edukyu {
     justify-content: space-around;
     align-items: center;
     background-color: #006f75;
@@ -599,15 +583,15 @@ p {
     color: #fff;
 }
 
-.college-header div{
+.college-header-edukyu div{
     display: flex;
 }
 
-.college {
+.college-edukyu {
     align-items: center;
 }
 
-.circle {
+.circle-edukyu {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -619,7 +603,7 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.circle img {
+.circle-edukyu img {
     max-width: 80%;
     max-height: 80%;
     border-radius: 50%;
@@ -630,7 +614,7 @@ h3 {
     color: #000;
 }
 
-.college-header-logo {
+.college-header-logo-edukyu {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -641,12 +625,12 @@ h3 {
     margin-bottom: 20px;
 }
 
-.college {
+.college-edukyu {
     text-align: center;
     width: 40%;
 }
 
-.circle {
+.circle-edukyu {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -658,7 +642,7 @@ h3 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.circle img {
+.circle-edukyu img {
     max-width: 80%;
     max-height: 80%;
     border-radius: 50%;
@@ -670,46 +654,43 @@ h3 {
 }
 
 .snackbar {
-    position: fixed; /* Stay at the bottom */
-    bottom: 20px; /* Distance from the bottom */
+    position: fixed;
+    bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    background-color: #f44336; /* Red */
+    transform: translateX(-50%);
+    background-color: #f44336;
     color: white;
     padding: 16px;
     border-radius: 6px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out; /* Smooth transitions */
-    z-index: 1000; /* Ensure it's on top */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
 }
 
-/* Modal Styles */
-/* Modal Overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1050; /* Ensure it's on top */
+    z-index: 1050;
 }
 
-/* Modal Content */
 .modal-content {
-    background-color: #f0f5f0; /* Light green background */
-    border-radius: 8px; /* Rounded corners */
+    background-color: #f0f5f0;
+    border-radius: 8px;
     padding: 20px;
-    width: 900px; /* Adjust width as needed */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    width: 900px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
     display: flex;
-    justify-content: flex-end; /* Align close button to the right */
+    justify-content: flex-end;
     margin-bottom: 10px;
 }
 
@@ -727,7 +708,6 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* Form Styles */
 .form-group {
     margin-bottom: 15px;
 }
@@ -779,7 +759,7 @@ h3 {
 
 .checkbox-group {
     display: flex;
-    align-items: flex-start; /* Align checkbox to top of label */
+    align-items: flex-start;
 }
 
 .terms-label {
@@ -796,64 +776,55 @@ h3 {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%; /* Make button take full width */
+    width: 100%;
 }
 
 .btn:hover {
     background-color: #e6ad0c;
 }
 
-/* Style the select dropdown */
 select.form-control {
-    -webkit-appearance: none; /* Remove default arrow */
-    -moz-appearance: none; /* Remove default arrow */
-    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24h-24z' fill='none'/></svg>"); /* Add custom arrow */
     background-repeat: no-repeat;
     background-position: right 10px center;
-    padding-right: 30px; /* Adjust to accommodate arrow */
+    padding-right: 30px;
 }
 
 
-/* Modal Content Background */
 .modal-content {
-    background-color: #f0f5f0; /* Light green background */
-    border: none; /* Remove default border */
-    border-radius: 10px; /* Rounded corners */
-    /*overflow: hidden; !* Ensure rounded corners are visible *!*/
+    background-color: #f0f5f0;
+    border: none;
+    border-radius: 10px;
 }
 
-/* Modal Header */
 .modal-header {
-    border-bottom: none; /* Remove default border */
-    padding: 20px; /* Add padding */
+    border-bottom: none;
+    padding: 20px;
 }
 
 .close {
-    opacity: 1; /* Make close button more visible */
-    font-size: 24px; /* Adjust size as needed */
+    opacity: 1;
+    font-size: 24px;
 }
 
-/* Modal Body */
 .modal-body {
-    padding: 0; /* Remove default padding */
+    padding: 0;
 }
 
-/* Left Section (University Info) */
 .left-section {
-    padding: 30px; /* Add padding */
-    background-color: #fff; /* White background */
+    padding: 30px;
+    background-color: #fff;
 }
 
-.university-slider {
-    /* Style for the slider (see below) */
-}
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Spacing between grid items */
-    margin-top: 30px; /* Add spacing above grid */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
 }
 
 div.features-item{
@@ -864,49 +835,46 @@ div.features-item{
 .feature-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center;
 }
 
-
-/* Right Section (Form) */
 .right-section {
-    padding: 30px; /* Add padding */
+    padding: 30px;
 }
 
 .modal-title {
-    font-weight: bold; /* Make title bold */
-    margin-bottom: 20px; /* Add spacing below title */
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px; /* Add spacing below form groups */
+    margin-bottom: 20px;
 }
 
 .form-control {
-    border-radius: 5px; /* Slightly rounded corners */
+    border-radius: 5px;
 }
 
 .input-group-addon {
-    background-color: #eee; /* Light gray background for +91 */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ced4da; /* Match input border */
-    border-right: none; /* Remove right border */
-    border-radius: 5px 0 0 5px; /* Round left corners only */
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
 }
 
 .btn-primary {
-    background-color: #ffc107; /* Yellow button */
-    border-color: #ffc107; /* Yellow border */
-    border-radius: 5px; /* Slightly rounded corners */
-    padding: 10px 20px; /* Add padding */
+    background-color: #ffc107;
+    border-color: #ffc107;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
 
 .btn-primary:hover {
-    background-color: #e6ad0c; /* Darker yellow on hover */
-    border-color: #e6ad0c; /* Darker yellow border on hover */
+    background-color: #e6ad0c;
+    border-color: #e6ad0c;
 }
 
-/* Slider Styling (Example) */
 .university-slider {
     width: 100%;
     overflow: hidden;
@@ -914,21 +882,21 @@ div.features-item{
 
 .slide-track {
     display: flex;
-    animation: scroll 20s linear infinite; /* Adjust animation duration as needed */
+    animation: scroll 20s linear infinite;
 }
 
 .slide {
-    height: 100px; /* Adjust slide height as needed */
-    margin: 0 10px; /* Adjust spacing between slides */
+    height: 100px;
+    margin: 0 10px;
 }
 
 .slide img {
-    max-height: 100%; /* Make images fit within slide */
+    max-height: 100%;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-100% / 3 * 20)); } /* Adjust multiplier based on number of slides */
+    100% { transform: translateX(calc(-100% / 3 * 20)); }
 }
 
 .modal-row{
@@ -1022,48 +990,42 @@ div.features-item{
     background-color: #e0a800;
 }
 
-
-/* Modal Size and Position */
 .modal-dialog {
     max-width: 50%;
     margin: 30px auto;
 }
 
-/* Modal Content */
 .modal-content {
-    background-color: #f0f5f0; /* Light green background */
+    background-color: #f0f5f0;
     border: none;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
-    overflow: hidden; /* Ensure content fits within rounded corners */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-/* Modal Header */
 .modal-header {
-    border-bottom: none; /* Remove default border */
+    border-bottom: none;
     padding: 15px;
 }
 
 .close {
     font-size: 24px;
-    opacity: 1; /* Make close button more visible */
+    opacity: 1;
 }
 
-/* Modal Row Layout */
 .modal-row {
     display: flex;
-    justify-content: space-between; /* Even spacing between sections */
-    align-items: flex-start; /* Align sections to the top */
-    gap: 20px; /* Add spacing between sections */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
     padding: 20px;
 }
 
-/* Left Section (University Info) */
 .left-section {
-    flex: 1; /* Take up equal space */
-    max-width: 45%; /* Limit width */
+    flex: 1;
+    max-width: 45%;
     background-color: #fff;
-    box-sizing: border-box; /* Include padding in width/height */
+    box-sizing: border-box;
     padding: 20px;
     text-align: center;
 }
@@ -1098,12 +1060,11 @@ div.features-item{
     margin-right: 10px;
 }
 
-/* Right Section (Form) */
 .right-section {
-    flex: 1; /* Take up equal space */
-    max-width: 50%; /* Limit width */
+    flex: 1;
+    max-width: 50%;
     background-color: #f8f9fa;
-    box-sizing: border-box; /* Include padding in width/height */
+    box-sizing: border-box;
     padding: 20px;
     text-align: center;
 }
@@ -1114,7 +1075,6 @@ div.features-item{
     margin-bottom: 20px;
 }
 
-/* Form Fields */
 .form-group {
     margin-bottom: 15px;
 }
@@ -1129,11 +1089,10 @@ div.features-item{
     background-color: #eee;
     padding: 10px;
     border: 1px solid #ced4da;
-    border-right: none; /* Remove right border */
-    border-radius: 5px 0 0 5px; /* Round left corners only */
+    border-right: none;
+    border-radius: 5px 0 0 5px;
 }
 
-/* Buttons */
 .btn-primary {
     background-color: #ffc107;
     border: none;
@@ -1152,20 +1111,19 @@ div.features-item{
     display: flex;
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
     .modal-row {
-        flex-direction: column; /* Stack sections */
+        flex-direction: column;
         gap: 10px;
     }
 
     .left-section,
     .right-section {
-        max-width: 100%; /* Full width on small screens */
+        max-width: 100%;
     }
 
     .features-grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr;
     }
 
 
@@ -1175,36 +1133,35 @@ div.features-item{
 }
 
 
-/* Sticky Footer Styles */
 .cxp_blog_sticky {
     height: 7%;
-    position: fixed; /* Stay in place */
+    position: fixed;
     left: 0;
-    bottom: 0; /* Stick to the bottom */
-    width: 100%; /* Full width */
-    background-color: #008080; /* Green background */
-    padding: 10px 0; /* Add some padding */
-    z-index: 100; /* Ensure it's on top of other content */
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    bottom: 0;
+    width: 100%;
+    background-color: #008080;
+    padding: 10px 0;
+    z-index: 100;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.green-bg { /* Apply green background to the sticky footer */
+.green-bg {
     background-color: #008080;
 }
 
-.container-fluid {
-    max-width: 600px; /* Or your preferred max-width */
+.container-fluid-edukyu {
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.row {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    align-items: center; /* Vertically center content */
+.row-edukyu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .col-lg-*, .col-xl-*, .col-md-* {
-    display: flex; /* Use flexbox for the columns too */
+    display: flex;
 }
 
 .sticky-logo {
@@ -1214,9 +1171,9 @@ div.features-item{
 
 .cxp-blog-sticky-text {
     color: white;
-    font-size: 1.2rem; /* Adjust as needed */
-    cursor: pointer; /* Make text clickable */
-    margin: 0; /* Remove default margins */
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0;
 }
 
 .yellow-txt {
@@ -1224,35 +1181,33 @@ div.features-item{
 }
 
 .cxp-blog-sticky-btn {
-    background-color: #f0ad4e; /* Example yellow color */
+    background-color: #f0ad4e;
     border-color: #f0ad4e;
     color: white;
     padding: 8px 16px;
     border-radius: 5px;
-    white-space: nowrap; /* Prevent button text from wrapping */
+    white-space: nowrap;
 }
 
-/* Hide columns on smaller screens (adjust breakpoint as needed) */
 @media (max-width: 767px) {
-    .d-none { /* Hide on smaller screens */
+    .d-none {
         display: none !important;
     }
 
-    .text-center {
+    .text-center-edukyu {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 1px;
         font-size: 1.25rem;
     }
 
-    p.text-center{
+    p.text-center-edukyu{
         font-size: 0.9rem;
     }
 
 }
 
-/* Center the content on smaller screens */
 @media (max-width: 767px) {
-    .col-md-6 {
+    .col-md-6-edukyu {
         justify-content: center;
     }
 
@@ -1264,13 +1219,13 @@ div.features-item{
 }
 
 .modal-overlay {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -1281,10 +1236,10 @@ div.features-item{
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     position: relative;
-    margin: auto; /* Center the modal content */
+    margin: auto;
 }
 
 .modal-header {
@@ -1342,20 +1297,20 @@ div.features-item{
 }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     justify-content: center;
     align-items: center;
 }
 
 .modal.show {
-    display: flex; /* Show the modal when it has the 'show' class */
+    display: flex;
 }
 
 .modal-content {
@@ -1434,10 +1389,9 @@ div.modal-body-2{
     max-width: 50%;
 }
 
-/* Add this for the table wrapper */
 .table-wrapper {
     width: 100%;
-    overflow-x: auto; /* Horizontal scroll for wider tables */
+    /*overflow-x: auto;*/
 }
 
 .college-body-header{
@@ -1446,29 +1400,24 @@ div.modal-body-2{
     background-color: #008080;
 }
 
-/* Mobile-specific styles */
 @media (max-width: 768px) {
 
-    /*.compare-table td:before {*/
-    /*    display: none; !* Hide data-label in vertical mode *!*/
-    /*}*/
-
-    .circle{
+    .circle-edukyu{
         width: 50px;
         height: 50px;
     }
 
-    .college h3{
+    .college-edukyu h3{
         font-size: 0.8rem;
     }
 
-    .compare-table td {
+    .compare-table-edukyu td {
         display: block;
-        width: 90.5%; /* Ensure full width for mobile */
+        width: 90.5%;
 
     }
 
-    .check-box-list{
+    .check-box-list-edukyu{
         font-size: 8px;
     }
 
@@ -1479,9 +1428,9 @@ div.modal-body-2{
 
     .cxp-blog-sticky-text {
         color: white;
-        font-size: 0.6rem; /* Adjust as needed */
-        cursor: pointer; /* Make text clickable */
-        margin-left: -100px; /* Remove default margins */
+        font-size: 0.6rem;
+        cursor: pointer;
+        margin-left: -100px;
     }
 
     .yellow-txt {
@@ -1492,11 +1441,11 @@ div.modal-body-2{
         margin-top: 1px;
         height: 30px;
         font-size: 12px;
-        background-color: #f0ad4e; /* Example yellow color */
+        background-color: #f0ad4e;
         border-color: #f0ad4e;
         color: white;
         border-radius: 5px;
-        white-space: nowrap; /* Prevent button text from wrapping */
+        white-space: nowrap;
     }
 
     .country-code {
@@ -1517,14 +1466,14 @@ div.modal-body-2{
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 1000;
         justify-content: center;
         align-items: center;
     }
 
     .modal.show {
-        display: block; /* Show the modal when it has the 'show' class */
+        display: block;
     }
 
 
@@ -1563,7 +1512,7 @@ div.modal-body-2{
         display: block;
     }
 
-    td.hidden-row-element{
+    td.hidden-row-element-edukyu{
         display: none;
     }
 
@@ -1571,7 +1520,7 @@ div.modal-body-2{
         padding-left: 10px;
     }
 
-    .hidden-row {
+    .hidden-row-edukyu {
         display: none;
     }
 
@@ -1581,14 +1530,14 @@ div.modal-body-2{
     padding-bottom: 20px;
 }
 
-.toggle-btn {
+.toggle-btn-edukyu {
     display: block;
     width: 40px;
     height: 40px;
     background-color: var(--secondary-color);
     color: var(--white);
     border: none;
-    border-radius: 50%;
+    border-radius: 25%;
     margin-top: 10px;
     padding: 5px;
     cursor: pointer;
@@ -1601,14 +1550,13 @@ div.modal-body-2{
     display: flex;
     flex-direction: column;
     flex-wrap: initial;
-    gap: 15px; /* Consistent gap for both horizontal and vertical */
+    gap: 15px;
     margin-top: 20px;
     justify-content: flex-start;
 
 }
 
-/* Filter icon styling */
-.toggle-btn img.filter-icon {
+.toggle-btn-edukyu img.filter-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
@@ -1616,12 +1564,12 @@ div.modal-body-2{
     margin: 0 auto;
 }
 
-.check-box-list {
+.check-box-list-edukyu {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
-    justify-content: flex-start; /* Align to the left */
+    justify-content: flex-start;
 }
 
 
@@ -1629,23 +1577,23 @@ div.modal-body-2{
     margin-top: 20px;
 }
 
-.check-box-list {
+.check-box-list-edukyu {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 10px; /* Add spacing between each checkbox group */
-    align-items: flex-start; /* Align items to the start of the container */
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
 
 .check-box-list-container {
     margin-top: 20px;
 }
 
-.check-box-list {
+.check-box-list-edukyu {
     display: flex;
-    flex-direction: row; /* Align items horizontally */
-    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-    gap: 10px; /* Add spacing between each checkbox group */
-    align-items: center; /* Align items vertically in the center */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
 }
 
 .hidden{
@@ -1662,12 +1610,20 @@ div.modal-body-2{
     margin-left: 5px;
 }
 
-.info-box{
+.info-box-edukyu{
     display : none;
 }
 
 @media (max-width: 768px) {
-    /* Apply styles only when the row is visible */
+
+    .container-edukyu{
+        margin-top: 54px!important;
+    }
+
+    .check-box-list-container {
+        display: none;
+    }
+
     /*.college-body:not(.hidden-row)::before {*/
     /*    content: attr(data-college-name); !* Set college name from data attribute *!*/
     /*    display: flex;*/
@@ -1749,24 +1705,24 @@ div.modal-body-2{
     }
 
 
-    .info-box {
+    .info-box-edukyu {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #f8f9fa; /* Light gray background */
+        background-color: #f8f9fa;
         padding: 10px 15px;
         border-radius: 8px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         font-size: 14px;
         font-family: Arial, sans-serif;
         max-width: 300px;
-        position: relative; /* Ensures it's always in view */
+        position: relative;
         margin-top: 15%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Perfect centering */
+        transform: translate(-50%, -50%);
     }
 
-    .info-box-cancel-button {
+    .info-box-cancel-button-edukyu {
         background-color: transparent;
         border: none;
         font-size: 16px;
@@ -1776,7 +1732,7 @@ div.modal-body-2{
         transition: color 0.2s ease-in-out;
     }
 
-    .info-box-cancel-button:hover {
+    .info-box-cancel-button-edukyu:hover {
         color: var(--primary-color);
     }
 
@@ -1790,11 +1746,11 @@ tr td.college-body-header{
     border-radius: 2%;
 }
 
-h4.modal-title.text-center{
+h4.modal-title.text-center-edukyu{
     font-size: 0.8rem
 }
 
-h4.text-center{
+h4.text-center-edukyu{
     font-size: 0.7rem;
 }
 
@@ -1816,79 +1772,97 @@ div.features-grid{
     }
 }
 
-.college-header-logo {
+.college-header-logo-edukyu {
     display: flex;
-    justify-content: space-around; /* Ensures spacing between elements */
-    align-items: flex-start; /* Aligns items to the top */
-    gap: 20px; /* Adds spacing between colleges */
-    width: 90%;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
     padding-left: 8%;
 }
 
-.college {
+.college-edukyu {
     display: flex;
-    flex-direction: column; /* Stack logo and text */
-    align-items: center; /* Center align logo and text */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.circle {
-    width: 100px; /* Adjust logo container size */
+.circle-edukyu {
+    width: 100px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Makes it circular */
+    border-radius: 50%;
     overflow: hidden;
 }
 
-.hidden-row {
+.hidden-row-edukyu {
     display: none;
 }
 
 .show-details-btn {
-    background-color: var(--primary-color); /* Blue background */
-    color: var(--secondary-color); /* White text */
-    border: none; /* No border */
-    padding: 8px 16px; /* Padding for better spacing */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 14px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    margin-top: 8px; /* Space above the button */
-    display: inline-block; /* Ensure it stays inline */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 8px;
+    display: inline-block;
 }
 
 .show-details-btn:hover {
-    background-color: var(--dark-shade-1); /* Darker blue on hover */
+    background-color: var(--dark-shade-1);
 }
 
 .show-details-btn:active {
-    background-color: var(--dark-shade-2); /* Even darker blue on click */
+    background-color: var(--dark-shade-2);
 }
 
-/* Optional: Add an icon to the button */
 .show-details-btn::after {
-    content: " ▼"; /* Down arrow for "Show Details" */
+    content: " ▼";
     font-size: 12px;
 }
 
 .show-details-btn.show-less::after {
-    content: " ▲"; /* Up arrow for "Show Less" */
+    content: " ▲";
 }
 
-.college-header-logo {
-    position: relative; /* Ensure the container is relative */
+.college-header-logo-edukyu {
+    position: relative;
 }
 
-.circle {
+.circle-edukyu {
     z-index: 100;
 }
 
+@media screen and (max-width: 768px) {
+    .show-details-btn {
+        padding: 3px 6px;
+        font-size: 0px;
+        border-radius: 3px;
+        margin-top: 6px;
+    }
+
+    .show-details-btn::after {
+        font-size: 10px;
+    }
+
+    .college-header-logo-edukyu {
+        padding-left: 1%;
+        width: 95%;
+    }
+}
+
+
 
 @media (max-width: 768px) {
-    .circle.fixed {
-        position: fixed; /* Fixed positioning when scrolling */
+    .circle-edukyu.fixed {
+        position: fixed;
         top: 20px;
         z-index: 100;
     }
@@ -1911,31 +1885,31 @@ div.features-grid{
 
 
 
-.factors-card {
-    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+.factors-card-edukyu {
+    flex: 0 0 auto;
     width: 35%;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.select-right-college {
+.select-right-college-edukyu {
     padding: 20px;
     text-align: center;
 }
 
-.select-right-college img {
+.select-right-college-edukyu img {
     width: 100px;
     height: 100px;
     margin-bottom: 15px;
 }
 
-.select-right-college h3 {
+.select-right-college-edukyu h3 {
     font-size: 18px;
     color: var(--primary-color);
     margin-bottom: 10px;
     font-weight: 600;
 }
 
-.select-right-college p {
+.select-right-college-edukyu p {
     font-size: var(--paragraph-font-size);
     color: var(--dark-shade-3);
     margin-bottom: 0;
@@ -1945,40 +1919,36 @@ div.features-grid{
 @media (max-width: 768px) {
 
 
-    .select-right-college img {
+    .select-right-college-edukyu img {
         width: 60px;
         height: 60px;
     }
 
-    .select-right-college h3 {
+    .select-right-college-edukyu h3 {
         font-size: 16px;
     }
 
-    .select-right-college p {
+    .select-right-college-edukyu p {
         font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .factors-card {
-        height: 160px; /* Further adjust card height for mobile */
-    }
 
-    .select-right-college img {
+    .select-right-college-edukyu img {
         width: 50px;
         height: 50px;
     }
 
-    .select-right-college h3 {
+    .select-right-college-edukyu h3 {
         font-size: 14px;
     }
 
-    .select-right-college p {
+    .select-right-college-edukyu p {
         font-size: 10px;
     }
 }
 
-/* Modal Background */
 .compare-form-modal {
     display: none;
     position: fixed;
@@ -1994,7 +1964,6 @@ div.features-grid{
     padding: 10px;
 }
 
-/* Modal Content */
 .compare-form-modal-content {
     background: white;
     padding: 20px;
@@ -2006,7 +1975,6 @@ div.features-grid{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Close Button */
 .close {
     position: absolute;
     right: 10px;
@@ -2015,13 +1983,11 @@ div.features-grid{
     cursor: pointer;
 }
 
-/* University Logo */
 .form-logo {
     max-width: 100px;
     margin-bottom: 10px;
 }
 
-/* Form Inputs */
 .compare-form-modal-content form input,
 .compare-form-modal-content form select {
     width: 100%;
@@ -2030,17 +1996,15 @@ div.features-grid{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    box-sizing: border-box;  /* Prevents extra width issues */
+    box-sizing: border-box;
 }
 
-/* Fix Checkbox Alignment */
 input.checkbox-compare-form {
     width: auto;
     margin-right: 5px;
     vertical-align: middle;
 }
 
-/* Submit Button */
 .compare-form-modal-content form button {
     width: 100%;
     padding: 14px;
@@ -2058,7 +2022,6 @@ input.checkbox-compare-form {
     background-color: #d1a700;
 }
 
-/* Responsive Adjustments for Mobile */
 @media (max-width: 480px) {
     .compare-form-modal-content {
         width: 95%;
@@ -2078,7 +2041,6 @@ input.checkbox-compare-form {
     }
 }
 
-/* Fix dropdown options */
 .compare-form-modal-content form select option {
     font-size: 14px;
     background-color: white;
@@ -2096,104 +2058,144 @@ input.checkbox-compare-form {
 
 
 @media (max-width: 768px) {
-    .college-header {
+    .college-header-edukyu {
         display: block;
-        width: 95%;
+        width: 100%;
         font-weight: bold;
         padding: 10px;
         text-align: center;
         margin-bottom: 15px;
     }
 
-    .college-data-wrapper {
+    .college-data-wrapper-edukyu {
         display: flex;
         flex-direction: row;
-        justify-content: space-between; /* Ensure equal spacing */
+        justify-content: space-between;
         gap: 10px;
         padding: 10px 0;
-        /*border: 1px solid;*/
         width: 100%;
     }
 
-    .college-data-cell {
-        flex: 1; /* Ensure each cell takes equal space */
-        text-align: center; /* Center text within each cell */
+    .college-data-cell-edukyu {
+        flex: 1;
+        text-align: left;
         border: 1px solid;
         padding: 5px;
     }
 }
 
-.factors-container {
-    display: flex;
-    flex-wrap: wrap;
+.factors-container-edukyu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Equal width columns */
     gap: 20px;
-    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.factors-card-edukyu {
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.select-right-college-edukyu {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.select-right-college-edukyu img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.select-right-college-edukyu h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.select-right-college-edukyu p {
+    font-size: 14px;
+    color: var(--dark-shade-3);
+    margin-bottom: 0;
+    line-height: 1.5;
+    flex-grow: 1; /* Makes paragraphs equal height */
 }
 
 
 @media (max-width: 768px) {
-    .factors-container {
+    .factors-container-edukyu {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: 10px;
-        padding-bottom: 60px;
         gap: 16px;
+        padding: 40px 16px 40px 16px;
         scrollbar-width: none;
-        margin-left: 10px;
     }
 
-    .factors-container::-webkit-scrollbar {
+    .factors-container-edukyu::-webkit-scrollbar {
         display: none;
     }
 
-    .factors-card {
-        flex: 0 0 80%; /* Adjust the width so that each card fits well and doesn't get cut off */
+    .factors-card-edukyu {
+        flex: 0 0 80%;
         box-sizing: border-box;
+        width: 50%;
     }
 
-    .factors-card:first-child {
-        margin-left: 820px; /* Ensures last card doesn't get clipped */
+    /*.factors-card:first-child {*/
+    /*    margin-left: 410% !important;*/
+    /*}*/
+
+    .factors-card-edukyu:last-child {
+        margin-right: 40px;
     }
 
-
-    .factors-card:last-child {
-        margin-right: 10px; /* Ensures last card doesn't get clipped */
-    }
-
-    .factors-card-container {
-        overflow: hidden; /* Optional, keeps container tidy */
+    .factors-card-container-edukyu {
+        overflow: hidden;
     }
 }
 
 
-
-.banner {
+.banner-edukyu {
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.banner-image {
+.banner-image-edukyu {
     width: 100%;
     display: block;
     position: relative;
 }
 
-.banner-image img {
+.banner-image-edukyu img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 10px;
 }
 
-.banner-button {
+.banner-button-edukyu {
     position: absolute;
     bottom: 60px;
     left: 60px;
@@ -2208,27 +2210,31 @@ input.checkbox-compare-form {
     border: 2px solid white;
 }
 
-.banner-button:hover {
+.banner-button-edukyu:hover {
     background: #0a3a35;
     color: white;
     border-color: white;
 }
 
 @media (max-width: 768px) {
-    .banner-button {
+
+
+
+    .banner-button-edukyu {
         bottom: 40px;
         left: 30px;
         font-size: 0.3em;
         padding: 5px 10px;
     }
-    .banner {
+    .banner-edukyu {
         flex-direction: column;
         text-align: center;
-        width: auto;
+        width: 100%;
+        height: auto;
+        margin-top: 54px;
     }
 }
 
-/* Universities to Explore Section */
 .universities-explore-section {
     padding: 60px 0;
     background-color: #f9f9f9;
@@ -2250,7 +2256,6 @@ input.checkbox-compare-form {
     line-height: 1.6;
 }
 
-/* Slider container */
 .universities-slider-container {
     position: relative;
     max-width: 1000px;
@@ -2258,7 +2263,6 @@ input.checkbox-compare-form {
     padding: 0 50px;
 }
 
-/* Navigation buttons */
 .slider-nav-btn {
     position: absolute;
     top: 50%;
@@ -2292,13 +2296,11 @@ input.checkbox-compare-form {
     right: 0;
 }
 
-/* Slider wrapper */
 .universities-slider-wrapper {
     overflow: hidden;
     width: 100%;
 }
 
-/* Slider track */
 .universities-slider {
     display: flex;
     gap: 25px;
@@ -2306,7 +2308,6 @@ input.checkbox-compare-form {
     padding: 10px 0;
 }
 
-/* University card styles */
 .university-card {
     flex: 0 0 300px;
     background: white;
@@ -2396,8 +2397,47 @@ input.checkbox-compare-form {
     background: var(--secondary-color);
 }
 
-/* Responsive adjustments */
+.fees-dropdown {
+    width: 100%;
+    max-width: 250px;
+
+    padding: 10px 12px;
+    font-size: 12px;
+    border: 1.5px solid #00737a;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300737a" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    transition: border-color 0.3s ease;
+}
+
+.fees-dropdown:hover {
+    border-color: #005f63;
+}
+
+
+
 @media (max-width: 768px) {
+    .fees-dropdown {
+        font-size: 10px;
+        padding: 10px;
+        background-size: 16px;
+        background-position: right 8px center;
+        background-image: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .college-data-cell img{
+        height: 130px;
+    }
+
     .universities-explore-section {
         padding: 40px 0;
         overflow-x: scroll;
@@ -2464,19 +2504,19 @@ input.checkbox-compare-form {
 .university-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* distributes content with space */
+    justify-content: space-between;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     background: #fff;
     padding: 16px;
-    height: 100%; /* ensures equal height cards */
+    height: 100%;
     position: relative;
 
 }
 
 .know-more-btn {
-    margin-top: auto; /* pushes the button to the bottom */
+    margin-top: auto;
     display: block;
     text-align: center;
     background: #f5f5f5;
@@ -2504,4 +2544,149 @@ input.checkbox-compare-form {
     object-fit: fill;
 }
 
+ul.simple-specialisation {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
 
+ul.simple-specialisation li {
+    padding: 2px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+ul.simple-specialisation li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+ul.nested-specialisation {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.nested-specialisation > li {
+    margin-bottom: 8px;
+}
+
+ul.nested-specialisation .program-name {
+    font-weight: 600;
+    color: #2c7be5;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+ul.nested-specialisation ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.fees-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .fees-dropdown{
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .fees-dropdown{
+        max-width: 100px;
+    }
+}
+
+.dropdown-header {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chevron {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+.dropdown-menu-edukyu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background: white;
+    z-index: 10;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    border-top: 1px solid #eee;
+}
+
+.dropdown-item:first-child {
+    border-top: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.compare-search-btn-edukyu {
+    position: relative;
+}
+
+.dropdown-edukyu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--background-white);
+    color: var(--font-color);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: var(--paragraph-font-size);
+    -webkit-overflow-scrolling: touch;
+}
+
+.dropdown-edukyu.open {
+    display: block;
+}
+
+.dropdown-edukyu .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    background: var(--background-white);
+    border-bottom: 1px solid var(--card-border);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-edukyu .dropdown-item:hover {
+    background: var(--primary-color);
+    color: var(--font-color-white);
+}
+
+.search-input-edukyu {
+    font-size: 16px;
+}

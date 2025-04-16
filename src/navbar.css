@@ -84,7 +84,7 @@ html, body {
     justify-content: space-between;
 }
 
-.toggle-btn {
+.toggle-btn-edukyu {
     border: none;
     padding: 9px;
     flex: 1;
@@ -103,7 +103,7 @@ html, body {
     text-align: center;
 }
 
-.toggle-btn.active {
+.toggle-btn-edukyu.active {
     background: #FFD700;
     color: black;
 }
@@ -413,7 +413,7 @@ html, body {
         margin-right: 7.5px;
     }
 
-    .toggle-btn {
+    .toggle-btn-edukyu {
         width: 112.5px;
         font-size: 7.5px;
         padding: 3.75px;

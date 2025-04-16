@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Compare online colleges and universities with ease. Make an informed decision for your future.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>College Comparison</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -17,43 +18,47 @@
 <body>
 <script src="script.js"></script>
 
-<div class="container ">
-    <div class="row col-md-12">
-        <h2 class="text-center">Compare Online Colleges & Universities</h2>
-        <p class="text-center">Easily compare top online colleges side by side and make an informed decision for your future.</p>
+<div class="container-edukyu ">
+    <div class="row-edukyu col-md-12">
+        <h2 class="text-center-edukyu">Compare Online Colleges & Universities</h2>
+        <p class="text-center-edukyu">Easily compare top online colleges side by side and make an informed decision for your future.</p>
 
-        <div class="col-md-12 compare-search-buttons">
-            <div class="col-md-6 col-sm-12">
-                <div class="compare-search-btn"  style="position: relative;">
-                    <div class="college-icon">
+        <div class="col-md-12 compare-search-buttons-edukyu">
+            <div class="col-md-6-edukyu col-sm-12">
+                <div class="compare-search-btn-edukyu" style="position: relative;">
+                    <div class="college-icon-edukyu">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
                     <div>
-                        <input type="search" id="collegeSearch1" placeholder="Search University" class="search-input">
-                        <select id="dropdown1" class="dropdown"  size="5"></select>
+                        <input type="search" id="collegeSearch1" placeholder="Search University" class="search-input-edukyu">
+                        <div id="dropdown1" class="dropdown-edukyu">
+                            <!-- Options will be added here dynamically -->
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-sm-12">
-                <div class="compare-search-btn" style="position: relative;">
-                    <div class="college-icon">
+            <div class="col-md-6-edukyu col-sm-12">
+                <div class="compare-search-btn-edukyu" style="position: relative;">
+                    <div class="college-icon-edukyu">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/college-icon.png" alt="college icon">
                     </div>
                     <span><i class="fas fa-search"></i></span>
                     <div>
-                        <input type="search" id="collegeSearch2" placeholder="Search University" class="search-input">
-                        <select id="dropdown2" class="dropdown" size="5"></select>
+                        <input type="search" id="collegeSearch2" placeholder="Search University" class="search-input-edukyu">
+                        <div id="dropdown2" class="dropdown-edukyu">
+                            <!-- Options will be added here dynamically -->
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="add-extra-cont">
-                <button id="scnd-button" type="button" class="add add-third-seachbar">+</button>
+            <div class="add-extra-cont-edukyu">
+                <button id="scnd-button" type="button" class="add-edukyu add-third-seachbar-edukyu">+</button>
             </div>
 
-            <button id="toggleCheckboxList" class="toggle-btn">
+            <button id="toggleCheckboxList" class="toggle-btn-edukyu">
                 <i class="fas fa-filter" style="color: #01262a"></i>
             </button>
         </div>
@@ -61,276 +66,276 @@
 
 
 
-    <div class="container check-box-list-container" >
+    <div class="container-edukyu check-box-list-container-edukyu" >
 
-        <div class="col-lg-12 check-box-list">
-            <label class="cxp-checkbox-inline">
+        <div class="col-lg-12 check-box-list-edukyu">
+            <label class="cxp-checkbox-inline-edukyu">
                 Abbreviation <input type="checkbox" name="abbreviation" value="abbreviation">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Institute Type <input type="checkbox" name="institute-type" value="institute-type">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Establishment <input type="checkbox" name="establishment" value="establishment">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 About <input type="checkbox" name="about" value="about">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Accreditation <input type="checkbox" name="accreditation" value="accreditation">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Duration <input type="checkbox" name="duration" value="duration">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Learning Methodology <input type="checkbox" name="learning-methodology" value="learning-methodology">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Fees <input type="checkbox" name="fees" value="fees">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Programs <input type="checkbox" name="degree" value="degree">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Specialisation <input type="checkbox" name="specialisation" value="specialisation">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Review <input type="checkbox" name="review" value="review">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Our Recommendation <input type="checkbox" name="our-recommendation" value="our-recommendation">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Eligibility <input type="checkbox" name="eligibility" value="eligibility">
             </label>
-            <label class="cxp-checkbox-inline">
+            <label class="cxp-checkbox-inline-edukyu">
                 Website <input type="checkbox" name="website" value="website">
             </label>
-            <label class="cxp-checkbox-inline cxp-select-all">
+            <label class="cxp-checkbox-inline-edukyu cxp-select-all">
                 Select All <input type="checkbox" name="selectAll" value="select All">
             </label>
         </div>
     </div>
 
-    <div class="compare-btn text-center">
+    <div class="compare-btn-edukyu text-center-edukyu">
         <button id="search_buttons" class="scnd-button">Compare now</button>
     </div>
 
-    <div class="compare-form-btn text-center">
-        <button id="search_form_button" class="scnd-button">Compare Form</button>
-    </div>
+<!--    <div class="compare-form-btn text-center">-->
+<!--        <button id="search_form_button" class="scnd-button">Compare Form</button>-->
+<!--    </div>-->
 
 
     <!-- Modal Structure -->
-    <div id="compareFormModal" class="compare-form-modal">
-        <div class="compare-form-modal-content">
-            <span class="close">&times;</span>
-            <div class="compare-form-modal-header-logo">
-                <img src="https://edukyu.com//public/compare-page/nmims.png" alt="University Logo" class="form-logo">
-                <img src="https://edukyu.com//public/compare-page/amity.png" alt="University Logo" class="form-logo">
-            </div>
-            <h2>Get a Free Brochure</h2>
-            <p>Please share your details and our counselor will connect with you.</p>
-            <form>
-                <input type="text" placeholder="Enter Your Name*" required>
-                <input type="email" placeholder="Enter Your Email*" required>
-                <input type="tel" placeholder="Enter Your Mobile Number*" required>
-                <input type="text" placeholder="Enter Your City*" required>
-                <select class="college-select" id="collegeSelect" required>
-                    <option style="width: 80%" value="" disabled selected>Choose Your University</option>
-                    <option style="width: 80%" value="University A">NMIMS CDOE</option>
-                    <option style="width: 50%" value="University B">Amity Univeristy Online</option>
-                </select>
-                <label>
-                    <input class="checkbox-compare-form" type="checkbox" required> I authorize Edukyu and its associates to contact me.
-                </label>
-                <button type="submit" class="scnd-button">Download Brochure</button>
-            </form>
-        </div>
-    </div>
+<!--    <div id="compareFormModal" class="compare-form-modal">-->
+<!--        <div class="compare-form-modal-content">-->
+<!--            <span class="close">&times;</span>-->
+<!--            <div class="compare-form-modal-header-logo">-->
+<!--                <img src="https://edukyu.com//public/compare-page/nmims.png" alt="University Logo" class="form-logo">-->
+<!--                <img src="https://edukyu.com//public/compare-page/amity.png" alt="University Logo" class="form-logo">-->
+<!--            </div>-->
+<!--            <h2>Get a Free Brochure</h2>-->
+<!--            <p>Please share your details and our counselor will connect with you.</p>-->
+<!--            <form>-->
+<!--                <input type="text" placeholder="Enter Your Name*" required>-->
+<!--                <input type="email" placeholder="Enter Your Email*" required>-->
+<!--                <input type="tel" placeholder="Enter Your Mobile Number*" required>-->
+<!--                <input type="text" placeholder="Enter Your City*" required>-->
+<!--                <select class="college-select" id="collegeSelect" required>-->
+<!--                    <option style="width: 80%" value="" disabled selected>Choose Your University</option>-->
+<!--                    <option style="width: 80%" value="University A">NMIMS CDOE</option>-->
+<!--                    <option style="width: 50%" value="University B">Amity Univeristy Online</option>-->
+<!--                </select>-->
+<!--                <label>-->
+<!--                    <input class="checkbox-compare-form" type="checkbox" required> I authorize Edukyu and its associates to contact me.-->
+<!--                </label>-->
+<!--                <button type="submit" class="scnd-button">Download Brochure</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
 
 
 </div>
 
-<div class="container container-2">
-    <div class="college-header-logo">
-        <div class="college">
-            <div class="circle">
+<div class="container-edukyu container-2">
+    <div class="college-header-logo-edukyu">
+        <div class="college-edukyu">
+            <div class="circle-edukyu">
                 <img src="https://edukyu.com//public/compare-page/nmims.png" alt="NMIMS Logo">
             </div>
             <h3 id="college1ContainerHeader"></h3>
         </div>
-        <div class="college">
-            <div class="circle">
+        <div class="college-edukyu">
+            <div class="circle-edukyu">
                 <img src="https://edukyu.com//public/compare-page/amity.png" alt="Amity Logo">
             </div>
             <h3 id="college2ContainerHeader"></h3>
         </div>
-        <div class="college hidden-row hidden-college-logo-3">
-            <div class="circle">
-                <img class = "college-logo-hide" src="https://edukyu.com//public/compare-page/amity.png" alt="Amity Logo">
+        <div class="college-edukyu hidden-row-edukyu hidden-college-logo-3-edukyu">
+            <div class="circle-edukyu">
+                <img class ="college-logo-hide-edukyu" src="https://edukyu.com//public/compare-page/amity.png" alt="Amity Logo">
             </div>
             <h3 id="college3ContainerHeader"></h3>
         </div>
     </div>
 
-    <div class="info-box">Tap on features to view more details of college
-        <button class="info-box-cancel-button">x</button>
+    <div class="info-box-edukyu">Tap on features to view more details of college
+        <button class="info-box-cancel-button-edukyu">x</button>
     </div>
 
-    <div class="compare-table-wrapper">
-        <table class="compare-table ">
+    <div class="compare-table-wrapper-edukyu">
+        <table class="compare-table-edukyu ">
             <thead>
             <tr>
-                <td id="collegeHeader" class="college-header">Colleges</td>
-                <td id="college1Header" class="college-header"></td>
-                <td id="college2Header" class="college-header"></td>
-                <td id="college3Header" class="college-header hidden-row hidden-row-element"></td>
+                <td id="collegeHeader" class="college-header-edukyu">Colleges</td>
+                <td id="college1Header" class="college-header-edukyu"></td>
+                <td id="college2Header" class="college-header-edukyu"></td>
+                <td id="college3Header" class="college-header-edukyu hidden-row-edukyu hidden-row-element-edukyu"></td>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td id="collegeInstituteType" class="college-body college-body-header">
+                <td id="collegeInstituteType" class="college-body-edukyu college-body-header-edukyu">
                     Institute Type
                 </td>
 
-                <td id="college1InstituteType" class="college-body college-td-hider"></td>
-                <td id="college2InstituteType" class="college-body college-td-hider"></td>
-                <td id="college3InstituteType" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1InstituteType" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2InstituteType" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3InstituteType" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
 
             </tr>
             <tr>
-                <td id="collegeEstablishment" class="college-body college-body-header">
+                <td id="collegeEstablishment" class="college-body-edukyu college-body-header-edukyu">
                     Establishment
                 </td>
 
-                <td id="college1Establishment" class="college-body college-td-hider"></td>
-                <td id="college2Establishment" class="college-body college-td-hider"></td>
-                <td id="college3Establishment" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Establishment" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Establishment" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Establishment" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeAbbreviation" class="college-body college-body-header">
+                <td id="collegeAbbreviation" class="college-body-edukyu college-body-header-edukyu">
                     Abbreviation
                 </td>
 
-                <td id="college1Abbreviation" class="college-body college-td-hider"></td>
-                <td id="college2Abbreviation" class="college-body college-td-hider"></td>
-                <td id="college3Abbreviation" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Abbreviation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Abbreviation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Abbreviation" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeAbout" class="college-body college-body-header">
+                <td id="collegeAbout" class="college-body-edukyu college-body-header-edukyu">
                     About
                 </td>
 
-                <td id="college1About" class="college-body college-td-hider"></td>
-                <td id="college2About" class="college-body college-td-hider"></td>
-                <td id="college3About" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1About" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2About" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3About" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeAccrediation" class="college-body college-body-header">
+                <td id="collegeAccrediation" class="college-body-edukyu college-body-header-edukyu">
                     Accreditation
                 </td>
 
-                <td id="college1Accrediation" class="college-body college-td-hider"></td>
-                <td id="college2Accrediation" class="college-body college-td-hider"></td>
-                <td id="college3Accrediation" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Accrediation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Accrediation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Accrediation" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegePrograms" class="college-body college-body-header">
+                <td id="collegePrograms" class="college-body-edukyu college-body-header-edukyu">
                     Programs
                 </td>
 
-                <td id="college1Programs" class="college-body college-td-hider"></td>
-                <td id="college2Programs" class="college-body college-td-hider"></td>
-                <td id="college3Programs" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Programs" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Programs" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Programs" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeSpecialisation" class="college-body college-body-header">
+                <td id="collegeSpecialisation" class="college-body-edukyu college-body-header-edukyu">
                     Specialisation
                 </td>
 
-                <td id="college1Specialisation" class="college-body college-td-hider"></td>
-                <td id="college2Specialisation" class="college-body college-td-hider"></td>
-                <td id="college3Specialisation" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Specialisation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Specialisation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Specialisation" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeDuration" class="college-body college-body-header">
+                <td id="collegeDuration" class="college-body-edukyu college-body-header-edukyu">
                     Duration
                 </td>
 
-                <td id="college1Duration" class="college-body college-td-hider"></td>
-                <td id="college2Duration" class="college-body college-td-hider"></td>
-                <td id="college3Duration" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Duration" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Duration" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Duration" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeLearningMethodoly" class="college-body college-body-header">
+                <td id="collegeLearningMethodoly" class="college-body-edukyu college-body-header-edukyu">
                     Learning Methodology
                 </td>
 
-                <td id="college1LearningMethodoly" class="college-body college-td-hider"></td>
-                <td id="college2LearningMethodoly" class="college-body college-td-hider"></td>
-                <td id="college3LearningMethodoly" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1LearningMethodoly" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2LearningMethodoly" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3LearningMethodoly" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeDegree" class="college-body college-body-header">
+                <td id="collegeDegree" class="college-body-edukyu college-body-header-edukyu">
                     Degree
                 </td>
 
-                <td id="college1Degree" class="college-body college-td-hider degree-img">
+                <td id="college1Degree" class="college-body-edukyu college-td-hider-edukyu degree-img">
                     <img src="https://5.imimg.com/data5/NM/WK/MY-42519038/certificates-for-degree-college-500x500.jpg" alt="Degree Image">
                 </td>
 
-                <td id="college2Degree" class="college-body college-td-hider degree-img">
+                <td id="college2Degree" class="college-body-edukyu college-td-hider-edukyu degree-img">
                     <img src="https://5.imimg.com/data5/NM/WK/MY-42519038/certificates-for-degree-college-500x500.jpg" alt="Degree Image">
                 </td>
-                <td id="college3Degree" class="college-body hidden-row hidden-row-element college-td-hider degree-img">
+                <td id="college3Degree" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu degree-img">
                     <img src="https://5.imimg.com/data5/NM/WK/MY-42519038/certificates-for-degree-college-500x500.jpg" alt="Degree Image">
                 </td>
             </tr>
             <tr>
-                <td id="collegeFees" class="college-body college-body-header">
+                <td id="collegeFees" class="college-body-edukyu college-body-header-edukyu">
                     Fees
                 </td>
 
-                <td id="college1Fees" class="college-body college-td-hider"></td>
-                <td id="college2Fees" class="college-body college-td-hider"></td>
-                <td id="college3Fees" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Fees" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Fees" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Fees" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeReview" class="college-body college-body-header">
+                <td id="collegeReview" class="college-body-edukyu college-body-header-edukyu">
                     Review
                 </td>
 
-                <td id="college1Review" class="college-body college-td-hider"></td>
-                <td id="college2Review" class="college-body college-td-hider"></td>
-                <td id="college3Review" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Review" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Review" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Review" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeEligibility" class="college-body college-body-header">
+                <td id="collegeEligibility" class="college-body-edukyu college-body-header-edukyu">
                     Eligibility
                 </td>
 
-                <td id="college1Eligibility" class="college-body college-td-hider"></td>
-                <td id="college2Eligibility" class="college-body college-td-hider"></td>
-                <td id="college3Eligibility" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1Eligibility" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2Eligibility" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3Eligibility" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeOurRecommendation" class="college-body college-body-header">
+                <td id="collegeOurRecommendation" class="college-body-edukyu college-body-header-edukyu">
                     Our Recommendation
                 </td>
 
-                <td id="college1OurRecommendation" class="college-body college-td-hider"></td>
-                <td id="college2OurRecommendation" class="college-body college-td-hider"></td>
-                <td id="college3OurRecommendation" class="college-body hidden-row hidden-row-element college-td-hider"></td>
+                <td id="college1OurRecommendation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college2OurRecommendation" class="college-body-edukyu college-td-hider-edukyu"></td>
+                <td id="college3OurRecommendation" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"></td>
             </tr>
             <tr>
-                <td id="collegeWebsite" class="college-body college-body-header">
+                <td id="collegeWebsite" class="college-body-edukyu college-body-header-edukyu">
                     Website
                 </td>
 
-                <td id="college1Website" class="college-body college-td-hider"><a href="https://online.nmims.edu/"></a></td>
-                <td id="college2Website" class="college-body college-td-hider"><a href="https://amityonline.com/"></a></td>
-                <td id="college3Website" class="college-body hidden-row hidden-row-element college-td-hider"><a href="https://amityonline.com/"></a></td>
+                <td id="college1Website" class="college-body-edukyu college-td-hider-edukyu"><p href="https://online.nmims.edu/"></p></td>
+                <td id="college2Website" class="college-body-edukyu college-td-hider-edukyu"><p href="https://amityonline.com/"></p></td>
+                <td id="college3Website" class="college-body-edukyu hidden-row-edukyu hidden-row-element-edukyu college-td-hider-edukyu"><p href="https://amityonline.com/"></p></td>
             </tr>
             </tbody>
         </table>
@@ -342,59 +347,59 @@
 
 </div>
 
-<div class="banner">
-    <div class="banner-image">
+<div class="banner-edukyu">
+    <div class="banner-image-edukyu">
         <img src="9eeden1c.png" alt="Confused Student">
     </div>
-    <a href="#" class="banner-button">Expert now with Expert Guidance</a>
+    <a href="#" class="banner-button-edukyu">Expert now with Expert Guidance</a>
 </div>
 
-<div class="container">
-    <div class="row">
+<div class="container-edukyu">
+    <div class="row-edukyu">
         <div class="col-md-12">
             <h2>Factors to Consider Before College Selection</h2>
             <p>A college isn’t just about academics—consider these essentials before selecting.</p>
         </div>
-        <div class="col-md-12 factors-card-container">
-            <div class="factors-container">
-                <div class="factors-card">
-                    <div class="select-right-college">
+        <div class="col-md-12 factors-card-container-edukyu">
+            <div class="factors-container-edukyu">
+                <div class="factors-card-edukyu">
+                    <div class="select-right-college-edukyu">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/support-mentor.gif" alt="Academic Quality">
                         <h3>Academic Quality</h3>
                         <p>Check if the college offers a well-structured curriculum and experienced faculty for quality learning.</p>
                     </div>
                 </div>
-                <div class="factors-card">
-                    <div class="select-right-college">
+                <div class="factors-card-edukyu">
+                    <div class="select-right-college-edukyu">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/accrediation.gif" alt="Accreditation">
                         <h3>Accreditation</h3>
                         <p>Verify if the college is accredited by bodies like UGC, AICTE, or AIU for trusted education.</p>
                     </div>
                 </div>
-                <div class="factors-card">
-                    <div class="select-right-college">
+                <div class="factors-card-edukyu">
+                    <div class="select-right-college-edukyu">
                         <img src="https://edukyu.com/assets/cxp-assets/imgs/blog/icons/no-cost.gif" alt="Costs and Financial Aid">
                         <h3>Costs and Financial Aid</h3>
                         <p>Check if the college offers scholarships, grants, or loans to make your education more affordable.</p>
                     </div>
                 </div>
 
-                <div class="factors-card">
-                    <div class="select-right-college">
+                <div class="factors-card-edukyu">
+                    <div class="select-right-college-edukyu">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/compare-colleges/alumni-network.gif" alt="Alumni Network">
                         <h3>Alumni Network</h3>
                         <p>Ensure the college has a robust alumni network and corporate ties for professional success.</p>
                     </div>
                 </div>
-                <div class="factors-card">
-                    <div class="select-right-college">
+                <div class="factors-card-edukyu">
+                    <div class="select-right-college-edukyu">
                         <img src="https://edukyu.com/assets/cxp-assets/imgs/blog/icons/scholarship.gif" alt="College Facilities">
                         <h3>College Facilities</h3>
                         <p>Look for modern infrastructure such as libraries, labs, and tools that enhance learning and skill development.</p>
                     </div>
                 </div>
-                <div class="factors-card">
-                    <div class="select-right-college">
+                <div class="factors-card-edukyu">
+                    <div class="select-right-college-edukyu">
                         <img src="https://edukyu.com//assets/cxp-assets/imgs/blog/icons/placement.gif" alt="Placement Support">
                         <h3>Placement Support</h3>
                         <p>Choose a college with strong placement records and industry tie-ups for better career prospects.</p>
@@ -408,432 +413,513 @@
 
 
 
-<section class="universities-explore-section">
-    <div class="container">
-        <div class="row">
+<section class="cxp-collage-slider">
+    <div class="container-edukyu">
+        <div class="row-edukyu">
             <div class="col-lg-12">
                 <h2 class="title">Universities to Explore</h2>
-                <p class="text">Unlock your potential with online programs from the best. Earn a degree from renowned universities, recognized for their excellence in online education. Experience cutting-edge curriculum, personalized support, and a global network of alumni, all delivered on your terms.</p>
-            </div>
-            <div class="col-lg-12">
-                <div class="universities-slider-container">
-                    <button class="slider-nav-btn prev-btn" aria-label="Previous universities">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
+                <p class="text" style="color: #0c0c0c">Unlock your potential with online programs from the best. Earn a degree from renowned
+                    universities, recognized for their excellence in online education. Experience cutting-edge curriculum,
+                    personalized support, and a global network of alumni, all delivered on your terms.
+                </p>
 
-                    <div class="universities-slider-wrapper">
-                        <div class="universities-slider">
-                            <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/dpu.jpg" alt="D.Y. Patil Vidyapeeth">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/dpu-logo.png" alt="D.Y. Patil Vidyapeeth" class="university-logo">
-                                </div>
-                                <h3>D.Y. Patil Vidyapeeth</h3>
-                                <small class="since">Since 2002</small>
+                <div class="card-slider arrow-icon">
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/dypatil-vidyapeeth"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/dpu-logo.png" alt="dpu-icon"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">D.Y. Patil Vidyapeeth</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/dpu.jpg" alt="dpu-icon">
                             </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: NIRF in Top 50, A++ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 5,841/- Per Month</p>
-
-                                </div>
-
+                        </a>
+                        <small class="since">Since 2002</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
                             </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF in Top 50, A++ grade NAAC accredited
 
-                            <a href="#" class="know-more-btn">Know More</a>
-
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 5,841/- Per Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/dypatil-vidyapeeth"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/amity-online-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/amity-logo.png" alt="amity-icon"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Amity University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/amity.jpg" alt="amity-icon">
+                            </div>
+                        </a>
+                        <small class="since">Since 2005</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF 35, A+ grade NAAC accredited
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 7,458/- Per Month</p>
+                            </div>
                         </div>
 
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/manipal.jpg" alt="Manipal University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/manipal-logo.png" alt="Manipal University" class="university-logo">
-                                </div>
-                                <h3>Manipal University</h3>
-                                <small class="since">Since 2011</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: NIRF in Top # 101-150, A+ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 7,292/- Per Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/lpu.jpg" alt="Lovely Professional University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/lpu-logo.png" alt="Lovely Professional University" class="university-logo">
-                                </div>
-                                <h3>Lovely Professional University</h3>
-                                <small class="since">Since 2005</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: NIRF 50, A++ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 7,333/- Per Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/london.jpg" alt="London Metropolitan University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/london-logo.png" alt="London Metropolitan University" class="university-logo">
-                                </div>
-                                <h3>London Metropolitan University</h3>
-                                <small class="since">Since 1849</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online MBA /MSc</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: RPL, REL, CMI</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: Top 10 United Kingdom University</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 32,000/- Per Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/uttaranchal.jpg" alt="Uttaranchal University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/uttarachal-logo.png" alt="Uttaranchal University" class="university-logo">
-                                </div>
-                                <h3>Uttaranchal University</h3>
-                                <small class="since">Since 2006</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: NIRF 35, A+ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 7,458/- Per Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/jain.jpg" alt="Jain University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/jain-logo.png" alt="Jain University" class="university-logo">
-                                </div>
-                                <h3>Jain University</h3>
-                                <small class="since">Since 2009</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: NIRF 68, A++ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 8,841/- Per Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/shoolini.jpg" alt="Shoolini University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/shoolini-logo.png" alt="Shoolini University" class="university-logo">
-                                </div>
-                                <h3>Shoolini University</h3>
-                                <small class="since">Since 2005</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: NIRF 73, 1st in India- QS World University Ranking</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 7,548/- Per Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/vivekanand.jpg" alt="Vivekanand Global University">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/new-ed/assets/cxp-assets/imgs/collage/logo/vivekanand.jpg" alt="Vivekanand Global University" class="university-logo">
-                                </div>
-                                <h3>Vivekanand Global University</h3>
-                                <small class="since">Since 2002</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: A+ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 5,417/ Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-
-                        <div class="university-card">
-                            <div class="university-header">
-                                <img src="https://edukyu.com//assets/cxp-assets/imgs/collage/nmims-university/card-banner.jpg" alt="NMIMS University Online">
-                                <div class="university-logo">
-                                    <img src="https://edukyu.com/assets/cxp-assets/imgs/collage/nmims-university/nmims-logo.png" alt="NMIMS University Online" class="university-logo">
-                                </div>
-                                <h3>NMIMS University Online</h3>
-                                <small class="since">Since 1981</small>
-                            </div>
-                            <div class="university-details">
-                                <div class="detail-row">
-                                    <span class="bullet">•</span>
-                                    <p>Course Offered: Online Masters/ Bachelors</p>
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Accreditation: UGC-entitled degree programme</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Ranking: A+ grade NAAC accredited</p>
-
-                                </div>
-
-                                <div class="detail-row">
-
-                                    <span class="bullet">•</span>
-
-                                    <p>Fee Starting at Rs 8,750/ Month</p>
-
-                                </div>
-
-                            </div>
-
-                            <a href="#" class="know-more-btn">Know More</a>
-
-                        </div>
-                            <!-- Add more university cards as needed -->
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/amity-online-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
                         </div>
                     </div>
 
-                    <button class="slider-nav-btn next-btn" aria-label="Next universities">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/manipal-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/logo/manipal-logo.png" alt="manipal-icon"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Manipal University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/manipal.jpg" alt="manipal-icon">
+                            </div>
+                        </a>
+                        <small class="since">Since 2011</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF in Top # 101-150,
+                                    A+ grade NAAC accredited
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 7,292/- Per Month</p>
+                            </div>
+                        </div>
+
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/manipal-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/lovely-professional-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/lpu-logo.png" alt="lpu-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Lovely Professional University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/lpu.jpg" alt="lpu-logo" >
+                            </div>
+                        </a>
+                        <small class="since">Since 2005</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF 50, A++ grade NAAC accredited
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 7,333/- Per Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/lovely-professional-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="card cxp-card-border-transparent">
+                       <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/london-metropolitan-university"
+                          target="_blank" class="main-link">
+                          <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/logo/london-logo.png" alt="london-logo"
+                             class="cxp-college-logo-card-ed">
+                          <h2 class="title-collage">London Metropolitan
+                             University</h2>
+                          <div class="image">
+                             <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/london.jpg" alt="london-logo">
+                          </div>
+                       </a>
+                       <small class="since">Since 1849</small>
+                       <div class="cxp-row cxp-row2">
+                          <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                          <div class="cxp-column-2">
+                             <p class="description">Course Offered: Online MBA /MSc</p>
+                          </div>
+                       </div>
+                       <div class="cxp-row cxp-row2 ">
+                          <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                          <div class="cxp-column-2">
+                             <p class="description">Accreditation: RPL, REL,
+                                CMI
+
+                             </p>
+                          </div>
+                       </div>
+                       <div class="cxp-row cxp-row2 margin-in-two-lines2">
+                          <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                          <div class="cxp-column-2">
+                             <p class="description">Ranking: Top 10 United Kingdom
+                                University
+                             </p>
+                          </div>
+                       </div>
+                       <div class="cxp-row cxp-row2">
+                          <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                          <div class="cxp-column-2">
+                             <p class="description">Fee Starting at Rs 32,000/- Per Month</p>
+                          </div>
+                       </div>
+                       <div align="center">
+                          <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/london-metropolitan-university"
+                             class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                       </div>
+                    </div> -->
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/uttaranchal-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/uttarachal-logo.png" alt="uu-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Uttaranchal University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/uttaranchal.jpg" alt="uu-logo-card">
+                            </div>
+                        </a>
+                        <small class="since">Since 2006</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF 35, A+ grade NAAC accredited
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 7,458/- Per Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/uttaranchal-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/jain-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/jain-logo.png" alt="jain-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Jain University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/jain.jpg" alt="jain-slider-card">
+                            </div>
+                        </a>
+                        <small class="since">Since 2009</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF 68, A++ grade NAAC accredited
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 8,841/- Per Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/jain-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/shoolini-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/shoolini-logo.png" alt="shoolini-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Shoolini University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/shoolini.jpg" alt="shoolini-slider-card">
+                            </div>
+                        </a>
+                        <small class="since">Since 2005</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: NIRF 73, 1st in India- QS World University Ranking
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 7,548/- Per Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/shoolini-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/vivekananda-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/logo/vgu-logo.png" alt="vivekanand-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Vivekanand Global University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//new-ed/assets/cxp-assets/imgs/collage/vivekanand.jpg" alt="vivekanand-slider-card">
+                            </div>
+                        </a>
+                        <small class="since">Since 2002</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: A+ grade NAAC
+                                    accredited&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 5,417/ Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a  href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/vivekananda-university" class="cxp-slider-button-home-collage-ed"
+                                role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/nmims-university"
+                           target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/nmims-logo.png" alt="nmims-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">NMIMS University Online</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com///assets/cxp-assets/imgs/collage/nmims-university/card-banner.jpg" alt="nmims-slider-card">
+                            </div>
+                        </a>
+                        <small class="since">Since 1981</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: A+ grade NAAC accredited
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 8,750/ Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/nmims-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="card cxp-card-border-transparent">
+                        <a  href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/sikkim-manipal-university"
+                            target="_blank" class="main-link">
+                            <img src="https://edukyu.com///new-ed/assets/cxp-assets/imgs/collage/logo/sikkim-card-logo.png" alt="sikkim-card-logo"
+                                 class="cxp-college-logo-card-ed">
+                            <h2 class="title-collage">Sikkim Manipal University</h2>
+                            <div class="image">
+                                <img src="https://edukyu.com//assets/cxp-assets/imgs/collage/sikkim-university/sikkim-card.jpg" alt="sikkim-slider-card">
+                            </div>
+                        </a>
+                        <small class="since">Since 1995</small>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-book"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Course Offered: Online Masters/ Bachelors</p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Accreditation: UGC-entitled degree programme
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-line-chart"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Ranking: A+ grade NAAC accredited
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cxp-row cxp-row2">
+                            <div class="cxp-column-1"><i class="fa fa-credit-card"></i></div>
+                            <div class="cxp-column-2">
+                                <p class="description">Fee Starting at Rs 4,583/ Month</p>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <a href="https://edukyu.com//online-mba-programs/top-distance-mba-colleges/sikkim-manipal-university"
+                               class="cxp-slider-button-home-collage-ed" role="button">Know More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -842,13 +928,14 @@
 
 
 
-<div style="padding-bottom:68px;" class="container cxp-padding-72">
-    <div class="row">
-        <div class="col-md-12 text-center cxp-suggestion-content">
+
+<div style="padding-bottom:68px;" class="container-edukyu cxp-padding-72-edukyu">
+    <div class="row-edukyu">
+        <div class="col-md-12 text-center-edukyu cxp-suggestion-content-edukyu">
             <h2 class="color-white">Still confused about your MBA options? Let our experts guide you toward the right choice</h2>
             <a  href="#cxphomeenqformed" data-toggle="modal" data-target="#cxphomeenqformed" aria-label="pop-up-form" id="talkToCounsellorBtn">
                 <button style="margin-top:21px; font-size: 1rem;" class="scnd-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill vl-align" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill vl-align-edukyu" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
                     </svg>
                     &nbsp; Talk To Counsellor
@@ -914,12 +1001,12 @@
             </button>
         </div>
         <div class="modal-body modal-body-2">
-            <div class="container-fluid">
-                <div class="row">
+            <div class="container-fluid-edukyu">
+                <div class="row-edukyu">
                     <div class="left-right-body">
                         <div class="left">
                             <div class="col-12">
-                                <h4 class="text-center">Compare and select from 20+ Universities</h4>
+                                <h4 class="text-center-edukyu">Compare and select from 20+ Universities</h4>
                                 <div class="university-slider">
                                     <div class="slide-track">
                                         <div class="slide"><img src="https://edukyu.com//assets/cxp-assets/imgs/logo-clg/dpu.png" alt="DPU"></div>
@@ -974,7 +1061,7 @@
                         </div>
                         <div class="right">
                             <div>
-                                <h4 class="modal-title text-center">Still Confused About the Right University for Your Online Degree?<br>Get Expert Assistance Now!</h4>
+                                <h4 class="modal-title text-center-edukyu">Still Confused About the Right University for Your Online Degree?<br>Get Expert Assistance Now!</h4>
                                 <form id="enrollmentForm">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Enter Your Name*" required>
@@ -1028,13 +1115,13 @@
 </div>
 
 <div class="green-bg cxp_blog_sticky">
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid-edukyu">
+        <div class="row-edukyu">
             <div class="col-lg-2 col-xl-3 d-none d-md-block"></div>
             <div class="col-lg-1 col-xl-1 col-md-2 d-flex justify-content-center align-items-center">
                 <img class="sticky-logo" src="https://edukyu.com/assets/cxp-assets/imgs/blog/study.svg" height="30px" alt="Study Logo">
             </div>
-            <div class="col-lg-5 col-xl-4 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
+            <div class="col-lg-5 col-xl-4 col-md-6-edukyu d-flex align-items-center justify-content-center justify-content-md-start">
                 <h2 class="white-txt cxp-blog-sticky-text" data-toggle="modal" data-target="#modal-subscribe-compare">
                     <span class="yellow-txt">Talk to Expert Counsellor</span>
                 </h2>
